@@ -1,0 +1,522 @@
+{
+  "common": {
+    "getStarted": "Commencer maintenant",
+    "learnMore": "En savoir plus",
+    "perMonth": "/mois",
+    "perEmployee": "par employé",
+    "readMore": "Lire la suite",
+    "contactUs": "Nous contacter",
+    "backToHome": "Retour à l'accueil",
+    "mostPopular": "Le plus populaire",
+    "allRightsReserved": "Tous droits réservés",
+    "swissMade": "Conçu en Suisse"
+  },
+  "nav": {
+    "services": "Services",
+    "pricing": "Tarifs",
+    "howItWorks": "Comment ça marche",
+    "about": "À propos",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cleaningLady": "Femme de ménage",
+    "nanny": "Nounou",
+    "auPair": "Au Pair",
+    "elderlyCare": "Aide aux personnes âgées",
+    "gardener": "Jardinier"
+  },
+  "home": {
+    "hero": {
+      "title": "La paie de vos employés de maison, simplifiée.",
+      "subtitle": "AVS, assurances, contrats de travail et fiches de salaire : tout est inclus pour un prix fixe mensuel. Sans commission sur le salaire brut.",
+      "ctaPrimary": "Démarrer gratuitement",
+      "ctaSecondary": "Découvrir nos tarifs"
+    },
+    "trustBar": {
+      "title": "Des milliers d'employeurs en Suisse nous font confiance"
+    },
+    "features": {
+      "title": "Tout ce dont vous avez besoin pour employer en toute sérénité",
+      "subtitle": "HappySalary s'occupe de toutes les démarches administratives liées à votre personnel de maison.",
+      "payroll": {
+        "title": "Gestion des salaires",
+        "description": "Calcul automatique des salaires mensuels, incluant les déductions légales et les indemnités."
+      },
+      "socialContributions": {
+        "title": "Cotisations sociales",
+        "description": "Déclaration et versement des cotisations AVS/AI/APG/AC auprès de la caisse de compensation compétente."
+      },
+      "insurance": {
+        "title": "Assurance accidents",
+        "description": "Affiliation à l'assurance accidents professionnels et non professionnels (LAA) conformément à la loi."
+      },
+      "contracts": {
+        "title": "Contrats de travail",
+        "description": "Génération de contrats de travail conformes au droit suisse, personnalisés selon votre situation."
+      },
+      "payslips": {
+        "title": "Fiches de salaire",
+        "description": "Fiches de salaire mensuelles détaillées, téléchargeables en PDF pour vous et votre employé."
+      },
+      "taxWithholding": {
+        "title": "Impôt à la source",
+        "description": "Calcul et prélèvement de l'impôt à la source pour les employés concernés, selon le barème cantonal."
+      }
+    },
+    "howItWorks": {
+      "title": "Comment ça marche",
+      "subtitle": "Trois étapes simples pour gérer la paie de votre employé de maison.",
+      "step1": {
+        "title": "Inscrivez-vous en ligne",
+        "description": "Créez votre compte en quelques minutes et renseignez les informations de votre employé."
+      },
+      "step2": {
+        "title": "Nous gérons tout",
+        "description": "Cotisations, assurances, contrats et fiches de salaire : nous nous occupons de l'ensemble."
+      },
+      "step3": {
+        "title": "Vous restez serein",
+        "description": "Recevez chaque mois vos documents et profitez de la tranquillité d'esprit d'un employeur en règle."
+      }
+    },
+    "comparison": {
+      "title": "Pourquoi choisir HappySalary ?",
+      "subtitle": "Comparez notre offre à forfait fixe avec les solutions à commission du marché.",
+      "feature": "Caractéristique",
+      "happySalary": "HappySalary",
+      "competitors": "Concurrents",
+      "pricingModel": "Modèle tarifaire",
+      "flatFee": "Forfait fixe mensuel",
+      "commission": "Commission sur le salaire brut",
+      "hiddenCosts": "Coûts cachés",
+      "none": "Aucun",
+      "possible": "Possibles",
+      "allInclusive": "Tout inclus",
+      "yes": "Oui",
+      "extra": "En supplément",
+      "support": "Support client",
+      "included": "Inclus",
+      "paid": "Payant"
+    },
+    "stats": {
+      "households": "Ménages employeurs en Suisse",
+      "undeclared": "Travaillent encore au noir",
+      "savings": "D'économies vs. la concurrence",
+      "cantons": "Cantons couverts"
+    },
+    "testimonials": {
+      "title": "Ce que disent nos clients",
+      "subtitle": "Découvrez les retours de nos utilisateurs à travers la Suisse."
+    },
+    "cta": {
+      "title": "Prêt à simplifier la gestion de votre employé de maison ?",
+      "subtitle": "Rejoignez des milliers d'employeurs suisses qui ont choisi la simplicité avec HappySalary.",
+      "button": "Commencer maintenant"
+    }
+  },
+  "pricing": {
+    "title": "Des tarifs clairs et transparents",
+    "subtitle": "Un forfait fixe par employé et par mois, sans commission sur le salaire brut. Pas de surprises.",
+    "basic": {
+      "name": "Basic",
+      "description": "L'essentiel pour gérer la paie et les cotisations sociales de votre employé."
+    },
+    "comfort": {
+      "name": "Comfort",
+      "description": "La solution complète avec assurances et contrats de travail inclus."
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "Le service intégral avec support prioritaire et conseils juridiques personnalisés."
+    },
+    "features": {
+      "payroll": "Gestion des salaires",
+      "socialContributions": "Cotisations sociales (AVS/AI/APG/AC)",
+      "payslips": "Fiches de salaire mensuelles",
+      "annualStatement": "Décompte annuel de salaire",
+      "accidentInsurance": "Assurance accidents (LAA)",
+      "employmentContract": "Contrat de travail conforme",
+      "sicknessInsurance": "Assurance indemnité journalière maladie",
+      "prioritySupport": "Support prioritaire",
+      "legalAdvice": "Conseils juridiques en droit du travail"
+    },
+    "cta": "Choisir ce plan",
+    "faq": {
+      "title": "Questions fréquentes sur nos tarifs",
+      "q1": "Pourquoi un forfait fixe plutôt qu'une commission ?",
+      "a1": "Notre forfait fixe vous garantit un coût prévisible chaque mois, quel que soit le salaire de votre employé. Contrairement aux solutions à commission, vous ne payez pas plus lorsque vous augmentez le salaire ou les heures de votre employé. C'est plus juste et plus transparent.",
+      "q2": "Puis-je changer de plan à tout moment ?",
+      "a2": "Oui, vous pouvez passer d'un plan à un autre à tout moment depuis votre espace client. Le changement prend effet le mois suivant. Aucun frais de résiliation ni engagement minimum.",
+      "q3": "Y a-t-il des frais cachés ?",
+      "a3": "Absolument aucun. Le prix affiché est le prix que vous payez. Les cotisations sociales et primes d'assurance sont facturées séparément au coût réel, sans majoration de notre part.",
+      "q4": "Que comprend exactement chaque plan ?",
+      "a4": "Le plan Basic comprend la gestion complète des salaires et des cotisations sociales. Le plan Comfort ajoute les assurances accidents et maladie ainsi que la rédaction de contrats de travail. Le plan Premium inclut en plus un support prioritaire et des conseils juridiques en matière de droit du travail."
+    }
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "subtitle": "Démarrez en quelques minutes et laissez HappySalary gérer l'administratif pour vous.",
+    "step1": {
+      "title": "Créez votre compte",
+      "description": "Inscrivez-vous en ligne en moins de 5 minutes.",
+      "detail": "Renseignez vos coordonnées et les informations de votre employé : nom, adresse, numéro AVS, salaire convenu et taux d'occupation. Notre formulaire vous guide pas à pas."
+    },
+    "step2": {
+      "title": "Nous prenons le relais",
+      "description": "HappySalary s'occupe de toutes les formalités administratives.",
+      "detail": "Nous affilions votre employé aux assurances sociales, générons le contrat de travail, calculons les déductions légales et préparons les fiches de salaire chaque mois automatiquement."
+    },
+    "step3": {
+      "title": "Suivez tout en ligne",
+      "description": "Accédez à vos documents depuis votre espace client.",
+      "detail": "Téléchargez vos fiches de salaire, contrats et décomptes annuels à tout moment. Vous recevez une notification dès qu'un nouveau document est disponible."
+    },
+    "cta": {
+      "title": "Prêt à vous lancer ?",
+      "button": "Créer mon compte"
+    }
+  },
+  "about": {
+    "title": "À propos de HappySalary",
+    "subtitle": "Une entreprise suisse au service des employeurs de personnel de maison.",
+    "mission": {
+      "title": "Notre mission",
+      "description": "Nous croyons que chaque employé de maison mérite un salaire déclaré et que chaque employeur mérite une solution simple et abordable pour remplir ses obligations légales. HappySalary a été fondée pour rendre l'emploi domestique en Suisse accessible, transparent et conforme à la loi."
+    },
+    "values": {
+      "title": "Nos valeurs",
+      "quality": {
+        "title": "Qualité",
+        "description": "Nous offrons un service de haute qualité, conçu par des spécialistes de la paie et du droit du travail suisse."
+      },
+      "transparency": {
+        "title": "Transparence",
+        "description": "Nos tarifs sont clairs et fixes. Pas de commission cachée, pas de surprises sur la facture."
+      },
+      "security": {
+        "title": "Sécurité",
+        "description": "Vos données sont hébergées en Suisse et protégées selon les normes les plus strictes."
+      },
+      "simplicity": {
+        "title": "Simplicité",
+        "description": "Une interface intuitive et un processus simplifié, parce que gérer un employé ne devrait pas être compliqué."
+      }
+    },
+    "team": {
+      "title": "Notre équipe",
+      "subtitle": "Des professionnels passionnés au service de votre tranquillité.",
+      "ceo": {
+        "name": "Thomas B.",
+        "role": "Fondateur & CEO",
+        "bio": "Expert en solutions digitales et passionné par la simplification des processus administratifs en Suisse."
+      },
+      "cto": {
+        "name": "Sarah K.",
+        "role": "Directrice technique",
+        "bio": "Ingénieure logiciel spécialisée dans le développement de plateformes sécurisées et performantes."
+      },
+      "ops": {
+        "name": "Marc D.",
+        "role": "Responsable opérations",
+        "bio": "Spécialiste de la paie suisse avec plus de 10 ans d'expérience dans la gestion salariale."
+      },
+      "support": {
+        "name": "Laura M.",
+        "role": "Responsable support client",
+        "bio": "Dévouée à offrir une expérience client exceptionnelle et répondre à toutes vos questions."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Une question ? Notre équipe est à votre disposition pour vous aider.",
+    "form": {
+      "name": "Nom complet",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "subject": "Sujet",
+      "message": "Votre message",
+      "submit": "Envoyer le message",
+      "success": "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais.",
+      "error": "Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter directement par téléphone."
+    },
+    "info": {
+      "address": "HappySalary SA, Rue du Marché 12, 1204 Genève, Suisse",
+      "email": "contact@happysalary.ch",
+      "phone": "+41 22 123 45 67",
+      "hours": "Lundi - Vendredi : 9h00 - 17h00"
+    }
+  },
+  "faq": {
+    "title": "Foire aux questions",
+    "subtitle": "Retrouvez les réponses aux questions les plus fréquentes sur HappySalary.",
+    "categories": {
+      "general": "Général",
+      "pricing": "Tarifs",
+      "services": "Services",
+      "legal": "Juridique"
+    },
+    "general": {
+      "q1": "Qu'est-ce que HappySalary ?",
+      "a1": "HappySalary est un service suisse de gestion de la paie pour les employeurs de personnel de maison. Nous gérons les salaires, les cotisations sociales, les assurances, les contrats de travail et les fiches de salaire, le tout pour un forfait fixe mensuel.",
+      "q2": "Qui peut utiliser HappySalary ?",
+      "a2": "Toute personne en Suisse qui emploie du personnel de maison : femme de ménage, nounou, au pair, aide à domicile pour personnes âgées, jardinier ou tout autre employé domestique.",
+      "q3": "Dans quels cantons HappySalary est-il disponible ?",
+      "a3": "HappySalary est disponible dans tous les cantons suisses. Nous appliquons les barèmes et réglementations spécifiques à chaque canton, notamment en matière d'impôt à la source.",
+      "q4": "Comment créer mon compte ?",
+      "a4": "Rendez-vous sur notre site, cliquez sur « Commencer maintenant » et suivez les étapes d'inscription. Vous aurez besoin des informations personnelles de votre employé (nom, adresse, numéro AVS) et du montant du salaire convenu."
+    },
+    "pricingFaq": {
+      "q1": "Pourquoi un forfait fixe plutôt qu'une commission ?",
+      "a1": "Le forfait fixe garantit un coût prévisible et équitable. Avec un modèle à commission, plus vous payez bien votre employé, plus le service vous coûte cher. Chez HappySalary, le prix reste le même quel que soit le montant du salaire.",
+      "q2": "Les cotisations sociales sont-elles incluses dans le forfait ?",
+      "a2": "Le forfait couvre la gestion et le calcul des cotisations sociales. Les montants des cotisations elles-mêmes (AVS/AI/APG/AC) sont facturés séparément au coût réel, sans aucune majoration de notre part.",
+      "q3": "Y a-t-il un engagement minimum ?",
+      "a3": "Non, il n'y a aucun engagement minimum. Vous pouvez résilier votre abonnement à tout moment. Le service prend fin à la fin du mois en cours."
+    },
+    "servicesFaq": {
+      "q1": "Quels types de contrats de travail proposez-vous ?",
+      "a1": "Nous générons des contrats de travail conformes au Code des obligations suisse et aux contrats-types de travail cantonaux applicables au travail domestique. Chaque contrat est personnalisé selon votre situation.",
+      "q2": "Comment fonctionnent les fiches de salaire ?",
+      "a2": "Chaque mois, nous calculons le salaire net de votre employé, déductions faites des cotisations sociales et de l'impôt à la source le cas échéant. La fiche de salaire est disponible en PDF dans votre espace client.",
+      "q3": "Gérez-vous les assurances accidents ?",
+      "a3": "Oui, dans les plans Comfort et Premium, nous affilions votre employé à l'assurance accidents obligatoire (LAA) et gérons l'ensemble des démarches avec l'assureur."
+    },
+    "legalFaq": {
+      "q1": "Suis-je obligé de déclarer mon employé de maison ?",
+      "a1": "Oui, en Suisse, tout employeur est légalement tenu de déclarer son employé de maison auprès de la caisse de compensation (AVS) et de souscrire une assurance accidents (LAA). Le travail au noir est passible de sanctions pénales.",
+      "q2": "Comment fonctionne l'impôt à la source ?",
+      "a2": "Les employés de nationalité étrangère sans permis C sont soumis à l'impôt à la source. HappySalary calcule automatiquement le montant selon le barème du canton de résidence de l'employé et le déduit du salaire brut.",
+      "q3": "Quelles sont mes obligations en tant qu'employeur ?",
+      "a3": "En tant qu'employeur de personnel de maison, vous devez déclarer votre employé aux assurances sociales, payer les cotisations patronales, souscrire une assurance accidents, établir un contrat de travail et remettre des fiches de salaire mensuelles. HappySalary prend en charge toutes ces obligations pour vous."
+    }
+  },
+  "services": {
+    "cleaningLady": {
+      "title": "Emploi d'une femme de ménage",
+      "subtitle": "Déclarez votre aide ménagère en toute simplicité et restez en conformité avec la loi.",
+      "description": "Que votre femme de ménage travaille quelques heures par semaine ou à temps partiel, HappySalary gère l'ensemble des formalités administratives : cotisations AVS, assurance accidents, contrat de travail et fiches de salaire.",
+      "benefits": {
+        "b1": {
+          "title": "Déclaration simplifiée",
+          "description": "Nous nous chargeons de toutes les déclarations auprès de la caisse de compensation, même pour quelques heures par semaine."
+        },
+        "b2": {
+          "title": "Contrat adapté",
+          "description": "Un contrat de travail conforme au contrat-type cantonal pour le travail domestique, adapté à votre situation."
+        },
+        "b3": {
+          "title": "Assurance en ordre",
+          "description": "Affiliation à l'assurance accidents obligatoire incluse, pour protéger votre employée et vous-même."
+        },
+        "b4": {
+          "title": "Coût maîtrisé",
+          "description": "Un forfait fixe à partir de CHF 9.90/mois, indépendamment du salaire versé."
+        }
+      }
+    },
+    "nanny": {
+      "title": "Emploi d'une nounou",
+      "subtitle": "Faites garder vos enfants en toute légalité, avec tous les papiers en règle.",
+      "description": "Employer une nounou à domicile implique des obligations légales précises. HappySalary vous accompagne pour que votre garde d'enfants soit déclarée correctement, avec toutes les assurances nécessaires.",
+      "benefits": {
+        "b1": {
+          "title": "Conformité totale",
+          "description": "Toutes les cotisations sociales et assurances gérées automatiquement, pour une garde d'enfants en règle."
+        },
+        "b2": {
+          "title": "Déduction fiscale",
+          "description": "Les fiches de salaire établies par HappySalary vous permettent de faire valoir la déduction pour frais de garde dans votre déclaration fiscale."
+        },
+        "b3": {
+          "title": "Contrat sur mesure",
+          "description": "Un contrat incluant les spécificités de la garde d'enfants : horaires, responsabilités, règles de la maison."
+        },
+        "b4": {
+          "title": "Tranquillité d'esprit",
+          "description": "Concentrez-vous sur votre vie de famille, nous gérons l'administratif."
+        }
+      }
+    },
+    "auPair": {
+      "title": "Emploi d'un(e) au pair",
+      "subtitle": "Accueillez un(e) au pair en Suisse en respectant toutes les formalités.",
+      "description": "L'emploi d'un(e) au pair en Suisse est soumis à des règles spécifiques : salaire minimum, horaires de travail, logement et nourriture. HappySalary gère la paie et les obligations sociales pour que votre accueil se passe sans souci.",
+      "benefits": {
+        "b1": {
+          "title": "Réglementation respectée",
+          "description": "Nous vérifions que les conditions d'emploi respectent les normes cantonales applicables aux au pairs."
+        },
+        "b2": {
+          "title": "Impôt à la source géré",
+          "description": "Calcul et retenue automatiques de l'impôt à la source pour les au pairs de nationalité étrangère."
+        },
+        "b3": {
+          "title": "Assurances complètes",
+          "description": "Assurance accidents et, si nécessaire, assurance maladie perte de gain pour votre au pair."
+        },
+        "b4": {
+          "title": "Accompagnement dédié",
+          "description": "Un support spécialisé pour répondre à vos questions sur l'emploi d'au pairs en Suisse."
+        }
+      }
+    },
+    "elderlyCare": {
+      "title": "Aide aux personnes âgées",
+      "subtitle": "Employez une aide à domicile pour un proche en toute légalité.",
+      "description": "Prendre soin d'un proche âgé à domicile nécessite souvent l'emploi d'une aide. HappySalary simplifie les démarches pour que vous puissiez vous concentrer sur le bien-être de votre proche.",
+      "benefits": {
+        "b1": {
+          "title": "Simplicité pour les familles",
+          "description": "Un processus simplifié, même pour les personnes peu familières avec les démarches administratives."
+        },
+        "b2": {
+          "title": "Horaires flexibles",
+          "description": "Gestion des salaires adaptée aux horaires variables et aux prestations de nuit ou de week-end."
+        },
+        "b3": {
+          "title": "Protection de l'employé",
+          "description": "Assurance accidents et couverture sociale complète pour l'aide à domicile."
+        },
+        "b4": {
+          "title": "Documents pour les aides",
+          "description": "Fiches de salaire détaillées utiles pour les demandes de prestations complémentaires ou d'allocation pour impotent."
+        }
+      }
+    },
+    "gardener": {
+      "title": "Emploi d'un jardinier",
+      "subtitle": "Déclarez votre jardinier sans vous compliquer la vie.",
+      "description": "Même pour un jardinier qui intervient quelques heures par mois, la loi exige une déclaration aux assurances sociales. HappySalary rend cette obligation simple et peu coûteuse.",
+      "benefits": {
+        "b1": {
+          "title": "Déclaration même ponctuelle",
+          "description": "Pas besoin d'un volume d'heures minimum. Nous gérons la déclaration même pour quelques heures par mois."
+        },
+        "b2": {
+          "title": "Assurance accidents incluse",
+          "description": "Protection en cas d'accident pendant le travail de jardinage, une obligation légale souvent négligée."
+        },
+        "b3": {
+          "title": "Forfait avantageux",
+          "description": "À partir de CHF 9.90/mois seulement, sans commission sur le salaire versé."
+        },
+        "b4": {
+          "title": "Sérénité juridique",
+          "description": "Vous êtes en règle avec la loi, sans effort de votre part."
+        }
+      }
+    }
+  },
+  "features": {
+    "payroll": {
+      "title": "Gestion des salaires",
+      "subtitle": "Calcul automatique et précis des salaires chaque mois.",
+      "description": "Notre système calcule automatiquement le salaire net de votre employé en tenant compte de toutes les déductions légales. Vous n'avez rien à faire.",
+      "details": [
+        "Calcul automatique du salaire brut au net",
+        "Prise en compte des heures supplémentaires et des vacances",
+        "Gestion des 13ème salaire et indemnités"
+      ]
+    },
+    "socialContributions": {
+      "title": "Cotisations sociales",
+      "subtitle": "AVS, AI, APG, AC : tout est calculé et déclaré pour vous.",
+      "description": "HappySalary calcule les parts employeur et employé des cotisations sociales, établit les décomptes et s'occupe des déclarations auprès de la caisse de compensation.",
+      "details": [
+        "Calcul des cotisations AVS/AI/APG/AC",
+        "Déclaration annuelle auprès de la caisse de compensation",
+        "Prise en charge de la LPP si applicable"
+      ]
+    },
+    "accidentInsurance": {
+      "title": "Assurance accidents",
+      "subtitle": "Protection légale obligatoire pour votre employé.",
+      "description": "Nous affilions votre employé à l'assurance accidents professionnels et non professionnels (LAA), conformément aux exigences légales suisses.",
+      "details": [
+        "Affiliation à la LAA (accidents professionnels et non professionnels)",
+        "Gestion des sinistres en cas d'accident",
+        "Prime intégrée dans le décompte mensuel"
+      ]
+    },
+    "employmentContracts": {
+      "title": "Contrats de travail",
+      "subtitle": "Des contrats conformes et personnalisés en quelques clics.",
+      "description": "Nous générons des contrats de travail conformes au droit suisse et aux contrats-types cantonaux, adaptés à votre situation spécifique.",
+      "details": [
+        "Conformité au Code des obligations et aux CTT cantonaux",
+        "Personnalisation selon le type d'emploi",
+        "Mise à jour automatique en cas de changement"
+      ]
+    },
+    "payslips": {
+      "title": "Fiches de salaire",
+      "subtitle": "Fiches de salaire détaillées et professionnelles chaque mois.",
+      "description": "Chaque mois, une fiche de salaire détaillée est générée automatiquement et mise à disposition en PDF dans votre espace client.",
+      "details": [
+        "Génération automatique mensuelle en PDF",
+        "Détail de toutes les déductions (AVS, LAA, impôt à la source)",
+        "Archivage sécurisé accessible en tout temps"
+      ]
+    }
+  },
+  "testimonials": {
+    "marie": {
+      "name": "Marie L.",
+      "text": "HappySalary m'a retiré un poids énorme. Je payais une commission de 5% sur le salaire de ma femme de ménage chez un concurrent. Désormais, je paie un forfait fixe et j'ai tout inclus. Simple et transparent."
+    },
+    "thomas": {
+      "name": "Thomas M.",
+      "text": "Nous avons une nounou à temps plein et les démarches étaient un vrai casse-tête. Avec HappySalary, le contrat, les fiches de salaire et les cotisations sont gérés automatiquement. Je recommande vivement."
+    },
+    "anna": {
+      "name": "Anna S.",
+      "text": "J'ai accueilli une au pair et je ne savais pas par où commencer pour les formalités. HappySalary a géré l'impôt à la source, l'assurance et le contrat. Un vrai soulagement."
+    },
+    "peter": {
+      "name": "Peter W.",
+      "text": "Ma mère a besoin d'une aide à domicile et nous voulions tout faire dans les règles. HappySalary nous a permis de déclarer l'employée rapidement et sans stress. Le forfait fixe est imbattable."
+    },
+    "sophie": {
+      "name": "Sophie B.",
+      "text": "Mon jardinier ne vient que 4 heures par mois, mais je devais quand même le déclarer. HappySalary rend la chose simple et le coût est dérisoire comparé à une amende pour travail au noir."
+    },
+    "marco": {
+      "name": "Marco R.",
+      "text": "Le support client est excellent. J'ai eu une question sur les cotisations APG et j'ai reçu une réponse claire et détaillée en moins d'une heure. Je suis client Premium et je ne regrette pas."
+    },
+    "roles": {
+      "employerCleaning": "Employeur d'aide ménagère",
+      "employerNanny": "Employeur de nounou",
+      "employerAuPair": "Famille d'accueil au pair",
+      "employerElderlyCare": "Employeur d'aide à domicile",
+      "employerGardener": "Employeur de jardinier"
+    }
+  },
+  "footer": {
+    "description": "HappySalary simplifie la gestion de la paie pour les employeurs de personnel de maison en Suisse. Cotisations sociales, assurances et contrats, tout est géré pour un forfait fixe.",
+    "services": "Services",
+    "features": "Fonctionnalités",
+    "company": "Entreprise",
+    "legal": "Mentions légales",
+    "impressum": "Impressum",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions générales"
+  },
+  "legal": {
+    "impressum": {
+      "title": "Impressum"
+    },
+    "privacy": {
+      "title": "Politique de confidentialité"
+    },
+    "terms": {
+      "title": "Conditions générales d'utilisation"
+    }
+  },
+  "cookie": {
+    "message": "Ce site utilise des cookies pour améliorer votre expérience. En poursuivant votre navigation, vous acceptez leur utilisation.",
+    "accept": "Accepter",
+    "decline": "Refuser",
+    "learnMore": "En savoir plus"
+  }
+}

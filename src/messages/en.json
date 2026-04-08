@@ -1,0 +1,522 @@
+{
+  "common": {
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "perMonth": "/month",
+    "perEmployee": "per employee",
+    "readMore": "Read More",
+    "contactUs": "Contact Us",
+    "backToHome": "Back to Home",
+    "mostPopular": "Most Popular",
+    "allRightsReserved": "All rights reserved",
+    "swissMade": "Made in Switzerland"
+  },
+  "nav": {
+    "services": "Services",
+    "pricing": "Pricing",
+    "howItWorks": "How It Works",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cleaningLady": "Cleaning Lady",
+    "nanny": "Nanny",
+    "auPair": "Au Pair",
+    "elderlyCare": "Elderly Care",
+    "gardener": "Gardener"
+  },
+  "home": {
+    "hero": {
+      "title": "Household payroll, simplified.",
+      "subtitle": "Social contributions, insurance, employment contracts and pay slips: everything included for a fixed monthly price. No commission on gross salary.",
+      "ctaPrimary": "Get Started Free",
+      "ctaSecondary": "View Pricing"
+    },
+    "trustBar": {
+      "title": "Trusted by thousands of Swiss employers"
+    },
+    "features": {
+      "title": "Everything you need to employ with confidence",
+      "subtitle": "HappySalary takes care of all administrative tasks related to your household staff.",
+      "payroll": {
+        "title": "Payroll Management",
+        "description": "Automatic calculation of monthly salaries including all statutory deductions and allowances."
+      },
+      "socialContributions": {
+        "title": "Social Contributions",
+        "description": "Declaration and payment of AHV/IV/EO/ALV contributions to the relevant compensation office."
+      },
+      "insurance": {
+        "title": "Accident Insurance",
+        "description": "Enrolment in compulsory occupational and non-occupational accident insurance (UVG) as required by law."
+      },
+      "contracts": {
+        "title": "Employment Contracts",
+        "description": "Generation of employment contracts compliant with Swiss law, tailored to your specific situation."
+      },
+      "payslips": {
+        "title": "Pay Slips",
+        "description": "Detailed monthly pay slips available as PDF downloads for both you and your employee."
+      },
+      "taxWithholding": {
+        "title": "Withholding Tax",
+        "description": "Calculation and deduction of withholding tax for eligible employees, based on the applicable cantonal tariff."
+      }
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "subtitle": "Three simple steps to manage your household employee's payroll.",
+      "step1": {
+        "title": "Register online",
+        "description": "Create your account in just a few minutes and enter your employee's details."
+      },
+      "step2": {
+        "title": "We handle everything",
+        "description": "Contributions, insurance, contracts and pay slips: we take care of it all."
+      },
+      "step3": {
+        "title": "You stay relaxed",
+        "description": "Receive your documents each month and enjoy the peace of mind of being a fully compliant employer."
+      }
+    },
+    "comparison": {
+      "title": "Why choose HappySalary?",
+      "subtitle": "Compare our flat-fee model with commission-based providers on the market.",
+      "feature": "Feature",
+      "happySalary": "HappySalary",
+      "competitors": "Competitors",
+      "pricingModel": "Pricing model",
+      "flatFee": "Fixed monthly fee",
+      "commission": "Commission on gross salary",
+      "hiddenCosts": "Hidden costs",
+      "none": "None",
+      "possible": "Possible",
+      "allInclusive": "All inclusive",
+      "yes": "Yes",
+      "extra": "Extra charge",
+      "support": "Customer support",
+      "included": "Included",
+      "paid": "Paid"
+    },
+    "stats": {
+      "households": "Employer households in Switzerland",
+      "undeclared": "Still employ undeclared workers",
+      "savings": "Savings vs. commission-based providers",
+      "cantons": "Cantons covered"
+    },
+    "testimonials": {
+      "title": "What our clients say",
+      "subtitle": "Discover feedback from our users across Switzerland."
+    },
+    "cta": {
+      "title": "Ready to simplify your household payroll?",
+      "subtitle": "Join thousands of Swiss employers who have chosen the simplicity of HappySalary.",
+      "button": "Get Started Now"
+    }
+  },
+  "pricing": {
+    "title": "Clear and transparent pricing",
+    "subtitle": "A fixed fee per employee per month, with no commission on gross salary. No surprises.",
+    "basic": {
+      "name": "Basic",
+      "description": "The essentials for managing your employee's payroll and social contributions."
+    },
+    "comfort": {
+      "name": "Comfort",
+      "description": "The complete solution with insurance and employment contracts included."
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "The full-service package with priority support and personalised legal advice."
+    },
+    "features": {
+      "payroll": "Payroll management",
+      "socialContributions": "Social contributions (AHV/IV/EO/ALV)",
+      "payslips": "Monthly pay slips",
+      "annualStatement": "Annual salary statement",
+      "accidentInsurance": "Accident insurance (UVG)",
+      "employmentContract": "Compliant employment contract",
+      "sicknessInsurance": "Daily sickness allowance insurance",
+      "prioritySupport": "Priority support",
+      "legalAdvice": "Employment law advice"
+    },
+    "cta": "Choose This Plan",
+    "faq": {
+      "title": "Frequently asked questions about pricing",
+      "q1": "Why a flat fee rather than a commission?",
+      "a1": "Our flat fee guarantees predictable costs every month, regardless of your employee's salary. Unlike commission-based providers, you do not pay more when you increase your employee's salary or hours. It is fairer and more transparent.",
+      "q2": "Can I change plan at any time?",
+      "a2": "Yes, you can switch between plans at any time from your account dashboard. The change takes effect the following month. There are no cancellation fees and no minimum commitment.",
+      "q3": "Are there any hidden costs?",
+      "a3": "Absolutely none. The price displayed is the price you pay. Social contributions and insurance premiums are invoiced separately at cost, with no mark-up on our part.",
+      "q4": "What does each plan include exactly?",
+      "a4": "The Basic plan includes full payroll and social contributions management. The Comfort plan adds accident and sickness insurance as well as employment contract generation. The Premium plan additionally includes priority support and employment law advice."
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "Get started in minutes and let HappySalary handle the administration for you.",
+    "step1": {
+      "title": "Create your account",
+      "description": "Register online in less than 5 minutes.",
+      "detail": "Enter your details and your employee's information: name, address, AHV number, agreed salary and employment rate. Our form guides you through each step."
+    },
+    "step2": {
+      "title": "We take over",
+      "description": "HappySalary handles all the administrative formalities.",
+      "detail": "We register your employee with the social insurance scheme, generate the employment contract, calculate statutory deductions and prepare the pay slips automatically each month."
+    },
+    "step3": {
+      "title": "Track everything online",
+      "description": "Access your documents from your account dashboard.",
+      "detail": "Download pay slips, contracts and annual statements at any time. You receive a notification as soon as a new document is available."
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "button": "Create My Account"
+    }
+  },
+  "about": {
+    "title": "About HappySalary",
+    "subtitle": "A Swiss company serving household employers.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "We believe that every household employee deserves a declared salary and that every employer deserves a simple, affordable solution to meet their legal obligations. HappySalary was founded to make household employment in Switzerland accessible, transparent and fully compliant."
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": {
+        "title": "Quality",
+        "description": "We deliver a high-quality service, designed by specialists in Swiss payroll and employment law."
+      },
+      "transparency": {
+        "title": "Transparency",
+        "description": "Our pricing is clear and fixed. No hidden commissions, no surprises on your invoice."
+      },
+      "security": {
+        "title": "Security",
+        "description": "Your data is hosted in Switzerland and protected to the highest standards."
+      },
+      "simplicity": {
+        "title": "Simplicity",
+        "description": "An intuitive interface and a streamlined process, because managing an employee should not be complicated."
+      }
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "Dedicated professionals committed to your peace of mind.",
+      "ceo": {
+        "name": "Thomas B.",
+        "role": "Founder & CEO",
+        "bio": "Expert in digital solutions with a passion for simplifying administrative processes in Switzerland."
+      },
+      "cto": {
+        "name": "Sarah K.",
+        "role": "Technical Director",
+        "bio": "Software engineer specialising in the development of secure, high-performance platforms."
+      },
+      "ops": {
+        "name": "Marc D.",
+        "role": "Head of Operations",
+        "bio": "Swiss payroll specialist with over 10 years of experience in salary administration."
+      },
+      "support": {
+        "name": "Laura M.",
+        "role": "Head of Customer Support",
+        "bio": "Dedicated to delivering an outstanding customer experience and answering all your questions."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Have a question? Our team is here to help.",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone number",
+      "subject": "Subject",
+      "message": "Your message",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully. We will get back to you as soon as possible.",
+      "error": "An error occurred while sending your message. Please try again or contact us directly by phone."
+    },
+    "info": {
+      "address": "HappySalary SA, Rue du Marché 12, 1204 Geneva, Switzerland",
+      "email": "contact@happysalary.ch",
+      "phone": "+41 22 123 45 67",
+      "hours": "Monday – Friday: 9:00 AM – 5:00 PM"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to the most common questions about HappySalary.",
+    "categories": {
+      "general": "General",
+      "pricing": "Pricing",
+      "services": "Services",
+      "legal": "Legal"
+    },
+    "general": {
+      "q1": "What is HappySalary?",
+      "a1": "HappySalary is a Swiss payroll service for household employers. We manage salaries, social contributions, insurance, employment contracts and pay slips — all for a fixed monthly fee.",
+      "q2": "Who can use HappySalary?",
+      "a2": "Anyone in Switzerland who employs household staff: cleaning lady, nanny, au pair, elderly care assistant, gardener or any other domestic employee.",
+      "q3": "In which cantons is HappySalary available?",
+      "a3": "HappySalary is available in all Swiss cantons. We apply the specific tariffs and regulations for each canton, particularly with regard to withholding tax.",
+      "q4": "How do I create my account?",
+      "a4": "Visit our website, click on ‘Get Started’ and follow the registration steps. You will need your employee's personal details (name, address, AHV number) and the agreed salary."
+    },
+    "pricingFaq": {
+      "q1": "Why a flat fee instead of a commission?",
+      "a1": "A flat fee guarantees predictable and fair costs. With a commission model, the better you pay your employee, the more the service costs you. At HappySalary, the price stays the same regardless of the salary amount.",
+      "q2": "Are social contributions included in the flat fee?",
+      "a2": "The flat fee covers the management and calculation of social contributions. The contributions themselves (AHV/IV/EO/ALV) are invoiced separately at cost, with no mark-up whatsoever on our part.",
+      "q3": "Is there a minimum commitment?",
+      "a3": "No, there is no minimum commitment. You can cancel your subscription at any time. The service ends at the end of the current month."
+    },
+    "servicesFaq": {
+      "q1": "What types of employment contracts do you offer?",
+      "a1": "We generate employment contracts that comply with the Swiss Code of Obligations and the applicable cantonal standard employment contracts for domestic workers. Each contract is individually tailored to your situation.",
+      "q2": "How do the pay slips work?",
+      "a2": "Each month, we calculate your employee's net salary after deducting social contributions and, where applicable, withholding tax. The pay slip is available as a PDF in your account dashboard.",
+      "q3": "Do you manage accident insurance?",
+      "a3": "Yes, with the Comfort and Premium plans, we register your employee with the compulsory accident insurance (UVG) and handle all the formalities with the insurer."
+    },
+    "legalFaq": {
+      "q1": "Am I required to declare my household employee?",
+      "a1": "Yes, in Switzerland every employer is legally required to register their household employee with the compensation office (AHV) and to take out accident insurance (UVG). Undeclared work is a criminal offence.",
+      "q2": "How does withholding tax work?",
+      "a2": "Foreign employees without a C settlement permit are subject to withholding tax. HappySalary automatically calculates the amount based on the tariff of the employee's canton of residence and deducts it from the gross salary.",
+      "q3": "What are my obligations as an employer?",
+      "a3": "As a household employer, you must register your employee with social insurance, pay employer contributions, take out accident insurance, draw up an employment contract and issue monthly pay slips. HappySalary takes care of all these obligations on your behalf."
+    }
+  },
+  "services": {
+    "cleaningLady": {
+      "title": "Employing a Cleaning Lady",
+      "subtitle": "Register your cleaner simply and in full compliance with the law.",
+      "description": "Whether your cleaning lady works just a few hours per week or part-time, HappySalary handles all the administrative formalities: AHV contributions, accident insurance, employment contract and pay slips.",
+      "benefits": {
+        "b1": {
+          "title": "Simplified registration",
+          "description": "We handle all registrations with the compensation office, even for just a few hours per week."
+        },
+        "b2": {
+          "title": "Tailored contract",
+          "description": "An employment contract compliant with the cantonal standard contract for domestic workers, adapted to your situation."
+        },
+        "b3": {
+          "title": "Insurance sorted",
+          "description": "Compulsory accident insurance included, protecting both your employee and yourself."
+        },
+        "b4": {
+          "title": "Predictable costs",
+          "description": "A flat fee from CHF 9.90/month, regardless of the salary paid."
+        }
+      }
+    },
+    "nanny": {
+      "title": "Employing a Nanny",
+      "subtitle": "Have your children looked after legally, with all the paperwork in order.",
+      "description": "Employing a nanny at home involves specific legal obligations. HappySalary supports you so that your childcare arrangement is correctly registered and insured.",
+      "benefits": {
+        "b1": {
+          "title": "Full compliance",
+          "description": "All social contributions and insurance managed automatically, for a fully compliant childcare arrangement."
+        },
+        "b2": {
+          "title": "Tax deduction",
+          "description": "The pay slips issued by HappySalary allow you to claim the childcare cost deduction on your tax return."
+        },
+        "b3": {
+          "title": "Bespoke contract",
+          "description": "A contract covering the specifics of childcare: working hours, responsibilities and household rules."
+        },
+        "b4": {
+          "title": "Peace of mind",
+          "description": "Focus on your family life whilst we handle the administration."
+        }
+      }
+    },
+    "auPair": {
+      "title": "Employing an Au Pair",
+      "subtitle": "Welcome an au pair to Switzerland in full compliance with all formalities.",
+      "description": "Employing an au pair in Switzerland is subject to specific rules: minimum salary, working hours, board and lodging. HappySalary manages the payroll and social insurance obligations so that your hosting runs smoothly.",
+      "benefits": {
+        "b1": {
+          "title": "Regulatory compliance",
+          "description": "We verify that the employment conditions meet the cantonal requirements applicable to au pairs."
+        },
+        "b2": {
+          "title": "Withholding tax managed",
+          "description": "Automatic calculation and deduction of withholding tax for foreign au pairs."
+        },
+        "b3": {
+          "title": "Comprehensive insurance",
+          "description": "Accident insurance and, where required, daily sickness allowance insurance for your au pair."
+        },
+        "b4": {
+          "title": "Dedicated guidance",
+          "description": "Specialised support to answer your questions about employing an au pair in Switzerland."
+        }
+      }
+    },
+    "elderlyCare": {
+      "title": "Elderly Care at Home",
+      "subtitle": "Employ a home carer for a loved one in full compliance with the law.",
+      "description": "Caring for an elderly relative at home often requires employing a carer. HappySalary simplifies the formalities so that you can focus on your loved one's wellbeing.",
+      "benefits": {
+        "b1": {
+          "title": "Simple for families",
+          "description": "A streamlined process, even for those unfamiliar with administrative procedures."
+        },
+        "b2": {
+          "title": "Flexible hours",
+          "description": "Payroll management adapted to variable working hours, including evenings and weekends."
+        },
+        "b3": {
+          "title": "Employee protection",
+          "description": "Accident insurance and full social insurance coverage for the home carer."
+        },
+        "b4": {
+          "title": "Supporting documentation",
+          "description": "Detailed pay slips useful for applications for supplementary benefits or helplessness allowance."
+        }
+      }
+    },
+    "gardener": {
+      "title": "Employing a Gardener",
+      "subtitle": "Register your gardener without the headache.",
+      "description": "Even for a gardener who works just a few hours per month, the law requires registration with social insurance. HappySalary makes this obligation simple and affordable.",
+      "benefits": {
+        "b1": {
+          "title": "Even for occasional work",
+          "description": "No minimum number of hours required. We manage the registration even for just a few hours per month."
+        },
+        "b2": {
+          "title": "Accident insurance included",
+          "description": "Protection in case of an accident during gardening work — a legal obligation that is often overlooked."
+        },
+        "b3": {
+          "title": "Great value flat fee",
+          "description": "From just CHF 9.90/month, with no commission on the salary paid."
+        },
+        "b4": {
+          "title": "Legal peace of mind",
+          "description": "You are fully compliant with the law, with no effort on your part."
+        }
+      }
+    }
+  },
+  "features": {
+    "payroll": {
+      "title": "Payroll Management",
+      "subtitle": "Automatic and precise salary calculation every month.",
+      "description": "Our system automatically calculates your employee's net salary, taking into account all statutory deductions. You do not need to do a thing.",
+      "details": [
+        "Automatic gross-to-net salary calculation",
+        "Overtime and holiday entitlement accounted for",
+        "Management of 13th-month salary and allowances"
+      ]
+    },
+    "socialContributions": {
+      "title": "Social Contributions",
+      "subtitle": "AHV, IV, EO, ALV: all calculated and declared for you.",
+      "description": "HappySalary calculates both employer and employee shares of social contributions, prepares the statements and handles all declarations to the compensation office.",
+      "details": [
+        "Calculation of AHV/IV/EO/ALV contributions",
+        "Annual declaration to the compensation office",
+        "BVG administration where applicable"
+      ]
+    },
+    "accidentInsurance": {
+      "title": "Accident Insurance",
+      "subtitle": "Compulsory legal protection for your employee.",
+      "description": "We register your employee with the occupational and non-occupational accident insurance (UVG), in accordance with Swiss legal requirements.",
+      "details": [
+        "UVG enrolment (occupational and non-occupational accident insurance)",
+        "Claims management in the event of an accident",
+        "Premium integrated into the monthly statement"
+      ]
+    },
+    "employmentContracts": {
+      "title": "Employment Contracts",
+      "subtitle": "Compliant, personalised contracts in just a few clicks.",
+      "description": "We generate employment contracts that comply with Swiss law and cantonal standard contracts, tailored to your specific situation.",
+      "details": [
+        "Compliance with the Code of Obligations and cantonal standard contracts",
+        "Customisation according to employment type",
+        "Automatic updates when changes occur"
+      ]
+    },
+    "payslips": {
+      "title": "Pay Slips",
+      "subtitle": "Detailed, professional pay slips every month.",
+      "description": "Each month, a detailed pay slip is automatically generated and made available as a PDF in your account dashboard.",
+      "details": [
+        "Automatic monthly generation as PDF",
+        "Full breakdown of all deductions (AHV, UVG, withholding tax)",
+        "Secure archive accessible at any time"
+      ]
+    }
+  },
+  "testimonials": {
+    "marie": {
+      "name": "Marie L.",
+      "text": "HappySalary has taken a huge weight off my shoulders. I was paying a 5% commission on my cleaner's salary with another provider. Now I pay a flat fee and everything is included. Simple and transparent."
+    },
+    "thomas": {
+      "name": "Thomas M.",
+      "text": "We have a full-time nanny and the paperwork was a nightmare. With HappySalary, the contract, pay slips and contributions are all managed automatically. I highly recommend it."
+    },
+    "anna": {
+      "name": "Anna S.",
+      "text": "I hosted an au pair and had no idea where to start with the formalities. HappySalary handled the withholding tax, insurance and contract. A real relief."
+    },
+    "peter": {
+      "name": "Peter W.",
+      "text": "My mother needs a home carer and we wanted to do everything by the book. HappySalary allowed us to register the employee quickly and without stress. The flat fee is unbeatable."
+    },
+    "sophie": {
+      "name": "Sophie B.",
+      "text": "My gardener only comes 4 hours a month, but I still had to register him. HappySalary makes it straightforward and the cost is negligible compared to a fine for undeclared work."
+    },
+    "marco": {
+      "name": "Marco R.",
+      "text": "The customer support is excellent. I had a question about EO contributions and received a clear, detailed answer within an hour. I am a Premium customer and I have no regrets."
+    },
+    "roles": {
+      "employerCleaning": "Household cleaner employer",
+      "employerNanny": "Nanny employer",
+      "employerAuPair": "Au pair host family",
+      "employerElderlyCare": "Home care employer",
+      "employerGardener": "Gardener employer"
+    }
+  },
+  "footer": {
+    "description": "HappySalary simplifies payroll management for household employers in Switzerland. Social contributions, insurance and contracts, all managed for a fixed fee.",
+    "services": "Services",
+    "features": "Features",
+    "company": "Company",
+    "legal": "Legal",
+    "impressum": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions"
+  },
+  "legal": {
+    "impressum": {
+      "title": "Legal Notice"
+    },
+    "privacy": {
+      "title": "Privacy Policy"
+    },
+    "terms": {
+      "title": "Terms and Conditions"
+    }
+  },
+  "cookie": {
+    "message": "This website uses cookies to improve your experience. By continuing to browse, you accept their use.",
+    "accept": "Accept",
+    "decline": "Decline",
+    "learnMore": "Learn More"
+  }
+}

@@ -1,0 +1,522 @@
+{
+  "common": {
+    "getStarted": "Jetzt starten",
+    "learnMore": "Mehr erfahren",
+    "perMonth": "/Monat",
+    "perEmployee": "pro Mitarbeiter",
+    "readMore": "Weiterlesen",
+    "contactUs": "Kontakt aufnehmen",
+    "backToHome": "Zurück zur Startseite",
+    "mostPopular": "Am beliebtesten",
+    "allRightsReserved": "Alle Rechte vorbehalten",
+    "swissMade": "Made in Switzerland"
+  },
+  "nav": {
+    "services": "Dienstleistungen",
+    "pricing": "Preise",
+    "howItWorks": "So funktioniert’s",
+    "about": "Über uns",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "cleaningLady": "Reinigungskraft",
+    "nanny": "Kinderbetreuung",
+    "auPair": "Au-Pair",
+    "elderlyCare": "Seniorenbetreuung",
+    "gardener": "Gärtner"
+  },
+  "home": {
+    "hero": {
+      "title": "Lohnabrechnung für Ihr Hauspersonal, einfach gemacht.",
+      "subtitle": "AHV, Versicherungen, Arbeitsverträge und Lohnabrechnungen: alles inklusive für eine feste monatliche Gebühr. Keine Provision auf den Bruttolohn.",
+      "ctaPrimary": "Kostenlos starten",
+      "ctaSecondary": "Preise ansehen"
+    },
+    "trustBar": {
+      "title": "Tausende Schweizer Arbeitgeber vertrauen uns"
+    },
+    "features": {
+      "title": "Alles, was Sie für eine sorglose Anstellung brauchen",
+      "subtitle": "HappySalary kümmert sich um sämtliche administrativen Aufgaben rund um Ihr Hauspersonal.",
+      "payroll": {
+        "title": "Lohnverwaltung",
+        "description": "Automatische Berechnung der monatlichen Löhne inklusive gesetzlicher Abzüge und Zulagen."
+      },
+      "socialContributions": {
+        "title": "Sozialversicherungsbeiträge",
+        "description": "Anmeldung und Abführung der AHV/IV/EO/ALV-Beiträge bei der zuständigen Ausgleichskasse."
+      },
+      "insurance": {
+        "title": "Unfallversicherung",
+        "description": "Anmeldung zur obligatorischen Berufs- und Nichtberufsunfallversicherung (UVG) gemäss Gesetz."
+      },
+      "contracts": {
+        "title": "Arbeitsverträge",
+        "description": "Erstellung rechtskonformer Arbeitsverträge nach Schweizer Recht, auf Ihre Situation zugeschnitten."
+      },
+      "payslips": {
+        "title": "Lohnabrechnungen",
+        "description": "Detaillierte monatliche Lohnabrechnungen als PDF zum Herunterladen für Sie und Ihren Mitarbeiter."
+      },
+      "taxWithholding": {
+        "title": "Quellensteuer",
+        "description": "Berechnung und Abzug der Quellensteuer für betroffene Mitarbeiter gemäss kantonalem Tarif."
+      }
+    },
+    "howItWorks": {
+      "title": "So funktioniert’s",
+      "subtitle": "Drei einfache Schritte zur Lohnabrechnung für Ihr Hauspersonal.",
+      "step1": {
+        "title": "Online registrieren",
+        "description": "Erstellen Sie Ihr Konto in wenigen Minuten und geben Sie die Daten Ihres Mitarbeiters ein."
+      },
+      "step2": {
+        "title": "Wir erledigen alles",
+        "description": "Beiträge, Versicherungen, Verträge und Lohnabrechnungen: wir kümmern uns um alles."
+      },
+      "step3": {
+        "title": "Sie bleiben entspannt",
+        "description": "Erhalten Sie monatlich Ihre Dokumente und geniessen Sie die Sicherheit eines gesetzeskonformen Arbeitgebers."
+      }
+    },
+    "comparison": {
+      "title": "Warum HappySalary wählen?",
+      "subtitle": "Vergleichen Sie unser Festpreismodell mit provisionsbasierten Anbietern.",
+      "feature": "Merkmal",
+      "happySalary": "HappySalary",
+      "competitors": "Mitbewerber",
+      "pricingModel": "Preismodell",
+      "flatFee": "Feste Monatsgebühr",
+      "commission": "Provision auf den Bruttolohn",
+      "hiddenCosts": "Versteckte Kosten",
+      "none": "Keine",
+      "possible": "Möglich",
+      "allInclusive": "Alles inklusive",
+      "yes": "Ja",
+      "extra": "Gegen Aufpreis",
+      "support": "Kundensupport",
+      "included": "Inklusive",
+      "paid": "Kostenpflichtig"
+    },
+    "stats": {
+      "households": "Arbeitgeberhaushalte in der Schweiz",
+      "undeclared": "Arbeiten noch schwarz",
+      "savings": "Ersparnis gegenüber der Konkurrenz",
+      "cantons": "Abgedeckte Kantone"
+    },
+    "testimonials": {
+      "title": "Was unsere Kunden sagen",
+      "subtitle": "Erfahrungsberichte unserer Nutzer aus der ganzen Schweiz."
+    },
+    "cta": {
+      "title": "Bereit, die Verwaltung Ihres Hauspersonals zu vereinfachen?",
+      "subtitle": "Schliessen Sie sich Tausenden Schweizer Arbeitgebern an, die sich für die Einfachheit von HappySalary entschieden haben.",
+      "button": "Jetzt starten"
+    }
+  },
+  "pricing": {
+    "title": "Klare und transparente Preise",
+    "subtitle": "Eine feste Gebühr pro Mitarbeiter und Monat, ohne Provision auf den Bruttolohn. Keine Überraschungen.",
+    "basic": {
+      "name": "Basic",
+      "description": "Das Wesentliche für die Lohn- und Sozialversicherungsverwaltung Ihres Mitarbeiters."
+    },
+    "comfort": {
+      "name": "Comfort",
+      "description": "Die komplette Lösung mit Versicherungen und Arbeitsverträgen inklusive."
+    },
+    "premium": {
+      "name": "Premium",
+      "description": "Der Rundum-Service mit priorisiertem Support und persönlicher Rechtsberatung."
+    },
+    "features": {
+      "payroll": "Lohnverwaltung",
+      "socialContributions": "Sozialversicherungsbeiträge (AHV/IV/EO/ALV)",
+      "payslips": "Monatliche Lohnabrechnungen",
+      "annualStatement": "Jährliche Lohnabrechnung",
+      "accidentInsurance": "Unfallversicherung (UVG)",
+      "employmentContract": "Rechtskonformer Arbeitsvertrag",
+      "sicknessInsurance": "Krankentaggeldversicherung",
+      "prioritySupport": "Prioritärer Support",
+      "legalAdvice": "Arbeitsrechtliche Beratung"
+    },
+    "cta": "Diesen Plan wählen",
+    "faq": {
+      "title": "Häufige Fragen zu unseren Preisen",
+      "q1": "Warum ein Festpreis statt einer Provision?",
+      "a1": "Unser Festpreis garantiert Ihnen jeden Monat planbare Kosten, unabhängig vom Lohn Ihres Mitarbeiters. Im Gegensatz zu provisionsbasierten Anbietern zahlen Sie nicht mehr, wenn Sie den Lohn oder die Stunden erhöhen. Das ist fairer und transparenter.",
+      "q2": "Kann ich jederzeit den Plan wechseln?",
+      "a2": "Ja, Sie können jederzeit über Ihr Kundenkonto den Plan wechseln. Der Wechsel wird ab dem nächsten Monat wirksam. Es gibt keine Kündigungsgebühren und keine Mindestlaufzeit.",
+      "q3": "Gibt es versteckte Kosten?",
+      "a3": "Absolut keine. Der angezeigte Preis ist der Preis, den Sie bezahlen. Sozialversicherungsbeiträge und Versicherungsprämien werden separat zum Selbstkostenpreis berechnet, ohne Aufschlag unsererseits.",
+      "q4": "Was umfasst jeder Plan genau?",
+      "a4": "Der Plan Basic umfasst die vollständige Lohn- und Sozialversicherungsverwaltung. Der Plan Comfort bietet zusätzlich Unfall- und Krankenversicherung sowie die Erstellung von Arbeitsverträgen. Der Plan Premium enthält darüber hinaus priorisierten Support und arbeitsrechtliche Beratung."
+    }
+  },
+  "howItWorks": {
+    "title": "So funktioniert’s",
+    "subtitle": "Starten Sie in wenigen Minuten und lassen Sie HappySalary die Administration für Sie erledigen.",
+    "step1": {
+      "title": "Konto erstellen",
+      "description": "Registrieren Sie sich online in weniger als 5 Minuten.",
+      "detail": "Geben Sie Ihre Angaben und die Daten Ihres Mitarbeiters ein: Name, Adresse, AHV-Nummer, vereinbarter Lohn und Beschäftigungsgrad. Unser Formular führt Sie Schritt für Schritt."
+    },
+    "step2": {
+      "title": "Wir übernehmen",
+      "description": "HappySalary erledigt sämtliche administrativen Formalitäten.",
+      "detail": "Wir melden Ihren Mitarbeiter bei den Sozialversicherungen an, erstellen den Arbeitsvertrag, berechnen die gesetzlichen Abzüge und bereiten die Lohnabrechnungen jeden Monat automatisch vor."
+    },
+    "step3": {
+      "title": "Alles online einsehen",
+      "description": "Greifen Sie auf Ihre Dokumente über Ihr Kundenkonto zu.",
+      "detail": "Laden Sie Lohnabrechnungen, Verträge und Jahresabrechnungen jederzeit herunter. Sie erhalten eine Benachrichtigung, sobald ein neues Dokument verfügbar ist."
+    },
+    "cta": {
+      "title": "Bereit loszulegen?",
+      "button": "Konto erstellen"
+    }
+  },
+  "about": {
+    "title": "Über HappySalary",
+    "subtitle": "Ein Schweizer Unternehmen im Dienste der Arbeitgeber von Hauspersonal.",
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Wir sind überzeugt, dass jeder Hausangestellte einen deklarierten Lohn verdient und jeder Arbeitgeber eine einfache und erschwingliche Lösung verdient, um seine gesetzlichen Pflichten zu erfüllen. HappySalary wurde gegründet, um die Hausanstellung in der Schweiz zugänglich, transparent und gesetzeskonform zu machen."
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "quality": {
+        "title": "Qualität",
+        "description": "Wir bieten einen hochwertigen Service, entwickelt von Spezialisten für Schweizer Lohnwesen und Arbeitsrecht."
+      },
+      "transparency": {
+        "title": "Transparenz",
+        "description": "Unsere Preise sind klar und fest. Keine versteckten Provisionen, keine Überraschungen auf der Rechnung."
+      },
+      "security": {
+        "title": "Sicherheit",
+        "description": "Ihre Daten werden in der Schweiz gehostet und nach höchsten Standards geschützt."
+      },
+      "simplicity": {
+        "title": "Einfachheit",
+        "description": "Eine intuitive Oberfläche und ein vereinfachter Prozess, denn Personalverwaltung sollte nicht kompliziert sein."
+      }
+    },
+    "team": {
+      "title": "Unser Team",
+      "subtitle": "Engagierte Fachleute für Ihre Sorglosigkeit.",
+      "ceo": {
+        "name": "Thomas B.",
+        "role": "Gründer & CEO",
+        "bio": "Experte für digitale Lösungen mit Leidenschaft für die Vereinfachung administrativer Prozesse in der Schweiz."
+      },
+      "cto": {
+        "name": "Sarah K.",
+        "role": "Technische Direktorin",
+        "bio": "Software-Ingenieurin spezialisiert auf die Entwicklung sicherer und leistungsfähiger Plattformen."
+      },
+      "ops": {
+        "name": "Marc D.",
+        "role": "Leiter Operations",
+        "bio": "Schweizer Lohnspezialist mit über 10 Jahren Erfahrung in der Lohnverwaltung."
+      },
+      "support": {
+        "name": "Laura M.",
+        "role": "Leiterin Kundensupport",
+        "bio": "Engagiert für ein herausragendes Kundenerlebnis und die Beantwortung all Ihrer Fragen."
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Haben Sie eine Frage? Unser Team steht Ihnen gerne zur Verfügung.",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "subject": "Betreff",
+      "message": "Ihre Nachricht",
+      "submit": "Nachricht senden",
+      "success": "Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns so bald wie möglich bei Ihnen.",
+      "error": "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt telefonisch."
+    },
+    "info": {
+      "address": "HappySalary SA, Rue du Marché 12, 1204 Genève, Schweiz",
+      "email": "contact@happysalary.ch",
+      "phone": "+41 22 123 45 67",
+      "hours": "Montag – Freitag: 9:00 – 17:00 Uhr"
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf die häufigsten Fragen zu HappySalary.",
+    "categories": {
+      "general": "Allgemein",
+      "pricing": "Preise",
+      "services": "Dienstleistungen",
+      "legal": "Rechtliches"
+    },
+    "general": {
+      "q1": "Was ist HappySalary?",
+      "a1": "HappySalary ist ein Schweizer Lohnabrechnungsservice für Arbeitgeber von Hauspersonal. Wir verwalten Löhne, Sozialversicherungsbeiträge, Versicherungen, Arbeitsverträge und Lohnabrechnungen – alles für eine feste monatliche Gebühr.",
+      "q2": "Wer kann HappySalary nutzen?",
+      "a2": "Jede Person in der Schweiz, die Hauspersonal beschäftigt: Reinigungskraft, Kinderbetreuung, Au-Pair, Seniorenbetreuung, Gärtner oder andere Hausangestellte.",
+      "q3": "In welchen Kantonen ist HappySalary verfügbar?",
+      "a3": "HappySalary ist in allen Schweizer Kantonen verfügbar. Wir wenden die kantonsspezifischen Tarife und Regelungen an, insbesondere bei der Quellensteuer.",
+      "q4": "Wie erstelle ich mein Konto?",
+      "a4": "Besuchen Sie unsere Website, klicken Sie auf «Jetzt starten» und folgen Sie den Registrierungsschritten. Sie benötigen die persönlichen Daten Ihres Mitarbeiters (Name, Adresse, AHV-Nummer) und den vereinbarten Lohn."
+    },
+    "pricingFaq": {
+      "q1": "Warum ein Festpreis statt einer Provision?",
+      "a1": "Der Festpreis garantiert planbare und faire Kosten. Bei einem Provisionsmodell zahlen Sie mehr, je besser Sie Ihren Mitarbeiter entlöhnen. Bei HappySalary bleibt der Preis gleich, unabhängig von der Lohnhöhe.",
+      "q2": "Sind die Sozialversicherungsbeiträge im Festpreis enthalten?",
+      "a2": "Der Festpreis deckt die Verwaltung und Berechnung der Sozialversicherungsbeiträge ab. Die Beiträge selbst (AHV/IV/EO/ALV) werden separat zum Selbstkostenpreis berechnet, ohne jeglichen Aufschlag unsererseits.",
+      "q3": "Gibt es eine Mindestlaufzeit?",
+      "a3": "Nein, es gibt keine Mindestlaufzeit. Sie können Ihr Abonnement jederzeit kündigen. Der Service endet zum Ende des laufenden Monats."
+    },
+    "servicesFaq": {
+      "q1": "Welche Arten von Arbeitsverträgen bieten Sie an?",
+      "a1": "Wir erstellen Arbeitsverträge, die dem Schweizerischen Obligationenrecht und den kantonalen Normalarbeitsverträgen für Hausangestellte entsprechen. Jeder Vertrag wird individuell auf Ihre Situation zugeschnitten.",
+      "q2": "Wie funktionieren die Lohnabrechnungen?",
+      "a2": "Jeden Monat berechnen wir den Nettolohn Ihres Mitarbeiters nach Abzug der Sozialversicherungsbeiträge und gegebenenfalls der Quellensteuer. Die Lohnabrechnung steht als PDF in Ihrem Kundenkonto zur Verfügung.",
+      "q3": "Verwalten Sie die Unfallversicherung?",
+      "a3": "Ja, in den Plänen Comfort und Premium melden wir Ihren Mitarbeiter bei der obligatorischen Unfallversicherung (UVG) an und übernehmen sämtliche Formalitäten mit dem Versicherer."
+    },
+    "legalFaq": {
+      "q1": "Muss ich mein Hauspersonal anmelden?",
+      "a1": "Ja, in der Schweiz ist jeder Arbeitgeber gesetzlich verpflichtet, sein Hauspersonal bei der Ausgleichskasse (AHV) anzumelden und eine Unfallversicherung (UVG) abzuschliessen. Schwarzarbeit ist strafbar.",
+      "q2": "Wie funktioniert die Quellensteuer?",
+      "a2": "Ausländische Arbeitnehmer ohne Niederlassungsbewilligung C unterliegen der Quellensteuer. HappySalary berechnet den Betrag automatisch gemäss dem Tarif des Wohnkantons des Mitarbeiters und zieht ihn vom Bruttolohn ab.",
+      "q3": "Welche Pflichten habe ich als Arbeitgeber?",
+      "a3": "Als Arbeitgeber von Hauspersonal müssen Sie Ihren Mitarbeiter bei den Sozialversicherungen anmelden, Arbeitgeberbeiträge zahlen, eine Unfallversicherung abschliessen, einen Arbeitsvertrag erstellen und monatliche Lohnabrechnungen ausstellen. HappySalary übernimmt all diese Pflichten für Sie."
+    }
+  },
+  "services": {
+    "cleaningLady": {
+      "title": "Reinigungskraft anstellen",
+      "subtitle": "Melden Sie Ihre Reinigungskraft einfach und gesetzeskonform an.",
+      "description": "Ob Ihre Reinigungskraft nur wenige Stunden pro Woche oder in Teilzeit arbeitet – HappySalary kümmert sich um sämtliche administrativen Formalitäten: AHV-Beiträge, Unfallversicherung, Arbeitsvertrag und Lohnabrechnungen.",
+      "benefits": {
+        "b1": {
+          "title": "Vereinfachte Anmeldung",
+          "description": "Wir übernehmen sämtliche Anmeldungen bei der Ausgleichskasse, auch für wenige Stunden pro Woche."
+        },
+        "b2": {
+          "title": "Passender Vertrag",
+          "description": "Ein rechtskonformer Arbeitsvertrag gemäss dem kantonalen Normalarbeitsvertrag für Hausangestellte, auf Ihre Situation angepasst."
+        },
+        "b3": {
+          "title": "Versicherung in Ordnung",
+          "description": "Die obligatorische Unfallversicherung inklusive, um Ihre Mitarbeiterin und Sie selbst zu schützen."
+        },
+        "b4": {
+          "title": "Kalkulierbare Kosten",
+          "description": "Eine Festgebühr ab CHF 9.90/Monat, unabhängig vom ausgezahlten Lohn."
+        }
+      }
+    },
+    "nanny": {
+      "title": "Kinderbetreuung anstellen",
+      "subtitle": "Lassen Sie Ihre Kinder legal betreuen, mit allen Papieren in Ordnung.",
+      "description": "Die Anstellung einer Kinderbetreuung zu Hause bringt bestimmte gesetzliche Pflichten mit sich. HappySalary begleitet Sie, damit Ihre Kinderbetreuung korrekt angemeldet und versichert ist.",
+      "benefits": {
+        "b1": {
+          "title": "Vollständige Konformität",
+          "description": "Alle Sozialversicherungsbeiträge und Versicherungen automatisch verwaltet, für eine gesetzeskonforme Kinderbetreuung."
+        },
+        "b2": {
+          "title": "Steuerabzug",
+          "description": "Die von HappySalary erstellten Lohnabrechnungen ermöglichen Ihnen, den Steuerabzug für Kinderbetreuungskosten geltend zu machen."
+        },
+        "b3": {
+          "title": "Massgeschneiderter Vertrag",
+          "description": "Ein Vertrag mit den Besonderheiten der Kinderbetreuung: Arbeitszeiten, Verantwortlichkeiten, Hausregeln."
+        },
+        "b4": {
+          "title": "Sorgenfreiheit",
+          "description": "Konzentrieren Sie sich auf Ihr Familienleben, wir kümmern uns um die Administration."
+        }
+      }
+    },
+    "auPair": {
+      "title": "Au-Pair anstellen",
+      "subtitle": "Nehmen Sie ein Au-Pair in der Schweiz auf, unter Einhaltung aller Formalitäten.",
+      "description": "Die Anstellung eines Au-Pairs in der Schweiz unterliegt besonderen Regeln: Mindestlohn, Arbeitszeiten, Unterkunft und Verpflegung. HappySalary verwaltet die Lohnabrechnung und die Sozialversicherungspflichten, damit Ihr Aufenthalt reibungslos verläuft.",
+      "benefits": {
+        "b1": {
+          "title": "Regelkonformität",
+          "description": "Wir prüfen, ob die Anstellungsbedingungen den kantonalen Vorschriften für Au-Pairs entsprechen."
+        },
+        "b2": {
+          "title": "Quellensteuer verwaltet",
+          "description": "Automatische Berechnung und Einbehaltung der Quellensteuer für ausländische Au-Pairs."
+        },
+        "b3": {
+          "title": "Umfassende Versicherungen",
+          "description": "Unfallversicherung und bei Bedarf Krankentaggeldversicherung für Ihr Au-Pair."
+        },
+        "b4": {
+          "title": "Spezialisierte Begleitung",
+          "description": "Ein spezialisierter Support für Ihre Fragen rund um die Au-Pair-Anstellung in der Schweiz."
+        }
+      }
+    },
+    "elderlyCare": {
+      "title": "Seniorenbetreuung",
+      "subtitle": "Stellen Sie eine Haushaltshilfe für einen Angehörigen legal an.",
+      "description": "Die Betreuung eines älteren Angehörigen zu Hause erfordert oft die Anstellung einer Hilfskraft. HappySalary vereinfacht die Formalitäten, damit Sie sich auf das Wohlbefinden Ihres Angehörigen konzentrieren können.",
+      "benefits": {
+        "b1": {
+          "title": "Einfach für Familien",
+          "description": "Ein vereinfachter Prozess, auch für Personen, die mit administrativen Schritten wenig vertraut sind."
+        },
+        "b2": {
+          "title": "Flexible Arbeitszeiten",
+          "description": "Lohnverwaltung angepasst an wechselnde Arbeitszeiten sowie Nacht- und Wochenendarbeit."
+        },
+        "b3": {
+          "title": "Schutz der Mitarbeiterin",
+          "description": "Unfallversicherung und vollständige Sozialversicherungsdeckung für die Haushaltshilfe."
+        },
+        "b4": {
+          "title": "Dokumente für Anträge",
+          "description": "Detaillierte Lohnabrechnungen, nützlich für Anträge auf Ergänzungsleistungen oder Hilflosenentschädigung."
+        }
+      }
+    },
+    "gardener": {
+      "title": "Gärtner anstellen",
+      "subtitle": "Melden Sie Ihren Gärtner an, ohne sich den Kopf zu zerbrechen.",
+      "description": "Selbst für einen Gärtner, der nur wenige Stunden pro Monat arbeitet, verlangt das Gesetz eine Anmeldung bei den Sozialversicherungen. HappySalary macht diese Pflicht einfach und kostengünstig.",
+      "benefits": {
+        "b1": {
+          "title": "Auch bei geringer Beschäftigung",
+          "description": "Kein Mindeststundenvolumen nötig. Wir verwalten die Anmeldung auch für nur wenige Stunden pro Monat."
+        },
+        "b2": {
+          "title": "Unfallversicherung inklusive",
+          "description": "Schutz bei Unfällen während der Gartenarbeit – eine gesetzliche Pflicht, die oft vernachlässigt wird."
+        },
+        "b3": {
+          "title": "Günstiger Festpreis",
+          "description": "Ab nur CHF 9.90/Monat, ohne Provision auf den ausgezahlten Lohn."
+        },
+        "b4": {
+          "title": "Rechtliche Sicherheit",
+          "description": "Sie sind gesetzeskonform, ohne Aufwand Ihrerseits."
+        }
+      }
+    }
+  },
+  "features": {
+    "payroll": {
+      "title": "Lohnverwaltung",
+      "subtitle": "Automatische und präzise Lohnberechnung jeden Monat.",
+      "description": "Unser System berechnet automatisch den Nettolohn Ihres Mitarbeiters unter Berücksichtigung aller gesetzlichen Abzüge. Sie müssen nichts tun.",
+      "details": [
+        "Automatische Berechnung vom Brutto- zum Nettolohn",
+        "Berücksichtigung von Überstunden und Ferienanspruch",
+        "Verwaltung von 13. Monatslohn und Zulagen"
+      ]
+    },
+    "socialContributions": {
+      "title": "Sozialversicherungsbeiträge",
+      "subtitle": "AHV, IV, EO, ALV: alles berechnet und gemeldet für Sie.",
+      "description": "HappySalary berechnet die Arbeitgeber- und Arbeitnehmeranteile der Sozialversicherungsbeiträge, erstellt die Abrechnungen und übernimmt die Meldungen an die Ausgleichskasse.",
+      "details": [
+        "Berechnung der AHV/IV/EO/ALV-Beiträge",
+        "Jährliche Meldung an die Ausgleichskasse",
+        "Übernahme der BVG-Verwaltung falls zutreffend"
+      ]
+    },
+    "accidentInsurance": {
+      "title": "Unfallversicherung",
+      "subtitle": "Obligatorischer gesetzlicher Schutz für Ihren Mitarbeiter.",
+      "description": "Wir melden Ihren Mitarbeiter bei der Berufs- und Nichtberufsunfallversicherung (UVG) an, gemäss den gesetzlichen Anforderungen der Schweiz.",
+      "details": [
+        "Anmeldung bei der UVG (Berufs- und Nichtberufsunfallversicherung)",
+        "Schadenabwicklung bei Unfällen",
+        "Prämie in der monatlichen Abrechnung integriert"
+      ]
+    },
+    "employmentContracts": {
+      "title": "Arbeitsverträge",
+      "subtitle": "Rechtskonforme und individuelle Verträge mit wenigen Klicks.",
+      "description": "Wir erstellen Arbeitsverträge, die dem Schweizer Recht und den kantonalen Normalarbeitsverträgen entsprechen, zugeschnitten auf Ihre spezifische Situation.",
+      "details": [
+        "Konformität mit dem Obligationenrecht und den kantonalen NAV",
+        "Individualisierung je nach Anstellungsart",
+        "Automatische Aktualisierung bei Änderungen"
+      ]
+    },
+    "payslips": {
+      "title": "Lohnabrechnungen",
+      "subtitle": "Detaillierte und professionelle Lohnabrechnungen jeden Monat.",
+      "description": "Jeden Monat wird automatisch eine detaillierte Lohnabrechnung erstellt und als PDF in Ihrem Kundenkonto bereitgestellt.",
+      "details": [
+        "Automatische monatliche Erstellung als PDF",
+        "Detaillierte Auflistung aller Abzüge (AHV, UVG, Quellensteuer)",
+        "Sicheres Archiv, jederzeit zugänglich"
+      ]
+    }
+  },
+  "testimonials": {
+    "marie": {
+      "name": "Marie L.",
+      "text": "HappySalary hat mir eine riesige Last abgenommen. Ich zahlte bei einem anderen Anbieter 5% Provision auf den Lohn meiner Reinigungskraft. Jetzt zahle ich einen Festpreis und habe alles inklusive. Einfach und transparent."
+    },
+    "thomas": {
+      "name": "Thomas M.",
+      "text": "Wir haben eine Vollzeit-Kinderbetreuung und der Papierkram war ein Albtraum. Mit HappySalary werden Vertrag, Lohnabrechnungen und Beiträge automatisch verwaltet. Ich kann es nur weiterempfehlen."
+    },
+    "anna": {
+      "name": "Anna S.",
+      "text": "Ich habe ein Au-Pair aufgenommen und wusste nicht, wo ich mit den Formalitäten anfangen sollte. HappySalary hat die Quellensteuer, die Versicherung und den Vertrag übernommen. Eine echte Erleichterung."
+    },
+    "peter": {
+      "name": "Peter W.",
+      "text": "Meine Mutter braucht eine Haushaltshilfe und wir wollten alles korrekt machen. HappySalary hat uns ermöglicht, die Mitarbeiterin schnell und stressfrei anzumelden. Der Festpreis ist unschlagbar."
+    },
+    "sophie": {
+      "name": "Sophie B.",
+      "text": "Mein Gärtner kommt nur 4 Stunden im Monat, aber ich musste ihn trotzdem anmelden. HappySalary macht es einfach und die Kosten sind minimal im Vergleich zu einer Busse für Schwarzarbeit."
+    },
+    "marco": {
+      "name": "Marco R.",
+      "text": "Der Kundensupport ist ausgezeichnet. Ich hatte eine Frage zu den EO-Beiträgen und erhielt innerhalb einer Stunde eine klare und ausführliche Antwort. Ich bin Premium-Kunde und bereue es nicht."
+    },
+    "roles": {
+      "employerCleaning": "Arbeitgeber einer Reinigungskraft",
+      "employerNanny": "Arbeitgeber einer Nanny",
+      "employerAuPair": "Au-pair-Gastfamilie",
+      "employerElderlyCare": "Arbeitgeber einer Betreuungsperson",
+      "employerGardener": "Arbeitgeber eines Gärtners"
+    }
+  },
+  "footer": {
+    "description": "HappySalary vereinfacht die Lohnverwaltung für Arbeitgeber von Hauspersonal in der Schweiz. Sozialversicherungsbeiträge, Versicherungen und Verträge – alles verwaltet für einen Festpreis.",
+    "services": "Dienstleistungen",
+    "features": "Funktionen",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "impressum": "Impressum",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Allgemeine Geschäftsbedingungen"
+  },
+  "legal": {
+    "impressum": {
+      "title": "Impressum"
+    },
+    "privacy": {
+      "title": "Datenschutzerklärung"
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen"
+    }
+  },
+  "cookie": {
+    "message": "Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern. Durch die weitere Nutzung stimmen Sie der Verwendung zu.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen",
+    "learnMore": "Mehr erfahren"
+  }
+}
