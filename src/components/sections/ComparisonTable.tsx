@@ -28,9 +28,7 @@ export function ComparisonTable() {
                     {t("feature")}
                   </th>
                   <th className="p-4 lg:p-6 text-center bg-primary/5">
-                    <div className="flex flex-col items-center gap-1">
-                      <span className="text-primary font-bold text-base">HappySalary</span>
-                    </div>
+                    <span className="text-primary font-bold text-base">HappySalary</span>
                   </th>
                   <th className="p-4 lg:p-6 text-center">
                     <span className="text-text-muted font-medium">{t("competitors")}</span>
@@ -65,37 +63,39 @@ export function ComparisonTable() {
             </table>
           </div>
 
-          {/* Mobile: side-by-side comparison cards */}
-          <div className="sm:hidden space-y-3">
-            {/* Column headers */}
-            <div className="flex gap-2 mb-1 px-1">
-              <div className="flex-1" />
-              <div className="w-[100px] text-center">
-                <span className="text-xs font-bold text-primary">HappySalary</span>
+          {/* Mobile: clean two-column table */}
+          <div className="sm:hidden overflow-hidden rounded-2xl border border-border bg-white shadow-lg">
+            {/* Header row */}
+            <div className="grid grid-cols-2 border-b-2 border-primary/20">
+              <div className="p-3 text-center bg-primary/5 border-r border-border">
+                <span className="text-sm font-bold text-primary">HappySalary</span>
               </div>
-              <div className="w-[100px] text-center">
-                <span className="text-xs font-medium text-text-muted">{t("competitors")}</span>
+              <div className="p-3 text-center">
+                <span className="text-sm font-medium text-text-muted">{t("competitors")}</span>
               </div>
             </div>
-            {rows.map((row) => (
-              <div key={row.key} className="bg-white rounded-xl border border-border p-3 shadow-sm">
-                <p className="text-xs font-medium text-text mb-2">{t(row.key)}</p>
-                <div className="flex items-center gap-2">
-                  <div className="flex-1 bg-success/10 rounded-lg px-2 py-1.5 text-center">
-                    <span className="text-xs font-semibold text-success flex items-center justify-center gap-1">
-                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            {/* Data rows */}
+            {rows.map((row, idx) => (
+              <div key={row.key} className={idx < rows.length - 1 ? "border-b border-border" : ""}>
+                <div className="px-3 pt-3 pb-1">
+                  <span className="text-xs font-semibold text-text uppercase tracking-wide">{t(row.key)}</span>
+                </div>
+                <div className="grid grid-cols-2">
+                  <div className="p-3 pt-1 bg-primary/5 border-r border-border">
+                    <div className="flex items-center gap-1.5">
+                      <svg className="w-4 h-4 text-success flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                       </svg>
-                      {row.hs}
-                    </span>
+                      <span className="text-sm font-semibold text-success">{row.hs}</span>
+                    </div>
                   </div>
-                  <div className="flex-1 bg-red-50 rounded-lg px-2 py-1.5 text-center">
-                    <span className="text-xs text-red-400 flex items-center justify-center gap-1">
-                      <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="p-3 pt-1">
+                    <div className="flex items-center gap-1.5">
+                      <svg className="w-4 h-4 text-red-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                       </svg>
-                      {row.comp}
-                    </span>
+                      <span className="text-sm text-red-400">{row.comp}</span>
+                    </div>
                   </div>
                 </div>
               </div>
