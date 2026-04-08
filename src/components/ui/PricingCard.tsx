@@ -17,13 +17,15 @@ export function PricingCard({ plan }: Props) {
       className={cn(
         "relative rounded-2xl bg-surface border p-6 lg:p-8 flex flex-col h-full transition-all duration-300",
         plan.highlighted
-          ? "border-primary shadow-xl shadow-primary/10 lg:scale-105"
+          ? "border-primary shadow-xl shadow-primary/10 lg:scale-105 mt-4"
           : "border-border hover:border-primary/20 hover:shadow-lg"
       )}
     >
       {plan.highlighted && (
-        <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-          <Badge variant="primary">{tc("mostPopular")}</Badge>
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+          <span className="inline-flex items-center rounded-full bg-primary px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-white shadow-md whitespace-nowrap">
+            {tc("mostPopular")}
+          </span>
         </div>
       )}
 
