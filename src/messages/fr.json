@@ -1,6 +1,6 @@
 {
   "common": {
-    "getStarted": "Commencer maintenant",
+    "getStarted": "Commencer",
     "learnMore": "En savoir plus",
     "perMonth": "/mois",
     "perEmployee": "par employé",
@@ -28,8 +28,8 @@
     "hero": {
       "title": "La paie de vos employés de maison, simplifiée.",
       "subtitle": "AVS, assurances, contrats de travail et fiches de salaire : tout est inclus pour un prix fixe mensuel. Sans commission sur le salaire brut.",
-      "ctaPrimary": "Démarrer gratuitement",
-      "ctaSecondary": "Découvrir nos tarifs"
+      "ctaPrimary": "Voir les tarifs",
+      "ctaSecondary": "Comment ça marche"
     },
     "trustBar": {
       "title": "Des milliers d'employeurs en Suisse nous font confiance"
@@ -110,7 +110,7 @@
     "cta": {
       "title": "Prêt à simplifier la gestion de votre employé de maison ?",
       "subtitle": "Rejoignez des milliers d'employeurs suisses qui ont choisi la simplicité avec HappySalary.",
-      "button": "Commencer maintenant"
+      "button": "Découvrir nos offres"
     }
   },
   "pricing": {

@@ -1,6 +1,6 @@
 {
   "common": {
-    "getStarted": "Jetzt starten",
+    "getStarted": "Loslegen",
     "learnMore": "Mehr erfahren",
     "perMonth": "/Monat",
     "perEmployee": "pro Mitarbeiter",
@@ -28,8 +28,8 @@
     "hero": {
       "title": "Lohnabrechnung für Ihr Hauspersonal, einfach gemacht.",
       "subtitle": "AHV, Versicherungen, Arbeitsverträge und Lohnabrechnungen: alles inklusive für eine feste monatliche Gebühr. Keine Provision auf den Bruttolohn.",
-      "ctaPrimary": "Kostenlos starten",
-      "ctaSecondary": "Preise ansehen"
+      "ctaPrimary": "Preise ansehen",
+      "ctaSecondary": "So funktioniert's"
     },
     "trustBar": {
       "title": "Tausende Schweizer Arbeitgeber vertrauen uns"
@@ -110,7 +110,7 @@
     "cta": {
       "title": "Bereit, die Verwaltung Ihres Hauspersonals zu vereinfachen?",
       "subtitle": "Schliessen Sie sich Tausenden Schweizer Arbeitgebern an, die sich für die Einfachheit von HappySalary entschieden haben.",
-      "button": "Jetzt starten"
+      "button": "Unsere Angebote entdecken"
     }
   },
   "pricing": {

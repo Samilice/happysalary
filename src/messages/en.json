@@ -28,8 +28,8 @@
     "hero": {
       "title": "Household payroll, simplified.",
       "subtitle": "Social contributions, insurance, employment contracts and pay slips: everything included for a fixed monthly price. No commission on gross salary.",
-      "ctaPrimary": "Get Started Free",
-      "ctaSecondary": "View Pricing"
+      "ctaPrimary": "View Pricing",
+      "ctaSecondary": "How It Works"
     },
     "trustBar": {
       "title": "Trusted by thousands of Swiss employers"
@@ -110,7 +110,7 @@
     "cta": {
       "title": "Ready to simplify your household payroll?",
       "subtitle": "Join thousands of Swiss employers who have chosen the simplicity of HappySalary.",
-      "button": "Get Started Now"
+      "button": "Discover Our Plans"
     }
   },
   "pricing": {
