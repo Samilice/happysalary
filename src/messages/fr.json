@@ -108,9 +108,9 @@
       "subtitle": "Découvrez les retours de nos utilisateurs à travers la Suisse."
     },
     "cta": {
-      "title": "Prêt à simplifier la gestion de votre employé de maison ?",
-      "subtitle": "Rejoignez des milliers d'employeurs suisses qui ont choisi la simplicité avec HappySalary.",
-      "button": "Découvrir nos offres"
+      "title": "Prêt à simplifier votre paie ?",
+      "subtitle": "Rejoignez les employeurs suisses qui ont choisi HappySalary.",
+      "button": "Voir les tarifs"
     }
   },
   "pricing": {
@@ -201,34 +201,21 @@
         "description": "Une interface intuitive et un processus simplifié, parce que gérer un employé ne devrait pas être compliqué."
       }
     },
-    "team": {
-      "title": "Notre équipe",
-      "subtitle": "Des professionnels passionnés au service de votre tranquillité.",
-      "ceo": {
-        "name": "Thomas B.",
-        "role": "Fondateur & CEO",
-        "bio": "Expert en solutions digitales et passionné par la simplification des processus administratifs en Suisse."
-      },
-      "cto": {
-        "name": "Sarah K.",
-        "role": "Directrice technique",
-        "bio": "Ingénieure logiciel spécialisée dans le développement de plateformes sécurisées et performantes."
-      },
-      "ops": {
-        "name": "Marc D.",
-        "role": "Responsable opérations",
-        "bio": "Spécialiste de la paie suisse avec plus de 10 ans d'expérience dans la gestion salariale."
-      },
-      "support": {
-        "name": "Laura M.",
-        "role": "Responsable support client",
-        "bio": "Dévouée à offrir une expérience client exceptionnelle et répondre à toutes vos questions."
-      }
+    "founder": {
+      "name": "Thomas Busquets",
+      "role": "Fondateur",
+      "bio": "Expert en solutions digitales et passionné par la simplification des processus administratifs en Suisse. Thomas a créé HappySalary pour rendre l'emploi domestique accessible et conforme à la loi."
     }
   },
   "contact": {
     "title": "Contactez-nous",
     "subtitle": "Une question ? Notre équipe est à votre disposition pour vous aider.",
+    "labels": {
+      "address": "Adresse",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "hours": "Horaires"
+    },
     "form": {
       "name": "Nom complet",
       "email": "Adresse e-mail",
@@ -240,10 +227,10 @@
       "error": "Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter directement par téléphone."
     },
     "info": {
-      "address": "HappySalary - Thomas Busquets, Rue du Marché 12, 1003 Lausanne",
+      "address": "HappySalary – Thomas Busquets, Suisse",
       "email": "contact@happysalary.ch",
       "phone": "+41 79 526 86 50",
-      "hours": "Lundi - Vendredi : 9h00 - 17h00"
+      "hours": "Lundi – Vendredi : 9h00 – 17h00"
     }
   },
   "faq": {
@@ -504,7 +491,24 @@
   },
   "legal": {
     "impressum": {
-      "title": "Impressum"
+      "title": "Impressum",
+      "operator": "Exploitant du site",
+      "legalForm": "Raison individuelle (RI)",
+      "contactTitle": "Contact",
+      "emailLabel": "E-mail",
+      "websiteLabel": "Site web",
+      "legalFormTitle": "Forme juridique",
+      "legalFormDescription": "Raison individuelle de droit suisse au sens de l'art. 945 CO, exploitée par Thomas Busquets.",
+      "responsiblePerson": "Personne responsable du contenu",
+      "founderRole": "Fondateur et exploitant",
+      "hosting": "Hébergement",
+      "hostingDescription": "Le site est hébergé via Cloudflare Pages. Les données utilisateurs sont traitées et stockées en Suisse et dans l'Union européenne.",
+      "disclaimer": "Clause de non-responsabilité",
+      "disclaimerText": "Les informations publiées sur ce site sont fournies à titre indicatif et sont susceptibles d'être modifiées sans préavis. HappySalary décline toute responsabilité quant à l'exactitude, la fiabilité ou l'exhaustivité des informations présentées. L'utilisation du site et l'accès aux informations qu'il contient se font sous la seule responsabilité de l'utilisateur.",
+      "copyright": "Droits d'auteur",
+      "copyrightText": "L'ensemble du contenu de ce site (textes, images, graphismes, logos, icônes) est protégé par les lois suisses et internationales sur les droits d'auteur. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable de Thomas Busquets est interdite.",
+      "applicableLaw": "Droit applicable et for juridique",
+      "applicableLawText": "Le présent site est soumis au droit suisse. Le for juridique exclusif est Lausanne, canton de Vaud, Suisse."
     },
     "privacy": {
       "title": "Politique de confidentialité"

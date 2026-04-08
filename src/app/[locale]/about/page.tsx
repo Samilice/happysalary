@@ -43,13 +43,6 @@ export default async function AboutPage({ params }: Props) {
     { key: "simplicity", icon: valueIcons[3] },
   ];
 
-  const team = [
-    { key: "ceo" },
-    { key: "cto" },
-    { key: "ops" },
-    { key: "support" },
-  ];
-
   return (
     <>
       {/* Hero */}
@@ -75,8 +68,30 @@ export default async function AboutPage({ params }: Props) {
         </Container>
       </section>
 
-      {/* Values */}
+      {/* Founder */}
       <section className="py-20 lg:py-28 bg-background-alt">
+        <Container>
+          <ScrollReveal>
+            <div className="max-w-2xl mx-auto text-center">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-bold text-primary">T</span>
+              </div>
+              <h3 className="text-lg font-bold text-secondary">
+                {t("founder.name")}
+              </h3>
+              <p className="text-sm font-medium text-primary mb-3">
+                {t("founder.role")}
+              </p>
+              <p className="text-sm text-text-muted max-w-md mx-auto">
+                {t("founder.bio")}
+              </p>
+            </div>
+          </ScrollReveal>
+        </Container>
+      </section>
+
+      {/* Values */}
+      <section className="py-20 lg:py-28">
         <Container>
           <ScrollReveal>
             <SectionHeading title={t("values.title")} />
@@ -93,41 +108,6 @@ export default async function AboutPage({ params }: Props) {
                   </h3>
                   <p className="text-sm text-text-muted">
                     {t(`values.${value.key}.description`)}
-                  </p>
-                </Card>
-              </ScrollReveal>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Team */}
-      <section className="py-20 lg:py-28">
-        <Container>
-          <ScrollReveal>
-            <SectionHeading
-              title={t("team.title")}
-              subtitle={t("team.subtitle")}
-            />
-          </ScrollReveal>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-5xl mx-auto">
-            {team.map((member, idx) => (
-              <ScrollReveal key={member.key} delay={idx * 100}>
-                <Card className="text-center h-full">
-                  {/* Avatar placeholder */}
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-primary">
-                      {t(`team.${member.key}.name`).charAt(0)}
-                    </span>
-                  </div>
-                  <h3 className="text-lg font-bold text-secondary">
-                    {t(`team.${member.key}.name`)}
-                  </h3>
-                  <p className="text-sm font-medium text-primary mb-3">
-                    {t(`team.${member.key}.role`)}
-                  </p>
-                  <p className="text-sm text-text-muted">
-                    {t(`team.${member.key}.bio`)}
                   </p>
                 </Card>
               </ScrollReveal>

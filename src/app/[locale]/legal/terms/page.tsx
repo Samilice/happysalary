@@ -27,7 +27,7 @@ export default async function TermsPage({ params }: Props) {
                 1. Champ d&apos;application
               </h2>
               <p>
-                Les pr&eacute;sentes conditions g&eacute;n&eacute;rales d&apos;utilisation (ci-apr&egrave;s &laquo; CGU &raquo;) r&eacute;gissent l&apos;utilisation de la plateforme HappySalary (ci-apr&egrave;s &laquo; la Plateforme &raquo;), exploit&eacute;e par Thomas Busquets, raison individuelle, Rue du March&eacute; 12, 1003 Lausanne, Suisse (ci-apr&egrave;s &laquo; HappySalary &raquo;). En acc&eacute;dant &agrave; la Plateforme ou en utilisant nos services, l&apos;utilisateur accepte les pr&eacute;sentes CGU dans leur int&eacute;gralit&eacute;.
+                Les pr&eacute;sentes conditions g&eacute;n&eacute;rales d&apos;utilisation (ci-apr&egrave;s &laquo; CGU &raquo;) r&eacute;gissent l&apos;utilisation de la plateforme HappySalary (ci-apr&egrave;s &laquo; la Plateforme &raquo;), exploit&eacute;e par Thomas Busquets, raison individuelle, Suisse (ci-apr&egrave;s &laquo; HappySalary &raquo;). En acc&eacute;dant &agrave; la Plateforme ou en utilisant nos services, l&apos;utilisateur accepte les pr&eacute;sentes CGU dans leur int&eacute;gralit&eacute;.
               </p>
             </div>
 
@@ -183,9 +183,7 @@ export default async function TermsPage({ params }: Props) {
               </p>
               <div className="space-y-1 mt-3">
                 <p>HappySalary &ndash; Thomas Busquets</p>
-                <p>Rue du March&eacute; 12, 1003 Lausanne, Suisse</p>
                 <p>E-mail : <a href="mailto:contact@happysalary.ch" className="text-primary hover:underline">contact@happysalary.ch</a></p>
-                <p>T&eacute;l&eacute;phone : <a href="tel:+41795268650" className="text-primary hover:underline">+41 79 526 86 50</a></p>
               </div>
             </div>
           </div>

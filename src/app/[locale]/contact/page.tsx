@@ -48,7 +48,7 @@ export default async function ContactPage({ params }: Props) {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-secondary mb-1">Adresse</h3>
+                    <h3 className="font-semibold text-secondary mb-1">{t("labels.address")}</h3>
                     <p className="text-text-muted text-sm">{t("info.address")}</p>
                   </div>
                 </div>
@@ -61,7 +61,7 @@ export default async function ContactPage({ params }: Props) {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-secondary mb-1">Email</h3>
+                    <h3 className="font-semibold text-secondary mb-1">{t("labels.email")}</h3>
                     <p className="text-text-muted text-sm">{t("info.email")}</p>
                   </div>
                 </div>
@@ -74,7 +74,7 @@ export default async function ContactPage({ params }: Props) {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-secondary mb-1">Phone</h3>
+                    <h3 className="font-semibold text-secondary mb-1">{t("labels.phone")}</h3>
                     <p className="text-text-muted text-sm">{t("info.phone")}</p>
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default async function ContactPage({ params }: Props) {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-secondary mb-1">Horaires</h3>
+                    <h3 className="font-semibold text-secondary mb-1">{t("labels.hours")}</h3>
                     <p className="text-text-muted text-sm">{t("info.hours")}</p>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export default async function ContactPage({ params }: Props) {
                     <span className="font-bold text-secondary">Swiss Made</span>
                   </div>
                   <p className="text-sm text-text-muted">
-                    HappySalary SA - Suisse
+                    HappySalary &ndash; Thomas Busquets
                   </p>
                 </Card>
               </div>

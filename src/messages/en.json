@@ -108,9 +108,9 @@
       "subtitle": "Discover feedback from our users across Switzerland."
     },
     "cta": {
-      "title": "Ready to simplify your household payroll?",
-      "subtitle": "Join thousands of Swiss employers who have chosen the simplicity of HappySalary.",
-      "button": "Discover Our Plans"
+      "title": "Ready to simplify your payroll?",
+      "subtitle": "Join Swiss employers who have chosen HappySalary.",
+      "button": "View Pricing"
     }
   },
   "pricing": {
@@ -201,34 +201,21 @@
         "description": "An intuitive interface and a streamlined process, because managing an employee should not be complicated."
       }
     },
-    "team": {
-      "title": "Our Team",
-      "subtitle": "Dedicated professionals committed to your peace of mind.",
-      "ceo": {
-        "name": "Thomas B.",
-        "role": "Founder & CEO",
-        "bio": "Expert in digital solutions with a passion for simplifying administrative processes in Switzerland."
-      },
-      "cto": {
-        "name": "Sarah K.",
-        "role": "Technical Director",
-        "bio": "Software engineer specialising in the development of secure, high-performance platforms."
-      },
-      "ops": {
-        "name": "Marc D.",
-        "role": "Head of Operations",
-        "bio": "Swiss payroll specialist with over 10 years of experience in salary administration."
-      },
-      "support": {
-        "name": "Laura M.",
-        "role": "Head of Customer Support",
-        "bio": "Dedicated to delivering an outstanding customer experience and answering all your questions."
-      }
+    "founder": {
+      "name": "Thomas Busquets",
+      "role": "Founder",
+      "bio": "Expert in digital solutions with a passion for simplifying administrative processes in Switzerland. Thomas created HappySalary to make household employment accessible and fully compliant."
     }
   },
   "contact": {
     "title": "Contact Us",
     "subtitle": "Have a question? Our team is here to help.",
+    "labels": {
+      "address": "Address",
+      "email": "Email",
+      "phone": "Phone",
+      "hours": "Hours"
+    },
     "form": {
       "name": "Full name",
       "email": "Email address",
@@ -240,7 +227,7 @@
       "error": "An error occurred while sending your message. Please try again or contact us directly by phone."
     },
     "info": {
-      "address": "HappySalary - Thomas Busquets, Rue du Marché 12, 1003 Lausanne",
+      "address": "HappySalary – Thomas Busquets, Switzerland",
       "email": "contact@happysalary.ch",
       "phone": "+41 79 526 86 50",
       "hours": "Monday – Friday: 9:00 AM – 5:00 PM"
@@ -504,7 +491,24 @@
   },
   "legal": {
     "impressum": {
-      "title": "Legal Notice"
+      "title": "Legal Notice",
+      "operator": "Website operator",
+      "legalForm": "Sole proprietorship (RI)",
+      "contactTitle": "Contact",
+      "emailLabel": "Email",
+      "websiteLabel": "Website",
+      "legalFormTitle": "Legal form",
+      "legalFormDescription": "Swiss sole proprietorship under Art. 945 of the Swiss Code of Obligations, operated by Thomas Busquets.",
+      "responsiblePerson": "Person responsible for content",
+      "founderRole": "Founder and operator",
+      "hosting": "Hosting",
+      "hostingDescription": "The website is hosted via Cloudflare Pages. User data is processed and stored in Switzerland and the European Union.",
+      "disclaimer": "Disclaimer",
+      "disclaimerText": "The information published on this website is provided for informational purposes only and is subject to change without notice. HappySalary accepts no liability for the accuracy, reliability or completeness of the information presented. Use of the website and access to its content is at the user's sole risk.",
+      "copyright": "Copyright",
+      "copyrightText": "All content on this website (text, images, graphics, logos, icons) is protected by Swiss and international copyright law. Any reproduction, distribution or use without the prior written consent of Thomas Busquets is prohibited.",
+      "applicableLaw": "Applicable law and jurisdiction",
+      "applicableLawText": "This website is governed by Swiss law. The exclusive place of jurisdiction is Lausanne, Canton of Vaud, Switzerland."
     },
     "privacy": {
       "title": "Privacy Policy"

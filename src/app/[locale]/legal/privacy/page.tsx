@@ -39,9 +39,7 @@ export default async function PrivacyPage({ params }: Props) {
               <div className="space-y-1">
                 <p><strong>HappySalary &ndash; Thomas Busquets</strong></p>
                 <p>Raison individuelle</p>
-                <p>Rue du March&eacute; 12, 1003 Lausanne, Suisse</p>
                 <p>E-mail : <a href="mailto:contact@happysalary.ch" className="text-primary hover:underline">contact@happysalary.ch</a></p>
-                <p>T&eacute;l&eacute;phone : <a href="tel:+41795268650" className="text-primary hover:underline">+41 79 526 86 50</a></p>
               </div>
               <p className="mt-3">
                 Pour toute question relative &agrave; la protection des donn&eacute;es, veuillez nous contacter &agrave; l&apos;adresse <a href="mailto:contact@happysalary.ch" className="text-primary hover:underline">contact@happysalary.ch</a>.
