@@ -173,9 +173,18 @@
       "description": "Accédez à vos documents depuis votre espace client.",
       "detail": "Téléchargez vos fiches de salaire, contrats et décomptes annuels à tout moment. Vous recevez une notification dès qu'un nouveau document est disponible."
     },
+    "pricing": {
+      "title": "Un forfait simple et transparent",
+      "subtitle": "Par employé, par mois. Sans commission sur le salaire.",
+      "basic": "Essentiel",
+      "comfort": "Comfort",
+      "premium": "Premium",
+      "month": "mois",
+      "popular": "Populaire"
+    },
     "cta": {
       "title": "Prêt à vous lancer ?",
-      "button": "Créer mon compte"
+      "button": "Voir les tarifs"
     }
   },
   "about": {

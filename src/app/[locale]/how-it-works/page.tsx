@@ -105,6 +105,42 @@ export default async function HowItWorksPage({ params }: Props) {
         </Container>
       </section>
 
+      {/* Pricing teaser */}
+      <section className="py-10 sm:py-16 lg:py-20 bg-background-alt">
+        <Container>
+          <ScrollReveal>
+            <div className="text-center max-w-2xl mx-auto mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-secondary mb-3">
+                {t("pricing.title")}
+              </h2>
+              <p className="text-sm sm:text-base text-text-muted">
+                {t("pricing.subtitle")}
+              </p>
+            </div>
+            <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-xl mx-auto">
+              <div className="bg-white rounded-2xl border border-border p-4 sm:p-6 text-center shadow-sm">
+                <p className="text-xs sm:text-sm font-medium text-text-muted mb-1">{t("pricing.basic")}</p>
+                <p className="text-xl sm:text-3xl font-bold text-secondary">9.90</p>
+                <p className="text-[10px] sm:text-xs text-text-muted">CHF/{t("pricing.month")}</p>
+              </div>
+              <div className="bg-white rounded-2xl border-2 border-primary p-4 sm:p-6 text-center shadow-lg relative">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                  <span className="text-[10px] sm:text-xs font-bold text-white bg-primary px-2 sm:px-3 py-0.5 sm:py-1 rounded-full whitespace-nowrap">{t("pricing.popular")}</span>
+                </div>
+                <p className="text-xs sm:text-sm font-medium text-primary mb-1">{t("pricing.comfort")}</p>
+                <p className="text-xl sm:text-3xl font-bold text-secondary">19.90</p>
+                <p className="text-[10px] sm:text-xs text-text-muted">CHF/{t("pricing.month")}</p>
+              </div>
+              <div className="bg-white rounded-2xl border border-border p-4 sm:p-6 text-center shadow-sm">
+                <p className="text-xs sm:text-sm font-medium text-text-muted mb-1">{t("pricing.premium")}</p>
+                <p className="text-xl sm:text-3xl font-bold text-secondary">29.90</p>
+                <p className="text-[10px] sm:text-xs text-text-muted">CHF/{t("pricing.month")}</p>
+              </div>
+            </div>
+          </ScrollReveal>
+        </Container>
+      </section>
+
       {/* CTA */}
       <section className="py-12 sm:py-20 lg:py-28">
         <Container>
@@ -116,9 +152,12 @@ export default async function HowItWorksPage({ params }: Props) {
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white max-w-xl mx-auto mb-6">
                   {t("cta.title")}
                 </h2>
-                <Button href="/pricing" size="lg" className="bg-white text-secondary hover:bg-white/90 shadow-xl">
+                <a
+                  href="/pricing"
+                  className="inline-flex items-center justify-center rounded-xl font-semibold px-8 py-4 text-lg bg-white text-secondary hover:bg-white/90 shadow-xl hover:shadow-2xl transition-all duration-200"
+                >
                   {t("cta.button")}
-                </Button>
+                </a>
               </div>
             </div>
           </ScrollReveal>

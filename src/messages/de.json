@@ -173,9 +173,18 @@
       "description": "Greifen Sie auf Ihre Dokumente über Ihr Kundenkonto zu.",
       "detail": "Laden Sie Lohnabrechnungen, Verträge und Jahresabrechnungen jederzeit herunter. Sie erhalten eine Benachrichtigung, sobald ein neues Dokument verfügbar ist."
     },
+    "pricing": {
+      "title": "Einfache, transparente Preise",
+      "subtitle": "Pro Mitarbeiter, pro Monat. Keine Provision.",
+      "basic": "Essentiell",
+      "comfort": "Comfort",
+      "premium": "Premium",
+      "month": "Monat",
+      "popular": "Beliebt"
+    },
     "cta": {
       "title": "Bereit loszulegen?",
-      "button": "Konto erstellen"
+      "button": "Preise ansehen"
     }
   },
   "about": {

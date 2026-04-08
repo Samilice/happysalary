@@ -173,9 +173,18 @@
       "description": "Access your documents from your account dashboard.",
       "detail": "Download pay slips, contracts and annual statements at any time. You receive a notification as soon as a new document is available."
     },
+    "pricing": {
+      "title": "Simple, transparent pricing",
+      "subtitle": "Per employee, per month. No commission on salary.",
+      "basic": "Essential",
+      "comfort": "Comfort",
+      "premium": "Premium",
+      "month": "month",
+      "popular": "Popular"
+    },
     "cta": {
       "title": "Ready to get started?",
-      "button": "Create My Account"
+      "button": "View Pricing"
     }
   },
   "about": {
