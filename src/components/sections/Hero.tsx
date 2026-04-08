@@ -8,7 +8,7 @@ export function Hero() {
   const t = useTranslations("home.hero");
 
   return (
-    <section className="relative overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-32">
+    <section className="relative overflow-hidden pt-24 pb-12 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-32">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-primary/5" />
       <div className="absolute top-20 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />

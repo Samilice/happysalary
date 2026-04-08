@@ -7,7 +7,7 @@ type Props = {
 
 export function LifestripeBanner({ src, alt }: Props) {
   return (
-    <section className="relative h-48 md:h-64 lg:h-80 overflow-hidden">
+    <section className="relative h-32 sm:h-48 md:h-64 lg:h-80 overflow-hidden">
       <Image
         src={src}
         alt={alt}

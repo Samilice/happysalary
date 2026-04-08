@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
+import { LocaleSwitcher } from "./LocaleSwitcher";
 import { cn } from "@/lib/utils";
 
 type NavLink = {
@@ -77,7 +78,10 @@ export function MobileMenu({ open, onClose, links }: Props) {
           ))}
         </nav>
 
-        <div className="p-4">
+        <div className="p-4 space-y-4">
+          <div className="flex justify-center">
+            <LocaleSwitcher />
+          </div>
           <Button href="/pricing" className="w-full" onClick={onClose}>
             {tc("getStarted")}
           </Button>

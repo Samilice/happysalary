@@ -17,7 +17,7 @@ export function PricingCard({ plan }: Props) {
       className={cn(
         "relative rounded-2xl bg-surface border p-6 lg:p-8 flex flex-col h-full transition-all duration-300",
         plan.highlighted
-          ? "border-primary shadow-xl shadow-primary/10 scale-[1.02] lg:scale-105"
+          ? "border-primary shadow-xl shadow-primary/10 lg:scale-105"
           : "border-border hover:border-primary/20 hover:shadow-lg"
       )}
     >

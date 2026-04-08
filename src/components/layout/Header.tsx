@@ -50,17 +50,17 @@ export function Header() {
       )}
     >
       <Container>
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
+          <Link href="/" className="flex items-center gap-1.5 sm:gap-2 group flex-shrink-0">
             <Image
               src="/images/logo.png"
               alt="HappySalary"
               width={48}
               height={48}
-              className="w-12 h-12"
+              className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
             />
-            <span className="text-xl font-bold text-secondary group-hover:text-primary transition-colors">
+            <span className="text-base sm:text-lg lg:text-xl font-bold text-secondary group-hover:text-primary transition-colors">
               Happy<span className="text-primary">Salary</span>
             </span>
           </Link>
@@ -103,14 +103,20 @@ export function Header() {
           </nav>
 
           {/* Right section */}
-          <div className="flex items-center gap-3">
-            <LocaleSwitcher />
-            <Button href="/pricing" size="sm" className="hidden lg:inline-flex">
-              {tc("getStarted")}
-            </Button>
+          <div className="flex items-center gap-2 sm:gap-3">
+            {/* Locale switcher - hidden on small mobile, shown on sm+ */}
+            <div className="hidden sm:block">
+              <LocaleSwitcher />
+            </div>
+            {/* CTA - desktop only */}
+            <div className="hidden lg:block">
+              <Button href="/pricing" size="sm">
+                {tc("getStarted")}
+              </Button>
+            </div>
             {/* Mobile hamburger */}
             <button
-              className="lg:hidden p-2 text-secondary"
+              className="lg:hidden p-2 text-secondary cursor-pointer"
               onClick={() => setMobileOpen(true)}
               aria-label="Menu"
             >
