@@ -17,12 +17,13 @@ export function OrganizationSchema() {
       data={{
         "@context": "https://schema.org",
         "@type": "Organization",
-        name: "HappySalary",
+        name: "HappySalary - Thomas Busquets",
         url: "https://happysalary.ch",
         logo: "https://happysalary.ch/images/logo.svg",
         contactPoint: {
           "@type": "ContactPoint",
-          telephone: "+41-21-123-45-67",
+          telephone: "+41-79-526-86-50",
+          email: "contact@happysalary.ch",
           contactType: "customer service",
           availableLanguage: ["French", "German", "English"],
         },
@@ -45,12 +46,12 @@ export function LocalBusinessSchema() {
       data={{
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        name: "HappySalary",
+        name: "HappySalary - Thomas Busquets",
         description:
           "Service suisse de gestion des salaires pour les employes de maison",
         url: "https://happysalary.ch",
-        telephone: "+41-21-123-45-67",
-        email: "info@happysalary.ch",
+        telephone: "+41-79-526-86-50",
+        email: "contact@happysalary.ch",
         address: {
           "@type": "PostalAddress",
           streetAddress: "Rue du Marche 12",

@@ -15,106 +15,115 @@ export default async function ImpressumPage({ params }: Props) {
   return (
     <section className="py-20 lg:py-28">
       <Container>
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-secondary mb-10">
             {t("title")}
           </h1>
 
-          <div className="prose prose-lg max-w-none text-text-muted space-y-8">
-            {/* Company Information */}
+          <div className="prose prose-lg max-w-none text-text-muted space-y-10">
+            {/* Exploitant du site */}
             <div>
-              <h2 className="text-xl font-semibold text-secondary mb-3">
-                Angaben gemass Art. 3 Abs. 1 Bst. s DSG / Informations selon art. 3 al. 1 let. s LPD
+              <h2 className="text-xl font-semibold text-secondary mb-4">
+                Exploitant du site
               </h2>
               <div className="space-y-1">
-                <p><strong>HappySalary SA</strong></p>
-                <p>Rue du Marche 12</p>
-                <p>CH-1204 Geneve</p>
-                <p>Suisse / Schweiz</p>
+                <p><strong>HappySalary</strong></p>
+                <p>Thomas Busquets</p>
+                <p>Raison individuelle (RI)</p>
+                <p>Rue du March&eacute; 12</p>
+                <p>1003 Lausanne</p>
+                <p>Suisse</p>
               </div>
             </div>
 
             {/* Contact */}
             <div>
-              <h2 className="text-xl font-semibold text-secondary mb-3">
+              <h2 className="text-xl font-semibold text-secondary mb-4">
                 Contact
               </h2>
               <div className="space-y-1">
-                <p>Telephone : +41 22 123 45 67</p>
-                <p>E-Mail : contact@happysalary.ch</p>
-                <p>Site web : www.happysalary.ch</p>
+                <p>T&eacute;l&eacute;phone : <a href="tel:+41795268650" className="text-primary hover:underline">+41 79 526 86 50</a></p>
+                <p>E-mail g&eacute;n&eacute;ral : <a href="mailto:contact@happysalary.ch" className="text-primary hover:underline">contact@happysalary.ch</a></p>
+                <p>Support : <a href="mailto:support@happysalary.ch" className="text-primary hover:underline">support@happysalary.ch</a></p>
+                <p>Site web : <a href="https://www.happysalary.ch" className="text-primary hover:underline">www.happysalary.ch</a></p>
               </div>
             </div>
 
-            {/* Legal form */}
+            {/* Forme juridique */}
             <div>
-              <h2 className="text-xl font-semibold text-secondary mb-3">
-                Forme juridique / Rechtsform
+              <h2 className="text-xl font-semibold text-secondary mb-4">
+                Forme juridique
               </h2>
               <p>
-                Societe anonyme de droit suisse (SA), inscrite au Registre du commerce du canton de Geneve.
+                Raison individuelle de droit suisse au sens de l&apos;art. 945 CO, exploit&eacute;e par Thomas Busquets.
               </p>
             </div>
 
-            {/* Registration */}
+            {/* Identification */}
             <div>
-              <h2 className="text-xl font-semibold text-secondary mb-3">
-                Registre du commerce / Handelsregister
+              <h2 className="text-xl font-semibold text-secondary mb-4">
+                Num&eacute;ro d&apos;identification
               </h2>
               <div className="space-y-1">
-                <p>Numero IDE : CHE-123.456.789</p>
-                <p>Numero TVA : CHE-123.456.789 TVA</p>
-                <p>Registre du commerce du canton de Geneve</p>
+                <p>Num&eacute;ro IDE (UID) : CHE-XXX.XXX.XXX</p>
               </div>
             </div>
 
-            {/* Responsible person */}
+            {/* Personne responsable */}
             <div>
-              <h2 className="text-xl font-semibold text-secondary mb-3">
-                Personne responsable / Verantwortliche Person
-              </h2>
-              <p>Thomas B., Fondateur & CEO</p>
-            </div>
-
-            {/* Hosting */}
-            <div>
-              <h2 className="text-xl font-semibold text-secondary mb-3">
-                Hebergement / Hosting
+              <h2 className="text-xl font-semibold text-secondary mb-4">
+                Personne responsable du contenu
               </h2>
               <div className="space-y-1">
-                <p>Vercel Inc.</p>
-                <p>440 N Baxter Street, Suite 200</p>
-                <p>Los Angeles, CA 90036, USA</p>
+                <p><strong>Thomas Busquets</strong></p>
+                <p>Fondateur et exploitant</p>
+                <p>Rue du March&eacute; 12, 1003 Lausanne, Suisse</p>
               </div>
             </div>
 
-            {/* Disclaimer */}
+            {/* Hebergement */}
             <div>
-              <h2 className="text-xl font-semibold text-secondary mb-3">
-                Clause de non-responsabilite / Haftungsausschluss
+              <h2 className="text-xl font-semibold text-secondary mb-4">
+                H&eacute;bergement
               </h2>
-              <p>
-                Les informations publiees sur ce site sont fournies a titre indicatif et sont susceptibles d&apos;etre modifiees sans preavis. HappySalary SA decline toute responsabilite quant a l&apos;exactitude, la fiabilite ou l&apos;exhaustivite des informations presentees. L&apos;utilisation du site et l&apos;acces aux informations qu&apos;il contient se font sous la seule responsabilite de l&apos;utilisateur.
+              <div className="space-y-1">
+                <p><strong>Cloudflare, Inc.</strong></p>
+                <p>101 Townsend St</p>
+                <p>San Francisco, CA 94107, USA</p>
+                <p>Site web : <a href="https://www.cloudflare.com" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">www.cloudflare.com</a></p>
+              </div>
+              <p className="mt-2">
+                Le site est h&eacute;berg&eacute; via Cloudflare Pages. Les donn&eacute;es utilisateurs sont trait&eacute;es et stock&eacute;es en Suisse et dans l&apos;Union europ&eacute;enne.
               </p>
             </div>
 
-            {/* Copyright */}
+            {/* Clause de non-responsabilite */}
             <div>
-              <h2 className="text-xl font-semibold text-secondary mb-3">
-                Droits d&apos;auteur / Urheberrecht
+              <h2 className="text-xl font-semibold text-secondary mb-4">
+                Clause de non-responsabilit&eacute;
               </h2>
               <p>
-                L&apos;ensemble du contenu de ce site (textes, images, graphismes, logos, icones) est protege par les lois suisses et internationales sur les droits d&apos;auteur. Toute reproduction, distribution ou utilisation sans autorisation ecrite prealable est interdite.
+                Les informations publi&eacute;es sur ce site sont fournies &agrave; titre indicatif et sont susceptibles d&apos;&ecirc;tre modifi&eacute;es sans pr&eacute;avis. HappySalary d&eacute;cline toute responsabilit&eacute; quant &agrave; l&apos;exactitude, la fiabilit&eacute; ou l&apos;exhaustivit&eacute; des informations pr&eacute;sent&eacute;es. L&apos;utilisation du site et l&apos;acc&egrave;s aux informations qu&apos;il contient se font sous la seule responsabilit&eacute; de l&apos;utilisateur.
               </p>
             </div>
 
-            {/* Applicable law */}
+            {/* Droits d'auteur */}
             <div>
-              <h2 className="text-xl font-semibold text-secondary mb-3">
-                Droit applicable / Anwendbares Recht
+              <h2 className="text-xl font-semibold text-secondary mb-4">
+                Droits d&apos;auteur
               </h2>
               <p>
-                Le present site est soumis au droit suisse. Le for juridique est Geneve, Suisse.
+                L&apos;ensemble du contenu de ce site (textes, images, graphismes, logos, ic&ocirc;nes) est prot&eacute;g&eacute; par les lois suisses et internationales sur les droits d&apos;auteur. Toute reproduction, distribution ou utilisation sans autorisation &eacute;crite pr&eacute;alable de Thomas Busquets est interdite.
+              </p>
+            </div>
+
+            {/* Droit applicable */}
+            <div>
+              <h2 className="text-xl font-semibold text-secondary mb-4">
+                Droit applicable et for juridique
+              </h2>
+              <p>
+                Le pr&eacute;sent site est soumis au droit suisse. Le for juridique exclusif est Lausanne, canton de Vaud, Suisse.
               </p>
             </div>
           </div>

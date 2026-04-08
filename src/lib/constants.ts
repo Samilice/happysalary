@@ -1,6 +1,6 @@
 export const SITE_NAME = "HappySalary";
 export const SITE_URL = "https://happysalary.ch";
-export const CONTACT_EMAIL = "info@happysalary.ch";
+export const CONTACT_EMAIL = "contact@happysalary.ch";
 
 export const STATS = {
   householdsWithEmployees: 250000,
