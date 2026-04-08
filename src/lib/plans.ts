@@ -12,6 +12,7 @@ export interface Plan {
   interval: "month";
   highlighted: boolean;
   stripePriceId: string;
+  paymentLink: string;
   features: PlanFeature[];
 }
 
@@ -23,6 +24,7 @@ export const plans: Plan[] = [
     interval: "month",
     highlighted: false,
     stripePriceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_BASIC || "",
+    paymentLink: "https://buy.stripe.com/aFadR914E1QL0OieTt4Ja00",
     features: [
       { key: "payroll", included: true },
       { key: "socialContributions", included: true },
@@ -42,6 +44,7 @@ export const plans: Plan[] = [
     interval: "month",
     highlighted: true,
     stripePriceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_COMFORT || "",
+    paymentLink: "https://buy.stripe.com/8x2fZh14E7b5fJc7r14Ja01",
     features: [
       { key: "payroll", included: true },
       { key: "socialContributions", included: true },
@@ -61,6 +64,7 @@ export const plans: Plan[] = [
     interval: "month",
     highlighted: false,
     stripePriceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PREMIUM || "",
+    paymentLink: "https://buy.stripe.com/fZudR9aFe6710Oi4eP4Ja02",
     features: [
       { key: "payroll", included: true },
       { key: "socialContributions", included: true },

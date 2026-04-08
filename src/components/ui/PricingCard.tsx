@@ -62,13 +62,19 @@ export function PricingCard({ plan }: Props) {
         ))}
       </ul>
 
-      <Button
-        href={`/checkout?plan=${plan.id}`}
-        variant={plan.highlighted ? "primary" : "outline"}
-        className="w-full"
+      <a
+        href={plan.paymentLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={cn(
+          "inline-flex items-center justify-center rounded-xl font-semibold px-6 py-3 w-full transition-all duration-200",
+          plan.highlighted
+            ? "bg-primary text-white hover:bg-primary-dark shadow-lg shadow-primary/25"
+            : "border-2 border-secondary text-secondary hover:bg-secondary hover:text-white"
+        )}
       >
         {t("cta")}
-      </Button>
+      </a>
     </div>
   );
 }
