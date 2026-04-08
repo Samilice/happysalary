@@ -9,12 +9,12 @@ type Props = {
 
 export function SectionHeading({ title, subtitle, centered = true, className }: Props) {
   return (
-    <div className={cn("mb-12 lg:mb-16", centered && "text-center", className)}>
-      <h2 className="text-3xl font-bold tracking-tight text-secondary sm:text-4xl lg:text-5xl">
+    <div className={cn("mb-8 sm:mb-12 lg:mb-16", centered && "text-center", className)}>
+      <h2 className="text-2xl font-bold tracking-tight text-secondary sm:text-3xl lg:text-4xl xl:text-5xl">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-4 text-lg text-text-muted max-w-3xl mx-auto">{subtitle}</p>
+        <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-text-muted max-w-3xl mx-auto">{subtitle}</p>
       )}
     </div>
   );

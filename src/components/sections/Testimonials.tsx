@@ -28,7 +28,7 @@ export function Testimonials() {
   const tt = useTranslations("testimonials");
 
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-12 sm:py-20 lg:py-28 bg-white">
       <Container>
         <SectionHeading title={t("title")} subtitle={t("subtitle")} />
 

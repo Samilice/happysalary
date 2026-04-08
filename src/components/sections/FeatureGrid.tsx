@@ -18,7 +18,7 @@ export function FeatureGrid() {
   const t = useTranslations("home.features");
 
   return (
-    <section className="py-20 lg:py-28 bg-background">
+    <section className="py-12 sm:py-20 lg:py-28 bg-background">
       <Container>
         <SectionHeading title={t("title")} subtitle={t("subtitle")} />
 

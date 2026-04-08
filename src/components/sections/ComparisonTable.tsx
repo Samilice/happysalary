@@ -14,12 +14,13 @@ export function ComparisonTable() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-secondary/[0.02]">
+    <section className="py-12 sm:py-20 lg:py-28 bg-secondary/[0.02]">
       <Container>
         <SectionHeading title={t("title")} subtitle={t("subtitle")} />
 
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto overflow-hidden rounded-2xl border border-border bg-white shadow-lg">
+          {/* Desktop: table */}
+          <div className="hidden sm:block max-w-3xl mx-auto overflow-hidden rounded-2xl border border-border bg-white shadow-lg">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-border">
@@ -55,6 +56,24 @@ export function ComparisonTable() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile: stacked cards */}
+          <div className="sm:hidden space-y-3">
+            {rows.map((row) => (
+              <div key={row.key} className="bg-white rounded-xl border border-border p-4 shadow-sm">
+                <p className="text-xs font-medium text-text-muted mb-2">{t(row.key)}</p>
+                <div className="flex items-center justify-between">
+                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-success bg-success/10 px-3 py-1 rounded-full">
+                    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    {row.hs}
+                  </span>
+                  <span className="text-xs text-text-light line-through">{row.comp}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </ScrollReveal>
       </Container>

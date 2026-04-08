@@ -7,7 +7,7 @@ export function CTABanner() {
   const t = useTranslations("home.cta");
 
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-12 sm:py-20 lg:py-28">
       <Container>
         <ScrollReveal>
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-secondary via-secondary to-secondary-light p-10 lg:p-16 text-center">
