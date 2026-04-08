@@ -32,7 +32,10 @@
       "ctaSecondary": "How It Works"
     },
     "trustBar": {
-      "title": "Trusted by thousands of Swiss employers"
+      "compliance": "Fully compliant",
+      "secure": "Data hosted in Switzerland",
+      "noCommission": "No commission",
+      "cantons": "26 cantons"
     },
     "features": {
       "title": "Everything you need to employ with confidence",

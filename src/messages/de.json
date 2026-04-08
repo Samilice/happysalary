@@ -32,7 +32,10 @@
       "ctaSecondary": "So funktioniert's"
     },
     "trustBar": {
-      "title": "Tausende Schweizer Arbeitgeber vertrauen uns"
+      "compliance": "100% konform",
+      "secure": "Daten in der Schweiz",
+      "noCommission": "Keine Provision",
+      "cantons": "26 Kantone"
     },
     "features": {
       "title": "Alles, was Sie für eine sorglose Anstellung brauchen",
