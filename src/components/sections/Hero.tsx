@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -65,14 +64,14 @@ export function Hero() {
           <ScrollReveal delay={200}>
             <div className="relative flex items-center justify-center mt-4 lg:mt-0">
               <div className="relative w-full max-w-sm sm:max-w-md xl:max-w-lg mx-auto">
-                <div className="relative aspect-[4/3] sm:aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl">
-                  <Image
-                    src="/images/hero-illustration.webp"
+                <div className="relative aspect-[16/9] sm:aspect-[4/5] rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl sm:shadow-2xl">
+                  {/* Animated GIF hero */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/images/hero-video.gif"
                     alt="Happy Swiss family at home"
-                    fill
-                    className="object-cover object-center"
-                    priority
-                    sizes="(max-width: 640px) 90vw, (max-width: 1024px) 60vw, 448px"
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                    loading="eager"
                   />
                 </div>
 
