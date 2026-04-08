@@ -104,10 +104,8 @@ export function Header() {
 
           {/* Right section */}
           <div className="flex items-center gap-2 sm:gap-3">
-            {/* Locale switcher - hidden on small mobile, shown on sm+ */}
-            <div className="hidden sm:block">
-              <LocaleSwitcher />
-            </div>
+            {/* Locale switcher - always visible as compact dropdown */}
+            <LocaleSwitcher />
             {/* CTA - desktop only */}
             <div className="hidden lg:block">
               <Button href="/pricing" size="sm">

@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Button } from "@/components/ui/Button";
@@ -21,6 +22,18 @@ type Props = {
 export function MobileMenu({ open, onClose, links }: Props) {
   const tc = useTranslations("common");
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <>
       {/* Backdrop */}
@@ -35,11 +48,12 @@ export function MobileMenu({ open, onClose, links }: Props) {
       {/* Panel */}
       <div
         className={cn(
-          "fixed top-0 right-0 h-full w-80 bg-white z-50 shadow-2xl transition-transform duration-300 lg:hidden",
+          "fixed top-0 right-0 h-full w-80 bg-white z-50 shadow-2xl transition-transform duration-300 lg:hidden flex flex-col",
           open ? "translate-x-0" : "translate-x-full"
         )}
       >
-        <div className="flex items-center justify-between p-4 border-b border-border">
+        {/* Header */}
+        <div className="flex items-center justify-between p-4 border-b border-border flex-shrink-0">
           <span className="text-lg font-bold text-secondary">
             Happy<span className="text-primary">Salary</span>
           </span>
@@ -50,7 +64,8 @@ export function MobileMenu({ open, onClose, links }: Props) {
           </button>
         </div>
 
-        <nav className="p-4 space-y-1">
+        {/* Scrollable nav */}
+        <nav className="flex-1 overflow-y-auto overscroll-contain p-4 space-y-1">
           {links.map((link) => (
             <div key={link.href}>
               <Link
@@ -78,7 +93,8 @@ export function MobileMenu({ open, onClose, links }: Props) {
           ))}
         </nav>
 
-        <div className="p-4 space-y-4">
+        {/* Bottom actions - fixed */}
+        <div className="p-4 space-y-3 border-t border-border flex-shrink-0 bg-white">
           <div className="flex justify-center">
             <LocaleSwitcher />
           </div>
