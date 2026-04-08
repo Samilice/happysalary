@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
+import { Link } from "@/i18n/navigation";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export function CTABanner() {
@@ -23,12 +23,12 @@ export function CTABanner() {
                 {t("subtitle")}
               </p>
               <div className="mt-8">
-                <a
+                <Link
                   href="/pricing"
                   className="inline-flex items-center justify-center rounded-xl font-semibold px-8 py-4 text-lg bg-white text-secondary hover:bg-white/90 shadow-xl hover:shadow-2xl transition-all duration-200"
                 >
                   {t("button")}
-                </a>
+                </Link>
               </div>
             </div>
           </div>

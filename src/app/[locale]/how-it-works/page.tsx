@@ -1,8 +1,8 @@
 import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/ui/Container";
-import { Button } from "@/components/ui/Button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { Link } from "@/i18n/navigation";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -152,12 +152,12 @@ export default async function HowItWorksPage({ params }: Props) {
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white max-w-xl mx-auto mb-6">
                   {t("cta.title")}
                 </h2>
-                <a
+                <Link
                   href="/pricing"
                   className="inline-flex items-center justify-center rounded-xl font-semibold px-8 py-4 text-lg bg-white text-secondary hover:bg-white/90 shadow-xl hover:shadow-2xl transition-all duration-200"
                 >
                   {t("cta.button")}
-                </a>
+                </Link>
               </div>
             </div>
           </ScrollReveal>
