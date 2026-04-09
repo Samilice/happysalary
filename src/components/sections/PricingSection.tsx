@@ -16,7 +16,7 @@ export function PricingSection() {
   const link = billing === "monthly" ? PLAN.monthlyPaymentLink : PLAN.yearlyPaymentLink;
 
   return (
-    <section className="pt-24 sm:pt-28 pb-12 sm:pb-20 lg:pt-32 lg:pb-28 bg-background">
+    <section className="py-12 sm:py-20 lg:py-28 bg-background">
       <Container>
         <SectionHeading title={t("title")} subtitle={t("subtitle")} />
 

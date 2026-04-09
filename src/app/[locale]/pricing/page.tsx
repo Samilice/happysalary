@@ -26,7 +26,9 @@ export default async function PricingPage({ params }: Props) {
 
   return (
     <>
-      <PricingSection />
+      <div className="pt-14 sm:pt-16 lg:pt-20">
+        <PricingSection />
+      </div>
 
       {/* FAQ Section */}
       <section className="py-20 lg:py-28 bg-background-alt">

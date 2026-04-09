@@ -98,9 +98,16 @@ export function MobileMenu({ open, onClose, links }: Props) {
           <div className="flex justify-center">
             <LocaleSwitcher />
           </div>
-          <Button href="/pricing" className="w-full" onClick={onClose}>
+          <Button href="/signup" className="w-full" onClick={onClose}>
             {tc("getStarted")}
           </Button>
+          <Link
+            href="/login"
+            onClick={onClose}
+            className="block text-center text-sm font-medium text-text-muted hover:text-primary transition-colors py-2"
+          >
+            Déjà un compte ? Se connecter
+          </Link>
         </div>
       </div>
     </>

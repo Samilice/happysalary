@@ -106,9 +106,13 @@ export function Header() {
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Locale switcher - always visible as compact dropdown */}
             <LocaleSwitcher />
+            {/* Login - desktop only */}
+            <Link href="/login" className="hidden lg:block text-sm font-medium text-text-muted hover:text-primary transition-colors">
+              Connexion
+            </Link>
             {/* CTA - desktop only */}
             <div className="hidden lg:block">
-              <Button href="/pricing" size="sm">
+              <Button href="/signup" size="sm">
                 {tc("getStarted")}
               </Button>
             </div>
