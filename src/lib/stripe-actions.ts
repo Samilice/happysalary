@@ -1,22 +1,18 @@
 "use server";
 
 import { getStripe } from "./stripe";
-import { plans } from "./plans";
-import type { PlanId } from "./plans";
 
-export async function createCheckoutSession(planId: PlanId, locale: string) {
-  const plan = plans.find((p) => p.id === planId);
-  if (!plan) throw new Error(`Plan ${planId} not found`);
+export async function createCheckoutSession(billing: "monthly" | "yearly", locale: string) {
+  const priceId = billing === "monthly"
+    ? process.env.STRIPE_PRICE_MONTHLY || ""
+    : process.env.STRIPE_PRICE_YEARLY || "";
+
+  if (!priceId) throw new Error("Stripe price not configured");
 
   const session = await getStripe().checkout.sessions.create({
     mode: "subscription",
     payment_method_types: ["card"],
-    line_items: [
-      {
-        price: plan.stripePriceId,
-        quantity: 1,
-      },
-    ],
+    line_items: [{ price: priceId, quantity: 1 }],
     success_url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${process.env.NEXT_PUBLIC_SITE_URL}/${locale}/checkout/cancel`,
     locale: locale === "fr" ? "fr" : locale === "de" ? "de" : "en",

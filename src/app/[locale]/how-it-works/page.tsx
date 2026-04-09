@@ -117,24 +117,15 @@ export default async function HowItWorksPage({ params }: Props) {
                 {t("pricing.subtitle")}
               </p>
             </div>
-            <div className="grid grid-cols-3 gap-3 sm:gap-6 max-w-xl mx-auto">
-              <div className="bg-white rounded-2xl border border-border p-4 sm:p-6 text-center shadow-sm">
-                <p className="text-xs sm:text-sm font-medium text-text-muted mb-1">{t("pricing.basic")}</p>
-                <p className="text-xl sm:text-3xl font-bold text-secondary">9.90</p>
-                <p className="text-[10px] sm:text-xs text-text-muted">CHF/{t("pricing.month")}</p>
+            <div className="flex items-center justify-center gap-4 sm:gap-8 max-w-md mx-auto">
+              <div className="bg-white rounded-2xl border-2 border-primary p-5 sm:p-8 text-center shadow-lg flex-1">
+                <p className="text-3xl sm:text-4xl font-bold text-secondary">{t("pricing.monthly")}</p>
+                <p className="text-sm text-text-muted mt-1">{t("pricing.monthLabel")}</p>
               </div>
-              <div className="bg-white rounded-2xl border-2 border-primary p-4 sm:p-6 text-center shadow-lg relative">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="text-[10px] sm:text-xs font-bold text-white bg-primary px-2 sm:px-3 py-0.5 sm:py-1 rounded-full whitespace-nowrap">{t("pricing.popular")}</span>
-                </div>
-                <p className="text-xs sm:text-sm font-medium text-primary mb-1">{t("pricing.comfort")}</p>
-                <p className="text-xl sm:text-3xl font-bold text-secondary">19.90</p>
-                <p className="text-[10px] sm:text-xs text-text-muted">CHF/{t("pricing.month")}</p>
-              </div>
-              <div className="bg-white rounded-2xl border border-border p-4 sm:p-6 text-center shadow-sm">
-                <p className="text-xs sm:text-sm font-medium text-text-muted mb-1">{t("pricing.premium")}</p>
-                <p className="text-xl sm:text-3xl font-bold text-secondary">29.90</p>
-                <p className="text-[10px] sm:text-xs text-text-muted">CHF/{t("pricing.month")}</p>
+              <span className="text-sm font-medium text-text-muted">{t("pricing.or")}</span>
+              <div className="bg-white rounded-2xl border border-border p-5 sm:p-8 text-center shadow-sm flex-1">
+                <p className="text-3xl sm:text-4xl font-bold text-secondary">{t("pricing.yearly")}</p>
+                <p className="text-sm text-text-muted mt-1">{t("pricing.yearLabel")}</p>
               </div>
             </div>
           </ScrollReveal>

@@ -27,6 +27,35 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
+  // Restrict payslip generation to current month only
+  const now = new Date();
+  const currentMonth = now.getMonth() + 1;
+  const currentYear = now.getFullYear();
+
+  if (type === "salary_sheet" && (month !== currentMonth || year !== currentYear)) {
+    return NextResponse.json(
+      { error: "Les fiches de salaire ne peuvent être générées que pour le mois en cours." },
+      { status: 403 }
+    );
+  }
+
+  // Check if payslip already exists for this employee/month/year
+  const { data: existing } = await supabase
+    .from("documents")
+    .select("id")
+    .eq("employee_id", employeeId)
+    .eq("type", "salary_sheet")
+    .eq("period_month", month)
+    .eq("period_year", year)
+    .limit(1);
+
+  if (existing && existing.length > 0) {
+    return NextResponse.json(
+      { error: "Une fiche de salaire existe déjà pour ce mois. Consultez l'onglet Documents." },
+      { status: 409 }
+    );
+  }
+
   // Fetch employee + employer data
   const { data: employee } = await supabase
     .from("employees")

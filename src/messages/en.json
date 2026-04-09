@@ -117,42 +117,41 @@
     }
   },
   "pricing": {
-    "title": "Clear and transparent pricing",
-    "subtitle": "A fixed fee per employee per month, with no commission on gross salary. No surprises.",
-    "basic": {
-      "name": "Essential",
-      "description": "The essentials for managing your employee's payroll and social contributions."
-    },
-    "comfort": {
-      "name": "Comfort",
-      "description": "The complete solution with insurance and employment contracts included."
-    },
-    "premium": {
-      "name": "Premium",
-      "description": "The full-service package with priority support and personalised legal advice."
+    "title": "One plan, everything included",
+    "subtitle": "Everything you need to employ properly, with no commitment.",
+    "plan": {
+      "name": "HappySalary",
+      "description": "Complete guidance for managing your household employee with confidence.",
+      "monthlyPrice": "12.99",
+      "yearlyPrice": "99",
+      "yearlyLabel": "Save with the annual plan",
+      "perMonth": "/month",
+      "perYear": "/year",
+      "monthly": "Monthly",
+      "yearly": "Annual",
+      "noCommitment": "No commitment, cancel anytime",
+      "yearlyEquiv": "~CHF 8.25/month"
     },
     "features": {
-      "payroll": "Payroll management",
-      "socialContributions": "Social contributions (AHV/IV/EO/ALV)",
-      "payslips": "Monthly pay slips",
-      "annualStatement": "Annual salary statement",
-      "accidentInsurance": "Accident insurance (UVG)",
-      "employmentContract": "Compliant employment contract",
-      "sicknessInsurance": "Daily sickness allowance insurance",
-      "prioritySupport": "Priority support",
-      "legalAdvice": "Employment law advice"
+      "checklist": "Personalised employer checklist",
+      "payroll": "Salary and contribution calculations",
+      "payslips": "Pay slip generation",
+      "contracts": "Employment contract template",
+      "guidance": "Canton-by-canton guidance",
+      "support": "Email support",
+      "updates": "Legal updates included"
     },
-    "cta": "Choose This Plan",
+    "cta": "Get Started",
     "faq": {
       "title": "Frequently asked questions about pricing",
       "q1": "Why a flat fee rather than a commission?",
-      "a1": "Our flat fee helps you plan your costs every month, regardless of your employee's salary. Unlike commission-based providers, you do not pay more when you increase your employee's salary or hours. It is fairer and more transparent.",
-      "q2": "Can I change plan at any time?",
-      "a2": "Yes, you can switch between plans at any time from your account dashboard. The change takes effect the following month. There are no cancellation fees and no minimum commitment.",
+      "a1": "Our flat fee helps you plan your costs every month, regardless of your employee's salary. Unlike commission-based providers, you do not pay more when you increase your employee's salary or hours.",
+      "q2": "Is there a commitment?",
+      "a2": "No commitment at all. With the monthly plan at CHF 12.99, you can cancel anytime. The annual plan at CHF 99 saves you money and works out to about CHF 8.25 per month.",
       "q3": "Are there any hidden costs?",
-      "a3": "Absolutely none. The price displayed is the price you pay. Social contributions and insurance premiums are invoiced separately at cost, with no mark-up on our part.",
-      "q4": "What does each plan include exactly?",
-      "a4": "The Basic plan includes full payroll and social contributions management. The Comfort plan adds accident and sickness insurance as well as employment contract generation. The Premium plan additionally includes priority support and employment law advice."
+      "a3": "Absolutely none. The price displayed is the price you pay. No commission, no surcharge.",
+      "q4": "What's included?",
+      "a4": "Everything: personalised employer checklist for your canton, pay slip generation, employment contract template, social contribution calculations, step-by-step administrative guidance and email support."
     }
   },
   "howItWorks": {
@@ -174,13 +173,13 @@
       "detail": "Download pay slips, contracts and annual statements at any time. You receive a notification as soon as a new document is available."
     },
     "pricing": {
-      "title": "Simple, transparent pricing",
-      "subtitle": "Per employee, per month. No commission on salary.",
-      "basic": "Essential",
-      "comfort": "Comfort",
-      "premium": "Premium",
-      "month": "month",
-      "popular": "Popular"
+      "title": "One plan, everything included",
+      "subtitle": "No commitment. No commission.",
+      "monthly": "12.99",
+      "yearly": "99",
+      "monthLabel": "CHF/month",
+      "yearLabel": "CHF/year",
+      "or": "or"
     },
     "cta": {
       "title": "Ready to get started?",

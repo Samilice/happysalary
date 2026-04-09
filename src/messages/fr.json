@@ -117,42 +117,41 @@
     }
   },
   "pricing": {
-    "title": "Des tarifs clairs et transparents",
-    "subtitle": "Un forfait fixe par employé et par mois, sans commission sur le salaire brut. Pas de surprises.",
-    "basic": {
-      "name": "Essentiel",
-      "description": "L'essentiel pour gérer la paie et les cotisations sociales de votre employé."
-    },
-    "comfort": {
-      "name": "Comfort",
-      "description": "La solution complète avec assurances et contrats de travail inclus."
-    },
-    "premium": {
-      "name": "Premium",
-      "description": "Le service intégral avec support prioritaire et conseils juridiques personnalisés."
+    "title": "Un tarif unique, tout inclus",
+    "subtitle": "Tout ce dont vous avez besoin pour employer en règle, sans engagement.",
+    "plan": {
+      "name": "HappySalary",
+      "description": "Accompagnement complet pour gérer votre employé de maison en toute sérénité.",
+      "monthlyPrice": "12.99",
+      "yearlyPrice": "99",
+      "yearlyLabel": "Économisez avec le forfait annuel",
+      "perMonth": "/mois",
+      "perYear": "/an",
+      "monthly": "Mensuel",
+      "yearly": "Annuel",
+      "noCommitment": "Sans engagement, résiliable à tout moment",
+      "yearlyEquiv": "soit ~8.25 CHF/mois"
     },
     "features": {
-      "payroll": "Gestion des salaires",
-      "socialContributions": "Cotisations sociales (AVS/AI/APG/AC)",
-      "payslips": "Fiches de salaire mensuelles",
-      "annualStatement": "Décompte annuel de salaire",
-      "accidentInsurance": "Assurance accidents (LAA)",
-      "employmentContract": "Contrat de travail conforme",
-      "sicknessInsurance": "Assurance indemnité journalière maladie",
-      "prioritySupport": "Support prioritaire",
-      "legalAdvice": "Conseils juridiques en droit du travail"
+      "checklist": "Checklist employeur personnalisée",
+      "payroll": "Calcul des salaires et cotisations",
+      "payslips": "Génération des fiches de salaire",
+      "contracts": "Modèle de contrat de travail",
+      "guidance": "Guidance canton par canton",
+      "support": "Support par email",
+      "updates": "Mises à jour légales incluses"
     },
-    "cta": "Choisir ce plan",
+    "cta": "Commencer maintenant",
     "faq": {
       "title": "Questions fréquentes sur nos tarifs",
       "q1": "Pourquoi un forfait fixe plutôt qu'une commission ?",
-      "a1": "Notre forfait fixe vous permet de prévoir vos coûts chaque mois, quel que soit le salaire de votre employé. Contrairement aux solutions à commission, vous ne payez pas plus lorsque vous augmentez le salaire ou les heures de votre employé. C'est plus juste et plus transparent.",
-      "q2": "Puis-je changer de plan à tout moment ?",
-      "a2": "Oui, vous pouvez passer d'un plan à un autre à tout moment depuis votre espace client. Le changement prend effet le mois suivant. Aucun frais de résiliation ni engagement minimum.",
+      "a1": "Notre forfait fixe vous permet de prévoir vos coûts chaque mois, quel que soit le salaire de votre employé. Contrairement aux solutions à commission, vous ne payez pas plus lorsque vous augmentez le salaire ou les heures de votre employé.",
+      "q2": "Y a-t-il un engagement ?",
+      "a2": "Non, aucun engagement. Avec le forfait mensuel à CHF 12.99, vous pouvez résilier à tout moment. Le forfait annuel à CHF 99 vous fait économiser et revient à environ CHF 8.25 par mois.",
       "q3": "Y a-t-il des frais cachés ?",
-      "a3": "Absolument aucun. Le prix affiché est le prix que vous payez. Les cotisations sociales et primes d'assurance sont facturées séparément au coût réel, sans majoration de notre part.",
-      "q4": "Que comprend exactement chaque plan ?",
-      "a4": "Le plan Basic comprend la gestion complète des salaires et des cotisations sociales. Le plan Comfort ajoute les assurances accidents et maladie ainsi que la rédaction de contrats de travail. Le plan Premium inclut en plus un support prioritaire et des conseils juridiques en matière de droit du travail."
+      "a3": "Absolument aucun. Le prix affiché est le prix que vous payez. Pas de commission, pas de supplément.",
+      "q4": "Que comprend le forfait ?",
+      "a4": "Tout est inclus : checklist employeur personnalisée selon votre canton, génération de fiches de salaire, modèle de contrat de travail, calcul des cotisations sociales, guidance administrative pas à pas et support par email."
     }
   },
   "howItWorks": {
@@ -174,13 +173,13 @@
       "detail": "Téléchargez vos fiches de salaire, contrats et décomptes annuels à tout moment. Vous recevez une notification dès qu'un nouveau document est disponible."
     },
     "pricing": {
-      "title": "Un forfait simple et transparent",
-      "subtitle": "Par employé, par mois. Sans commission sur le salaire.",
-      "basic": "Essentiel",
-      "comfort": "Comfort",
-      "premium": "Premium",
-      "month": "mois",
-      "popular": "Populaire"
+      "title": "Un tarif unique, tout inclus",
+      "subtitle": "Sans engagement. Sans commission.",
+      "monthly": "12.99",
+      "yearly": "99",
+      "monthLabel": "CHF/mois",
+      "yearLabel": "CHF/an",
+      "or": "ou"
     },
     "cta": {
       "title": "Prêt à vous lancer ?",

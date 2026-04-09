@@ -117,42 +117,41 @@
     }
   },
   "pricing": {
-    "title": "Klare und transparente Preise",
-    "subtitle": "Eine feste Gebühr pro Mitarbeiter und Monat, ohne Provision auf den Bruttolohn. Keine Überraschungen.",
-    "basic": {
-      "name": "Essentiell",
-      "description": "Das Wesentliche für die Lohn- und Sozialversicherungsverwaltung Ihres Mitarbeiters."
-    },
-    "comfort": {
-      "name": "Comfort",
-      "description": "Die komplette Lösung mit Versicherungen und Arbeitsverträgen inklusive."
-    },
-    "premium": {
-      "name": "Premium",
-      "description": "Der Rundum-Service mit priorisiertem Support und persönlicher Rechtsberatung."
+    "title": "Ein Tarif, alles inklusive",
+    "subtitle": "Alles, was Sie brauchen, um korrekt anzustellen. Ohne Verpflichtung.",
+    "plan": {
+      "name": "HappySalary",
+      "description": "Komplette Begleitung für die Verwaltung Ihres Hauspersonals.",
+      "monthlyPrice": "12.99",
+      "yearlyPrice": "99",
+      "yearlyLabel": "Sparen Sie mit dem Jahresabo",
+      "perMonth": "/Monat",
+      "perYear": "/Jahr",
+      "monthly": "Monatlich",
+      "yearly": "Jährlich",
+      "noCommitment": "Ohne Verpflichtung, jederzeit kündbar",
+      "yearlyEquiv": "~CHF 8.25/Monat"
     },
     "features": {
-      "payroll": "Lohnverwaltung",
-      "socialContributions": "Sozialversicherungsbeiträge (AHV/IV/EO/ALV)",
-      "payslips": "Monatliche Lohnabrechnungen",
-      "annualStatement": "Jährliche Lohnabrechnung",
-      "accidentInsurance": "Unfallversicherung (UVG)",
-      "employmentContract": "Rechtskonformer Arbeitsvertrag",
-      "sicknessInsurance": "Krankentaggeldversicherung",
-      "prioritySupport": "Prioritärer Support",
-      "legalAdvice": "Arbeitsrechtliche Beratung"
+      "checklist": "Personalisierte Arbeitgeber-Checkliste",
+      "payroll": "Lohn- und Beitragsberechnung",
+      "payslips": "Lohnabrechnungserstellung",
+      "contracts": "Arbeitsvertragsvorlage",
+      "guidance": "Kantonsspezifische Anleitung",
+      "support": "E-Mail-Support",
+      "updates": "Rechtliche Updates inklusive"
     },
-    "cta": "Diesen Plan wählen",
+    "cta": "Jetzt starten",
     "faq": {
       "title": "Häufige Fragen zu unseren Preisen",
       "q1": "Warum ein Festpreis statt einer Provision?",
-      "a1": "Unser Festpreis ermöglicht Ihnen jeden Monat planbare Kosten, unabhängig vom Lohn Ihres Mitarbeiters. Im Gegensatz zu provisionsbasierten Anbietern zahlen Sie nicht mehr, wenn Sie den Lohn oder die Stunden erhöhen. Das ist fairer und transparenter.",
-      "q2": "Kann ich jederzeit den Plan wechseln?",
-      "a2": "Ja, Sie können jederzeit über Ihr Kundenkonto den Plan wechseln. Der Wechsel wird ab dem nächsten Monat wirksam. Es gibt keine Kündigungsgebühren und keine Mindestlaufzeit.",
+      "a1": "Unser Festpreis ermöglicht Ihnen jeden Monat planbare Kosten, unabhängig vom Lohn Ihres Mitarbeiters. Im Gegensatz zu provisionsbasierten Anbietern zahlen Sie nicht mehr, wenn Sie den Lohn oder die Stunden erhöhen.",
+      "q2": "Gibt es eine Verpflichtung?",
+      "a2": "Keine Verpflichtung. Mit dem Monatsabo zu CHF 12.99 können Sie jederzeit kündigen. Das Jahresabo zu CHF 99 spart Ihnen Geld und entspricht etwa CHF 8.25 pro Monat.",
       "q3": "Gibt es versteckte Kosten?",
-      "a3": "Absolut keine. Der angezeigte Preis ist der Preis, den Sie bezahlen. Sozialversicherungsbeiträge und Versicherungsprämien werden separat zum Selbstkostenpreis berechnet, ohne Aufschlag unsererseits.",
-      "q4": "Was umfasst jeder Plan genau?",
-      "a4": "Der Plan Basic umfasst die vollständige Lohn- und Sozialversicherungsverwaltung. Der Plan Comfort bietet zusätzlich Unfall- und Krankenversicherung sowie die Erstellung von Arbeitsverträgen. Der Plan Premium enthält darüber hinaus priorisierten Support und arbeitsrechtliche Beratung."
+      "a3": "Absolut keine. Der angezeigte Preis ist der Preis, den Sie bezahlen. Keine Provision, kein Aufschlag.",
+      "q4": "Was ist alles enthalten?",
+      "a4": "Alles: personalisierte Arbeitgeber-Checkliste für Ihren Kanton, Lohnabrechnungserstellung, Arbeitsvertragsvorlage, Sozialversicherungsberechnung, Schritt-für-Schritt Anleitung und E-Mail-Support."
     }
   },
   "howItWorks": {
@@ -174,13 +173,13 @@
       "detail": "Laden Sie Lohnabrechnungen, Verträge und Jahresabrechnungen jederzeit herunter. Sie erhalten eine Benachrichtigung, sobald ein neues Dokument verfügbar ist."
     },
     "pricing": {
-      "title": "Einfache, transparente Preise",
-      "subtitle": "Pro Mitarbeiter, pro Monat. Keine Provision.",
-      "basic": "Essentiell",
-      "comfort": "Comfort",
-      "premium": "Premium",
-      "month": "Monat",
-      "popular": "Beliebt"
+      "title": "Ein Tarif, alles inklusive",
+      "subtitle": "Ohne Verpflichtung. Ohne Provision.",
+      "monthly": "12.99",
+      "yearly": "99",
+      "monthLabel": "CHF/Monat",
+      "yearLabel": "CHF/Jahr",
+      "or": "oder"
     },
     "cta": {
       "title": "Bereit loszulegen?",
