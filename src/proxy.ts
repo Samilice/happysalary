@@ -7,7 +7,7 @@ const intlMiddleware = createIntlMiddleware(routing);
 const protectedPaths = ["/dashboard", "/admin", "/onboarding"];
 const authPaths = ["/login", "/signup"];
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Skip for API routes
