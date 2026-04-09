@@ -32,8 +32,8 @@
       "ctaSecondary": "How It Works"
     },
     "trustBar": {
-      "compliance": "Fully compliant",
-      "secure": "Data hosted in Switzerland",
+      "compliance": "AVS/LAA compliant",
+      "secure": "Secure data",
       "noCommission": "No commission",
       "cantons": "26 cantons"
     },

@@ -32,8 +32,8 @@
       "ctaSecondary": "Comment ça marche"
     },
     "trustBar": {
-      "compliance": "100% conforme",
-      "secure": "Données en Suisse",
+      "compliance": "Conforme AVS/LAA",
+      "secure": "Données sécurisées",
       "noCommission": "Sans commission",
       "cantons": "26 cantons"
     },
