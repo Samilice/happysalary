@@ -3,6 +3,10 @@
   "main": ".open-next/worker.js",
   "compatibility_date": "2026-04-08",
   "compatibility_flags": ["nodejs_compat"],
+  "routes": [
+    { "pattern": "happysalary.ch", "custom_domain": true },
+    { "pattern": "www.happysalary.ch", "custom_domain": true }
+  ],
   "assets": {
     "directory": ".open-next/assets",
     "binding": "ASSETS"
