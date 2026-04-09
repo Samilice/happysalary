@@ -39,7 +39,7 @@
     },
     "features": {
       "title": "Alles, was Sie für eine sorglose Anstellung brauchen",
-      "subtitle": "HappySalary kümmert sich um sämtliche administrativen Aufgaben rund um Ihr Hauspersonal.",
+      "subtitle": "HappySalary begleitet Sie durch sämtliche administrativen Aufgaben rund um Ihr Hauspersonal.",
       "payroll": {
         "title": "Lohnverwaltung",
         "description": "Automatische Berechnung der monatlichen Löhne inklusive gesetzlicher Abzüge und Zulagen."
@@ -73,8 +73,8 @@
         "description": "Erstellen Sie Ihr Konto in wenigen Minuten und geben Sie die Daten Ihres Mitarbeiters ein."
       },
       "step2": {
-        "title": "Wir erledigen alles",
-        "description": "Beiträge, Versicherungen, Verträge und Lohnabrechnungen: wir kümmern uns um alles."
+        "title": "Wir begleiten Sie Schritt für Schritt",
+        "description": "Beiträge, Versicherungen, Verträge und Lohnabrechnungen: wir begleiten Sie durch jeden Schritt."
       },
       "step3": {
         "title": "Sie bleiben entspannt",
@@ -146,7 +146,7 @@
     "faq": {
       "title": "Häufige Fragen zu unseren Preisen",
       "q1": "Warum ein Festpreis statt einer Provision?",
-      "a1": "Unser Festpreis garantiert Ihnen jeden Monat planbare Kosten, unabhängig vom Lohn Ihres Mitarbeiters. Im Gegensatz zu provisionsbasierten Anbietern zahlen Sie nicht mehr, wenn Sie den Lohn oder die Stunden erhöhen. Das ist fairer und transparenter.",
+      "a1": "Unser Festpreis ermöglicht Ihnen jeden Monat planbare Kosten, unabhängig vom Lohn Ihres Mitarbeiters. Im Gegensatz zu provisionsbasierten Anbietern zahlen Sie nicht mehr, wenn Sie den Lohn oder die Stunden erhöhen. Das ist fairer und transparenter.",
       "q2": "Kann ich jederzeit den Plan wechseln?",
       "a2": "Ja, Sie können jederzeit über Ihr Kundenkonto den Plan wechseln. Der Wechsel wird ab dem nächsten Monat wirksam. Es gibt keine Kündigungsgebühren und keine Mindestlaufzeit.",
       "q3": "Gibt es versteckte Kosten?",
@@ -266,7 +266,7 @@
     },
     "pricingFaq": {
       "q1": "Warum ein Festpreis statt einer Provision?",
-      "a1": "Der Festpreis garantiert planbare und faire Kosten. Bei einem Provisionsmodell zahlen Sie mehr, je besser Sie Ihren Mitarbeiter entlöhnen. Bei HappySalary bleibt der Preis gleich, unabhängig von der Lohnhöhe.",
+      "a1": "Der Festpreis ermöglicht planbare und faire Kosten. Bei einem Provisionsmodell zahlen Sie mehr, je besser Sie Ihren Mitarbeiter entlöhnen. Bei HappySalary bleibt der Preis gleich, unabhängig von der Lohnhöhe.",
       "q2": "Sind die Sozialversicherungsbeiträge im Festpreis enthalten?",
       "a2": "Der Festpreis deckt die Verwaltung und Berechnung der Sozialversicherungsbeiträge ab. Die Beiträge selbst (AHV/IV/EO/ALV) werden separat zum Selbstkostenpreis berechnet, ohne jeglichen Aufschlag unsererseits.",
       "q3": "Gibt es eine Mindestlaufzeit?",
@@ -286,7 +286,7 @@
       "q2": "Wie funktioniert die Quellensteuer?",
       "a2": "Ausländische Arbeitnehmer ohne Niederlassungsbewilligung C unterliegen der Quellensteuer. HappySalary berechnet den Betrag automatisch gemäss dem Tarif des Wohnkantons des Mitarbeiters und zieht ihn vom Bruttolohn ab.",
       "q3": "Welche Pflichten habe ich als Arbeitgeber?",
-      "a3": "Als Arbeitgeber von Hauspersonal müssen Sie Ihren Mitarbeiter bei den Sozialversicherungen anmelden, Arbeitgeberbeiträge zahlen, eine Unfallversicherung abschliessen, einen Arbeitsvertrag erstellen und monatliche Lohnabrechnungen ausstellen. HappySalary übernimmt all diese Pflichten für Sie."
+      "a3": "Als Arbeitgeber von Hauspersonal müssen Sie Ihren Mitarbeiter bei den Sozialversicherungen anmelden, Arbeitgeberbeiträge zahlen, eine Unfallversicherung abschliessen, einen Arbeitsvertrag erstellen und monatliche Lohnabrechnungen ausstellen. HappySalary begleitet Sie und stellt Ihnen die Werkzeuge bereit, um diese Pflichten zu erfüllen."
     }
   },
   "services": {
@@ -492,7 +492,7 @@
     }
   },
   "footer": {
-    "description": "HappySalary vereinfacht die Lohnverwaltung für Arbeitgeber von Hauspersonal in der Schweiz. Sozialversicherungsbeiträge, Versicherungen und Verträge – alles verwaltet für einen Festpreis.",
+    "description": "HappySalary begleitet Arbeitgeber von Hauspersonal in der Schweiz durch die Lohnverwaltung. Sozialversicherungsbeiträge, Versicherungen und Verträge – Schritt für Schritt, für einen Festpreis.",
     "services": "Dienstleistungen",
     "features": "Funktionen",
     "company": "Unternehmen",

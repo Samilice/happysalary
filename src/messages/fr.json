@@ -39,7 +39,7 @@
     },
     "features": {
       "title": "Tout ce dont vous avez besoin pour employer en toute sérénité",
-      "subtitle": "HappySalary s'occupe de toutes les démarches administratives liées à votre personnel de maison.",
+      "subtitle": "HappySalary vous accompagne dans toutes les démarches administratives liées à votre personnel de maison.",
       "payroll": {
         "title": "Gestion des salaires",
         "description": "Calcul automatique des salaires mensuels, incluant les déductions légales et les indemnités."
@@ -73,8 +73,8 @@
         "description": "Créez votre compte en quelques minutes et renseignez les informations de votre employé."
       },
       "step2": {
-        "title": "Nous gérons tout",
-        "description": "Cotisations, assurances, contrats et fiches de salaire : nous nous occupons de l'ensemble."
+        "title": "On vous guide pas à pas",
+        "description": "Cotisations, assurances, contrats et fiches de salaire : on vous accompagne sur chaque étape."
       },
       "step3": {
         "title": "Vous restez serein",
@@ -146,7 +146,7 @@
     "faq": {
       "title": "Questions fréquentes sur nos tarifs",
       "q1": "Pourquoi un forfait fixe plutôt qu'une commission ?",
-      "a1": "Notre forfait fixe vous garantit un coût prévisible chaque mois, quel que soit le salaire de votre employé. Contrairement aux solutions à commission, vous ne payez pas plus lorsque vous augmentez le salaire ou les heures de votre employé. C'est plus juste et plus transparent.",
+      "a1": "Notre forfait fixe vous permet de prévoir vos coûts chaque mois, quel que soit le salaire de votre employé. Contrairement aux solutions à commission, vous ne payez pas plus lorsque vous augmentez le salaire ou les heures de votre employé. C'est plus juste et plus transparent.",
       "q2": "Puis-je changer de plan à tout moment ?",
       "a2": "Oui, vous pouvez passer d'un plan à un autre à tout moment depuis votre espace client. Le changement prend effet le mois suivant. Aucun frais de résiliation ni engagement minimum.",
       "q3": "Y a-t-il des frais cachés ?",
@@ -165,7 +165,7 @@
     },
     "step2": {
       "title": "Nous prenons le relais",
-      "description": "HappySalary s'occupe de toutes les formalités administratives.",
+      "description": "HappySalary vous guide dans toutes les formalités administratives.",
       "detail": "Nous affilions votre employé aux assurances sociales, générons le contrat de travail, calculons les déductions légales et préparons les fiches de salaire chaque mois automatiquement."
     },
     "step3": {
@@ -192,7 +192,7 @@
     "subtitle": "Une entreprise suisse au service des employeurs de personnel de maison.",
     "mission": {
       "title": "Notre mission",
-      "description": "Nous croyons que chaque employé de maison mérite un salaire déclaré et que chaque employeur mérite une solution simple et abordable pour remplir ses obligations légales. HappySalary a été fondée pour rendre l'emploi domestique en Suisse accessible, transparent et conforme à la loi."
+      "description": "Nous croyons que chaque employé de maison mérite un salaire déclaré et que chaque employeur mérite un accompagnement simple et abordable pour ses obligations légales. HappySalary vous guide pas à pas pour rendre l'emploi domestique en Suisse accessible et transparent."
     },
     "values": {
       "title": "Nos valeurs",
@@ -266,7 +266,7 @@
     },
     "pricingFaq": {
       "q1": "Pourquoi un forfait fixe plutôt qu'une commission ?",
-      "a1": "Le forfait fixe garantit un coût prévisible et équitable. Avec un modèle à commission, plus vous payez bien votre employé, plus le service vous coûte cher. Chez HappySalary, le prix reste le même quel que soit le montant du salaire.",
+      "a1": "Le forfait fixe vous permet de maîtriser vos coûts de manière équitable. Avec un modèle à commission, plus vous payez bien votre employé, plus le service vous coûte cher. Chez HappySalary, le prix reste le même quel que soit le montant du salaire.",
       "q2": "Les cotisations sociales sont-elles incluses dans le forfait ?",
       "a2": "Le forfait couvre la gestion et le calcul des cotisations sociales. Les montants des cotisations elles-mêmes (AVS/AI/APG/AC) sont facturés séparément au coût réel, sans aucune majoration de notre part.",
       "q3": "Y a-t-il un engagement minimum ?",
@@ -286,7 +286,7 @@
       "q2": "Comment fonctionne l'impôt à la source ?",
       "a2": "Les employés de nationalité étrangère sans permis C sont soumis à l'impôt à la source. HappySalary calcule automatiquement le montant selon le barème du canton de résidence de l'employé et le déduit du salaire brut.",
       "q3": "Quelles sont mes obligations en tant qu'employeur ?",
-      "a3": "En tant qu'employeur de personnel de maison, vous devez déclarer votre employé aux assurances sociales, payer les cotisations patronales, souscrire une assurance accidents, établir un contrat de travail et remettre des fiches de salaire mensuelles. HappySalary prend en charge toutes ces obligations pour vous."
+      "a3": "En tant qu'employeur de personnel de maison, vous devez déclarer votre employé aux assurances sociales, payer les cotisations patronales, souscrire une assurance accidents, établir un contrat de travail et remettre des fiches de salaire mensuelles. HappySalary vous guide et vous fournit les outils pour remplir ces obligations."
     }
   },
   "services": {
@@ -332,7 +332,7 @@
         },
         "b4": {
           "title": "Tranquillité d'esprit",
-          "description": "Concentrez-vous sur votre vie de famille, nous gérons l'administratif."
+          "description": "Concentrez-vous sur votre vie de famille, on s'occupe de vous simplifier l'administratif."
         }
       }
     },
@@ -492,7 +492,7 @@
     }
   },
   "footer": {
-    "description": "HappySalary simplifie la gestion de la paie pour les employeurs de personnel de maison en Suisse. Cotisations sociales, assurances et contrats, tout est géré pour un forfait fixe.",
+    "description": "HappySalary vous accompagne dans la gestion de la paie pour votre personnel de maison en Suisse. Cotisations sociales, assurances et contrats : on vous guide étape par étape.",
     "services": "Services",
     "features": "Fonctionnalités",
     "company": "Entreprise",

@@ -39,7 +39,7 @@
     },
     "features": {
       "title": "Everything you need to employ with confidence",
-      "subtitle": "HappySalary takes care of all administrative tasks related to your household staff.",
+      "subtitle": "HappySalary guides you through all administrative tasks related to your household staff.",
       "payroll": {
         "title": "Payroll Management",
         "description": "Automatic calculation of monthly salaries including all statutory deductions and allowances."
@@ -73,8 +73,8 @@
         "description": "Create your account in just a few minutes and enter your employee's details."
       },
       "step2": {
-        "title": "We handle everything",
-        "description": "Contributions, insurance, contracts and pay slips: we take care of it all."
+        "title": "We guide you step by step",
+        "description": "Contributions, insurance, contracts and pay slips: we walk you through every step."
       },
       "step3": {
         "title": "You stay relaxed",
@@ -146,7 +146,7 @@
     "faq": {
       "title": "Frequently asked questions about pricing",
       "q1": "Why a flat fee rather than a commission?",
-      "a1": "Our flat fee guarantees predictable costs every month, regardless of your employee's salary. Unlike commission-based providers, you do not pay more when you increase your employee's salary or hours. It is fairer and more transparent.",
+      "a1": "Our flat fee helps you plan your costs every month, regardless of your employee's salary. Unlike commission-based providers, you do not pay more when you increase your employee's salary or hours. It is fairer and more transparent.",
       "q2": "Can I change plan at any time?",
       "a2": "Yes, you can switch between plans at any time from your account dashboard. The change takes effect the following month. There are no cancellation fees and no minimum commitment.",
       "q3": "Are there any hidden costs?",
@@ -266,7 +266,7 @@
     },
     "pricingFaq": {
       "q1": "Why a flat fee instead of a commission?",
-      "a1": "A flat fee guarantees predictable and fair costs. With a commission model, the better you pay your employee, the more the service costs you. At HappySalary, the price stays the same regardless of the salary amount.",
+      "a1": "A flat fee helps you keep costs predictable and fair. With a commission model, the better you pay your employee, the more the service costs you. At HappySalary, the price stays the same regardless of the salary amount.",
       "q2": "Are social contributions included in the flat fee?",
       "a2": "The flat fee covers the management and calculation of social contributions. The contributions themselves (AHV/IV/EO/ALV) are invoiced separately at cost, with no mark-up whatsoever on our part.",
       "q3": "Is there a minimum commitment?",
@@ -286,7 +286,7 @@
       "q2": "How does withholding tax work?",
       "a2": "Foreign employees without a C settlement permit are subject to withholding tax. HappySalary automatically calculates the amount based on the tariff of the employee's canton of residence and deducts it from the gross salary.",
       "q3": "What are my obligations as an employer?",
-      "a3": "As a household employer, you must register your employee with social insurance, pay employer contributions, take out accident insurance, draw up an employment contract and issue monthly pay slips. HappySalary takes care of all these obligations on your behalf."
+      "a3": "As a household employer, you must register your employee with social insurance, pay employer contributions, take out accident insurance, draw up an employment contract and issue monthly pay slips. HappySalary guides you and provides the tools to meet these obligations."
     }
   },
   "services": {
@@ -492,7 +492,7 @@
     }
   },
   "footer": {
-    "description": "HappySalary simplifies payroll management for household employers in Switzerland. Social contributions, insurance and contracts, all managed for a fixed fee.",
+    "description": "HappySalary guides household employers through payroll management in Switzerland. Social contributions, insurance and contracts — step by step, for a fixed fee.",
     "services": "Services",
     "features": "Features",
     "company": "Company",

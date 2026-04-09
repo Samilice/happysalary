@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/Card";
 import { Link } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import type { Database } from "@/lib/database.types";
+import { EmployeeActions } from "@/components/admin/EmployeeActions";
 
 type Profile = Database["public"]["Tables"]["profiles"]["Row"];
 type Employer = Database["public"]["Tables"]["employers"]["Row"];
@@ -160,30 +161,7 @@ export default async function ClientDetailPage({ params }: Props) {
                       <div><span className="text-text-muted">Salaire</span><p className="font-medium">CHF {Number(emp.monthly_salary).toFixed(2)}</p></div>
                     </div>
 
-                    {/* Generate document buttons - placeholder */}
-                    <div className="flex flex-wrap gap-2 pt-3 border-t border-border/50">
-                      <button disabled className="text-xs font-medium px-3 py-1.5 rounded-lg bg-primary/10 text-primary cursor-not-allowed opacity-60 flex items-center gap-1">
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                        </svg>
-                        Générer fiche de salaire
-                      </button>
-                      <button disabled className="text-xs font-medium px-3 py-1.5 rounded-lg bg-secondary/10 text-secondary cursor-not-allowed opacity-60 flex items-center gap-1">
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.5a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
-                        </svg>
-                        Générer contrat
-                      </button>
-                      <button disabled className="text-xs font-medium px-3 py-1.5 rounded-lg bg-amber-50 text-amber-700 cursor-not-allowed opacity-60 flex items-center gap-1">
-                        <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
-                        </svg>
-                        Décompte annuel
-                      </button>
-                    </div>
-                    <p className="text-[10px] text-text-muted mt-2 italic">
-                      La génération de documents sera disponible prochainement via API/IA.
-                    </p>
+                    <EmployeeActions employee={{ id: emp.id, first_name: emp.first_name, last_name: emp.last_name }} />
                   </div>
                 ))}
               </div>
