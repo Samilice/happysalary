@@ -23,6 +23,34 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
+function TestimonialCard({ testimonial, tt }: { testimonial: typeof TESTIMONIALS[number]; tt: ReturnType<typeof useTranslations> }) {
+  return (
+    <Card className="h-full flex flex-col" hover={false}>
+      <StarRating rating={testimonial.rating} />
+      <p className="mt-3 text-text-muted text-sm leading-relaxed flex-1 italic">
+        &ldquo;{tt(`${testimonial.nameKey}.text`)}&rdquo;
+      </p>
+      <div className="mt-4 flex items-center gap-3 pt-3 border-t border-border">
+        <Image
+          src={testimonial.image}
+          alt={tt(`${testimonial.nameKey}.name`)}
+          width={40}
+          height={40}
+          className="w-10 h-10 rounded-full object-cover"
+        />
+        <div>
+          <p className="text-sm font-semibold text-text">
+            {tt(`${testimonial.nameKey}.name`)}
+          </p>
+          <p className="text-xs text-text-muted">
+            {tt(`roles.${testimonial.role}`)} &middot; {testimonial.location}
+          </p>
+        </div>
+      </div>
+    </Card>
+  );
+}
+
 export function Testimonials() {
   const t = useTranslations("home.testimonials");
   const tt = useTranslations("testimonials");
@@ -32,32 +60,28 @@ export function Testimonials() {
       <Container>
         <SectionHeading title={t("title")} subtitle={t("subtitle")} />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Mobile: horizontal carousel */}
+        <div className="sm:hidden">
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 scrollbar-hide">
+            {TESTIMONIALS.map((testimonial) => (
+              <div key={testimonial.id} className="min-w-[280px] max-w-[300px] snap-center flex-shrink-0">
+                <TestimonialCard testimonial={testimonial} tt={tt} />
+              </div>
+            ))}
+          </div>
+          {/* Scroll indicator dots */}
+          <div className="flex justify-center gap-1.5 mt-3">
+            {TESTIMONIALS.map((testimonial) => (
+              <div key={testimonial.id} className="w-1.5 h-1.5 rounded-full bg-border" />
+            ))}
+          </div>
+        </div>
+
+        {/* Tablet+: grid */}
+        <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {TESTIMONIALS.map((testimonial, idx) => (
             <ScrollReveal key={testimonial.id} delay={idx * 100}>
-              <Card className="h-full flex flex-col">
-                <StarRating rating={testimonial.rating} />
-                <p className="mt-4 text-text-muted text-sm leading-relaxed flex-1 italic">
-                  &ldquo;{tt(`${testimonial.nameKey}.text`)}&rdquo;
-                </p>
-                <div className="mt-6 flex items-center gap-3 pt-4 border-t border-border">
-                  <Image
-                    src={testimonial.image}
-                    alt={tt(`${testimonial.nameKey}.name`)}
-                    width={40}
-                    height={40}
-                    className="w-10 h-10 rounded-full object-cover"
-                  />
-                  <div>
-                    <p className="text-sm font-semibold text-text">
-                      {tt(`${testimonial.nameKey}.name`)}
-                    </p>
-                    <p className="text-xs text-text-muted">
-                      {tt(`roles.${testimonial.role}`)} &middot; {testimonial.location}
-                    </p>
-                  </div>
-                </div>
-              </Card>
+              <TestimonialCard testimonial={testimonial} tt={tt} />
             </ScrollReveal>
           ))}
         </div>
