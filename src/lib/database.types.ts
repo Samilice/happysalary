@@ -156,6 +156,30 @@ export type Database = {
         };
         Update: Partial<Omit<Database["public"]["Tables"]["subscriptions"]["Insert"], "user_id">>;
       };
+      checklist_progress: {
+        Row: {
+          id: string;
+          employee_id: string;
+          step_key: string;
+          completed: boolean;
+          completed_at: string | null;
+          notes: string | null;
+          created_at: string;
+          updated_at: string;
+        };
+        Insert: {
+          employee_id: string;
+          step_key: string;
+          completed?: boolean;
+          completed_at?: string | null;
+          notes?: string | null;
+        };
+        Update: {
+          completed?: boolean;
+          completed_at?: string | null;
+          notes?: string | null;
+        };
+      };
     };
     Views: {
       admin_client_overview: {

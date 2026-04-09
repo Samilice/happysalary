@@ -248,6 +248,45 @@ create trigger set_updated_at before update on public.subscriptions
   for each row execute function public.update_updated_at();
 
 -- ============================================
+-- CHECKLIST PROGRESS (tracks which steps user completed)
+-- ============================================
+create table public.checklist_progress (
+  id uuid default uuid_generate_v4() primary key,
+  employee_id uuid references public.employees(id) on delete cascade not null,
+  step_key text not null,
+  completed boolean not null default false,
+  completed_at timestamptz,
+  notes text,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now(),
+  unique(employee_id, step_key)
+);
+
+alter table public.checklist_progress enable row level security;
+
+create policy "Users can manage own checklist"
+  on public.checklist_progress for all
+  using (
+    employee_id in (
+      select e.id from public.employees e
+      join public.employers emp on e.employer_id = emp.id
+      where emp.user_id = auth.uid()
+    )
+  );
+
+create policy "Admins can view all checklists"
+  on public.checklist_progress for select
+  using (
+    exists (
+      select 1 from public.profiles
+      where id = auth.uid() and role = 'admin'
+    )
+  );
+
+create trigger set_updated_at before update on public.checklist_progress
+  for each row execute function public.update_updated_at();
+
+-- ============================================
 -- VIEWS FOR ADMIN
 -- ============================================
 create or replace view public.admin_client_overview as
