@@ -46,8 +46,7 @@ export async function POST(request: Request) {
       const customerId = session.customer as string;
 
       if (customerEmail) {
-        const sb = supabase as Record<string, CallableFunction>;
-        const { data: profile } = await (supabase as ReturnType<typeof createServerClient>)
+        const { data: profile } = await supabase
           .from("profiles")
           .select("id")
           .eq("email", customerEmail)
@@ -59,7 +58,7 @@ export async function POST(request: Request) {
           if (amount >= 29) plan = "premium";
           else if (amount >= 19) plan = "comfort";
 
-          await (supabase as ReturnType<typeof createServerClient>).from("subscriptions").upsert({
+          await supabase.from("subscriptions").upsert({
             user_id: profile.id,
             stripe_customer_id: customerId,
             stripe_subscription_id: (session.subscription as string) || null,
@@ -68,7 +67,7 @@ export async function POST(request: Request) {
             current_period_start: new Date().toISOString(),
           } as Record<string, unknown>, { onConflict: "user_id" });
 
-          await (supabase as ReturnType<typeof createServerClient>)
+          await supabase
             .from("profiles")
             .update({ stripe_customer_id: customerId })
             .eq("id", profile.id);
@@ -86,7 +85,7 @@ export async function POST(request: Request) {
         : "canceled";
 
       const sub = subscription as unknown as { current_period_start: number; current_period_end: number };
-      await (supabase as ReturnType<typeof createServerClient>)
+      await supabase
         .from("subscriptions")
         .update({
           status,
