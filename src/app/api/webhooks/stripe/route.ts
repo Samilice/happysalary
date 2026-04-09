@@ -3,11 +3,18 @@ import Stripe from "stripe";
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-
-const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET!;
+function getStripe() {
+  return new Stripe(process.env.STRIPE_SECRET_KEY || "");
+}
 
 export async function POST(request: Request) {
+  const stripe = getStripe();
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET || "";
+
+  if (!process.env.STRIPE_SECRET_KEY || !webhookSecret) {
+    return NextResponse.json({ error: "Stripe not configured" }, { status: 500 });
+  }
+
   const body = await request.text();
   const signature = request.headers.get("stripe-signature")!;
 
@@ -23,7 +30,7 @@ export async function POST(request: Request) {
   const cookieStore = await cookies();
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "",
     {
       cookies: {
         getAll() { return cookieStore.getAll(); },
@@ -39,32 +46,29 @@ export async function POST(request: Request) {
       const customerId = session.customer as string;
 
       if (customerEmail) {
-        // Find user by email
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const sb = supabase as any;
-        const { data: profile } = await sb
+        const sb = supabase as Record<string, CallableFunction>;
+        const { data: profile } = await (supabase as ReturnType<typeof createServerClient>)
           .from("profiles")
           .select("id")
           .eq("email", customerEmail)
           .single();
 
         if (profile) {
-          // Determine plan from amount
           const amount = session.amount_total ? session.amount_total / 100 : 0;
           let plan: "basic" | "comfort" | "premium" = "basic";
           if (amount >= 29) plan = "premium";
           else if (amount >= 19) plan = "comfort";
 
-          await sb.from("subscriptions").upsert({
+          await (supabase as ReturnType<typeof createServerClient>).from("subscriptions").upsert({
             user_id: profile.id,
             stripe_customer_id: customerId,
-            stripe_subscription_id: session.subscription as string || null,
+            stripe_subscription_id: (session.subscription as string) || null,
             plan,
-            status: "active",
+            status: "active" as const,
             current_period_start: new Date().toISOString(),
-          }, { onConflict: "user_id" });
+          } as Record<string, unknown>, { onConflict: "user_id" });
 
-          await sb
+          await (supabase as ReturnType<typeof createServerClient>)
             .from("profiles")
             .update({ stripe_customer_id: customerId })
             .eq("id", profile.id);
@@ -81,9 +85,8 @@ export async function POST(request: Request) {
         : subscription.status === "past_due" ? "past_due"
         : "canceled";
 
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const sub = subscription as any;
-      await (supabase as any)
+      const sub = subscription as unknown as { current_period_start: number; current_period_end: number };
+      await (supabase as ReturnType<typeof createServerClient>)
         .from("subscriptions")
         .update({
           status,
