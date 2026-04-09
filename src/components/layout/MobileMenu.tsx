@@ -39,7 +39,7 @@ export function MobileMenu({ open, onClose, links }: Props) {
       {/* Backdrop */}
       <div
         className={cn(
-          "fixed inset-0 bg-black/50 z-40 transition-opacity lg:hidden",
+          "fixed inset-0 bg-black/50 z-[60] transition-opacity lg:hidden",
           open ? "opacity-100" : "opacity-0 pointer-events-none"
         )}
         onClick={onClose}
@@ -48,7 +48,7 @@ export function MobileMenu({ open, onClose, links }: Props) {
       {/* Panel */}
       <div
         className={cn(
-          "fixed top-0 right-0 h-full w-80 bg-white z-50 shadow-2xl transition-transform duration-300 lg:hidden flex flex-col",
+          "fixed top-0 right-0 h-full w-80 bg-white z-[70] shadow-2xl transition-transform duration-300 lg:hidden flex flex-col",
           open ? "translate-x-0" : "translate-x-full"
         )}
       >
