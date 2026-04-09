@@ -7,6 +7,7 @@ import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { PricingSection } from "@/components/sections/PricingSection";
 import { CTABanner } from "@/components/sections/CTABanner";
+import { LifestripeBanner } from "@/components/sections/LifestripeBanner";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -21,10 +22,13 @@ export default async function HomePage({ params }: Props) {
       <Hero />
       <TrustBar />
       <PricingSection />
+      <LifestripeBanner src="/images/lifestyle/desk.webp" alt="Modern workspace" />
       <FeatureGrid />
       <ComparisonTable />
+      <LifestripeBanner src="/images/lifestyle/couple.webp" alt="Swiss couple reviewing documents" />
       <HowItWorks />
       <Testimonials />
+      <LifestripeBanner src="/images/lifestyle/woman-phone.webp" alt="Happy customer" />
       <CTABanner />
     </>
   );
