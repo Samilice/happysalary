@@ -1,10 +1,18 @@
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
-import { createServerClient } from "@supabase/ssr";
-import { cookies } from "next/headers";
+import { createClient } from "@supabase/supabase-js";
 
+// Lazy Stripe initialization — avoids crash at build time
 function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY || "");
+}
+
+// Admin Supabase client for webhooks (no user cookies needed)
+function getSupabaseAdmin() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL || "",
+    process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
+  );
 }
 
 export async function POST(request: Request) {
@@ -27,17 +35,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Invalid signature" }, { status: 400 });
   }
 
-  const cookieStore = await cookies();
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "",
-    {
-      cookies: {
-        getAll() { return cookieStore.getAll(); },
-        setAll() {},
-      },
-    }
-  );
+  const supabase = getSupabaseAdmin();
 
   switch (event.type) {
     case "checkout.session.completed": {
@@ -63,9 +61,9 @@ export async function POST(request: Request) {
             stripe_customer_id: customerId,
             stripe_subscription_id: (session.subscription as string) || null,
             plan,
-            status: "active" as const,
+            status: "active",
             current_period_start: new Date().toISOString(),
-          } as Record<string, unknown>, { onConflict: "user_id" });
+          }, { onConflict: "user_id" });
 
           await supabase
             .from("profiles")

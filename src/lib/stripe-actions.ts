@@ -1,6 +1,6 @@
 "use server";
 
-import { stripe } from "./stripe";
+import { getStripe } from "./stripe";
 import { plans } from "./plans";
 import type { PlanId } from "./plans";
 
@@ -8,7 +8,7 @@ export async function createCheckoutSession(planId: PlanId, locale: string) {
   const plan = plans.find((p) => p.id === planId);
   if (!plan) throw new Error(`Plan ${planId} not found`);
 
-  const session = await stripe.checkout.sessions.create({
+  const session = await getStripe().checkout.sessions.create({
     mode: "subscription",
     payment_method_types: ["card"],
     line_items: [
