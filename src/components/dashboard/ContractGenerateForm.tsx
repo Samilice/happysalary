@@ -4,6 +4,7 @@ import { useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
 import { createClient } from "@/lib/supabase/client";
+import { cleanName, cleanNameForFile, formatHours, cn } from "@/lib/utils";
 
 type Employee = {
   id: string;
@@ -40,26 +41,23 @@ const CONTRACT_TYPES = ["cdi", "cdd"] as const;
 const TRIAL_PERIODS = ["none", "1month", "3months"] as const;
 const SALARY_TYPES = ["monthly", "hourly"] as const;
 const NOTICE_PERIODS = ["legal", "1month", "2months", "3months"] as const;
+const PAYMENT_DAYS = ["25", "end", "custom"] as const;
+const PAYMENT_METHODS = ["transfer", "cash"] as const;
+const HOURS_TYPES = ["fixed", "variable"] as const;
 
 function Tooltip({ text }: { text: string }) {
-  const [show, setShow] = useState(false);
   return (
-    <span className="relative inline-block ml-1">
-      <button
-        type="button"
-        className="w-4 h-4 rounded-full bg-secondary/10 text-secondary text-[10px] font-bold inline-flex items-center justify-center hover:bg-secondary/20 transition-colors"
-        onMouseEnter={() => setShow(true)}
-        onMouseLeave={() => setShow(false)}
-        onClick={(e) => { e.preventDefault(); setShow(!show); }}
+    <span className="relative inline-flex ml-1.5 group/tip">
+      <span
+        className="w-4 h-4 rounded-full bg-secondary/10 text-secondary hover:bg-secondary/20 transition-colors inline-flex items-center justify-center text-[10px] font-bold cursor-help flex-shrink-0"
+        tabIndex={0}
       >
         i
-      </button>
-      {show && (
-        <span className="absolute z-50 bottom-full left-1/2 -translate-x-1/2 mb-2 w-56 p-2.5 text-xs text-white bg-secondary rounded-lg shadow-lg leading-relaxed">
-          {text}
-          <span className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-secondary" />
-        </span>
-      )}
+      </span>
+      <span className="pointer-events-none opacity-0 group-hover/tip:opacity-100 group-focus-within/tip:opacity-100 transition-opacity duration-150 absolute left-1/2 -translate-x-1/2 bottom-full mb-2 z-50 w-56 p-2.5 rounded-xl bg-secondary text-white text-xs leading-relaxed shadow-xl whitespace-normal">
+        {text}
+        <span className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-x-[6px] border-x-transparent border-t-[6px] border-t-secondary" />
+      </span>
     </span>
   );
 }
@@ -86,9 +84,22 @@ export function ContractGenerateForm({ employees, employer }: Props) {
   const [accommodation, setAccommodation] = useState(false);
   const [meals, setMeals] = useState(false);
   const [specialConditions, setSpecialConditions] = useState("");
+
+  // New fields
+  const [paymentDay, setPaymentDay] = useState<typeof PAYMENT_DAYS[number]>("end");
+  const [customPaymentDay, setCustomPaymentDay] = useState("");
+  const [paymentMethod, setPaymentMethod] = useState<typeof PAYMENT_METHODS[number]>("transfer");
+  const [thirteenthSalary, setThirteenthSalary] = useState(false);
+  const [thirteenthSalaryAmount, setThirteenthSalaryAmount] = useState("");
+  const [hoursType, setHoursType] = useState<typeof HOURS_TYPES[number]>("fixed");
+  const [minHours, setMinHours] = useState("");
+  const [maxHours, setMaxHours] = useState("");
+  const [simplifiedProcedure, setSimplifiedProcedure] = useState(false);
+
   const [loading, setLoading] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const selectedEmployee = employees.find((e) => e.id === employeeId);
 
@@ -96,21 +107,54 @@ export function ContractGenerateForm({ employees, employer }: Props) {
     setEmployeeId(id);
     setSaveSuccess(false);
     setSaveError(null);
+    setErrors({});
     const emp = employees.find((e) => e.id === id);
     if (emp) {
       setSalaryAmount(String(emp.monthly_salary));
       setStartDate(emp.start_date || new Date().toISOString().split("T")[0]);
       setWeeklyHours(String(Math.round((emp.monthly_hours || 0) * 12 / 52)));
+      setThirteenthSalaryAmount(String((emp.monthly_salary / 12).toFixed(2)));
     }
   }, [employees]);
 
   const inputClass =
     "w-full px-4 py-3 rounded-xl border border-border bg-white text-text placeholder:text-text-light focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors text-sm";
+  const errorInputClass = "border-red-400 focus:ring-red-400/50 focus:border-red-400";
+
+  function FieldError({ name }: { name: string }) {
+    if (!errors[name]) return null;
+    return <p className="text-xs text-red-500 mt-1">{errors[name]}</p>;
+  }
+
+  // ── Validation ────────────────────────────────────────────────
+  function validate(): boolean {
+    const errs: Record<string, string> = {};
+    if (!employeeId) errs.employeeId = t("errors.required");
+    if (!startDate) errs.startDate = t("errors.required");
+    if (contractType === "cdd" && !endDate) errs.endDate = t("errors.endDateRequired");
+    const rate = Number(activityRate);
+    if (!rate || rate < 1 || rate > 100) errs.activityRate = t("errors.activityRange");
+    const salary = Number(salaryAmount);
+    if (!salary || salary <= 0) errs.salaryAmount = t("errors.salaryPositive");
+    if (hoursType === "fixed") {
+      const wh = Number(weeklyHours);
+      if (!wh || wh <= 0) errs.weeklyHours = t("errors.hoursPositive");
+    } else {
+      const mn = Number(minHours);
+      const mx = Number(maxHours);
+      if (!mn || mn <= 0) errs.minHours = t("errors.hoursPositive");
+      if (!mx || mx <= 0) errs.maxHours = t("errors.hoursPositive");
+      if (mn && mx && mn >= mx) errs.maxHours = t("errors.minMaxInvalid");
+    }
+    setErrors(errs);
+    return Object.keys(errs).length === 0;
+  }
 
   // ── PDF Generation + Save ─────────────────────────────────────
   async function handleGenerate(e: React.FormEvent) {
     e.preventDefault();
     if (!selectedEmployee) return;
+    if (!validate()) return;
     setLoading(true);
     setSaveSuccess(false);
     setSaveError(null);
@@ -133,6 +177,16 @@ export function ContractGenerateForm({ employees, employer }: Props) {
       const gray = rgb(0.45, 0.45, 0.45);
       const lightGray = rgb(0.85, 0.85, 0.85);
       const bgLight = rgb(0.96, 0.96, 0.96);
+
+      // Cleaned names
+      const empFirstName = cleanName(selectedEmployee.first_name);
+      const empLastName = cleanName(selectedEmployee.last_name);
+      const empName = `${empFirstName} ${empLastName}`;
+      const employerFirstName = cleanName(employer.first_name);
+      const employerLastName = cleanName(employer.last_name);
+      const employerName = employer.company
+        ? `${employer.company} (${employerFirstName} ${employerLastName})`
+        : `${employerFirstName} ${employerLastName}`;
 
       function drawText(text: string, x: number, yPos: number, size: number, f = font, color = dark) {
         page.drawText(text, { x, y: yPos, size, font: f, color });
@@ -170,7 +224,7 @@ export function ContractGenerateForm({ employees, employer }: Props) {
       function drawSection(title: string) {
         sectionNum++;
         checkPage(50);
-        y -= 22;
+        y -= 26;
         page.drawRectangle({ x: margin, y: y - 4, width: contentWidth, height: 22, color: bgLight });
         drawText(`Article ${sectionNum} — ${title}`, margin + 8, y, 10.5, fontBold, dark);
         y -= 22;
@@ -209,22 +263,32 @@ export function ContractGenerateForm({ employees, employer }: Props) {
       drawLine(y);
       y -= 20;
 
-      // ===== CONTRACT SUMMARY BOX =====
-      checkPage(80);
-      const summaryH = 60;
-      page.drawRectangle({ x: margin, y: y - summaryH, width: contentWidth, height: summaryH, color: rgb(0.94, 0.96, 0.99) });
-      page.drawRectangle({ x: margin, y: y - summaryH, width: 3, height: summaryH, color: primary });
-      const empName = `${selectedEmployee.first_name} ${selectedEmployee.last_name}`;
-      const employerName = employer.company
-        ? `${employer.company} (${employer.first_name} ${employer.last_name})`
-        : `${employer.first_name} ${employer.last_name}`;
-      drawText(t("pdf.summaryTitle").toUpperCase(), margin + 14, y - 14, 8, fontBold, primary);
-      drawText(`${t("pdf.employer")} : ${employerName}`, margin + 14, y - 28, 9, font, dark);
-      drawText(`${t("pdf.employee")} : ${empName}`, margin + 14, y - 42, 9, font, dark);
+      // ===== CONTRACT SUMMARY BOX (line-by-line) =====
+      checkPage(130);
       const salaryStr = salaryType === "hourly"
         ? `CHF ${Number(salaryAmount).toFixed(2)} / h`
         : `CHF ${Number(salaryAmount).toFixed(2)} / ${t("pdf.perMonth")}`;
-      drawText(`${t("pdf.position")} : ${selectedEmployee.job_title}  |  ${t("pdf.grossSalary")} : ${salaryStr}  |  ${t("activityRate")} : ${activityRate}%`, margin + 14, y - 56, 8, font, gray);
+
+      const summaryLines = [
+        `${t("pdf.employer")} : ${employerName}`,
+        `${t("pdf.employee")} : ${empName}`,
+        `${t("pdf.contractType")} : ${contractType === "cdi" ? t("cdi") : t("cdd")}`,
+        `${t("pdf.position")} : ${selectedEmployee.job_title}`,
+        `${t("pdf.grossSalary")} : ${salaryStr}`,
+        `${t("activityRate")} : ${activityRate}%`,
+        `${t("startDate")} : ${startDate}`,
+      ];
+      const summaryH = summaryLines.length * 14 + 26;
+
+      page.drawRectangle({ x: margin, y: y - summaryH, width: contentWidth, height: summaryH, color: rgb(0.94, 0.96, 0.99) });
+      page.drawRectangle({ x: margin, y: y - summaryH, width: 3, height: summaryH, color: primary });
+
+      drawText(t("pdf.summaryTitle").toUpperCase(), margin + 14, y - 14, 8, fontBold, primary);
+      let sy = y - 30;
+      for (const line of summaryLines) {
+        drawText(line, margin + 14, sy, 9, font, dark);
+        sy -= 14;
+      }
       y -= summaryH + 16;
 
       // ===== ART 1 — EMPLOYER =====
@@ -263,15 +327,32 @@ export function ContractGenerateForm({ employees, employer }: Props) {
       // ===== ART 5 — WORKING HOURS =====
       drawSection(t("pdf.workingHoursTitle"));
       drawField(t("activityRate"), `${activityRate}%`);
-      if (weeklyHours) drawField(t("pdf.weeklyHours"), `${weeklyHours}h`);
+      if (hoursType === "fixed") {
+        if (weeklyHours) drawField(t("pdf.weeklyHours"), `${formatHours(weeklyHours)} / ${t("pdf.perWeek")}`);
+      } else {
+        drawField(t("pdf.weeklyHours"), t("pdf.hoursRange", { min: minHours, max: maxHours }));
+      }
       if (workingDays) drawField(t("pdf.workingDays"), workingDays);
 
       // ===== ART 6 — SALARY =====
       drawSection(t("pdf.salaryTitle"));
       drawField(t("pdf.grossSalary"), salaryStr);
       drawParagraph(t("pdf.salaryClause"));
+      drawParagraph(t("pdf.salaryNetClause"));
+      if (simplifiedProcedure) {
+        drawParagraph(t("pdf.simplifiedTaxNote"));
+      }
       if (vacationIncluded) {
         drawParagraph(t("pdf.vacationIncludedClause"));
+      }
+      // Payment details
+      const payDayStr = paymentDay === "25" ? t("paymentDay25") : paymentDay === "end" ? t("paymentDayEnd") : customPaymentDay;
+      drawField(t("pdf.paymentDayField"), payDayStr);
+      drawField(t("pdf.paymentMethodField"), paymentMethod === "transfer" ? t("pdf.paymentTransferValue") : t("pdf.paymentCashValue"));
+      // 13th salary
+      if (thirteenthSalary) {
+        const amount13 = thirteenthSalaryAmount || (Number(salaryAmount) / 12).toFixed(2);
+        drawParagraph(t("pdf.thirteenthSalaryClause", { amount: amount13 }));
       }
 
       // ===== ART 7 — VACATION =====
@@ -288,7 +369,7 @@ export function ContractGenerateForm({ employees, employer }: Props) {
         if (noticePeriod === "legal") {
           drawParagraph(t("pdf.noticeClauseCDI"));
         } else {
-          const np = noticePeriod === "1month" ? t("trial1Month") : noticePeriod === "2months" ? "2 mois" : t("trial3Months");
+          const np = noticePeriod === "1month" ? t("notice1Month") : noticePeriod === "2months" ? t("notice2Months") : t("notice3Months");
           drawParagraph(t("pdf.noticeClauseCustom", { period: np }));
         }
       } else {
@@ -306,31 +387,32 @@ export function ContractGenerateForm({ employees, employer }: Props) {
         }
       }
 
-      // ===== SIGNATURES =====
+      // ===== SIGNATURES (lines first, names below) =====
       checkPage(130);
       y -= 20;
       drawSection(t("pdf.signatures"));
       drawText(`${t("pdf.signDate")} _______________________`, margin + 8, y, 9, font, gray);
-      y -= 40;
+      y -= 30;
 
       const halfW = contentWidth / 2 - 10;
+      // Headers
       drawText(t("pdf.employer"), margin + 8, y, 9, fontBold, gray);
       drawText(t("pdf.employee"), margin + halfW + 20, y, 9, fontBold, gray);
-      y -= 8;
-      drawText(employerName, margin + 8, y, 8.5, font, dark);
-      drawText(empName, margin + halfW + 20, y, 8.5, font, dark);
-      y -= 30;
-      page.drawLine({ start: { x: margin + 8, y: y + 5 }, end: { x: margin + halfW, y: y + 5 }, thickness: 0.5, color: rgb(0.7, 0.7, 0.7) });
-      page.drawLine({ start: { x: margin + halfW + 20, y: y + 5 }, end: { x: pageWidth - margin - 8, y: y + 5 }, thickness: 0.5, color: rgb(0.7, 0.7, 0.7) });
-      drawText("Signature", margin + 8, y - 10, 7.5, font, gray);
-      drawText("Signature", margin + halfW + 20, y - 10, 7.5, font, gray);
+      y -= 40;
+      // Signature lines
+      page.drawLine({ start: { x: margin + 8, y }, end: { x: margin + halfW, y }, thickness: 0.5, color: rgb(0.7, 0.7, 0.7) });
+      page.drawLine({ start: { x: margin + halfW + 20, y }, end: { x: pageWidth - margin - 8, y }, thickness: 0.5, color: rgb(0.7, 0.7, 0.7) });
+      // Names BELOW the lines
+      y -= 14;
+      drawText(employerName, margin + 8, y, 8.5, font, gray);
+      drawText(empName, margin + halfW + 20, y, 8.5, font, gray);
 
-      // ===== DISCLAIMER =====
-      checkPage(50);
+      // ===== LEGAL DISCLAIMER =====
+      checkPage(60);
       y -= 40;
       drawLine(y + 10);
       y -= 5;
-      const disclaimerLines = wrapText(t("disclaimer"), contentWidth, 7.5);
+      const disclaimerLines = wrapText(t("pdf.legalDisclaimer"), contentWidth, 7.5);
       for (const line of disclaimerLines) {
         drawText(line, margin, y, 7.5, font, gray);
         y -= 11;
@@ -341,9 +423,8 @@ export function ContractGenerateForm({ employees, employer }: Props) {
       // ===== SAVE & DOWNLOAD =====
       const pdfBytes = await pdfDoc.save();
       const blob = new Blob([pdfBytes as unknown as BlobPart], { type: "application/pdf" });
-      const fileName = `contrat-${selectedEmployee.first_name}-${selectedEmployee.last_name}.pdf`;
+      const fileName = `contrat-${cleanNameForFile(selectedEmployee.first_name)}-${cleanNameForFile(selectedEmployee.last_name)}.pdf`;
 
-      // Upload to Supabase Storage & create document record
       try {
         const supabase = createClient();
         const { data: { session } } = await supabase.auth.getSession();
@@ -374,7 +455,6 @@ export function ContractGenerateForm({ employees, employer }: Props) {
         setSaveError(t("saveError"));
       }
 
-      // Download locally
       const url = URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
@@ -394,12 +474,12 @@ export function ContractGenerateForm({ employees, employer }: Props) {
       <div className="bg-surface border border-border rounded-2xl p-4 sm:p-6">
         <form onSubmit={handleGenerate} className="space-y-6">
 
-          {/* ── Bloc 1 : Employé ──────────────────────────────── */}
+          {/* ── Bloc 1 : Employe ──────────────────────────────── */}
           <fieldset className="space-y-4">
             <legend className="text-sm font-bold text-secondary mb-2">{t("selectEmployee")}</legend>
             <select value={employeeId} onChange={(e) => handleEmployeeChange(e.target.value)} className={inputClass}>
               {employees.map((emp) => (
-                <option key={emp.id} value={emp.id}>{emp.first_name} {emp.last_name} — {emp.job_title}</option>
+                <option key={emp.id} value={emp.id}>{cleanName(emp.first_name)} {cleanName(emp.last_name)} — {emp.job_title}</option>
               ))}
             </select>
           </fieldset>
@@ -432,12 +512,14 @@ export function ContractGenerateForm({ employees, employer }: Props) {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-sm font-medium text-text mb-1.5">{t("startDate")}</label>
-                <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} className={inputClass} />
+                <input type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} className={cn(inputClass, errors.startDate && errorInputClass)} />
+                <FieldError name="startDate" />
               </div>
               {contractType === "cdd" && (
                 <div>
                   <label className="block text-sm font-medium text-text mb-1.5">{t("endDate")}</label>
-                  <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} className={inputClass} />
+                  <input type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} className={cn(inputClass, errors.endDate && errorInputClass)} />
+                  <FieldError name="endDate" />
                 </div>
               )}
             </div>
@@ -462,16 +544,40 @@ export function ContractGenerateForm({ employees, employer }: Props) {
                   {t("activityRate")}
                   <Tooltip text={t("tooltips.activityRate")} />
                 </label>
-                <input type="number" min="1" max="100" value={activityRate} onChange={(e) => setActivityRate(e.target.value)} className={inputClass} />
+                <input type="number" min="1" max="100" value={activityRate} onChange={(e) => setActivityRate(e.target.value)} className={cn(inputClass, errors.activityRate && errorInputClass)} />
+                <FieldError name="activityRate" />
               </div>
               <div>
-                <label className="block text-sm font-medium text-text mb-1.5">{t("weeklyHours")}</label>
-                <input type="number" min="1" max="50" value={weeklyHours} onChange={(e) => setWeeklyHours(e.target.value)} className={inputClass} />
+                <label className="block text-sm font-medium text-text mb-1.5">{t("hoursType")}</label>
+                <select value={hoursType} onChange={(e) => setHoursType(e.target.value as typeof HOURS_TYPES[number])} className={inputClass}>
+                  <option value="fixed">{t("hoursFixed")}</option>
+                  <option value="variable">{t("hoursVariable")}</option>
+                </select>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-text mb-1.5">{t("workingDaysLabel")}</label>
-                <input type="text" value={workingDays} onChange={(e) => setWorkingDays(e.target.value)} placeholder={t("workingDaysPlaceholder")} className={inputClass} />
-              </div>
+              {hoursType === "fixed" ? (
+                <div>
+                  <label className="block text-sm font-medium text-text mb-1.5">{t("weeklyHours")}</label>
+                  <input type="number" min="1" max="50" value={weeklyHours} onChange={(e) => setWeeklyHours(e.target.value)} className={cn(inputClass, errors.weeklyHours && errorInputClass)} />
+                  <FieldError name="weeklyHours" />
+                </div>
+              ) : (
+                <>
+                  <div>
+                    <label className="block text-sm font-medium text-text mb-1.5">{t("minHoursLabel")}</label>
+                    <input type="number" min="1" max="50" value={minHours} onChange={(e) => setMinHours(e.target.value)} className={cn(inputClass, errors.minHours && errorInputClass)} />
+                    <FieldError name="minHours" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-text mb-1.5">{t("maxHoursLabel")}</label>
+                    <input type="number" min="1" max="50" value={maxHours} onChange={(e) => setMaxHours(e.target.value)} className={cn(inputClass, errors.maxHours && errorInputClass)} />
+                    <FieldError name="maxHours" />
+                  </div>
+                </>
+              )}
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-text mb-1.5">{t("workingDaysLabel")}</label>
+              <input type="text" value={workingDays} onChange={(e) => setWorkingDays(e.target.value)} placeholder={t("workingDaysPlaceholder")} className={inputClass} />
             </div>
           </fieldset>
 
@@ -488,13 +594,53 @@ export function ContractGenerateForm({ employees, employer }: Props) {
               </div>
               <div>
                 <label className="block text-sm font-medium text-text mb-1.5">{t("salary")}</label>
-                <input type="number" step="0.01" value={salaryAmount} onChange={(e) => setSalaryAmount(e.target.value)} className={inputClass} />
+                <input type="number" step="0.01" value={salaryAmount} onChange={(e) => setSalaryAmount(e.target.value)} className={cn(inputClass, errors.salaryAmount && errorInputClass)} />
+                <FieldError name="salaryAmount" />
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-text mb-1.5">{t("paymentDay")}</label>
+                <select value={paymentDay} onChange={(e) => setPaymentDay(e.target.value as typeof PAYMENT_DAYS[number])} className={inputClass}>
+                  <option value="25">{t("paymentDay25")}</option>
+                  <option value="end">{t("paymentDayEnd")}</option>
+                  <option value="custom">{t("paymentDayCustom")}</option>
+                </select>
+                {paymentDay === "custom" && (
+                  <input type="text" value={customPaymentDay} onChange={(e) => setCustomPaymentDay(e.target.value)} placeholder={t("customPaymentDayLabel")} className={cn(inputClass, "mt-2")} />
+                )}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-text mb-1.5">
+                  {t("paymentMethod")}
+                  <Tooltip text={t("tooltips.paymentMethod")} />
+                </label>
+                <select value={paymentMethod} onChange={(e) => setPaymentMethod(e.target.value as typeof PAYMENT_METHODS[number])} className={inputClass}>
+                  <option value="transfer">{t("paymentTransfer")}</option>
+                  <option value="cash">{t("paymentCash")}</option>
+                </select>
               </div>
             </div>
             <label className="flex items-center gap-2 text-sm text-text cursor-pointer">
               <input type="checkbox" checked={vacationIncluded} onChange={(e) => setVacationIncluded(e.target.checked)} className="rounded border-border text-primary focus:ring-primary/50" />
               {t("vacationIncluded")}
               <Tooltip text={t("tooltips.vacation")} />
+            </label>
+            <label className="flex items-center gap-2 text-sm text-text cursor-pointer">
+              <input type="checkbox" checked={thirteenthSalary} onChange={(e) => setThirteenthSalary(e.target.checked)} className="rounded border-border text-primary focus:ring-primary/50" />
+              {t("thirteenthSalary")}
+              <Tooltip text={t("tooltips.thirteenth")} />
+            </label>
+            {thirteenthSalary && (
+              <div>
+                <label className="block text-sm font-medium text-text mb-1.5">{t("thirteenthSalaryAmount")}</label>
+                <input type="number" step="0.01" value={thirteenthSalaryAmount} onChange={(e) => setThirteenthSalaryAmount(e.target.value)} placeholder={(Number(salaryAmount) / 12).toFixed(2)} className={inputClass} />
+              </div>
+            )}
+            <label className="flex items-center gap-2 text-sm text-text cursor-pointer">
+              <input type="checkbox" checked={simplifiedProcedure} onChange={(e) => setSimplifiedProcedure(e.target.checked)} className="rounded border-border text-primary focus:ring-primary/50" />
+              {t("simplifiedProcedureLabel")}
+              <Tooltip text={t("tooltips.simplifiedProcedure")} />
             </label>
           </fieldset>
 
@@ -510,7 +656,7 @@ export function ContractGenerateForm({ employees, employer }: Props) {
             </label>
           </fieldset>
 
-          {/* ── Bloc 6 : Résiliation ──────────────────────────── */}
+          {/* ── Bloc 6 : Resiliation ──────────────────────────── */}
           {contractType === "cdi" && (
             <fieldset className="space-y-4">
               <legend className="text-sm font-bold text-secondary mb-2">
@@ -526,7 +672,7 @@ export function ContractGenerateForm({ employees, employer }: Props) {
             </fieldset>
           )}
 
-          {/* ── Bloc 7 : Conditions spécifiques ──────────────── */}
+          {/* ── Bloc 7 : Conditions specifiques ──────────────── */}
           <fieldset className="space-y-3">
             <legend className="text-sm font-bold text-secondary mb-2">{t("pdf.specificTitle")}</legend>
             <label className="flex items-center gap-2 text-sm text-text cursor-pointer">
