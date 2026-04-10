@@ -30,7 +30,8 @@ export default function RootLayout({
 }>) {
   return (
     <html className={`${inter.variable} h-full scroll-smooth`} suppressHydrationWarning>
-      <head>
+      <body className="min-h-full flex flex-col antialiased font-sans">
+        {children}
         <Script id="clarity" strategy="afterInteractive">{`
           (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -38,9 +39,6 @@ export default function RootLayout({
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "w9dcyak2z6");
         `}</Script>
-      </head>
-      <body className="min-h-full flex flex-col antialiased font-sans">
-        {children}
       </body>
     </html>
   );
