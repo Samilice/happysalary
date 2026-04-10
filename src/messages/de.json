@@ -46,11 +46,11 @@
       },
       "socialContributions": {
         "title": "Sozialversicherungsbeiträge",
-        "description": "Anmeldung und Abführung der AHV/IV/EO/ALV-Beiträge bei der zuständigen Ausgleichskasse."
+        "description": "Präzise Berechnung der AHV/IV/EO/ALV-Beiträge für Arbeitgeber und Arbeitnehmer, mit Anleitung zur Deklaration bei Ihrer Ausgleichskasse."
       },
       "insurance": {
         "title": "Unfallversicherung",
-        "description": "Anmeldung zur obligatorischen Berufs- und Nichtberufsunfallversicherung (UVG) gemäss Gesetz."
+        "description": "Anleitung zur UVG-Unfallversicherung und Beitragsberechnung direkt in Ihren Lohnabrechnungen."
       },
       "contracts": {
         "title": "Arbeitsverträge",
@@ -62,7 +62,7 @@
       },
       "taxWithholding": {
         "title": "Quellensteuer",
-        "description": "Berechnung und Abzug der Quellensteuer für betroffene Mitarbeiter gemäss kantonalem Tarif."
+        "description": "Berechnung der Quellensteuer (vereinfachtes Verfahren 5%) direkt in Ihren Lohnabrechnungen."
       }
     },
     "howItWorks": {
@@ -73,8 +73,8 @@
         "description": "Erstellen Sie Ihr Konto in wenigen Minuten und geben Sie die Daten Ihres Mitarbeiters ein."
       },
       "step2": {
-        "title": "Wir begleiten Sie Schritt für Schritt",
-        "description": "Beiträge, Versicherungen, Verträge und Lohnabrechnungen: wir begleiten Sie durch jeden Schritt."
+        "title": "Dokumente erstellen",
+        "description": "Arbeitsvertrag, Lohnabrechnungen und Beitragsberechnung: alles wird in Ihrem Bereich erstellt."
       },
       "step3": {
         "title": "Sie bleiben entspannt",
@@ -96,7 +96,7 @@
       "allInclusive": "Alles inklusive",
       "yes": "Ja",
       "extra": "Gegen Aufpreis",
-      "support": "Kundensupport",
+      "support": "Support per E-Mail",
       "included": "Inklusive",
       "paid": "Kostenpflichtig"
     },
@@ -163,9 +163,9 @@
       "detail": "Geben Sie Ihre Angaben und die Daten Ihres Mitarbeiters ein: Name, Adresse, AHV-Nummer, vereinbarter Lohn und Beschäftigungsgrad. Unser Formular führt Sie Schritt für Schritt."
     },
     "step2": {
-      "title": "Wir übernehmen",
+      "title": "Dokumente erstellen",
       "description": "HappySalary erledigt sämtliche administrativen Formalitäten.",
-      "detail": "Wir melden Ihren Mitarbeiter bei den Sozialversicherungen an, erstellen den Arbeitsvertrag, berechnen die gesetzlichen Abzüge und bereiten die Lohnabrechnungen jeden Monat automatisch vor."
+      "detail": "Erstellen Sie den Arbeitsvertrag, berechnen Sie die gesetzlichen Abzüge und erstellen Sie die Lohnabrechnungen jeden Monat in Ihrem Bereich. Unsere Checkliste führt Sie durch die Anmeldung bei den Sozialversicherungen."
     },
     "step3": {
       "title": "Alles online einsehen",

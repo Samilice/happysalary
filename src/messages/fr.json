@@ -46,11 +46,11 @@
       },
       "socialContributions": {
         "title": "Cotisations sociales",
-        "description": "Déclaration et versement des cotisations AVS/AI/APG/AC auprès de la caisse de compensation compétente."
+        "description": "Calcul précis des cotisations AVS/AI/APG/AC employeur et employé, avec guide pour la déclaration à votre caisse de compensation."
       },
       "insurance": {
         "title": "Assurance accidents",
-        "description": "Affiliation à l'assurance accidents professionnels et non professionnels (LAA) conformément à la loi."
+        "description": "Guide pour l'affiliation à l'assurance accidents (LAA) et calcul des cotisations intégré à vos fiches de salaire."
       },
       "contracts": {
         "title": "Contrats de travail",
@@ -62,7 +62,7 @@
       },
       "taxWithholding": {
         "title": "Impôt à la source",
-        "description": "Calcul et prélèvement de l'impôt à la source pour les employés concernés, selon le barème cantonal."
+        "description": "Calcul de l'impôt à la source (procédure simplifiée 5%) intégré dans vos fiches de salaire."
       }
     },
     "howItWorks": {
@@ -73,8 +73,8 @@
         "description": "Créez votre compte en quelques minutes et renseignez les informations de votre employé."
       },
       "step2": {
-        "title": "On vous guide pas à pas",
-        "description": "Cotisations, assurances, contrats et fiches de salaire : on vous accompagne sur chaque étape."
+        "title": "Générez vos documents",
+        "description": "Contrat de travail, fiches de salaire et calcul des cotisations : tout est généré depuis votre espace."
       },
       "step3": {
         "title": "Vous restez serein",
@@ -96,7 +96,7 @@
       "allInclusive": "Tout inclus",
       "yes": "Oui",
       "extra": "En supplément",
-      "support": "Support client",
+      "support": "Support par email",
       "included": "Inclus",
       "paid": "Payant"
     },
@@ -163,9 +163,9 @@
       "detail": "Renseignez vos coordonnées et les informations de votre employé : nom, adresse, numéro AVS, salaire convenu et taux d'occupation. Notre formulaire vous guide pas à pas."
     },
     "step2": {
-      "title": "Nous prenons le relais",
+      "title": "Générez vos documents",
       "description": "HappySalary vous guide dans toutes les formalités administratives.",
-      "detail": "Nous affilions votre employé aux assurances sociales, générons le contrat de travail, calculons les déductions légales et préparons les fiches de salaire chaque mois automatiquement."
+      "detail": "Générez le contrat de travail, calculez les déductions légales et créez les fiches de salaire chaque mois depuis votre espace. Notre checklist vous guide pour les affiliations aux assurances sociales."
     },
     "step3": {
       "title": "Suivez tout en ligne",

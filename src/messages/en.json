@@ -46,11 +46,11 @@
       },
       "socialContributions": {
         "title": "Social Contributions",
-        "description": "Declaration and payment of AHV/IV/EO/ALV contributions to the relevant compensation office."
+        "description": "Precise calculation of OASI/DI/APG/UI contributions for employer and employee, with guidance for declaration to your compensation fund."
       },
       "insurance": {
         "title": "Accident Insurance",
-        "description": "Enrolment in compulsory occupational and non-occupational accident insurance (UVG) as required by law."
+        "description": "Guidance for accident insurance (AIA) affiliation and contribution calculation integrated into your payslips."
       },
       "contracts": {
         "title": "Employment Contracts",
@@ -62,7 +62,7 @@
       },
       "taxWithholding": {
         "title": "Withholding Tax",
-        "description": "Calculation and deduction of withholding tax for eligible employees, based on the applicable cantonal tariff."
+        "description": "Source tax calculation (simplified procedure 5%) integrated into your payslips."
       }
     },
     "howItWorks": {
@@ -73,8 +73,8 @@
         "description": "Create your account in just a few minutes and enter your employee's details."
       },
       "step2": {
-        "title": "We guide you step by step",
-        "description": "Contributions, insurance, contracts and pay slips: we walk you through every step."
+        "title": "Generate your documents",
+        "description": "Employment contract, payslips and contribution calculation: everything is generated from your dashboard."
       },
       "step3": {
         "title": "You stay relaxed",
@@ -96,7 +96,7 @@
       "allInclusive": "All inclusive",
       "yes": "Yes",
       "extra": "Extra charge",
-      "support": "Customer support",
+      "support": "Email support",
       "included": "Included",
       "paid": "Paid"
     },
@@ -163,9 +163,9 @@
       "detail": "Enter your details and your employee's information: name, address, AHV number, agreed salary and employment rate. Our form guides you through each step."
     },
     "step2": {
-      "title": "We take over",
+      "title": "Generate your documents",
       "description": "HappySalary handles all the administrative formalities.",
-      "detail": "We register your employee with the social insurance scheme, generate the employment contract, calculate statutory deductions and prepare the pay slips automatically each month."
+      "detail": "Generate the employment contract, calculate legal deductions and create payslips each month from your dashboard. Our checklist guides you through social insurance registrations."
     },
     "step3": {
       "title": "Track everything online",
