@@ -32,14 +32,14 @@
       "ctaSecondary": "How It Works"
     },
     "trustBar": {
-      "compliance": "AVS/LAA compliant",
+      "compliance": "Based on current AVS/LAA rates",
       "secure": "Secure data",
       "noCommission": "No commission",
       "cantons": "26 cantons"
     },
     "features": {
       "title": "Everything you need to employ with confidence",
-      "subtitle": "HappySalary guides you through all administrative tasks related to your household staff.",
+      "subtitle": "HappySalary provides tools and guides for your key administrative tasks related to your household staff.",
       "payroll": {
         "title": "Payroll Management",
         "description": "Automatic calculation of monthly salaries including all statutory deductions and allowances."
@@ -121,7 +121,7 @@
     "subtitle": "Everything you need to employ properly, with no commitment.",
     "plan": {
       "name": "HappySalary",
-      "description": "Complete guidance for managing your household employee with confidence.",
+      "description": "Tools and guides for managing your household employee with confidence.",
       "monthlyPrice": "12.99",
       "yearlyPrice": "99",
       "yearlyLabel": "Save with the annual plan",
@@ -156,7 +156,7 @@
   },
   "howItWorks": {
     "title": "How It Works",
-    "subtitle": "Get started in minutes and let HappySalary handle the administration for you.",
+    "subtitle": "Get started in minutes and generate your payroll documents with HappySalary.",
     "step1": {
       "title": "Create your account",
       "description": "Register online in less than 5 minutes.",
@@ -185,7 +185,7 @@
       "feature1": "Automatic payslips",
       "feature2": "Social contributions calculated",
       "feature3": "Employment contract included",
-      "feature4": "Accident insurance (LAA) managed",
+      "feature4": "LAA contribution calculated",
       "saveDetail": "Save CHF 56.88 per year",
       "cta": "View details"
     },
@@ -222,7 +222,7 @@
     },
     "story": {
       "title": "Our Story",
-      "description": "HappySalary was born from a simple observation: in Switzerland, declaring a household employee is too complicated and too expensive. We built a platform that simplifies all administrative tasks — social contributions, insurance, contracts, pay slips — for a fixed, transparent price. Our goal: making legal household employment accessible to every Swiss household."
+      "description": "HappySalary was born from a simple observation: in Switzerland, declaring a household employee is too complicated and too expensive. We built a platform that provides tools and guides for the key administrative tasks — contribution calculations, LAA guidance, contract templates, pay slips — for a fixed, transparent price. Our goal: making legal household employment accessible to every Swiss household."
     }
   },
   "contact": {
@@ -262,7 +262,7 @@
     },
     "general": {
       "q1": "What is HappySalary?",
-      "a1": "HappySalary is a Swiss payroll service for household employers. We manage salaries, social contributions, insurance, employment contracts and pay slips — all for a fixed monthly fee.",
+      "a1": "HappySalary is a Swiss platform for household employers. It calculates salaries and social contributions, generates pay slips and contract templates, and guides you through LAA and registration procedures — all for a fixed monthly fee.",
       "q2": "Who can use HappySalary?",
       "a2": "Anyone in Switzerland who employs household staff: cleaning lady, nanny, au pair, elderly care assistant, gardener or any other domestic employee.",
       "q3": "In which cantons is HappySalary available?",
@@ -274,7 +274,7 @@
       "q1": "Why a flat fee instead of a commission?",
       "a1": "A flat fee helps you keep costs predictable and fair. With a commission model, the better you pay your employee, the more the service costs you. At HappySalary, the price stays the same regardless of the salary amount.",
       "q2": "Are social contributions included in the flat fee?",
-      "a2": "The flat fee covers the management and calculation of social contributions. The contributions themselves (AHV/IV/EO/ALV) are invoiced separately at cost, with no mark-up whatsoever on our part.",
+      "a2": "The flat fee covers the calculation and generation of social contribution documents. The contributions themselves (AHV/IV/EO/ALV) are paid by you directly to the compensation fund, with no mark-up whatsoever on our part.",
       "q3": "Is there a minimum commitment?",
       "a3": "No, there is no minimum commitment. You can cancel your subscription at any time. The service ends at the end of the current month."
     },
@@ -284,7 +284,7 @@
       "q2": "How do the pay slips work?",
       "a2": "Each month, we calculate your employee's net salary after deducting social contributions and, where applicable, withholding tax. The pay slip is available as a PDF in your account dashboard.",
       "q3": "Do you manage accident insurance?",
-      "a3": "Yes, with the Comfort and Premium plans, we register your employee with the compulsory accident insurance (UVG) and handle all the formalities with the insurer."
+      "a3": "HappySalary calculates the LAA (UVG) contribution and integrates it into your pay slips. You remain responsible for affiliating with an accident insurer — our checklist guides you through the process step by step."
     },
     "legalFaq": {
       "q1": "Am I required to declare my household employee?",
@@ -299,19 +299,19 @@
     "cleaningLady": {
       "title": "Employing a Cleaning Lady",
       "subtitle": "Register your cleaner simply and in full compliance with the law.",
-      "description": "Whether your cleaning lady works just a few hours per week or part-time, HappySalary handles all the administrative formalities: AHV contributions, accident insurance, employment contract and pay slips.",
+      "description": "Whether your cleaning lady works just a few hours per week or part-time, HappySalary calculates contributions, generates pay slips and contract templates, and guides you through LAA affiliation and registration procedures.",
       "benefits": {
         "b1": {
           "title": "Simplified registration",
-          "description": "We handle all registrations with the compensation office, even for just a few hours per week."
+          "description": "Our checklist guides you through registration with the compensation office, even for just a few hours per week."
         },
         "b2": {
           "title": "Tailored contract",
           "description": "An employment contract compliant with the cantonal standard contract for domestic workers, adapted to your situation."
         },
         "b3": {
-          "title": "Insurance sorted",
-          "description": "Compulsory accident insurance included, protecting both your employee and yourself."
+          "title": "LAA calculation integrated",
+          "description": "LAA contribution calculated and integrated into your pay slips, with guidance for insurer affiliation."
         },
         "b4": {
           "title": "Predictable costs",
@@ -324,14 +324,14 @@
       "benefitsSubtitle": "HappySalary makes registering your cleaner simple, legal and affordable.",
       "howItWorks": {
         "title": "How does it work?",
-        "subtitle": "Three simple steps to be fully compliant with your cleaning lady.",
+        "subtitle": "Three simple steps to get started with your cleaning lady.",
         "step1": {
           "title": "Create your account",
           "description": "Sign up in minutes and enter your employee's basic information."
         },
         "step2": {
-          "title": "We prepare everything",
-          "description": "Employment contract, social insurance and accident insurance registration: all generated automatically."
+          "title": "Generate your documents",
+          "description": "Employment contract template, contribution calculation and LAA guidance: generated from your dashboard."
         },
         "step3": {
           "title": "Receive your documents",
@@ -340,17 +340,17 @@
       },
       "meta": {
         "title": "Cleaning Lady in Switzerland — Simplified Registration | HappySalary",
-        "description": "Register your cleaning lady legally in Switzerland. AHV, accident insurance, employment contract and pay slips included from CHF 12.99/month."
+        "description": "Register your cleaning lady legally in Switzerland. AHV calculation, LAA guidance, contract template and pay slips from CHF 12.99/month."
       }
     },
     "nanny": {
       "title": "Employing a Nanny",
       "subtitle": "Have your children looked after legally, with all the paperwork in order.",
-      "description": "Employing a nanny at home involves specific legal obligations. HappySalary supports you so that your childcare arrangement is correctly registered and insured.",
+      "description": "Employing a nanny at home involves specific legal obligations. HappySalary calculates contributions, generates your documents and guides you through registration and LAA affiliation procedures.",
       "benefits": {
         "b1": {
-          "title": "Full compliance",
-          "description": "All social contributions and insurance managed automatically, for a fully compliant childcare arrangement."
+          "title": "Contributions calculated",
+          "description": "Social contributions and LAA calculated automatically, with guidance for a compliant childcare arrangement."
         },
         "b2": {
           "title": "Tax deduction",
@@ -362,7 +362,7 @@
         },
         "b4": {
           "title": "Peace of mind",
-          "description": "Focus on your family life whilst we handle the administration."
+          "description": "Focus on your family life with tools and guides that simplify the administration."
         }
       },
       "cta": "View Pricing",
@@ -377,8 +377,8 @@
           "description": "Sign up and enter your nanny's details: working hours, salary and contract start date."
         },
         "step2": {
-          "title": "We handle everything",
-          "description": "Childcare-specific employment contract, insurance and social contributions managed automatically."
+          "title": "Generate your documents",
+          "description": "Childcare-specific contract template, LAA calculation and social contributions generated from your dashboard."
         },
         "step3": {
           "title": "Receive your documents",
@@ -387,29 +387,29 @@
       },
       "meta": {
         "title": "Nanny in Switzerland — Legal Employment Made Simple | HappySalary",
-        "description": "Employ your nanny legally in Switzerland. Contract, AHV contributions, insurance and pay slips included. Tax deduction made easy."
+        "description": "Employ your nanny legally in Switzerland. Contract template, AHV calculation, LAA guidance and pay slips from CHF 12.99/month."
       }
     },
     "auPair": {
       "title": "Employing an Au Pair",
       "subtitle": "Welcome an au pair to Switzerland in full compliance with all formalities.",
-      "description": "Employing an au pair in Switzerland is subject to specific rules: minimum salary, working hours, board and lodging. HappySalary manages the payroll and social insurance obligations so that your hosting runs smoothly.",
+      "description": "Employing an au pair in Switzerland is subject to specific rules: minimum salary, working hours, board and lodging. HappySalary calculates contributions, generates your documents and guides you through the procedures so that your hosting runs smoothly.",
       "benefits": {
         "b1": {
           "title": "Regulatory compliance",
           "description": "A step-by-step guide to help you understand the employment conditions applicable to au pairs in your canton."
         },
         "b2": {
-          "title": "Withholding tax managed",
+          "title": "Withholding tax calculated",
           "description": "Automatic calculation and deduction of withholding tax for foreign au pairs."
         },
         "b3": {
-          "title": "Comprehensive insurance",
-          "description": "Compulsory accident insurance (LAA) included for your au pair."
+          "title": "LAA calculation integrated",
+          "description": "LAA contribution calculated and integrated into your pay slips, with guidance for insurer affiliation."
         },
         "b4": {
           "title": "Dedicated guidance",
-          "description": "Everything you need to manage your au pair's employment, accessible in your dashboard."
+          "description": "Tools and guides for your au pair's employment, accessible in your dashboard."
         }
       },
       "cta": "View Pricing",
@@ -424,8 +424,8 @@
           "description": "Sign up and enter your au pair's details: nationality, length of stay and conditions."
         },
         "step2": {
-          "title": "We handle the formalities",
-          "description": "Compliant contract, insurance registration, withholding tax: all taken care of automatically."
+          "title": "Generate your documents",
+          "description": "Contract template, LAA calculation, withholding tax: generated from your dashboard."
         },
         "step3": {
           "title": "Receive your documents",
@@ -433,14 +433,14 @@
         }
       },
       "meta": {
-        "title": "Au Pair in Switzerland — Compliant and Simplified | HappySalary",
-        "description": "Host an au pair in Switzerland legally. Withholding tax, insurance and contract managed automatically from CHF 12.99/month."
+        "title": "Au Pair in Switzerland — Tools and Guides | HappySalary",
+        "description": "Host an au pair in Switzerland legally. Withholding tax calculation, LAA guidance and contract template from CHF 12.99/month."
       }
     },
     "elderlyCare": {
       "title": "Elderly Care at Home",
       "subtitle": "Employ a home carer for a loved one in full compliance with the law.",
-      "description": "Caring for an elderly relative at home often requires employing a carer. HappySalary simplifies the formalities so that you can focus on your loved one's wellbeing.",
+      "description": "Caring for an elderly relative at home often requires employing a carer. HappySalary provides tools and guides to help you with the key administrative steps.",
       "benefits": {
         "b1": {
           "title": "Simple for families",
@@ -448,11 +448,11 @@
         },
         "b2": {
           "title": "Flexible hours",
-          "description": "Payroll management adapted to variable working hours, including evenings and weekends."
+          "description": "Salary calculation adapted to variable working hours, including evenings and weekends."
         },
         "b3": {
-          "title": "Employee protection",
-          "description": "Accident insurance and full social insurance coverage for the home carer."
+          "title": "LAA calculation integrated",
+          "description": "LAA contribution calculated and integrated into your pay slips, with guidance for insurer affiliation."
         },
         "b4": {
           "title": "Supporting documentation",
@@ -462,7 +462,7 @@
       "cta": "View Pricing",
       "ctaSecondary": "How It Works",
       "benefitsTitle": "Why register your home carer?",
-      "benefitsSubtitle": "Protect your loved one and their carer by being fully compliant with Swiss law.",
+      "benefitsSubtitle": "Tools and guides to help you employ your home carer in line with Swiss law.",
       "howItWorks": {
         "title": "How does it work?",
         "subtitle": "Three simple steps to legally employ a home carer.",
@@ -471,8 +471,8 @@
           "description": "Sign up and indicate your loved one's needs: schedule, type of care, frequency."
         },
         "step2": {
-          "title": "We handle everything",
-          "description": "Employment contract, accident insurance, AHV contributions: all configured for the specifics of home care."
+          "title": "Generate your documents",
+          "description": "Contract template, LAA calculation, AHV contributions: generated from your dashboard, adapted to home care."
         },
         "step3": {
           "title": "Receive your documents",
@@ -481,7 +481,7 @@
       },
       "meta": {
         "title": "Elderly Care in Switzerland — Registered Employment | HappySalary",
-        "description": "Employ a home carer for an elderly relative legally in Switzerland. Contributions, insurance and contract included from CHF 12.99/month."
+        "description": "Employ a home carer for an elderly relative legally in Switzerland. Contribution calculation, LAA guidance and contract template from CHF 12.99/month."
       }
     },
     "gardener": {
@@ -491,11 +491,11 @@
       "benefits": {
         "b1": {
           "title": "Even for occasional work",
-          "description": "No minimum number of hours required. We manage the registration even for just a few hours per month."
+          "description": "No minimum number of hours required. Our checklist guides you through registration, even for just a few hours per month."
         },
         "b2": {
-          "title": "Accident insurance included",
-          "description": "Protection in case of an accident during gardening work — a legal obligation that is often overlooked."
+          "title": "LAA calculation integrated",
+          "description": "LAA contribution calculated and integrated into your pay slips — guidance for a legal obligation often overlooked."
         },
         "b3": {
           "title": "Great value flat fee",
@@ -503,7 +503,7 @@
         },
         "b4": {
           "title": "Legal peace of mind",
-          "description": "You are fully compliant with the law, with no effort on your part."
+          "description": "Our tools and guides help you meet your legal obligations as an employer."
         }
       },
       "cta": "View Pricing",
@@ -518,8 +518,8 @@
           "description": "Sign up and enter your gardener's details: frequency, duration and hourly rate."
         },
         "step2": {
-          "title": "We handle the formalities",
-          "description": "Registration with the compensation office, accident insurance and employment contract generated automatically."
+          "title": "Generate your documents",
+          "description": "Contract template, contribution calculation and LAA guidance: generated from your dashboard. Our checklist guides you through registration."
         },
         "step3": {
           "title": "Receive your documents",
@@ -528,7 +528,7 @@
       },
       "meta": {
         "title": "Gardener in Switzerland — Simplified Registration | HappySalary",
-        "description": "Register your gardener in Switzerland easily. AHV contributions, accident insurance and contract included from CHF 12.99/month."
+        "description": "Register your gardener in Switzerland easily. AHV calculation, LAA guidance and contract template from CHF 12.99/month."
       }
     }
   },
@@ -582,24 +582,24 @@
     },
     "socialContributions": {
       "title": "Social Contributions",
-      "subtitle": "AHV, IV, EO, ALV: all calculated and declared for you.",
-      "description": "HappySalary calculates both employer and employee shares of social contributions, prepares the statements and handles all declarations to the compensation office.",
+      "subtitle": "AHV, IV, EO, ALV: calculated with documents generated for your declaration.",
+      "description": "HappySalary calculates both employer and employee shares of social contributions and generates the statements needed for your declaration to the compensation fund.",
       "cta": "View Pricing",
       "ctaSecondary": "How It Works",
-      "benefitsTitle": "Social contributions managed from A to Z",
-      "benefitsSubtitle": "AHV, IV, EO, ALV: we calculate, we declare — you do nothing.",
+      "benefitsTitle": "Social contributions calculated and documented",
+      "benefitsSubtitle": "AHV, IV, EO, ALV: we calculate, you declare with the documents we generate.",
       "benefits": {
         "b1": {
           "title": "Precise calculation",
           "description": "Employer and employee shares calculated automatically according to current federal rates."
         },
         "b2": {
-          "title": "Annual declaration",
-          "description": "We prepare and submit the annual declaration to the relevant compensation office."
+          "title": "Annual statement generated",
+          "description": "We generate the annual statement — you submit it to the relevant compensation fund."
         },
         "b3": {
           "title": "BVG where applicable",
-          "description": "Occupational pension administration handled when salary thresholds require it."
+          "description": "Guidance on occupational pension obligations when salary thresholds require it."
         },
         "b4": {
           "title": "Always up to date",
@@ -618,60 +618,60 @@
           "description": "HappySalary calculates AHV/IV/EO/ALV contributions for each pay slip."
         },
         "step3": {
-          "title": "Declaration included",
-          "description": "At year-end, we prepare the annual declaration for the compensation office."
+          "title": "Annual statement included",
+          "description": "At year-end, we generate the annual statement for your declaration to the compensation fund."
         }
       },
       "meta": {
         "title": "Social Contributions AHV/IV/EO/ALV — Calculation & Declaration | HappySalary",
-        "description": "Calculation and declaration of social contributions for your household staff. AHV, IV, EO, ALV managed automatically."
+        "description": "Calculation and document generation for social contributions for your household staff. AHV, IV, EO, ALV calculated automatically."
       }
     },
     "accidentInsurance": {
       "title": "Accident Insurance",
-      "subtitle": "Compulsory legal protection for your employee.",
-      "description": "We register your employee with the occupational and non-occupational accident insurance (UVG), in accordance with Swiss legal requirements.",
+      "subtitle": "LAA contribution calculation and affiliation guidance.",
+      "description": "HappySalary calculates the LAA (UVG) contribution and integrates it into your pay slips. Our checklist guides you through affiliation with an accident insurer.",
       "cta": "View Pricing",
       "ctaSecondary": "How It Works",
-      "benefitsTitle": "Compulsory accident insurance, simplified",
-      "benefitsSubtitle": "We register your employee with the UVG, in accordance with Swiss law.",
+      "benefitsTitle": "LAA contribution calculation, simplified",
+      "benefitsSubtitle": "Contribution calculated and integrated into your pay slips, with a step-by-step guide for insurer affiliation.",
       "benefits": {
         "b1": {
-          "title": "Full UVG coverage",
-          "description": "Occupational and non-occupational accident coverage, in line with legal requirements."
+          "title": "Automatic calculation",
+          "description": "LAA (BU/NBU) contribution calculated according to current rates and integrated into your pay slips."
         },
         "b2": {
-          "title": "Claims management",
-          "description": "In the event of an accident, we support you through the claims process with the insurer."
+          "title": "Guidance in case of claim",
+          "description": "In the event of an accident, our guide explains the steps to take with your insurer."
         },
         "b3": {
-          "title": "Premium included",
-          "description": "The insurance premium is calculated and integrated directly into the monthly statement."
+          "title": "Contribution integrated",
+          "description": "The LAA contribution is calculated and shown directly on the monthly pay slip."
         },
         "b4": {
-          "title": "Legal obligation met",
-          "description": "You are fully compliant with the Federal Accident Insurance Act (UVG)."
+          "title": "Based on Swiss law",
+          "description": "Calculation based on the Federal Accident Insurance Act (UVG)."
         }
       },
       "howItWorks": {
         "title": "How does it work?",
-        "subtitle": "Accident insurance in three simple steps.",
+        "subtitle": "LAA contribution calculation in three simple steps.",
         "step1": {
           "title": "Add your employee",
           "description": "Enter your employee's information during registration."
         },
         "step2": {
-          "title": "Automatic enrolment",
-          "description": "HappySalary registers your employee with occupational and non-occupational accident insurance."
+          "title": "Automatic calculation",
+          "description": "HappySalary calculates the LAA contribution (BU/NBU) and integrates it into the pay slip."
         },
         "step3": {
-          "title": "Coverage active",
-          "description": "Your employee is protected from day one. The premium is included in the monthly statement."
+          "title": "Contribution calculation integrated",
+          "description": "The LAA contribution appears on each pay slip. Our checklist guides you through insurer affiliation."
         }
       },
       "meta": {
-        "title": "Accident Insurance UVG — Simplified Enrolment | HappySalary",
-        "description": "Register your household employee with compulsory accident insurance (UVG) in Switzerland. Full coverage included in your subscription."
+        "title": "Accident Insurance LAA — Calculation and Guidance | HappySalary",
+        "description": "LAA contribution calculation for your household employee in Switzerland. Contribution integrated into pay slips, with guidance for insurer affiliation."
       }
     },
     "employmentContracts": {
@@ -684,8 +684,8 @@
       "benefitsSubtitle": "Generated automatically in accordance with Swiss law and cantonal standard contracts.",
       "benefits": {
         "b1": {
-          "title": "Guaranteed compliance",
-          "description": "Contracts compliant with the Code of Obligations and cantonal standard contracts for domestic workers."
+          "title": "Based on Swiss law",
+          "description": "Templates based on the Code of Obligations and cantonal standard contracts for domestic workers."
         },
         "b2": {
           "title": "Personalised",
@@ -803,7 +803,7 @@
     }
   },
   "footer": {
-    "description": "HappySalary guides household employers through payroll management in Switzerland. Social contributions, insurance and contracts — step by step, for a fixed fee.",
+    "description": "HappySalary provides tools and guides for household payroll in Switzerland. Contribution calculation, LAA guidance, contract templates — step by step, for a fixed fee.",
     "services": "Services",
     "features": "Features",
     "company": "Company",
@@ -884,8 +884,8 @@
         "description": "Sign up for free and add your employee's information."
       },
       "step2": {
-        "title": "We handle everything",
-        "description": "Contract, AHV contributions, accident insurance: all automated."
+        "title": "Generate your documents",
+        "description": "Contract template, AHV calculation, LAA guidance: generated from your dashboard."
       },
       "step3": {
         "title": "Receive your documents",
@@ -894,10 +894,10 @@
     },
     "premium": {
       "title": "All included for CHF 12.99/month",
-      "subtitle": "Go from calculation to complete payroll management for your employee.",
+      "subtitle": "Go from calculation to generating all your payroll documents.",
       "feature1": "Monthly pay slips in PDF",
-      "feature2": "AHV/IV/EO/ALV calculation and declaration",
-      "feature3": "Accident insurance (UVG) included",
+      "feature2": "AHV/IV/EO/ALV calculation and document generation",
+      "feature3": "LAA (UVG) contribution calculated",
       "feature4": "Compliant employment contract",
       "feature5": "Annual statement for tax purposes",
       "feature6": "Priority e-mail support",
@@ -914,7 +914,7 @@
       "q3": "Do I really need to register my household employee?",
       "a3": "Yes, in Switzerland, every employer of household staff is required to register their employee with social insurance, even for just a few hours per month.",
       "q4": "How much does HappySalary cost?",
-      "a4": "HappySalary costs CHF 12.99/month or CHF 99/year. Everything is included: payroll, contributions, insurance and contracts."
+      "a4": "HappySalary costs CHF 12.99/month or CHF 99/year. Everything is included: salary calculation, contribution documents, LAA guidance and contract templates."
     }
   },
   "dashboard": {

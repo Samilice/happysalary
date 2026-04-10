@@ -32,14 +32,14 @@
       "ctaSecondary": "So funktioniert's"
     },
     "trustBar": {
-      "compliance": "AHV/UVG-konform",
+      "compliance": "Basierend auf aktuellen AHV/UVG-Sätzen",
       "secure": "Sichere Daten",
       "noCommission": "Keine Provision",
       "cantons": "26 Kantone"
     },
     "features": {
       "title": "Alles, was Sie für eine sorglose Anstellung brauchen",
-      "subtitle": "HappySalary begleitet Sie durch sämtliche administrativen Aufgaben rund um Ihr Hauspersonal.",
+      "subtitle": "HappySalary stellt Ihnen Werkzeuge und Anleitungen für Ihre wichtigsten administrativen Aufgaben bereit.",
       "payroll": {
         "title": "Lohnverwaltung",
         "description": "Automatische Berechnung der monatlichen Löhne inklusive gesetzlicher Abzüge und Zulagen."
@@ -121,7 +121,7 @@
     "subtitle": "Alles, was Sie brauchen, um korrekt anzustellen. Ohne Verpflichtung.",
     "plan": {
       "name": "HappySalary",
-      "description": "Komplette Begleitung für die Verwaltung Ihres Hauspersonals.",
+      "description": "Werkzeuge und Anleitungen für die Verwaltung Ihres Hauspersonals.",
       "monthlyPrice": "12.99",
       "yearlyPrice": "99",
       "yearlyLabel": "Sparen Sie mit dem Jahresabo",
@@ -156,7 +156,7 @@
   },
   "howItWorks": {
     "title": "So funktioniert’s",
-    "subtitle": "Starten Sie in wenigen Minuten und lassen Sie HappySalary die Administration für Sie erledigen.",
+    "subtitle": "Starten Sie in wenigen Minuten und lassen Sie sich von HappySalary durch die Administration führen.",
     "step1": {
       "title": "Konto erstellen",
       "description": "Registrieren Sie sich online in weniger als 5 Minuten.",
@@ -164,8 +164,8 @@
     },
     "step2": {
       "title": "Dokumente erstellen",
-      "description": "HappySalary erledigt sämtliche administrativen Formalitäten.",
-      "detail": "Erstellen Sie den Arbeitsvertrag, berechnen Sie die gesetzlichen Abzüge und erstellen Sie die Lohnabrechnungen jeden Monat in Ihrem Bereich. Unsere Checkliste führt Sie durch die Anmeldung bei den Sozialversicherungen."
+      "description": "HappySalary führt Sie durch alle administrativen Formalitäten.",
+      "detail": "Erstellen Sie den Arbeitsvertrag, berechnen Sie die gesetzlichen Abzüge und erstellen Sie die Lohnabrechnungen jeden Monat in Ihrem Bereich. Unsere Checkliste begleitet Sie bei der Anmeldung bei den Sozialversicherungen."
     },
     "step3": {
       "title": "Alles online einsehen",
@@ -185,7 +185,7 @@
       "feature1": "Automatische Lohnabrechnungen",
       "feature2": "AHV/IV/EO-Beiträge berechnet",
       "feature3": "Arbeitsvertrag inklusive",
-      "feature4": "Unfallversicherung (UVG) verwaltet",
+      "feature4": "UVG-Beitragsberechnung integriert",
       "saveDetail": "Sparen Sie 56.88 CHF pro Jahr",
       "cta": "Details ansehen"
     },
@@ -222,7 +222,7 @@
     },
     "story": {
       "title": "Unsere Geschichte",
-      "description": "HappySalary entstand aus einer einfachen Feststellung: In der Schweiz ist es zu kompliziert und zu teuer, einen Hausangestellten zu deklarieren. Wir haben eine Plattform geschaffen, die alle administrativen Aufgaben vereinfacht — Sozialversicherungsbeiträge, Versicherungen, Verträge, Lohnabrechnungen — zu einem festen, transparenten Preis. Unser Ziel: legale Hausanstellung für jeden Schweizer Haushalt zugänglich zu machen."
+      "description": "HappySalary entstand aus einer einfachen Feststellung: In der Schweiz ist es zu kompliziert und zu teuer, einen Hausangestellten zu deklarieren. Wir haben eine Plattform geschaffen, die alle administrativen Aufgaben vereinfacht -- Beitragsberechnung, Versicherungsanleitung, Verträge, Lohnabrechnungen -- zu einem festen, transparenten Preis. Unser Ziel: legale Hausanstellung für jeden Schweizer Haushalt zugänglich zu machen."
     }
   },
   "contact": {
@@ -262,7 +262,7 @@
     },
     "general": {
       "q1": "Was ist HappySalary?",
-      "a1": "HappySalary ist ein Schweizer Lohnabrechnungsservice für Arbeitgeber von Hauspersonal. Wir verwalten Löhne, Sozialversicherungsbeiträge, Versicherungen, Arbeitsverträge und Lohnabrechnungen – alles für eine feste monatliche Gebühr.",
+      "a1": "HappySalary ist ein Schweizer Lohnabrechnungsservice für Arbeitgeber von Hauspersonal. Wir berechnen Löhne und Sozialversicherungsbeiträge, erstellen Arbeitsverträge und Lohnabrechnungen und begleiten Sie bei den Versicherungsformalitäten -- alles für eine feste monatliche Gebühr.",
       "q2": "Wer kann HappySalary nutzen?",
       "a2": "Jede Person in der Schweiz, die Hauspersonal beschäftigt: Reinigungskraft, Kinderbetreuung, Au-Pair, Seniorenbetreuung, Gärtner oder andere Hausangestellte.",
       "q3": "In welchen Kantonen ist HappySalary verfügbar?",
@@ -274,7 +274,7 @@
       "q1": "Warum ein Festpreis statt einer Provision?",
       "a1": "Der Festpreis ermöglicht planbare und faire Kosten. Bei einem Provisionsmodell zahlen Sie mehr, je besser Sie Ihren Mitarbeiter entlöhnen. Bei HappySalary bleibt der Preis gleich, unabhängig von der Lohnhöhe.",
       "q2": "Sind die Sozialversicherungsbeiträge im Festpreis enthalten?",
-      "a2": "Der Festpreis deckt die Verwaltung und Berechnung der Sozialversicherungsbeiträge ab. Die Beiträge selbst (AHV/IV/EO/ALV) werden separat zum Selbstkostenpreis berechnet, ohne jeglichen Aufschlag unsererseits.",
+      "a2": "Der Festpreis umfasst die Berechnung der Sozialversicherungsbeiträge und deren Integration in Ihre Lohnabrechnungen. Die Beiträge selbst (AHV/IV/EO/ALV) sind von Ihnen an die Ausgleichskasse zu entrichten.",
       "q3": "Gibt es eine Mindestlaufzeit?",
       "a3": "Nein, es gibt keine Mindestlaufzeit. Sie können Ihr Abonnement jederzeit kündigen. Der Service endet zum Ende des laufenden Monats."
     },
@@ -283,8 +283,8 @@
       "a1": "Wir erstellen Arbeitsverträge, die dem Schweizerischen Obligationenrecht und den kantonalen Normalarbeitsverträgen für Hausangestellte entsprechen. Jeder Vertrag wird individuell auf Ihre Situation zugeschnitten.",
       "q2": "Wie funktionieren die Lohnabrechnungen?",
       "a2": "Jeden Monat berechnen wir den Nettolohn Ihres Mitarbeiters nach Abzug der Sozialversicherungsbeiträge und gegebenenfalls der Quellensteuer. Die Lohnabrechnung steht als PDF in Ihrem Kundenkonto zur Verfügung.",
-      "q3": "Verwalten Sie die Unfallversicherung?",
-      "a3": "Ja, in den Plänen Comfort und Premium melden wir Ihren Mitarbeiter bei der obligatorischen Unfallversicherung (UVG) an und übernehmen sämtliche Formalitäten mit dem Versicherer."
+      "q3": "Was bieten Sie bezüglich Unfallversicherung?",
+      "a3": "HappySalary berechnet die UVG-Beiträge und integriert sie in die Lohnabrechnungen. Die Anmeldung bei einem Versicherer bleibt in Ihrer Verantwortung -- unsere Checkliste begleitet Sie Schritt für Schritt."
     },
     "legalFaq": {
       "q1": "Muss ich mein Hauspersonal anmelden?",
@@ -299,19 +299,19 @@
     "cleaningLady": {
       "title": "Reinigungskraft anstellen",
       "subtitle": "Melden Sie Ihre Reinigungskraft einfach und gesetzeskonform an.",
-      "description": "Ob Ihre Reinigungskraft nur wenige Stunden pro Woche oder in Teilzeit arbeitet – HappySalary kümmert sich um sämtliche administrativen Formalitäten: AHV-Beiträge, Unfallversicherung, Arbeitsvertrag und Lohnabrechnungen.",
+      "description": "Ob Ihre Reinigungskraft nur wenige Stunden pro Woche oder in Teilzeit arbeitet -- HappySalary erstellt alle administrativen Dokumente: AHV-Beitragsberechnung, UVG-Beitragsberechnung, Arbeitsvertrag und Lohnabrechnungen.",
       "benefits": {
         "b1": {
           "title": "Vereinfachte Anmeldung",
-          "description": "Wir übernehmen sämtliche Anmeldungen bei der Ausgleichskasse, auch für wenige Stunden pro Woche."
+          "description": "Unsere Checkliste begleitet Sie bei der Anmeldung bei der Ausgleichskasse, auch für wenige Stunden pro Woche."
         },
         "b2": {
           "title": "Passender Vertrag",
           "description": "Ein rechtskonformer Arbeitsvertrag gemäss dem kantonalen Normalarbeitsvertrag für Hausangestellte, auf Ihre Situation angepasst."
         },
         "b3": {
-          "title": "Versicherung in Ordnung",
-          "description": "Die obligatorische Unfallversicherung inklusive, um Ihre Mitarbeiterin und Sie selbst zu schützen."
+          "title": "UVG-Beitragsberechnung",
+          "description": "UVG-Beitragsberechnung in den Lohnabrechnungen integriert, mit Anleitung zur Anmeldung bei einem Versicherer."
         },
         "b4": {
           "title": "Kalkulierbare Kosten",
@@ -330,8 +330,8 @@
           "description": "Registrieren Sie sich in wenigen Minuten und geben Sie die Grunddaten Ihrer Mitarbeiterin ein."
         },
         "step2": {
-          "title": "Wir bereiten alles vor",
-          "description": "Arbeitsvertrag, Sozialversicherungs- und Unfallversicherungsanmeldung: alles wird automatisch erstellt."
+          "title": "Dokumente erstellen",
+          "description": "Arbeitsvertrag und Lohnabrechnungen werden automatisch erstellt. Unsere Checkliste begleitet Sie bei der Anmeldung bei den Sozialversicherungen."
         },
         "step3": {
           "title": "Dokumente erhalten",
@@ -340,17 +340,17 @@
       },
       "meta": {
         "title": "Reinigungskraft in der Schweiz — Vereinfachte Anmeldung | HappySalary",
-        "description": "Melden Sie Ihre Reinigungskraft legal in der Schweiz an. AHV, Unfallversicherung, Arbeitsvertrag und Lohnabrechnungen ab CHF 12.99/Monat."
+        "description": "Melden Sie Ihre Reinigungskraft legal in der Schweiz an. AHV-Berechnung, UVG-Beitragsberechnung, Arbeitsvertrag und Lohnabrechnungen ab CHF 12.99/Monat."
       }
     },
     "nanny": {
       "title": "Kinderbetreuung anstellen",
       "subtitle": "Lassen Sie Ihre Kinder legal betreuen, mit allen Papieren in Ordnung.",
-      "description": "Die Anstellung einer Kinderbetreuung zu Hause bringt bestimmte gesetzliche Pflichten mit sich. HappySalary begleitet Sie, damit Ihre Kinderbetreuung korrekt angemeldet und versichert ist.",
+      "description": "Die Anstellung einer Kinderbetreuung zu Hause bringt bestimmte gesetzliche Pflichten mit sich. HappySalary stellt Ihnen die Werkzeuge bereit, damit Ihre Kinderbetreuung korrekt angemeldet und versichert ist.",
       "benefits": {
         "b1": {
           "title": "Vollständige Konformität",
-          "description": "Alle Sozialversicherungsbeiträge und Versicherungen automatisch verwaltet, für eine gesetzeskonforme Kinderbetreuung."
+          "description": "Alle Sozialversicherungsbeiträge automatisch berechnet, mit Anleitung zu den Versicherungen, für eine gesetzeskonforme Kinderbetreuung."
         },
         "b2": {
           "title": "Dokumentation für die Steuererklärung",
@@ -362,7 +362,7 @@
         },
         "b4": {
           "title": "Sorgenfreiheit",
-          "description": "Konzentrieren Sie sich auf Ihr Familienleben, wir kümmern uns um die Administration."
+          "description": "Konzentrieren Sie sich auf Ihr Familienleben, wir vereinfachen Ihnen die Administration."
         }
       },
       "cta": "Preise ansehen",
@@ -377,8 +377,8 @@
           "description": "Registrieren Sie sich und geben Sie die Daten Ihrer Kinderbetreuung ein: Arbeitszeiten, Lohn, Vertragsbeginn."
         },
         "step2": {
-          "title": "Wir kümmern uns um alles",
-          "description": "Auf Kinderbetreuung angepasster Arbeitsvertrag, Versicherungen und Sozialabgaben automatisch verwaltet."
+          "title": "Dokumente erstellen",
+          "description": "Auf Kinderbetreuung angepasster Arbeitsvertrag und Lohnabrechnungen automatisch erstellt. Checkliste für die Versicherungsanmeldung."
         },
         "step3": {
           "title": "Dokumente erhalten",
@@ -387,13 +387,13 @@
       },
       "meta": {
         "title": "Kinderbetreuung in der Schweiz — Legale Anstellung einfach gemacht | HappySalary",
-        "description": "Stellen Sie Ihre Kinderbetreuung legal in der Schweiz an. Vertrag, AHV-Beiträge, Versicherung und Lohnabrechnungen inklusive."
+        "description": "Stellen Sie Ihre Kinderbetreuung legal in der Schweiz an. Vertrag, AHV-Berechnung, UVG-Beitragsberechnung und Lohnabrechnungen inklusive."
       }
     },
     "auPair": {
       "title": "Au-Pair anstellen",
       "subtitle": "Nehmen Sie ein Au-Pair in der Schweiz auf, unter Einhaltung aller Formalitäten.",
-      "description": "Die Anstellung eines Au-Pairs in der Schweiz unterliegt besonderen Regeln: Mindestlohn, Arbeitszeiten, Unterkunft und Verpflegung. HappySalary verwaltet die Lohnabrechnung und die Sozialversicherungspflichten, damit Ihr Aufenthalt reibungslos verläuft.",
+      "description": "Die Anstellung eines Au-Pairs in der Schweiz unterliegt besonderen Regeln: Mindestlohn, Arbeitszeiten, Unterkunft und Verpflegung. HappySalary erstellt die Lohnabrechnungen und berechnet die Sozialversicherungsbeiträge, damit Ihr Aufenthalt reibungslos verläuft.",
       "benefits": {
         "b1": {
           "title": "Schritt-für-Schritt-Anleitung",
@@ -424,8 +424,8 @@
           "description": "Registrieren Sie sich und geben Sie die Daten Ihres Au-Pairs ein: Nationalität, Aufenthaltsdauer, Bedingungen."
         },
         "step2": {
-          "title": "Wir erledigen die Formalitäten",
-          "description": "Konformer Vertrag, Versicherungsanmeldung, Quellensteuer: alles automatisch erledigt."
+          "title": "Dokumente erstellen",
+          "description": "Konformer Vertrag, Quellensteuerberechnung und Lohnabrechnungen automatisch erstellt. Checkliste für die Versicherungsanmeldung."
         },
         "step3": {
           "title": "Dokumente erhalten",
@@ -434,7 +434,7 @@
       },
       "meta": {
         "title": "Au-Pair in der Schweiz — Konform und vereinfacht | HappySalary",
-        "description": "Nehmen Sie ein Au-Pair in der Schweiz legal auf. Quellensteuer, Versicherungen und Vertrag automatisch verwaltet ab CHF 12.99/Monat."
+        "description": "Nehmen Sie ein Au-Pair in der Schweiz legal auf. Quellensteuer, UVG-Beitragsberechnung und Vertrag ab CHF 12.99/Monat."
       }
     },
     "elderlyCare": {
@@ -452,7 +452,7 @@
         },
         "b3": {
           "title": "Schutz der Mitarbeiterin",
-          "description": "Unfallversicherung und vollständige Sozialversicherungsdeckung für die Haushaltshilfe."
+          "description": "UVG-Beitragsberechnung und vollständige Sozialversicherungsberechnung für die Haushaltshilfe."
         },
         "b4": {
           "title": "Dokumente im Dashboard",
@@ -471,8 +471,8 @@
           "description": "Registrieren Sie sich und geben Sie die Bedürfnisse Ihres Angehörigen an: Zeitplan, Art der Betreuung, Häufigkeit."
         },
         "step2": {
-          "title": "Wir kümmern uns um alles",
-          "description": "Arbeitsvertrag, Unfallversicherung, AHV-Beiträge: alles für die Besonderheiten der häuslichen Pflege konfiguriert."
+          "title": "Dokumente erstellen",
+          "description": "Arbeitsvertrag und Lohnabrechnungen automatisch erstellt. AHV- und UVG-Beiträge für die Besonderheiten der häuslichen Pflege berechnet."
         },
         "step3": {
           "title": "Dokumente erhalten",
@@ -481,7 +481,7 @@
       },
       "meta": {
         "title": "Seniorenbetreuung in der Schweiz — Legale Anstellung | HappySalary",
-        "description": "Stellen Sie eine Betreuungsperson für einen älteren Angehörigen legal in der Schweiz an. Beiträge, Versicherungen und Vertrag ab CHF 12.99/Monat."
+        "description": "Stellen Sie eine Betreuungsperson für einen älteren Angehörigen legal in der Schweiz an. Beitragsberechnung, Versicherungsanleitung und Vertrag ab CHF 12.99/Monat."
       }
     },
     "gardener": {
@@ -491,11 +491,11 @@
       "benefits": {
         "b1": {
           "title": "Auch bei geringer Beschäftigung",
-          "description": "Kein Mindeststundenvolumen nötig. Wir verwalten die Anmeldung auch für nur wenige Stunden pro Monat."
+          "description": "Kein Mindeststundenvolumen nötig. Unsere Checkliste begleitet Sie bei der Anmeldung, auch für nur wenige Stunden pro Monat."
         },
         "b2": {
-          "title": "Unfallversicherung inklusive",
-          "description": "Schutz bei Unfällen während der Gartenarbeit – eine gesetzliche Pflicht, die oft vernachlässigt wird."
+          "title": "UVG-Beitragsberechnung integriert",
+          "description": "UVG-Beitragsberechnung in den Lohnabrechnungen integriert, mit Anleitung zur Versicherungsanmeldung."
         },
         "b3": {
           "title": "Günstiger Festpreis",
@@ -518,8 +518,8 @@
           "description": "Registrieren Sie sich und geben Sie die Einsätze Ihres Gärtners ein: Häufigkeit, Dauer, Stundenlohn."
         },
         "step2": {
-          "title": "Wir erledigen die Formalitäten",
-          "description": "Anmeldung bei der Ausgleichskasse, Unfallversicherung und Arbeitsvertrag automatisch erstellt."
+          "title": "Dokumente erstellen",
+          "description": "Arbeitsvertrag und Lohnabrechnungen automatisch erstellt. Unsere Checkliste begleitet Sie bei der Anmeldung bei der Ausgleichskasse und dem Versicherer."
         },
         "step3": {
           "title": "Dokumente erhalten",
@@ -528,7 +528,7 @@
       },
       "meta": {
         "title": "Gärtner in der Schweiz — Vereinfachte Anmeldung | HappySalary",
-        "description": "Melden Sie Ihren Gärtner in der Schweiz einfach an. AHV-Beiträge, Unfallversicherung und Vertrag ab CHF 12.99/Monat."
+        "description": "Melden Sie Ihren Gärtner in der Schweiz einfach an. AHV-Berechnung, UVG-Beitragsberechnung und Vertrag ab CHF 12.99/Monat."
       }
     }
   },
@@ -582,12 +582,12 @@
     },
     "socialContributions": {
       "title": "Sozialversicherungsbeiträge",
-      "subtitle": "AHV, IV, EO, ALV: alles berechnet und gemeldet für Sie.",
-      "description": "HappySalary berechnet die Arbeitgeber- und Arbeitnehmeranteile der Sozialversicherungsbeiträge, erstellt die Abrechnungen und übernimmt die Meldungen an die Ausgleichskasse.",
+      "subtitle": "AHV, IV, EO, ALV: alles berechnet, mit Anleitung zur Deklaration.",
+      "description": "HappySalary berechnet die Arbeitgeber- und Arbeitnehmeranteile der Sozialversicherungsbeiträge, erstellt die Abrechnungen und bereitet die Jahresmeldung für die Ausgleichskasse vor.",
       "cta": "Preise ansehen",
       "ctaSecondary": "So funktioniert's",
-      "benefitsTitle": "Sozialversicherungsbeiträge von A bis Z verwaltet",
-      "benefitsSubtitle": "AHV, IV, EO, ALV: wir berechnen, wir melden — Sie müssen nichts tun.",
+      "benefitsTitle": "Sozialversicherungsbeiträge von A bis Z berechnet",
+      "benefitsSubtitle": "AHV, IV, EO, ALV: wir berechnen, wir bereiten die Meldung vor -- Sie folgen der Anleitung.",
       "benefits": {
         "b1": {
           "title": "Präzise Berechnung",
@@ -595,11 +595,11 @@
         },
         "b2": {
           "title": "Jährliche Meldung",
-          "description": "Wir erstellen und übermitteln die Jahresmeldung an die zuständige Ausgleichskasse."
+          "description": "Wir erstellen die Jahresmeldung und bereiten sie für die Übermittlung an die zuständige Ausgleichskasse vor."
         },
         "b3": {
           "title": "BVG falls zutreffend",
-          "description": "Berufliche Vorsorgeverwaltung, wenn die Gehaltsschwellen es erfordern."
+          "description": "Anleitung zur beruflichen Vorsorge, wenn die Gehaltsschwellen es erfordern."
         },
         "b4": {
           "title": "Immer aktuell",
@@ -618,60 +618,60 @@
           "description": "HappySalary berechnet die AHV/IV/EO/ALV-Beiträge für jede Lohnabrechnung."
         },
         "step3": {
-          "title": "Meldung inklusive",
-          "description": "Am Jahresende erstellen wir die Jahresmeldung für die Ausgleichskasse."
+          "title": "Meldung vorbereitet",
+          "description": "Am Jahresende bereiten wir die Jahresmeldung für die Ausgleichskasse vor."
         }
       },
       "meta": {
         "title": "Sozialversicherungsbeiträge AHV/IV/EO/ALV — Berechnung & Meldung | HappySalary",
-        "description": "Berechnung und Meldung der Sozialversicherungsbeiträge für Ihr Hauspersonal. AHV, IV, EO, ALV automatisch verwaltet."
+        "description": "Berechnung der Sozialversicherungsbeiträge für Ihr Hauspersonal. AHV, IV, EO, ALV automatisch berechnet, mit Anleitung zur Deklaration."
       }
     },
     "accidentInsurance": {
       "title": "Unfallversicherung",
-      "subtitle": "Obligatorischer gesetzlicher Schutz für Ihren Mitarbeiter.",
-      "description": "Wir melden Ihren Mitarbeiter bei der Berufs- und Nichtberufsunfallversicherung (UVG) an, gemäss den gesetzlichen Anforderungen der Schweiz.",
+      "subtitle": "Beitragsberechnung und Anleitung zur obligatorischen Unfallversicherung.",
+      "description": "HappySalary berechnet die UVG-Beiträge (Berufs- und Nichtberufsunfall) und integriert sie in Ihre Lohnabrechnungen. Unsere Checkliste begleitet Sie bei der Anmeldung bei einem Versicherer.",
       "cta": "Preise ansehen",
       "ctaSecondary": "So funktioniert's",
-      "benefitsTitle": "Obligatorische Unfallversicherung, vereinfacht",
-      "benefitsSubtitle": "Wir melden Ihren Mitarbeiter bei der UVG an, gemäss Schweizer Recht.",
+      "benefitsTitle": "UVG-Beitragsberechnung, vereinfacht",
+      "benefitsSubtitle": "UVG-Beiträge automatisch berechnet, mit Anleitung zur Versicherungsanmeldung.",
       "benefits": {
         "b1": {
-          "title": "Vollständige UVG-Deckung",
-          "description": "Berufs- und Nichtberufsunfalldeckung, gemäss den gesetzlichen Anforderungen."
+          "title": "UVG-Beitragsberechnung",
+          "description": "Berufs- und Nichtberufsunfallbeiträge automatisch berechnet und in die Lohnabrechnungen integriert."
         },
         "b2": {
-          "title": "Schadenabwicklung",
-          "description": "Im Falle eines Unfalls begleiten wir Sie bei den Schritten beim Versicherer."
+          "title": "Anleitung für den Schadensfall",
+          "description": "Im Falle eines Unfalls stellen wir Ihnen eine Anleitung für die Schritte beim Versicherer bereit."
         },
         "b3": {
-          "title": "Prämie integriert",
-          "description": "Die Versicherungsprämie wird berechnet und direkt in die monatliche Abrechnung integriert."
+          "title": "Beitrag integriert",
+          "description": "Der UVG-Beitrag wird berechnet und direkt in die monatliche Lohnabrechnung integriert."
         },
         "b4": {
-          "title": "Gesetzliche Pflicht erfüllt",
-          "description": "Sie sind konform mit dem Bundesgesetz über die Unfallversicherung (UVG)."
+          "title": "Basierend auf Schweizer Recht",
+          "description": "Berechnungen basierend auf dem Bundesgesetz über die Unfallversicherung (UVG)."
         }
       },
       "howItWorks": {
         "title": "Wie funktioniert es?",
-        "subtitle": "Unfallversicherung in drei einfachen Schritten.",
+        "subtitle": "UVG-Beitragsberechnung in drei einfachen Schritten.",
         "step1": {
           "title": "Mitarbeiter hinzufügen",
           "description": "Geben Sie die Informationen Ihres Mitarbeiters bei der Registrierung ein."
         },
         "step2": {
-          "title": "Automatische Anmeldung",
-          "description": "HappySalary meldet Ihren Mitarbeiter bei der Berufs- und Nichtberufsunfallversicherung an."
+          "title": "Automatische Berechnung",
+          "description": "HappySalary berechnet die UVG-Beiträge und integriert sie in die Lohnabrechnungen."
         },
         "step3": {
-          "title": "Deckung aktiv",
-          "description": "Ihr Mitarbeiter ist ab dem ersten Tag geschützt. Die Prämie ist in der monatlichen Abrechnung enthalten."
+          "title": "Anleitung zur Anmeldung",
+          "description": "Unsere Checkliste begleitet Sie bei der Anmeldung bei einem UVG-Versicherer. Der Beitrag ist in der Lohnabrechnung integriert."
         }
       },
       "meta": {
-        "title": "Unfallversicherung UVG — Vereinfachte Anmeldung | HappySalary",
-        "description": "Melden Sie Ihren Hausangestellten bei der obligatorischen Unfallversicherung (UVG) an. Vollständige Deckung in Ihrem Abo inklusive."
+        "title": "Unfallversicherung UVG — Beitragsberechnung und Anleitung | HappySalary",
+        "description": "UVG-Beitragsberechnung für Ihr Hauspersonal in der Schweiz. Beiträge in den Lohnabrechnungen integriert, mit Anleitung zur Versicherungsanmeldung."
       }
     },
     "employmentContracts": {
@@ -684,8 +684,8 @@
       "benefitsSubtitle": "Automatisch erstellt gemäss Schweizer Recht und kantonalen Normalarbeitsverträgen.",
       "benefits": {
         "b1": {
-          "title": "Garantierte Konformität",
-          "description": "Verträge konform mit dem Obligationenrecht und den kantonalen Normalarbeitsverträgen für Hausangestellte."
+          "title": "Basierend auf Schweizer Recht",
+          "description": "Verträge basierend auf dem Obligationenrecht und den kantonalen Normalarbeitsverträgen für Hausangestellte."
         },
         "b2": {
           "title": "Individuell angepasst",
@@ -803,7 +803,7 @@
     }
   },
   "footer": {
-    "description": "HappySalary begleitet Arbeitgeber von Hauspersonal in der Schweiz durch die Lohnverwaltung. Sozialversicherungsbeiträge, Versicherungen und Verträge – Schritt für Schritt, für einen Festpreis.",
+    "description": "HappySalary begleitet Arbeitgeber von Hauspersonal in der Schweiz bei der Lohnverwaltung. Beitragsberechnung, Versicherungsanleitung und Verträge -- Schritt für Schritt, für einen Festpreis.",
     "services": "Dienstleistungen",
     "features": "Funktionen",
     "company": "Unternehmen",
@@ -884,8 +884,8 @@
         "description": "Registrieren Sie sich kostenlos und fügen Sie die Informationen Ihres Mitarbeiters hinzu."
       },
       "step2": {
-        "title": "Wir kümmern uns um alles",
-        "description": "Vertrag, AHV-Beiträge, Unfallversicherung: alles automatisiert."
+        "title": "Dokumente erstellen",
+        "description": "Vertrag, Lohnabrechnungen und AHV-Beitragsberechnung: alles wird in Ihrem Bereich erstellt."
       },
       "step3": {
         "title": "Dokumente erhalten",
@@ -896,8 +896,8 @@
       "title": "Alles inklusive für CHF 12.99/Monat",
       "subtitle": "Von der Berechnung zur vollständigen Lohnverwaltung Ihres Mitarbeiters.",
       "feature1": "Monatliche Lohnabrechnungen als PDF",
-      "feature2": "AHV/IV/EO/ALV-Berechnung und -Meldung",
-      "feature3": "Unfallversicherung (UVG) inklusive",
+      "feature2": "AHV/IV/EO/ALV-Berechnung",
+      "feature3": "UVG-Beitragsberechnung integriert",
       "feature4": "Rechtskonformer Arbeitsvertrag",
       "feature5": "Jahresabrechnung für die Steuererklärung",
       "feature6": "Prioritärer E-Mail-Support",
@@ -914,7 +914,7 @@
       "q3": "Muss ich meinen Hausangestellten wirklich anmelden?",
       "a3": "Ja, in der Schweiz ist jeder Arbeitgeber von Hauspersonal verpflichtet, seinen Mitarbeiter bei den Sozialversicherungen anzumelden, auch für wenige Stunden pro Monat.",
       "q4": "Was kostet HappySalary?",
-      "a4": "HappySalary kostet CHF 12.99/Monat oder CHF 99/Jahr. Alles inklusive: Lohnabrechnung, Beiträge, Versicherungen und Verträge."
+      "a4": "HappySalary kostet CHF 12.99/Monat oder CHF 99/Jahr. Alles inklusive: Lohnabrechnungserstellung, Beitragsberechnung, Versicherungsanleitung und Arbeitsvertragsvorlage."
     }
   },
   "dashboard": {
