@@ -26,8 +26,8 @@
   },
   "home": {
     "hero": {
-      "title": "La paie de vos employés de maison, simplifiée.",
-      "subtitle": "AVS, assurances, contrats de travail et fiches de salaire : tout est inclus pour un prix fixe mensuel. Sans commission sur le salaire brut.",
+      "title": "Calculez, générez, suivez les démarches.",
+      "subtitle": "Fiches de salaire, contrats de travail, cotisations sociales : tous vos documents générés en quelques clics, avec un guide employeur pas à pas.",
       "ctaPrimary": "Voir les tarifs",
       "ctaSecondary": "Comment ça marche"
     },
@@ -54,7 +54,7 @@
       },
       "contracts": {
         "title": "Contrats de travail",
-        "description": "Génération de contrats de travail conformes au droit suisse, personnalisés selon votre situation."
+        "description": "Génération de modèles de contrats de travail personnalisés selon votre situation et le type d'emploi."
       },
       "payslips": {
         "title": "Fiches de salaire",
@@ -776,23 +776,23 @@
     },
     "thomas": {
       "name": "Thomas M.",
-      "text": "Nous avons une nounou à temps plein et les démarches étaient un vrai casse-tête. Avec HappySalary, le contrat, les fiches de salaire et les cotisations sont gérés automatiquement. Je recommande vivement."
+      "text": "Nous avons une nounou à temps plein et les démarches étaient un vrai casse-tête. Avec HappySalary, j'ai généré le contrat et les fiches de salaire en quelques clics, et le guide m'a aidé pour les cotisations. Je recommande vivement."
     },
     "anna": {
       "name": "Anna S.",
-      "text": "J'ai accueilli une au pair et je ne savais pas par où commencer pour les formalités. HappySalary a géré l'impôt à la source, l'assurance et le contrat. Un vrai soulagement."
+      "text": "J'ai accueilli une au pair et je ne savais pas par où commencer. Grâce au guide et au calculateur de HappySalary, j'ai pu créer le contrat et comprendre les démarches d'assurance étape par étape."
     },
     "peter": {
       "name": "Peter W.",
-      "text": "Ma mère a besoin d'une aide à domicile et nous voulions tout faire dans les règles. HappySalary nous a permis de déclarer l'employée rapidement et sans stress. Le forfait fixe est imbattable."
+      "text": "Ma mère a besoin d'une aide à domicile et nous voulions tout faire dans les règles. Grâce à la checklist de HappySalary, on a suivi les démarches sans stress. Le forfait fixe est vraiment abordable."
     },
     "sophie": {
       "name": "Sophie B.",
-      "text": "Mon jardinier ne vient que 4 heures par mois, mais je devais quand même le déclarer. HappySalary rend la chose simple et le coût est dérisoire comparé à une amende pour travail au noir."
+      "text": "Mon jardinier ne vient que 4 heures par mois, mais je devais quand même le déclarer. HappySalary m'a guidé pas à pas et je génère la fiche de salaire chaque mois en 2 minutes."
     },
     "marco": {
       "name": "Marco R.",
-      "text": "Le support client est excellent. J'ai eu une question sur les cotisations APG et j'ai reçu une réponse claire et détaillée en moins d'une heure. Je suis client Premium et je ne regrette pas."
+      "text": "J'ai eu une question sur les cotisations APG et j'ai reçu une réponse claire par email en moins d'une heure. L'outil est intuitif et le guide employeur est vraiment complet."
     },
     "roles": {
       "employerCleaning": "Employeur d'aide ménagère",

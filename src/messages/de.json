@@ -26,8 +26,8 @@
   },
   "home": {
     "hero": {
-      "title": "Lohnabrechnung für Ihr Hauspersonal, einfach gemacht.",
-      "subtitle": "AHV, Versicherungen, Arbeitsverträge und Lohnabrechnungen: alles inklusive für eine feste monatliche Gebühr. Keine Provision auf den Bruttolohn.",
+      "title": "Berechnen, erstellen, Schritte verfolgen.",
+      "subtitle": "Lohnabrechnungen, Arbeitsverträge, Sozialversicherungsbeiträge: alle Dokumente in wenigen Klicks erstellt, mit einer Schritt-für-Schritt-Anleitung.",
       "ctaPrimary": "Preise ansehen",
       "ctaSecondary": "So funktioniert's"
     },
@@ -54,7 +54,7 @@
       },
       "contracts": {
         "title": "Arbeitsverträge",
-        "description": "Erstellung rechtskonformer Arbeitsverträge nach Schweizer Recht, auf Ihre Situation zugeschnitten."
+        "description": "Erstellung von personalisierten Arbeitsvertragsvorlagen je nach Situation und Beschäftigungsart."
       },
       "payslips": {
         "title": "Lohnabrechnungen",
@@ -776,23 +776,23 @@
     },
     "thomas": {
       "name": "Thomas M.",
-      "text": "Wir haben eine Vollzeit-Kinderbetreuung und der Papierkram war ein Albtraum. Mit HappySalary werden Vertrag, Lohnabrechnungen und Beiträge automatisch verwaltet. Ich kann es nur weiterempfehlen."
+      "text": "Wir haben eine Vollzeit-Kinderbetreuung und der Papierkram war ein Albtraum. Mit HappySalary konnte ich den Vertrag und die Lohnabrechnungen in wenigen Klicks erstellen. Die Anleitung hat mir bei den Beiträgen enorm geholfen."
     },
     "anna": {
       "name": "Anna S.",
-      "text": "Ich habe ein Au-Pair aufgenommen und wusste nicht, wo ich mit den Formalitäten anfangen sollte. HappySalary hat die Quellensteuer, die Versicherung und den Vertrag übernommen. Eine echte Erleichterung."
+      "text": "Ich habe ein Au-Pair aufgenommen und wusste nicht, wo ich anfangen sollte. Die Anleitung und der Rechner haben mir geholfen, die Au-Pair-Formalitäten Schritt für Schritt zu verstehen. Eine echte Erleichterung."
     },
     "peter": {
       "name": "Peter W.",
-      "text": "Meine Mutter braucht eine Haushaltshilfe und wir wollten alles korrekt machen. HappySalary hat uns ermöglicht, die Mitarbeiterin schnell und stressfrei anzumelden. Der Festpreis ist unschlagbar."
+      "text": "Meine Mutter braucht eine Haushaltshilfe und wir wollten alles korrekt machen. Die Checkliste hat uns geholfen, alle Schritte ohne Stress zu befolgen. Der Festpreis ist unschlagbar."
     },
     "sophie": {
       "name": "Sophie B.",
-      "text": "Mein Gärtner kommt nur 4 Stunden im Monat, aber ich musste ihn trotzdem anmelden. HappySalary macht es einfach und die Kosten sind minimal im Vergleich zu einer Busse für Schwarzarbeit."
+      "text": "Mein Gärtner kommt nur 4 Stunden im Monat, aber ich musste ihn trotzdem anmelden. HappySalary hat mich Schritt für Schritt angeleitet und ich erstelle die Lohnabrechnung in 2 Minuten. Einfach und günstig."
     },
     "marco": {
       "name": "Marco R.",
-      "text": "Der Kundensupport ist ausgezeichnet. Ich hatte eine Frage zu den EO-Beiträgen und erhielt innerhalb einer Stunde eine klare und ausführliche Antwort. Ich bin Premium-Kunde und bereue es nicht."
+      "text": "Der E-Mail-Support ist ausgezeichnet. Ich hatte eine Frage zu den EO-Beiträgen und erhielt innerhalb einer Stunde eine klare und ausführliche Antwort. Die Arbeitgeberanleitung ist wirklich umfassend."
     },
     "roles": {
       "employerCleaning": "Arbeitgeber einer Reinigungskraft",

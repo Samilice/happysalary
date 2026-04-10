@@ -26,8 +26,8 @@
   },
   "home": {
     "hero": {
-      "title": "Household payroll, simplified.",
-      "subtitle": "Social contributions, insurance, employment contracts and pay slips: everything included for a fixed monthly price. No commission on gross salary.",
+      "title": "Calculate, generate, follow the steps.",
+      "subtitle": "Payslips, employment contracts, social contributions: all your documents generated in a few clicks, with a step-by-step employer guide.",
       "ctaPrimary": "View Pricing",
       "ctaSecondary": "How It Works"
     },
@@ -54,7 +54,7 @@
       },
       "contracts": {
         "title": "Employment Contracts",
-        "description": "Generation of employment contracts compliant with Swiss law, tailored to your specific situation."
+        "description": "Generation of personalised employment contract templates based on your situation and type of employment."
       },
       "payslips": {
         "title": "Pay Slips",
@@ -776,23 +776,23 @@
     },
     "thomas": {
       "name": "Thomas M.",
-      "text": "We have a full-time nanny and the paperwork was a nightmare. With HappySalary, the contract, pay slips and contributions are all managed automatically. I highly recommend it."
+      "text": "We have a full-time nanny and the paperwork was a nightmare. With HappySalary, I generated the contract and payslips in a few clicks. The guide really helped me with the contributions."
     },
     "anna": {
       "name": "Anna S.",
-      "text": "I hosted an au pair and had no idea where to start with the formalities. HappySalary handled the withholding tax, insurance and contract. A real relief."
+      "text": "I hosted an au pair and had no idea where to start. The guide and calculator helped me understand the au pair procedures step by step. A real relief."
     },
     "peter": {
       "name": "Peter W.",
-      "text": "My mother needs a home carer and we wanted to do everything by the book. HappySalary allowed us to register the employee quickly and without stress. The flat fee is unbeatable."
+      "text": "My mother needs a home carer and we wanted to do everything by the book. The checklist helped us follow every procedure without stress. The flat fee is unbeatable."
     },
     "sophie": {
       "name": "Sophie B.",
-      "text": "My gardener only comes 4 hours a month, but I still had to register him. HappySalary makes it straightforward and the cost is negligible compared to a fine for undeclared work."
+      "text": "My gardener only comes 4 hours a month, but I still had to register him. HappySalary guided me step by step and I generate the payslip in 2 minutes. Simple and affordable."
     },
     "marco": {
       "name": "Marco R.",
-      "text": "The customer support is excellent. I had a question about EO contributions and received a clear, detailed answer within an hour. I am a Premium customer and I have no regrets."
+      "text": "The email support is excellent. I had a question about EO contributions and received a clear, detailed answer within an hour. The employer guide is truly comprehensive."
     },
     "roles": {
       "employerCleaning": "Household cleaner employer",
