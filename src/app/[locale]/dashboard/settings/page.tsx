@@ -1,6 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
+import { getTranslations } from "next-intl/server";
 import type { Database } from "@/lib/database.types";
 
 type Profile = Database["public"]["Tables"]["profiles"]["Row"];
@@ -8,6 +9,7 @@ type Employer = Database["public"]["Tables"]["employers"]["Row"];
 type Subscription = Database["public"]["Tables"]["subscriptions"]["Row"];
 
 export default async function SettingsPage() {
+  const t = await getTranslations("dashboard.settingsPage");
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
@@ -21,23 +23,23 @@ export default async function SettingsPage() {
   return (
     <Container>
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-2xl font-bold text-secondary mb-6">Paramètres</h1>
+        <h1 className="text-2xl font-bold text-secondary mb-6">{t("title")}</h1>
 
         <div className="space-y-6">
           {/* Account */}
           <Card hover={false}>
-            <h2 className="text-lg font-bold text-secondary mb-4">Compte</h2>
+            <h2 className="text-lg font-bold text-secondary mb-4">{t("account")}</h2>
             <div className="space-y-3 text-sm">
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-text-muted">Email</span>
+                <span className="text-text-muted">{t("email")}</span>
                 <span className="font-medium">{profile?.email}</span>
               </div>
               <div className="flex justify-between py-2 border-b border-border">
-                <span className="text-text-muted">Nom</span>
+                <span className="text-text-muted">{t("name")}</span>
                 <span className="font-medium">{profile?.full_name || "—"}</span>
               </div>
               <div className="flex justify-between py-2">
-                <span className="text-text-muted">Inscrit le</span>
+                <span className="text-text-muted">{t("registeredOn")}</span>
                 <span className="font-medium">{new Date(profile?.created_at || "").toLocaleDateString("fr-CH")}</span>
               </div>
             </div>
@@ -46,25 +48,25 @@ export default async function SettingsPage() {
           {/* Employer */}
           {employer && (
             <Card hover={false}>
-              <h2 className="text-lg font-bold text-secondary mb-4">Informations employeur</h2>
+              <h2 className="text-lg font-bold text-secondary mb-4">{t("employerInfo")}</h2>
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-text-muted">Nom</span>
+                  <span className="text-text-muted">{t("name")}</span>
                   <span className="font-medium">{employer.first_name} {employer.last_name}</span>
                 </div>
                 {employer.company_name && (
                   <div className="flex justify-between py-2 border-b border-border">
-                    <span className="text-text-muted">Société</span>
+                    <span className="text-text-muted">{t("company")}</span>
                     <span className="font-medium">{employer.company_name}</span>
                   </div>
                 )}
                 <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-text-muted">Adresse</span>
+                  <span className="text-text-muted">{t("address")}</span>
                   <span className="font-medium text-right">{employer.address_street}, {employer.address_postal_code} {employer.address_city} ({employer.address_canton})</span>
                 </div>
                 {employer.phone && (
                   <div className="flex justify-between py-2">
-                    <span className="text-text-muted">Téléphone</span>
+                    <span className="text-text-muted">{t("phone")}</span>
                     <span className="font-medium">{employer.phone}</span>
                   </div>
                 )}
@@ -74,20 +76,20 @@ export default async function SettingsPage() {
 
           {/* Subscription */}
           <Card hover={false}>
-            <h2 className="text-lg font-bold text-secondary mb-4">Abonnement</h2>
+            <h2 className="text-lg font-bold text-secondary mb-4">{t("subscription")}</h2>
             {subscription ? (
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between py-2 border-b border-border">
-                  <span className="text-text-muted">Plan</span>
+                  <span className="text-text-muted">{t("plan")}</span>
                   <span className="font-medium capitalize">{subscription.plan}</span>
                 </div>
                 <div className="flex justify-between py-2">
-                  <span className="text-text-muted">Statut</span>
-                  <span className="font-medium text-success">Actif</span>
+                  <span className="text-text-muted">{t("statusLabel")}</span>
+                  <span className="font-medium text-success">{t("active")}</span>
                 </div>
               </div>
             ) : (
-              <p className="text-sm text-text-muted">Aucun abonnement actif.</p>
+              <p className="text-sm text-text-muted">{t("noSubscription")}</p>
             )}
           </Card>
         </div>

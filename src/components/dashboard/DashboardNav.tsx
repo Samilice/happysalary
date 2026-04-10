@@ -5,6 +5,7 @@ import { Link } from "@/i18n/navigation";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
+import { useTranslations } from "next-intl";
 
 type Props = {
   userName: string;
@@ -13,15 +14,16 @@ type Props = {
 
 export function DashboardNav({ userName, userRole }: Props) {
   const pathname = usePathname();
+  const t = useTranslations("dashboard.nav");
 
   const links = [
-    { href: "/dashboard", label: "Aperçu" },
-    { href: "/dashboard/checklist", label: "Démarches" },
-    { href: "/dashboard/employees", label: "Employés" },
-    { href: "/dashboard/payslip", label: "Fiche de salaire" },
-    { href: "/dashboard/contracts", label: "Contrats" },
-    { href: "/dashboard/documents", label: "Documents" },
-    { href: "/dashboard/settings", label: "Paramètres" },
+    { href: "/dashboard", label: t("overview") },
+    { href: "/dashboard/checklist", label: t("checklist") },
+    { href: "/dashboard/employees", label: t("employees") },
+    { href: "/dashboard/payslip", label: t("payslip") },
+    { href: "/dashboard/contracts", label: t("contracts") },
+    { href: "/dashboard/documents", label: t("documents") },
+    { href: "/dashboard/settings", label: t("settings") },
   ];
 
   const locale = pathname.split("/")[1] || "fr";
@@ -70,7 +72,7 @@ export function DashboardNav({ userName, userRole }: Props) {
             <LocaleSwitcher />
             <span className="text-sm text-text-muted hidden sm:block">{userName}</span>
             <button onClick={handleLogout} className="text-xs text-text-muted hover:text-text px-3 py-1.5 rounded-lg border border-border hover:bg-background-alt transition-colors">
-              Déconnexion
+              {t("logout")}
             </button>
           </div>
         </div>

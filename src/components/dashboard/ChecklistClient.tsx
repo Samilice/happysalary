@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import type { ChecklistStep } from "@/lib/checklist";
+import { useTranslations } from "next-intl";
 
 type Employee = {
   id: string;
@@ -21,16 +22,17 @@ type Props = {
   totalSteps: number;
 };
 
-const employmentTypeLabels: Record<string, string> = {
-  cleaning: "Aide ménagère",
-  nanny: "Nounou",
-  au_pair: "Au pair",
-  elderly_care: "Aide à domicile",
-  gardener: "Jardinier",
-  other: "Autre",
-};
-
 export function ChecklistClient({ employee, steps, completedKeys: initialCompleted, percentage: initialPercentage, completedCount: initialCount, totalSteps }: Props) {
+  const t = useTranslations("dashboard.checklistPage");
+
+  const employmentTypeLabels: Record<string, string> = {
+    cleaning: t("cleaning"),
+    nanny: t("nanny"),
+    au_pair: t("auPair"),
+    elderly_care: t("elderlyCare"),
+    gardener: t("gardener"),
+    other: t("other"),
+  };
   const [completed, setCompleted] = useState<Set<string>>(new Set(initialCompleted));
   const [expandedStep, setExpandedStep] = useState<string | null>(null);
   const [saving, setSaving] = useState<string | null>(null);
@@ -91,7 +93,7 @@ export function ChecklistClient({ employee, steps, completedKeys: initialComplet
             <span className={`text-2xl font-bold ${percentage === 100 ? "text-success" : "text-primary"}`}>
               {percentage}%
             </span>
-            <p className="text-[10px] text-text-muted">{completedCount}/{totalSteps} étapes</p>
+            <p className="text-[10px] text-text-muted">{completedCount}/{totalSteps} {t("steps")}</p>
           </div>
         </div>
 
@@ -108,7 +110,7 @@ export function ChecklistClient({ employee, steps, completedKeys: initialComplet
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            Toutes les démarches sont terminées !
+            {t("allDone")}
           </div>
         )}
       </div>
@@ -177,7 +179,7 @@ export function ChecklistClient({ employee, steps, completedKeys: initialComplet
 
                   {step.links.length > 0 && (
                     <div className="mt-3 space-y-1.5">
-                      <p className="text-xs font-semibold text-text-muted uppercase tracking-wider">Liens utiles</p>
+                      <p className="text-xs font-semibold text-text-muted uppercase tracking-wider">{t("usefulLinks")}</p>
                       {step.links.map((link, i) => (
                         <a
                           key={i}

@@ -2,25 +2,27 @@ import { createClient } from "@/lib/supabase/server";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
 import type { Database } from "@/lib/database.types";
+import { getTranslations } from "next-intl/server";
 
 type Employer = Database["public"]["Tables"]["employers"]["Row"];
 type Document = Database["public"]["Tables"]["documents"]["Row"];
 
-const typeLabels: Record<string, string> = {
-  salary_sheet: "Fiche de salaire",
-  employment_contract: "Contrat de travail",
-  annual_statement: "Décompte annuel",
-  other: "Autre",
-};
-
-const statusLabels: Record<string, { label: string; className: string }> = {
-  pending: { label: "En attente", className: "text-amber-600 bg-amber-50" },
-  generating: { label: "Génération...", className: "text-blue-600 bg-blue-50" },
-  ready: { label: "Prêt", className: "text-success bg-success/10" },
-  sent: { label: "Envoyé", className: "text-primary bg-primary/10" },
-};
-
 export default async function DocumentsPage() {
+  const t = await getTranslations("dashboard.documentsPage");
+
+  const typeLabels: Record<string, string> = {
+    salary_sheet: t("typeSalarySheet"),
+    employment_contract: t("typeContract"),
+    annual_statement: t("typeAnnualStatement"),
+    other: t("typeOther"),
+  };
+
+  const statusLabels: Record<string, { label: string; className: string }> = {
+    pending: { label: t("statusPending"), className: "text-amber-600 bg-amber-50" },
+    generating: { label: t("statusGenerating"), className: "text-blue-600 bg-blue-50" },
+    ready: { label: t("statusReady"), className: "text-success bg-success/10" },
+    sent: { label: t("statusSent"), className: "text-primary bg-primary/10" },
+  };
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
@@ -50,7 +52,7 @@ export default async function DocumentsPage() {
   return (
     <Container>
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-2xl font-bold text-secondary mb-6">Documents</h1>
+        <h1 className="text-2xl font-bold text-secondary mb-6">{t("title")}</h1>
 
         {documents && documents.length > 0 ? (
           <div className="space-y-3">
@@ -79,7 +81,7 @@ export default async function DocumentsPage() {
                       </span>
                       {doc.status === "ready" && doc.file_url && (
                         <a href={doc.file_url} target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-primary hover:underline">
-                          Télécharger
+                          {t("download")}
                         </a>
                       )}
                     </div>
@@ -93,9 +95,9 @@ export default async function DocumentsPage() {
             <svg className="w-16 h-16 text-text-light mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
             </svg>
-            <h3 className="text-lg font-bold text-secondary mb-2">Aucun document</h3>
+            <h3 className="text-lg font-bold text-secondary mb-2">{t("noDocuments")}</h3>
             <p className="text-sm text-text-muted max-w-sm mx-auto">
-              Vos fiches de salaire et contrats de travail apparaîtront ici dès qu&apos;ils seront générés.
+              {t("noDocumentsDesc")}
             </p>
           </Card>
         )}

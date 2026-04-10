@@ -5,11 +5,12 @@ import type { Database } from "@/lib/database.types";
 
 type Profile = Database["public"]["Tables"]["profiles"]["Row"];
 
-export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default async function DashboardLayout({ children, params }: { children: React.ReactNode; params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
-  if (!user) redirect("/fr/login");
+  if (!user) redirect(`/${locale}/login`);
 
   const { data } = await supabase
     .from("profiles")
@@ -18,7 +19,7 @@ export default async function DashboardLayout({ children }: { children: React.Re
     .single();
   const profile = data as Profile | null;
 
-  if (!profile?.onboarding_completed) redirect("/fr/onboarding");
+  if (!profile?.onboarding_completed) redirect(`/${locale}/onboarding`);
 
   return (
     <div className="min-h-screen bg-background-alt">

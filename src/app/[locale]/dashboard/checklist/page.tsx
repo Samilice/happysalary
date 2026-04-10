@@ -3,11 +3,13 @@ import { Container } from "@/components/ui/Container";
 import type { Database } from "@/lib/database.types";
 import { getChecklistSteps } from "@/lib/checklist";
 import { ChecklistClient } from "@/components/dashboard/ChecklistClient";
+import { getTranslations } from "next-intl/server";
 
 type Employer = Database["public"]["Tables"]["employers"]["Row"];
 type Employee = Database["public"]["Tables"]["employees"]["Row"];
 
 export default async function ChecklistPage() {
+  const t = await getTranslations("dashboard.checklistPage");
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
@@ -57,15 +59,15 @@ export default async function ChecklistPage() {
     <Container>
       <div className="max-w-3xl mx-auto">
         <div className="mb-6">
-          <h1 className="text-2xl sm:text-3xl font-bold text-secondary">Démarches employeur</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-secondary">{t("title")}</h1>
           <p className="text-sm text-text-muted mt-1">
-            Suivez pas à pas les démarches pour employer correctement votre personnel de maison.
+            {t("subtitle")}
           </p>
         </div>
 
         {employeeChecklists.length === 0 ? (
           <div className="text-center py-16 bg-white rounded-2xl border border-border">
-            <p className="text-text-muted">Aucun employé actif. Ajoutez un employé pour voir votre checklist.</p>
+            <p className="text-text-muted">{t("noActiveEmployees")}</p>
           </div>
         ) : (
           <div className="space-y-8">

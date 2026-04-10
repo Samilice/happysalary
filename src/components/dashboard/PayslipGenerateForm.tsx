@@ -42,6 +42,7 @@ const CANTON_CODES = Object.keys(CANTON_RATES).sort();
 
 export function PayslipGenerateForm({ employees, employer }: Props) {
   const t = useTranslations("dashboard.payslip");
+  const tt = useTranslations("dashboard.tooltips");
   const locale = useLocale();
 
   // ── Form state ────────────────────────────────────────────────
@@ -274,7 +275,7 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
         : `${employer.first_name} ${employer.last_name}`;
       drawInfoField(t("pdf.name"), employerName);
       drawInfoField(t("pdf.address"), `${employer.address_street}, ${employer.address_postal_code} ${employer.address_city}`);
-      drawInfoField(t("pdf.canton"), `${canton} — ${CANTON_RATES[canton]?.nameFr || canton}`);
+      drawInfoField(t("pdf.canton"), `${canton} — ${(locale === "de" ? CANTON_RATES[canton]?.nameDe : locale === "en" ? CANTON_RATES[canton]?.nameEn : CANTON_RATES[canton]?.nameFr) || canton}`);
 
       // ===== EMPLOYEE =====
       drawSection(t("pdf.employee"));
@@ -506,7 +507,7 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
           {/* Hours & Rate */}
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium text-text mb-1.5">{t("hoursWorked")}<InfoTip text="Nombre d'heures réellement travaillées ce mois. Si différent du contrat (absences, heures sup.), ajustez ici." /></label>
+              <label className="block text-sm font-medium text-text mb-1.5">{t("hoursWorked")}<InfoTip text={tt("hoursWorked")} /></label>
               <input
                 type="number"
                 min="0"
@@ -518,7 +519,7 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-text mb-1.5">{t("hourlyRate")}<InfoTip text="Salaire horaire brut convenu dans le contrat de travail. Si vous avez un salaire mensuel, divisez-le par les heures mensuelles." /></label>
+              <label className="block text-sm font-medium text-text mb-1.5">{t("hourlyRate")}<InfoTip text={tt("hourlyRate")} /></label>
               <input
                 type="number"
                 min="0"
@@ -533,11 +534,11 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
 
           {/* Canton */}
           <div>
-            <label className="block text-sm font-medium text-text mb-1.5">{t("canton")}<InfoTip text="Canton de travail de l'employé. Détermine les allocations familiales et les taux de cotisation cantonaux." /></label>
+            <label className="block text-sm font-medium text-text mb-1.5">{t("canton")}<InfoTip text={tt("canton")} /></label>
             <select value={canton} onChange={(e) => setCanton(e.target.value)} className={inputClass}>
               {CANTON_CODES.map((code) => (
                 <option key={code} value={code}>
-                  {code} — {CANTON_RATES[code].nameFr}
+                  {code} — {locale === "de" ? CANTON_RATES[code].nameDe : locale === "en" ? CANTON_RATES[code].nameEn : CANTON_RATES[code].nameFr}
                 </option>
               ))}
             </select>
@@ -549,7 +550,7 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
             <div className="grid grid-cols-2 gap-4">
               {/* Salary type */}
               <div>
-                <label className="block text-xs font-medium text-text mb-1.5">{t("salaryType")}<InfoTip text="Horaire = salaire calculé sur les heures travaillées (le plus courant pour le personnel de maison). Mensuel = salaire fixe indépendant des heures. Doit correspondre à ce qui est défini dans le contrat." /></label>
+                <label className="block text-xs font-medium text-text mb-1.5">{t("salaryType")}<InfoTip text={tt("salaryType")} /></label>
                 <select value={salaryType} onChange={(e) => setSalaryType(e.target.value as SalaryType)} className={inputClass}>
                   <option value="hourly">{t("salaryTypeHourly")}</option>
                   <option value="monthly">{t("salaryTypeMonthly")}</option>
@@ -558,7 +559,7 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
 
               {/* Vacation handling */}
               <div>
-                <label className="block text-xs font-medium text-text mb-1.5">{t("vacationHandling")}<InfoTip text="'Ajouté au salaire' = un supplément de 8.33% (4 sem.) ou 10.64% (5 sem.) est ajouté chaque mois. 'Inclus dans le salaire' = le taux horaire comprend déjà les vacances. Vérifiez votre contrat de travail." /></label>
+                <label className="block text-xs font-medium text-text mb-1.5">{t("vacationHandling")}<InfoTip text={tt("vacationHandling")} /></label>
                 <select value={vacationHandling} onChange={(e) => setVacationHandling(e.target.value as VacationHandling)} className={inputClass}>
                   <option value="added">{t("vacationAdded")}</option>
                   <option value="included">{t("vacationIncluded")}</option>
@@ -567,7 +568,7 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
 
               {/* Simplified procedure */}
               <div>
-                <label className="block text-xs font-medium text-text mb-1.5">{t("simplifiedProcedure")}<InfoTip text="Art. 37a LAVS — procédure simplifiée pour les employeurs privés. Un impôt forfaitaire de 5% est prélevé à la source. Applicable si le salaire ≤ CHF 22'050/an par employeur. Recommandé pour la plupart des ménages." /></label>
+                <label className="block text-xs font-medium text-text mb-1.5">{t("simplifiedProcedure")}<InfoTip text={tt("simplifiedProcedure")} /></label>
                 <select value={simplifiedProcedure ? "yes" : "no"} onChange={(e) => setSimplifiedProcedure(e.target.value === "yes")} className={inputClass}>
                   <option value="yes">{t("yes")}</option>
                   <option value="no">{t("no")}</option>
@@ -576,7 +577,7 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
 
               {/* NBU */}
               <div>
-                <label className="block text-xs font-medium text-text mb-1.5">{t("nbuOption")}<InfoTip text="Assurance accidents non professionnels (AANP). Obligatoire si l'employé travaille ≥ 8h/semaine chez vous. 'Auto' active la déduction automatiquement selon les heures déclarées." /></label>
+                <label className="block text-xs font-medium text-text mb-1.5">{t("nbuOption")}<InfoTip text={tt("nbuOption")} /></label>
                 <select value={nbuOption} onChange={(e) => setNbuOption(e.target.value as "auto" | "yes" | "no")} className={inputClass}>
                   <option value="auto">{t("nbuAuto")}</option>
                   <option value="yes">{t("nbuYes")}</option>

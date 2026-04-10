@@ -4,12 +4,14 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Link } from "@/i18n/navigation";
 import { ToggleActiveButton } from "@/components/dashboard/ToggleActiveButton";
+import { getTranslations } from "next-intl/server";
 import type { Database } from "@/lib/database.types";
 
 type Employer = Database["public"]["Tables"]["employers"]["Row"];
 type Employee = Database["public"]["Tables"]["employees"]["Row"];
 
 export default async function EmployeesPage() {
+  const t = await getTranslations("dashboard.employees");
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
 
@@ -31,9 +33,9 @@ export default async function EmployeesPage() {
     <Container>
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-between mb-6">
-          <h1 className="text-2xl font-bold text-secondary">Mes employés</h1>
+          <h1 className="text-2xl font-bold text-secondary">{t("title")}</h1>
           <Button href="/dashboard/employees/new" size="sm">
-            + Ajouter un employé
+            {t("addEmployee")}
           </Button>
         </div>
 
@@ -55,26 +57,26 @@ export default async function EmployeesPage() {
                   </div>
                   <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-sm">
                     <div>
-                      <span className="text-text-muted">Heures : </span>
-                      <strong>{emp.monthly_hours}h/mois</strong>
+                      <span className="text-text-muted">{t("hours")} : </span>
+                      <strong>{emp.monthly_hours}{t("hPerMonth")}</strong>
                     </div>
                     <div>
-                      <span className="text-text-muted">Salaire : </span>
+                      <span className="text-text-muted">{t("salary")} : </span>
                       <strong>CHF {Number(emp.monthly_salary).toFixed(2)}</strong>
                     </div>
                     <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${
                       emp.is_active ? "text-success bg-success/10" : "text-red-500 bg-red-50"
                     }`}>
-                      {emp.is_active ? "Actif" : "Inactif"}
+                      {emp.is_active ? t("active") : t("inactive")}
                     </span>
                     <div className="flex items-center gap-2">
                       <Link
                         href={`/dashboard/employees/${emp.id}/edit`}
                         className="text-xs text-primary hover:text-primary-dark font-medium px-2.5 py-1.5 rounded-lg border border-primary/20 hover:bg-primary/5 transition-colors"
                       >
-                        Modifier
+                        {t("edit")}
                       </Link>
-                      <ToggleActiveButton employeeId={emp.id} isActive={emp.is_active} activateLabel="Activer" deactivateLabel="Désactiver" />
+                      <ToggleActiveButton employeeId={emp.id} isActive={emp.is_active} activateLabel={t("activate")} deactivateLabel={t("deactivate")} />
                     </div>
                   </div>
                 </div>
@@ -83,9 +85,9 @@ export default async function EmployeesPage() {
           </div>
         ) : (
           <Card hover={false} className="text-center py-12">
-            <p className="text-text-muted mb-4">Aucun employé enregistré.</p>
+            <p className="text-text-muted mb-4">{t("noEmployees")}</p>
             <Button href="/dashboard/employees/new" size="sm">
-              + Ajouter un employé
+              {t("addEmployee")}
             </Button>
           </Card>
         )}
