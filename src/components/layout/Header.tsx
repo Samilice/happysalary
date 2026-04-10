@@ -9,16 +9,25 @@ import { Button } from "@/components/ui/Button";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { MobileMenu } from "./MobileMenu";
 import { cn } from "@/lib/utils";
+import { createClient } from "@/lib/supabase/client";
 
 export function Header() {
   const t = useTranslations("nav");
   const tc = useTranslations("common");
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
+
+    // Check auth state
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setIsLoggedIn(!!user);
+    });
+
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -106,16 +115,25 @@ export function Header() {
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Locale switcher - always visible as compact dropdown */}
             <LocaleSwitcher />
-            {/* Login - desktop only */}
-            <Link href="/login" className="hidden lg:block text-sm font-medium text-text-muted hover:text-primary transition-colors">
-              Connexion
-            </Link>
-            {/* CTA - desktop only */}
-            <div className="hidden lg:block">
-              <Button href="/signup" size="sm">
-                {tc("getStarted")}
-              </Button>
-            </div>
+            {/* Auth buttons - desktop only */}
+            {isLoggedIn ? (
+              <div className="hidden lg:block">
+                <Button href="/dashboard" size="sm">
+                  Mon espace
+                </Button>
+              </div>
+            ) : (
+              <>
+                <Link href="/login" className="hidden lg:block text-sm font-medium text-text-muted hover:text-primary transition-colors">
+                  Connexion
+                </Link>
+                <div className="hidden lg:block">
+                  <Button href="/signup" size="sm">
+                    {tc("getStarted")}
+                  </Button>
+                </div>
+              </>
+            )}
             {/* Mobile hamburger */}
             <button
               className="lg:hidden p-2 text-secondary cursor-pointer"

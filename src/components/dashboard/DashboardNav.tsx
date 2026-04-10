@@ -42,8 +42,7 @@ export function DashboardNav({ userName, userRole }: Props) {
               height={48}
               className="w-8 h-8 sm:w-10 sm:h-10"
             />
-            <span className="font-bold text-secondary text-sm sm:text-base">Happy</span>
-            <span className="font-bold text-primary text-sm sm:text-base">Salary</span>
+            <span className="text-sm sm:text-base font-bold text-secondary">Happy<span className="text-primary">Salary</span></span>
           </Link>
 
           {/* Desktop nav */}
