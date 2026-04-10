@@ -4,6 +4,7 @@ import { createClient } from "@/lib/supabase/client";
 import { Link } from "@/i18n/navigation";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import { LocaleSwitcher } from "@/components/layout/LocaleSwitcher";
 
 type Props = {
   userName: string;
@@ -23,10 +24,12 @@ export function DashboardNav({ userName, userRole }: Props) {
     { href: "/dashboard/settings", label: "Paramètres" },
   ];
 
+  const locale = pathname.split("/")[1] || "fr";
+
   async function handleLogout() {
     const supabase = createClient();
     await supabase.auth.signOut();
-    window.location.href = "/fr";
+    window.location.href = `/${locale}`;
   }
 
   return (
@@ -62,8 +65,9 @@ export function DashboardNav({ userName, userRole }: Props) {
             )}
           </div>
 
-          {/* User */}
-          <div className="flex items-center gap-3">
+          {/* User + Locale */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <LocaleSwitcher />
             <span className="text-sm text-text-muted hidden sm:block">{userName}</span>
             <button onClick={handleLogout} className="text-xs text-text-muted hover:text-text px-3 py-1.5 rounded-lg border border-border hover:bg-background-alt transition-colors">
               Déconnexion

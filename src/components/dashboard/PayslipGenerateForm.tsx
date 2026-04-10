@@ -157,28 +157,21 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
   const inputClass =
     "w-full px-4 py-3 rounded-xl border border-border bg-white text-text placeholder:text-text-light focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors text-sm";
 
-  // Tooltip component for info icons
+  // Tooltip component for info icons — hover on desktop, tap on mobile
   function InfoTip({ text }: { text: string }) {
-    const [open, setOpen] = useState(false);
     return (
-      <span className="relative inline-flex ml-1.5">
-        <button
-          type="button"
-          onClick={(e) => { e.preventDefault(); setOpen(!open); }}
-          className="w-4 h-4 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors inline-flex items-center justify-center text-[10px] font-bold cursor-pointer flex-shrink-0"
+      <span className="relative inline-flex ml-1.5 group/tip">
+        <span
+          className="w-4 h-4 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors inline-flex items-center justify-center text-[10px] font-bold cursor-help flex-shrink-0"
+          tabIndex={0}
           aria-label="Info"
         >
           i
-        </button>
-        {open && (
-          <>
-            <div className="fixed inset-0 z-40" onClick={() => setOpen(false)} />
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 z-50 w-64 p-3 rounded-xl bg-secondary text-white text-xs leading-relaxed shadow-xl whitespace-normal">
-              {text}
-              <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-x-[6px] border-x-transparent border-t-[6px] border-t-secondary" />
-            </div>
-          </>
-        )}
+        </span>
+        <span className="pointer-events-none opacity-0 group-hover/tip:opacity-100 group-focus-within/tip:opacity-100 transition-opacity duration-150 absolute left-1/2 -translate-x-1/2 bottom-full mb-2 z-50 w-64 p-3 rounded-xl bg-secondary text-white text-xs leading-relaxed shadow-xl whitespace-normal">
+          {text}
+          <span className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-x-[6px] border-x-transparent border-t-[6px] border-t-secondary" />
+        </span>
       </span>
     );
   }
