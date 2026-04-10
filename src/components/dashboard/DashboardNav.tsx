@@ -3,6 +3,7 @@
 import { createClient } from "@/lib/supabase/client";
 import { Link } from "@/i18n/navigation";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 type Props = {
   userName: string;
@@ -33,9 +34,16 @@ export function DashboardNav({ userName, userRole }: Props) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-bold text-secondary">Happy</span>
-            <span className="font-bold text-primary">Salary</span>
+          <Link href="/" className="flex items-center gap-1.5 group flex-shrink-0">
+            <Image
+              src="/images/logo.png"
+              alt="HappySalary"
+              width={48}
+              height={48}
+              className="w-8 h-8 sm:w-10 sm:h-10"
+            />
+            <span className="font-bold text-secondary text-sm sm:text-base">Happy</span>
+            <span className="font-bold text-primary text-sm sm:text-base">Salary</span>
           </Link>
 
           {/* Desktop nav */}
