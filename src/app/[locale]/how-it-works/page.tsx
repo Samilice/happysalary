@@ -117,16 +117,85 @@ export default async function HowItWorksPage({ params }: Props) {
                 {t("pricing.subtitle")}
               </p>
             </div>
-            <div className="flex items-center justify-center gap-4 sm:gap-8 max-w-md mx-auto">
-              <div className="bg-white rounded-2xl border-2 border-primary p-5 sm:p-8 text-center shadow-lg flex-1">
-                <p className="text-3xl sm:text-4xl font-bold text-secondary">{t("pricing.monthly")}</p>
-                <p className="text-sm text-text-muted mt-1">{t("pricing.monthLabel")}</p>
-              </div>
-              <span className="text-sm font-medium text-text-muted">{t("pricing.or")}</span>
-              <div className="bg-white rounded-2xl border border-border p-5 sm:p-8 text-center shadow-sm flex-1">
-                <p className="text-3xl sm:text-4xl font-bold text-secondary">{t("pricing.yearly")}</p>
-                <p className="text-sm text-text-muted mt-1">{t("pricing.yearLabel")}</p>
-              </div>
+            <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+              {/* Monthly card */}
+              <Link
+                href="/pricing"
+                className="group bg-white rounded-2xl border-2 border-primary p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
+              >
+                <div className="text-center mb-5">
+                  <div className="inline-flex items-center gap-1.5 bg-primary/10 rounded-full px-3 py-1 mb-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">{t("pricing.popularBadge")}</span>
+                  </div>
+                  <p className="text-4xl sm:text-5xl font-bold text-secondary">{t("pricing.monthly")}</p>
+                  <p className="text-sm text-text-muted mt-1">{t("pricing.monthLabel")}</p>
+                </div>
+                <ul className="space-y-2.5 text-sm text-text-muted">
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {t("pricing.feature1")}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {t("pricing.feature2")}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {t("pricing.feature3")}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {t("pricing.feature4")}
+                  </li>
+                </ul>
+                <div className="mt-5 text-center">
+                  <span className="inline-flex items-center justify-center w-full rounded-xl bg-primary text-white font-semibold py-3 text-sm group-hover:bg-primary-dark transition-colors">
+                    {t("pricing.cta")}
+                  </span>
+                </div>
+              </Link>
+
+              {/* Yearly card */}
+              <Link
+                href="/pricing"
+                className="group bg-white rounded-2xl border-2 border-accent p-6 sm:p-8 shadow-sm hover:shadow-xl transition-all duration-200 hover:-translate-y-1"
+              >
+                <div className="text-center mb-5">
+                  <div className="inline-flex items-center gap-1.5 bg-accent/10 rounded-full px-3 py-1 mb-3">
+                    <span className="text-xs font-semibold text-accent uppercase tracking-wider">{t("pricing.saveBadge")}</span>
+                  </div>
+                  <p className="text-4xl sm:text-5xl font-bold text-secondary">{t("pricing.yearly")}</p>
+                  <p className="text-sm text-text-muted mt-1">{t("pricing.yearLabel")}</p>
+                </div>
+                <ul className="space-y-2.5 text-sm text-text-muted">
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {t("pricing.feature1")}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {t("pricing.feature2")}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {t("pricing.feature3")}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {t("pricing.feature4")}
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    {t("pricing.saveDetail")}
+                  </li>
+                </ul>
+                <div className="mt-5 text-center">
+                  <span className="inline-flex items-center justify-center w-full rounded-xl bg-accent text-white font-semibold py-3 text-sm group-hover:bg-accent/90 transition-colors">
+                    {t("pricing.cta")}
+                  </span>
+                </div>
+              </Link>
             </div>
           </ScrollReveal>
         </Container>

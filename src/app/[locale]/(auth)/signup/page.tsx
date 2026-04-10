@@ -32,7 +32,7 @@ export default function SignupPage() {
       password,
       options: {
         data: { full_name: fullName },
-        emailRedirectTo: `${window.location.origin}/api/auth/callback?next=/fr/onboarding`,
+        emailRedirectTo: `${window.location.origin}/api/auth/callback?next=/${window.location.pathname.split("/")[1] || "fr"}/onboarding`,
       },
     });
 

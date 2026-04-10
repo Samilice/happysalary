@@ -65,7 +65,7 @@ export async function ServiceLanding({ namespace, badge }: Props) {
                 <Button href="/pricing" size="lg" className="text-sm sm:text-base">
                   {t("cta")}
                 </Button>
-                <Button href="/contact" variant="outline" size="lg" className="text-sm sm:text-base">
+                <Button href="/how-it-works" variant="outline" size="lg" className="text-sm sm:text-base">
                   {t("ctaSecondary")}
                 </Button>
               </div>

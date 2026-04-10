@@ -179,7 +179,15 @@
       "yearly": "99",
       "monthLabel": "CHF/Monat",
       "yearLabel": "CHF/Jahr",
-      "or": "oder"
+      "or": "oder",
+      "popularBadge": "Am beliebtesten",
+      "saveBadge": "36% sparen",
+      "feature1": "Automatische Lohnabrechnungen",
+      "feature2": "AHV/IV/EO-Beiträge berechnet",
+      "feature3": "Arbeitsvertrag inklusive",
+      "feature4": "Unfallversicherung (UVG) verwaltet",
+      "saveDetail": "Sparen Sie 56.88 CHF pro Jahr",
+      "cta": "Details ansehen"
     },
     "cta": {
       "title": "Bereit loszulegen?",
@@ -237,7 +245,7 @@
       "error": "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt telefonisch."
     },
     "info": {
-      "address": "HappySalary – Thomas Busquets, Schweiz",
+      "address": "HappySalary – Rata Services SA, Schweiz",
       "email": "contact@happysalary.ch",
       "phone": "+41 79 526 86 50",
       "hours": "Montag – Freitag: 9:00 – 17:00 Uhr"
@@ -311,7 +319,7 @@
         }
       },
       "cta": "Preise ansehen",
-      "ctaSecondary": "Kontakt",
+      "ctaSecondary": "So funktioniert's",
       "benefitsTitle": "Warum Ihre Reinigungskraft anmelden?",
       "benefitsSubtitle": "HappySalary macht die Anmeldung Ihrer Haushaltshilfe einfach, legal und günstig.",
       "howItWorks": {
@@ -358,7 +366,7 @@
         }
       },
       "cta": "Preise ansehen",
-      "ctaSecondary": "Kontakt",
+      "ctaSecondary": "So funktioniert's",
       "benefitsTitle": "Warum Ihre Kinderbetreuung anmelden?",
       "benefitsSubtitle": "Eine angemeldete Kinderbetreuung schützt Ihre Familie und ermöglicht Steuerabzüge.",
       "howItWorks": {
@@ -405,7 +413,7 @@
         }
       },
       "cta": "Preise ansehen",
-      "ctaSecondary": "Kontakt",
+      "ctaSecondary": "So funktioniert's",
       "benefitsTitle": "Warum HappySalary für Ihr Au-Pair?",
       "benefitsSubtitle": "Die Aufnahme eines Au-Pairs bringt spezifische Pflichten mit sich. Wir übernehmen sie für Sie.",
       "howItWorks": {
@@ -452,7 +460,7 @@
         }
       },
       "cta": "Preise ansehen",
-      "ctaSecondary": "Kontakt",
+      "ctaSecondary": "So funktioniert's",
       "benefitsTitle": "Warum Ihre Haushaltshilfe anmelden?",
       "benefitsSubtitle": "Schützen Sie Ihren Angehörigen und die Betreuungsperson durch Einhaltung des Schweizer Rechts.",
       "howItWorks": {
@@ -499,7 +507,7 @@
         }
       },
       "cta": "Preise ansehen",
-      "ctaSecondary": "Kontakt",
+      "ctaSecondary": "So funktioniert's",
       "benefitsTitle": "Warum Ihren Gärtner anmelden?",
       "benefitsSubtitle": "Selbst für wenige Stunden im Monat ist die Anmeldung Pflicht. HappySalary macht es schmerzlos.",
       "howItWorks": {
@@ -530,7 +538,7 @@
       "subtitle": "Automatische und präzise Lohnberechnung jeden Monat.",
       "description": "Unser System berechnet automatisch den Nettolohn Ihres Mitarbeiters unter Berücksichtigung aller gesetzlichen Abzüge. Sie müssen nichts tun.",
       "cta": "Preise ansehen",
-      "ctaSecondary": "Kontakt",
+      "ctaSecondary": "So funktioniert's",
       "benefitsTitle": "Mühelose Lohnverwaltung",
       "benefitsSubtitle": "Alles wird automatisch berechnet — Sie müssen nur bestätigen.",
       "benefits": {
@@ -577,7 +585,7 @@
       "subtitle": "AHV, IV, EO, ALV: alles berechnet und gemeldet für Sie.",
       "description": "HappySalary berechnet die Arbeitgeber- und Arbeitnehmeranteile der Sozialversicherungsbeiträge, erstellt die Abrechnungen und übernimmt die Meldungen an die Ausgleichskasse.",
       "cta": "Preise ansehen",
-      "ctaSecondary": "Kontakt",
+      "ctaSecondary": "So funktioniert's",
       "benefitsTitle": "Sozialversicherungsbeiträge von A bis Z verwaltet",
       "benefitsSubtitle": "AHV, IV, EO, ALV: wir berechnen, wir melden — Sie müssen nichts tun.",
       "benefits": {
@@ -624,7 +632,7 @@
       "subtitle": "Obligatorischer gesetzlicher Schutz für Ihren Mitarbeiter.",
       "description": "Wir melden Ihren Mitarbeiter bei der Berufs- und Nichtberufsunfallversicherung (UVG) an, gemäss den gesetzlichen Anforderungen der Schweiz.",
       "cta": "Preise ansehen",
-      "ctaSecondary": "Kontakt",
+      "ctaSecondary": "So funktioniert's",
       "benefitsTitle": "Obligatorische Unfallversicherung, vereinfacht",
       "benefitsSubtitle": "Wir melden Ihren Mitarbeiter bei der UVG an, gemäss Schweizer Recht.",
       "benefits": {
@@ -671,7 +679,7 @@
       "subtitle": "Rechtskonforme und individuelle Verträge mit wenigen Klicks.",
       "description": "Wir erstellen Arbeitsverträge, die dem Schweizer Recht und den kantonalen Normalarbeitsverträgen entsprechen, zugeschnitten auf Ihre spezifische Situation.",
       "cta": "Preise ansehen",
-      "ctaSecondary": "Kontakt",
+      "ctaSecondary": "So funktioniert's",
       "benefitsTitle": "Rechtskonforme, individuelle Arbeitsverträge",
       "benefitsSubtitle": "Automatisch erstellt gemäss Schweizer Recht und kantonalen Normalarbeitsverträgen.",
       "benefits": {
@@ -718,7 +726,7 @@
       "subtitle": "Detaillierte und professionelle Lohnabrechnungen jeden Monat.",
       "description": "Jeden Monat wird automatisch eine detaillierte Lohnabrechnung erstellt und als PDF in Ihrem Kundenkonto bereitgestellt.",
       "cta": "Preise ansehen",
-      "ctaSecondary": "Kontakt",
+      "ctaSecondary": "So funktioniert's",
       "benefitsTitle": "Professionelle Lohnabrechnungen jeden Monat",
       "benefitsSubtitle": "Automatisch erstellt mit detaillierter Aufschlüsselung aller Abzüge.",
       "benefits": {

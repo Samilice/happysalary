@@ -1,15 +1,11 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { createServerClient } from "@supabase/ssr";
 import createIntlMiddleware from "next-intl/middleware";
 import { routing } from "@/i18n/routing";
 
 const intlMiddleware = createIntlMiddleware(routing);
 
-// Auth protection is handled at the layout level:
-// - src/app/[locale]/dashboard/layout.tsx → redirects to /login if no user
-// - src/app/[locale]/admin/layout.tsx → redirects if not admin
-// This keeps middleware Edge-compatible for Cloudflare Workers (OpenNext).
-
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Skip for API routes
@@ -17,8 +13,32 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // All routes — i18n locale detection & routing only
-  return intlMiddleware(request);
+  // Run intl middleware first to get the response
+  const response = intlMiddleware(request);
+
+  // Refresh Supabase session on every request to keep auth cookies alive
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return request.cookies.getAll();
+        },
+        setAll(cookiesToSet) {
+          cookiesToSet.forEach(({ name, value, options }) => {
+            request.cookies.set(name, value);
+            response.cookies.set(name, value, options);
+          });
+        },
+      },
+    }
+  );
+
+  // This refreshes the session token if needed and writes updated cookies
+  await supabase.auth.getUser();
+
+  return response;
 }
 
 export const config = {

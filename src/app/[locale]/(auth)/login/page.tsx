@@ -13,6 +13,11 @@ export default function LoginPage() {
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+  // Detect current locale from URL
+  const locale = typeof window !== "undefined"
+    ? window.location.pathname.split("/")[1] || "fr"
+    : "fr";
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
@@ -27,7 +32,7 @@ export default function LoginPage() {
       return;
     }
 
-    window.location.href = "/fr/dashboard";
+    window.location.href = `/${locale}/dashboard`;
   }
 
   return (

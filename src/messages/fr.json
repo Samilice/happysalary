@@ -179,7 +179,15 @@
       "yearly": "99",
       "monthLabel": "CHF/mois",
       "yearLabel": "CHF/an",
-      "or": "ou"
+      "or": "ou",
+      "popularBadge": "Le plus populaire",
+      "saveBadge": "Économisez 36%",
+      "feature1": "Fiches de salaire automatiques",
+      "feature2": "Cotisations AVS/AI/APG calculées",
+      "feature3": "Contrat de travail inclus",
+      "feature4": "Assurance accident (LAA) gérée",
+      "saveDetail": "Économisez 56.88 CHF par an",
+      "cta": "Voir les détails"
     },
     "cta": {
       "title": "Prêt à vous lancer ?",
@@ -237,7 +245,7 @@
       "error": "Une erreur est survenue lors de l'envoi. Veuillez réessayer ou nous contacter directement par téléphone."
     },
     "info": {
-      "address": "HappySalary – Thomas Busquets, Suisse",
+      "address": "HappySalary – Rata Services SA, Suisse",
       "email": "contact@happysalary.ch",
       "phone": "+41 79 526 86 50",
       "hours": "Lundi – Vendredi : 9h00 – 17h00"
@@ -311,7 +319,7 @@
         }
       },
       "cta": "Voir les tarifs",
-      "ctaSecondary": "Nous contacter",
+      "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Pourquoi déclarer votre femme de ménage ?",
       "benefitsSubtitle": "HappySalary rend la déclaration de votre aide ménagère simple, légale et abordable.",
       "howItWorks": {
@@ -358,7 +366,7 @@
         }
       },
       "cta": "Voir les tarifs",
-      "ctaSecondary": "Nous contacter",
+      "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Pourquoi déclarer votre nounou ?",
       "benefitsSubtitle": "Employer une nounou déclarée, c'est protéger votre famille et bénéficier de déductions fiscales.",
       "howItWorks": {
@@ -405,7 +413,7 @@
         }
       },
       "cta": "Voir les tarifs",
-      "ctaSecondary": "Nous contacter",
+      "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Pourquoi passer par HappySalary pour votre au pair ?",
       "benefitsSubtitle": "Accueillir un(e) au pair implique des obligations spécifiques. Nous les gérons pour vous.",
       "howItWorks": {
@@ -452,7 +460,7 @@
         }
       },
       "cta": "Voir les tarifs",
-      "ctaSecondary": "Nous contacter",
+      "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Pourquoi déclarer votre aide à domicile ?",
       "benefitsSubtitle": "Protégez votre proche et son aide en étant en conformité avec la loi suisse.",
       "howItWorks": {
@@ -499,7 +507,7 @@
         }
       },
       "cta": "Voir les tarifs",
-      "ctaSecondary": "Nous contacter",
+      "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Pourquoi déclarer votre jardinier ?",
       "benefitsSubtitle": "Même pour quelques heures par mois, la déclaration est obligatoire. HappySalary la rend indolore.",
       "howItWorks": {
@@ -530,7 +538,7 @@
       "subtitle": "Calcul automatique et précis des salaires chaque mois.",
       "description": "Notre système calcule automatiquement le salaire net de votre employé en tenant compte de toutes les déductions légales. Vous n'avez rien à faire.",
       "cta": "Voir les tarifs",
-      "ctaSecondary": "Nous contacter",
+      "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Une gestion des salaires sans effort",
       "benefitsSubtitle": "Tout est calculé automatiquement, vous n'avez qu'à valider.",
       "benefits": {
@@ -577,7 +585,7 @@
       "subtitle": "AVS, AI, APG, AC : tout est calculé et déclaré pour vous.",
       "description": "HappySalary calcule les parts employeur et employé des cotisations sociales, établit les décomptes et s'occupe des déclarations auprès de la caisse de compensation.",
       "cta": "Voir les tarifs",
-      "ctaSecondary": "Nous contacter",
+      "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Cotisations sociales gérées de A à Z",
       "benefitsSubtitle": "AVS, AI, APG, AC : on calcule, on déclare, vous n'avez rien à faire.",
       "benefits": {
@@ -624,7 +632,7 @@
       "subtitle": "Protection légale obligatoire pour votre employé.",
       "description": "Nous affilions votre employé à l'assurance accidents professionnels et non professionnels (LAA), conformément aux exigences légales suisses.",
       "cta": "Voir les tarifs",
-      "ctaSecondary": "Nous contacter",
+      "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Assurance accidents obligatoire, simplifiée",
       "benefitsSubtitle": "Nous affilions votre employé à la LAA, conformément à la loi suisse.",
       "benefits": {
@@ -671,7 +679,7 @@
       "subtitle": "Des contrats conformes et personnalisés en quelques clics.",
       "description": "Nous générons des contrats de travail conformes au droit suisse et aux contrats-types cantonaux, adaptés à votre situation spécifique.",
       "cta": "Voir les tarifs",
-      "ctaSecondary": "Nous contacter",
+      "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Des contrats de travail conformes et personnalisés",
       "benefitsSubtitle": "Générés automatiquement selon le droit suisse et les contrats-types cantonaux.",
       "benefits": {
@@ -718,7 +726,7 @@
       "subtitle": "Fiches de salaire détaillées et professionnelles chaque mois.",
       "description": "Chaque mois, une fiche de salaire détaillée est générée automatiquement et mise à disposition en PDF dans votre espace client.",
       "cta": "Voir les tarifs",
-      "ctaSecondary": "Nous contacter",
+      "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Des fiches de salaire professionnelles chaque mois",
       "benefitsSubtitle": "Générées automatiquement avec le détail de toutes les déductions.",
       "benefits": {

@@ -99,7 +99,7 @@ export default async function ContactPage({ params }: Props) {
                     <span className="font-bold text-secondary">Swiss Made</span>
                   </div>
                   <p className="text-sm text-text-muted">
-                    HappySalary &ndash; Thomas Busquets
+                    HappySalary &ndash; Rata Services SA
                   </p>
                 </Card>
               </div>

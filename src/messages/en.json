@@ -179,7 +179,15 @@
       "yearly": "99",
       "monthLabel": "CHF/month",
       "yearLabel": "CHF/year",
-      "or": "or"
+      "or": "or",
+      "popularBadge": "Most popular",
+      "saveBadge": "Save 36%",
+      "feature1": "Automatic payslips",
+      "feature2": "Social contributions calculated",
+      "feature3": "Employment contract included",
+      "feature4": "Accident insurance (LAA) managed",
+      "saveDetail": "Save CHF 56.88 per year",
+      "cta": "View details"
     },
     "cta": {
       "title": "Ready to get started?",
@@ -237,7 +245,7 @@
       "error": "An error occurred while sending your message. Please try again or contact us directly by phone."
     },
     "info": {
-      "address": "HappySalary – Thomas Busquets, Switzerland",
+      "address": "HappySalary – Rata Services SA, Switzerland",
       "email": "contact@happysalary.ch",
       "phone": "+41 79 526 86 50",
       "hours": "Monday – Friday: 9:00 AM – 5:00 PM"
@@ -311,7 +319,7 @@
         }
       },
       "cta": "View Pricing",
-      "ctaSecondary": "Contact Us",
+      "ctaSecondary": "How It Works",
       "benefitsTitle": "Why register your cleaning lady?",
       "benefitsSubtitle": "HappySalary makes registering your cleaner simple, legal and affordable.",
       "howItWorks": {
@@ -358,7 +366,7 @@
         }
       },
       "cta": "View Pricing",
-      "ctaSecondary": "Contact Us",
+      "ctaSecondary": "How It Works",
       "benefitsTitle": "Why register your nanny?",
       "benefitsSubtitle": "Employing a registered nanny protects your family and unlocks tax deductions.",
       "howItWorks": {
@@ -405,7 +413,7 @@
         }
       },
       "cta": "View Pricing",
-      "ctaSecondary": "Contact Us",
+      "ctaSecondary": "How It Works",
       "benefitsTitle": "Why use HappySalary for your au pair?",
       "benefitsSubtitle": "Hosting an au pair involves specific obligations. We handle them for you.",
       "howItWorks": {
@@ -452,7 +460,7 @@
         }
       },
       "cta": "View Pricing",
-      "ctaSecondary": "Contact Us",
+      "ctaSecondary": "How It Works",
       "benefitsTitle": "Why register your home carer?",
       "benefitsSubtitle": "Protect your loved one and their carer by being fully compliant with Swiss law.",
       "howItWorks": {
@@ -499,7 +507,7 @@
         }
       },
       "cta": "View Pricing",
-      "ctaSecondary": "Contact Us",
+      "ctaSecondary": "How It Works",
       "benefitsTitle": "Why register your gardener?",
       "benefitsSubtitle": "Even for just a few hours a month, registration is compulsory. HappySalary makes it painless.",
       "howItWorks": {
@@ -530,7 +538,7 @@
       "subtitle": "Automatic and precise salary calculation every month.",
       "description": "Our system automatically calculates your employee's net salary, taking into account all statutory deductions. You do not need to do a thing.",
       "cta": "View Pricing",
-      "ctaSecondary": "Contact Us",
+      "ctaSecondary": "How It Works",
       "benefitsTitle": "Effortless payroll management",
       "benefitsSubtitle": "Everything is calculated automatically — you just need to approve.",
       "benefits": {
@@ -577,7 +585,7 @@
       "subtitle": "AHV, IV, EO, ALV: all calculated and declared for you.",
       "description": "HappySalary calculates both employer and employee shares of social contributions, prepares the statements and handles all declarations to the compensation office.",
       "cta": "View Pricing",
-      "ctaSecondary": "Contact Us",
+      "ctaSecondary": "How It Works",
       "benefitsTitle": "Social contributions managed from A to Z",
       "benefitsSubtitle": "AHV, IV, EO, ALV: we calculate, we declare — you do nothing.",
       "benefits": {
@@ -624,7 +632,7 @@
       "subtitle": "Compulsory legal protection for your employee.",
       "description": "We register your employee with the occupational and non-occupational accident insurance (UVG), in accordance with Swiss legal requirements.",
       "cta": "View Pricing",
-      "ctaSecondary": "Contact Us",
+      "ctaSecondary": "How It Works",
       "benefitsTitle": "Compulsory accident insurance, simplified",
       "benefitsSubtitle": "We register your employee with the UVG, in accordance with Swiss law.",
       "benefits": {
@@ -671,7 +679,7 @@
       "subtitle": "Compliant, personalised contracts in just a few clicks.",
       "description": "We generate employment contracts that comply with Swiss law and cantonal standard contracts, tailored to your specific situation.",
       "cta": "View Pricing",
-      "ctaSecondary": "Contact Us",
+      "ctaSecondary": "How It Works",
       "benefitsTitle": "Compliant, personalised employment contracts",
       "benefitsSubtitle": "Generated automatically in accordance with Swiss law and cantonal standard contracts.",
       "benefits": {
@@ -718,7 +726,7 @@
       "subtitle": "Detailed, professional pay slips every month.",
       "description": "Each month, a detailed pay slip is automatically generated and made available as a PDF in your account dashboard.",
       "cta": "View Pricing",
-      "ctaSecondary": "Contact Us",
+      "ctaSecondary": "How It Works",
       "benefitsTitle": "Professional pay slips every month",
       "benefitsSubtitle": "Generated automatically with a full breakdown of all deductions.",
       "benefits": {
