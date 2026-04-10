@@ -76,7 +76,7 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       guidance: `Contactez la caisse de compensation de votre canton (${canton}) pour vous inscrire en tant qu'employeur de personnel de maison. Vous recevrez un numéro d'affilié. Cette démarche est obligatoire dès le premier franc de salaire versé.\n\nMunissez-vous de :\n• Votre pièce d'identité\n• Les coordonnées de votre employé(e)\n• Le numéro AVS de l'employé(e) (756.XXXX.XXXX.XX)`,
       links: [
         ...(cantonAvsLink ? [cantonAvsLink] : []),
-        { label: "Informations AVS – ch.ch", url: "https://www.ch.ch/fr/travail/assurances-sociales/avs/" },
+        { label: "Informations AVS – ch.ch", url: "https://www.ch.ch/fr/avs/" },
         { label: "Guide employeur – KMU Admin", url: "https://www.kmu.admin.ch/kmu/fr/home/savoir-pratique/personnel/gestion-personnel/obligations-employeur/assurances-sociales.html" },
       ],
       order: 1,
@@ -99,7 +99,7 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       guidance: `Le contrat doit mentionner :\n• Les parties (employeur et employé)\n• La fonction et le taux d'occupation\n• L'horaire de travail (jours et heures)\n• Le salaire brut (avec ou sans vacances incluses)\n• La date de début\n• Le délai de résiliation\n• Les vacances (minimum 4 semaines, 5 semaines si < 20 ans)\n\nVérifiez si un contrat-type de travail (CTT) existe dans votre canton (${canton}) pour le travail domestique — il fixe des conditions minimales obligatoires.\n\n💡 Utilisez le générateur de contrats HappySalary dans votre dashboard pour créer un contrat conforme automatiquement.`,
       links: [
         { label: "Contrats-types cantonaux (SECO)", url: "https://www.seco.admin.ch/seco/fr/home/Arbeit/Personenfreizugigkeit_Arbeitsbeziehungen/normalarbeitsvertraege.html" },
-        { label: "Contrat-type de travail – ch.ch", url: "https://www.ch.ch/fr/travail/conditions-de-travail/contrat-type-de-travail/" },
+        { label: "Contrat-type de travail – ch.ch", url: "https://www.ch.ch/fr/contrat-travail/" },
       ],
       order: 3,
     },
@@ -110,7 +110,7 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       guidance: `Règles LAA pour le personnel de maison :\n\n• ≥ 8h/semaine chez vous → Assurance accidents professionnels ET non professionnels obligatoire\n• < 8h/semaine → Seuls les accidents professionnels sont couverts par votre assurance\n\nContactez un assureur LAA reconnu :\n• SUVA (assureur de référence)\n• Zurich Assurance\n• AXA\n• La Mobilière\n• Helvetia\n• Baloise${cantonLaaInfo ? `\n\n${cantonLaaInfo}` : ""}`,
       links: [
         { label: "SUVA – Assurance accidents", url: "https://www.suva.ch/fr-ch" },
-        { label: "Info LAA – ch.ch", url: "https://www.ch.ch/fr/travail/assurances-sociales/assurance-accidents/" },
+        { label: "Info LAA – ch.ch", url: "https://www.ch.ch/fr/travail/maladie--accident--invalidite/assurance-accidents/" },
       ],
       order: 4,
     },
@@ -138,7 +138,7 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       description: "Les employés étrangers sans permis C sont soumis à l'impôt à la source.",
       guidance: `Si votre employé(e) est de nationalité étrangère et ne possède pas de permis d'établissement (permis C), vous devez prélever l'impôt à la source sur son salaire.\n\nLe taux dépend de :\n• Le canton de résidence de l'employé(e)\n• Son état civil\n• Ses revenus\n\n${cantonTaxInfo}\n\n💡 La procédure simplifiée (art. 37a LAVS) inclut un impôt forfaitaire de 5% — applicable si le salaire ne dépasse pas CHF 22'050/an par employeur. Activable dans le générateur de fiches de salaire HappySalary.`,
       links: [
-        { label: "Impôt à la source – ch.ch", url: "https://www.ch.ch/fr/impots-et-finances/impots/impot-a-la-source/" },
+        { label: "Impôt à la source – ch.ch", url: "https://www.ch.ch/fr/etrangers-en-suisse/vivre-en-suisse/imposition-a-la-source/" },
       ],
       order: 7,
     },
@@ -149,7 +149,7 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       guidance: `Avant le 30 janvier de chaque année :\n\n1. Déclarez à votre caisse de compensation (${canton}) le total des salaires bruts versés l'année précédente\n2. La caisse établira le décompte définitif des cotisations\n3. Vous recevrez une facture pour le solde ou un remboursement\n\n⚠️ Conservez les fiches de salaire et justificatifs pendant 10 ans minimum (obligation légale).`,
       links: [
         ...(cantonAvsLink ? [cantonAvsLink] : []),
-        { label: "Obligations AVS – ch.ch", url: "https://www.ch.ch/fr/travail/assurances-sociales/avs/" },
+        { label: "Obligations AVS – ch.ch", url: "https://www.ch.ch/fr/avs/" },
       ],
       order: 8,
     },
@@ -173,7 +173,7 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       description: "Un permis de travail est nécessaire pour les au pairs non-européens.",
       guidance: `Règles pour l'engagement d'un(e) au pair :\n\n• UE/AELE : simple annonce en ligne auprès de l'Office cantonal de la population\n• Hors UE/AELE : permis de travail cantonal obligatoire\n\nConditions :\n• Âge : 18 à 25 ans (parfois 30 selon le canton)\n• Durée max : 1 an (non renouvelable)\n• Heures de travail : max 30h/semaine\n• L'au pair doit suivre des cours de langue\n\nContactez l'Office de la population de votre canton (${canton}).`,
       links: [
-        { label: "Au pair en Suisse – ch.ch", url: "https://www.ch.ch/fr/travail/travailler-en-suisse/au-pair/" },
+        { label: "Travailler en Suisse – ch.ch", url: "https://www.ch.ch/fr/etrangers-en-suisse/travailler-en-suisse/" },
       ],
       order: 2.5,
     });
