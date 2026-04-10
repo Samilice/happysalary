@@ -56,6 +56,18 @@ export interface PayslipInput {
    * - 'no': never applied
    */
   nbuOption?: "auto" | "yes" | "no";
+
+  /**
+   * Custom NBU rate (%) — if provided, overrides the default 1.28%.
+   * Allows users to enter their actual insurer rate.
+   */
+  customNbuRate?: number;
+
+  /**
+   * Custom BU rate (%) — if provided, overrides the default 0.17%.
+   * Allows users to enter their actual insurer rate.
+   */
+  customBuRate?: number;
 }
 
 export interface PayslipResult {
@@ -104,6 +116,12 @@ export interface PayslipResult {
   salaryType: SalaryType;
   /** Vacation handling used */
   vacationHandling: VacationHandling;
+  /** Whether custom LAA rates were used */
+  customRatesUsed: boolean;
+  /** Actual NBU rate applied */
+  nbuRateUsed: number;
+  /** Actual BU rate applied */
+  buRateUsed: number;
 }
 
 /**
@@ -175,10 +193,15 @@ export function calculatePayslip(input: PayslipInput): PayslipResult {
     nbuApplies = weeklyHours >= r.nbuMinWeeklyHours;
   }
 
-  // ── 3. Employee deductions (withheld from gross) ─────────────
+  // ── 3. LAA rates (custom or default) ─────────────────────────
+  const nbuRateUsed = input.customNbuRate ?? r.nbuRate;
+  const buRateUsed = input.customBuRate ?? r.buRate;
+  const customRatesUsed = input.customNbuRate !== undefined || input.customBuRate !== undefined;
+
+  // ── 4. Employee deductions (withheld from gross) ─────────────
   const employeeAvsAiApg = round2(totalGross * r.avsAiApg / 100);
   const employeeAlv = round2(totalGross * r.alv / 100);
-  const employeeNbu = nbuApplies ? round2(totalGross * r.nbuRate / 100) : 0;
+  const employeeNbu = nbuApplies ? round2(totalGross * nbuRateUsed / 100) : 0;
   const employeeTax = useSimplified ? round2(totalGross * r.simplifiedTaxRate / 100) : 0;
   const totalEmployeeDeductions = round2(
     employeeAvsAiApg + employeeAlv + employeeNbu + employeeTax
@@ -190,7 +213,7 @@ export function calculatePayslip(input: PayslipInput): PayslipResult {
   // ── 5. Employer charges (additional cost) ────────────────────
   const employerAvsAiApg = round2(totalGross * r.avsAiApg / 100);
   const employerAlv = round2(totalGross * r.alv / 100);
-  const employerBu = round2(totalGross * r.buRate / 100);
+  const employerBu = round2(totalGross * buRateUsed / 100);
   const employerFamilyAllowance = round2(totalGross * cantonRate.familyAllowanceRate / 100);
   const employerAdminFee = round2(totalGross * r.adminFeeRate / 100);
   const totalEmployerCharges = round2(
@@ -225,5 +248,8 @@ export function calculatePayslip(input: PayslipInput): PayslipResult {
     simplifiedProcedure: useSimplified,
     salaryType,
     vacationHandling,
+    customRatesUsed,
+    nbuRateUsed,
+    buRateUsed,
   };
 }

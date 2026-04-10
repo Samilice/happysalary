@@ -62,6 +62,8 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
   const [vacationHandling, setVacationHandling] = useState<VacationHandling>("added");
   const [simplifiedProcedure, setSimplifiedProcedure] = useState(true);
   const [nbuOption, setNbuOption] = useState<"auto" | "yes" | "no">("auto");
+  const [customNbuRate, setCustomNbuRate] = useState<string>("");
+  const [customBuRate, setCustomBuRate] = useState<string>("");
   const [showDetails, setShowDetails] = useState(false);
   const [loading, setLoading] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
@@ -122,11 +124,13 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
         vacationHandling,
         simplifiedProcedure,
         nbuOption,
+        customNbuRate: customNbuRate ? Number(customNbuRate) : undefined,
+        customBuRate: customBuRate ? Number(customBuRate) : undefined,
       });
     } catch {
       return null;
     }
-  }, [hoursWorked, hourlyRate, canton, isUnder20, salaryType, vacationHandling, simplifiedProcedure, nbuOption]);
+  }, [hoursWorked, hourlyRate, canton, isUnder20, salaryType, vacationHandling, simplifiedProcedure, nbuOption, customNbuRate, customBuRate]);
 
   // ── Helpers ───────────────────────────────────────────────────
   function handleEmployeeChange(id: string) {
@@ -300,7 +304,7 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
       drawRow(t("results.avsAiApg"), `${FEDERAL_RATES.avsAiApg}%`, `- CHF ${chf(result.employeeAvsAiApg)}`);
       drawRow(t("results.alv"), `${FEDERAL_RATES.alv}%`, `- CHF ${chf(result.employeeAlv)}`);
       if (result.nbuApplies) {
-        drawRow(t("results.nbu"), `${FEDERAL_RATES.nbuRate}%`, `- CHF ${chf(result.employeeNbu)}`);
+        drawRow(`${t("results.nbu")}${result.customRatesUsed ? "" : " *"}`, `${result.nbuRateUsed}%`, `- CHF ${chf(result.employeeNbu)}`);
       } else {
         drawRow(t("results.nbu"), "", t("results.nbuNotApplicable"));
       }
@@ -327,7 +331,7 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
       drawSection(t("pdf.employerCharges"));
       drawRow(t("results.avsAiApg"), `${FEDERAL_RATES.avsAiApg}%`, `CHF ${chf(result.employerAvsAiApg)}`);
       drawRow(t("results.alv"), `${FEDERAL_RATES.alv}%`, `CHF ${chf(result.employerAlv)}`);
-      drawRow(t("results.bu"), `${FEDERAL_RATES.buRate}%`, `CHF ${chf(result.employerBu)}`);
+      drawRow(`${t("results.bu")}${result.customRatesUsed ? "" : " *"}`, `${result.buRateUsed}%`, `CHF ${chf(result.employerBu)}`);
       drawRow(t("results.familyAllowance"), `${result.cantonRate.familyAllowanceRate}%`, `CHF ${chf(result.employerFamilyAllowance)}`);
       drawRow(t("results.adminFee"), `${FEDERAL_RATES.adminFeeRate}%`, `CHF ${chf(result.employerAdminFee)}`);
       y -= 4;
@@ -585,6 +589,40 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
                 </select>
               </div>
             </div>
+
+            {/* LAA custom rates */}
+            <div className="mt-4 pt-3 border-t border-border/50">
+              <p className="text-xs font-semibold text-text-muted uppercase tracking-wider mb-2">{t("laaRates")}</p>
+              <p className="text-[11px] text-text-light mb-3">{t("laaRatesHint")}</p>
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-medium text-text mb-1.5">{t("customNbuRate")}</label>
+                  <input
+                    type="number"
+                    step="0.01"
+                    min="0"
+                    max="5"
+                    value={customNbuRate}
+                    onChange={(e) => setCustomNbuRate(e.target.value)}
+                    placeholder="1.28"
+                    className={inputClass}
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-medium text-text mb-1.5">{t("customBuRate")}</label>
+                  <input
+                    type="number"
+                    step="0.01"
+                    min="0"
+                    max="5"
+                    value={customBuRate}
+                    onChange={(e) => setCustomBuRate(e.target.value)}
+                    placeholder="0.17"
+                    className={inputClass}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -656,7 +694,7 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
                     <Row label={t("results.avsAiApg")} rate={`${FEDERAL_RATES.avsAiApg}%`} value={`- CHF ${chf(result.employeeAvsAiApg)}`} />
                     <Row label={t("results.alv")} rate={`${FEDERAL_RATES.alv}%`} value={`- CHF ${chf(result.employeeAlv)}`} />
                     {result.nbuApplies ? (
-                      <Row label={t("results.nbu")} rate={`${FEDERAL_RATES.nbuRate}%`} value={`- CHF ${chf(result.employeeNbu)}`} />
+                      <Row label={`${t("results.nbu")}${result.customRatesUsed ? "" : " *"}`} rate={`${result.nbuRateUsed}%`} value={`- CHF ${chf(result.employeeNbu)}`} />
                     ) : (
                       <Row label={t("results.nbu")} value={t("results.nbuNotApplicable")} muted />
                     )}
@@ -673,7 +711,7 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
                   <div className="space-y-1.5 text-sm">
                     <Row label={t("results.avsAiApg")} rate={`${FEDERAL_RATES.avsAiApg}%`} value={`CHF ${chf(result.employerAvsAiApg)}`} />
                     <Row label={t("results.alv")} rate={`${FEDERAL_RATES.alv}%`} value={`CHF ${chf(result.employerAlv)}`} />
-                    <Row label={t("results.bu")} rate={`${FEDERAL_RATES.buRate}%`} value={`CHF ${chf(result.employerBu)}`} />
+                    <Row label={`${t("results.bu")}${result.customRatesUsed ? "" : " *"}`} rate={`${result.buRateUsed}%`} value={`CHF ${chf(result.employerBu)}`} />
                     <Row
                       label={`${t("results.familyAllowance")} (${canton})`}
                       rate={`${result.cantonRate.familyAllowanceRate}%`}
@@ -756,6 +794,13 @@ export function PayslipGenerateForm({ employees, employer }: Props) {
             </button>
             <p className="text-xs text-text-muted">{t("savedAutomatically")}</p>
           </div>
+
+          {/* LAA estimation note */}
+          {result && !result.customRatesUsed && (
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
+              <p className="text-xs text-blue-700">* {t("laaEstimationNote")}</p>
+            </div>
+          )}
 
           {/* Disclaimer */}
           <div className="bg-amber-50 border border-amber-200 rounded-xl p-4">
