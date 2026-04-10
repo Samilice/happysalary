@@ -20,5 +20,5 @@ export default async function ElderlyCarePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ServiceLanding namespace="services.elderlyCare" badge="Service" />;
+  return <ServiceLanding namespace="services.elderlyCare" badge="Service" image="/images/use-cases/elderly-care.webp" imageAlt="Aide aux personnes âgées" />;
 }

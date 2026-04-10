@@ -20,5 +20,5 @@ export default async function AuPairPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ServiceLanding namespace="services.auPair" badge="Service" />;
+  return <ServiceLanding namespace="services.auPair" badge="Service" image="/images/use-cases/au-pair.webp" imageAlt="Au pair en Suisse" />;
 }

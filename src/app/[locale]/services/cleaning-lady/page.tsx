@@ -20,5 +20,5 @@ export default async function CleaningLadyPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ServiceLanding namespace="services.cleaningLady" badge="Service" />;
+  return <ServiceLanding namespace="services.cleaningLady" badge="Service" image="/images/use-cases/cleaning.webp" imageAlt="Femme de ménage en Suisse" />;
 }

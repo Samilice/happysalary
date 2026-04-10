@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
@@ -33,9 +34,11 @@ const benefitIcons = [
 type Props = {
   namespace: string;
   badge: string;
+  image?: string;
+  imageAlt?: string;
 };
 
-export async function ServiceLanding({ namespace, badge }: Props) {
+export async function ServiceLanding({ namespace, badge, image, imageAlt }: Props) {
   const t = await getTranslations(namespace);
 
   const benefits = ["b1", "b2", "b3", "b4"] as const;
@@ -46,31 +49,48 @@ export async function ServiceLanding({ namespace, badge }: Props) {
       <section className="relative overflow-hidden pt-16 sm:pt-28 lg:pt-36 pb-14 sm:pb-20 lg:pb-24">
         <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 via-transparent to-primary/5" />
         <Container className="relative">
-          <ScrollReveal>
-            <div className="max-w-3xl mx-auto text-center">
-              <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-3 py-1 mb-4 sm:mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                <span className="text-xs sm:text-sm font-medium text-primary">{badge}</span>
+          <div className={`flex flex-col ${image ? "lg:flex-row lg:items-center lg:gap-12" : ""}`}>
+            <ScrollReveal className={image ? "lg:flex-1" : ""}>
+              <div className={image ? "max-w-xl" : "max-w-3xl mx-auto text-center"}>
+                <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-3 py-1 mb-4 sm:mb-6">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                  <span className="text-xs sm:text-sm font-medium text-primary">{badge}</span>
+                </div>
+                <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-secondary">
+                  {t("title")}
+                </h1>
+                <p className="mt-3 sm:mt-5 text-sm sm:text-lg text-text-muted leading-relaxed">
+                  {t("subtitle")}
+                </p>
+                <p className="mt-3 text-sm text-text-muted leading-relaxed">
+                  {t("description")}
+                </p>
+                <div className="mt-6 sm:mt-8 flex flex-row gap-3">
+                  <Button href="/pricing" size="lg" className="text-sm sm:text-base">
+                    {t("cta")}
+                  </Button>
+                  <Button href="/how-it-works" variant="outline" size="lg" className="text-sm sm:text-base">
+                    {t("ctaSecondary")}
+                  </Button>
+                </div>
               </div>
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-secondary">
-                {t("title")}
-              </h1>
-              <p className="mt-3 sm:mt-5 text-sm sm:text-lg text-text-muted leading-relaxed max-w-2xl mx-auto">
-                {t("subtitle")}
-              </p>
-              <p className="mt-3 text-sm text-text-muted leading-relaxed max-w-2xl mx-auto">
-                {t("description")}
-              </p>
-              <div className="mt-6 sm:mt-8 flex flex-row gap-3 justify-center">
-                <Button href="/pricing" size="lg" className="text-sm sm:text-base">
-                  {t("cta")}
-                </Button>
-                <Button href="/how-it-works" variant="outline" size="lg" className="text-sm sm:text-base">
-                  {t("ctaSecondary")}
-                </Button>
-              </div>
-            </div>
-          </ScrollReveal>
+            </ScrollReveal>
+
+            {image && (
+              <ScrollReveal delay={200} className="lg:flex-1 mt-10 lg:mt-0">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-secondary/10">
+                  <Image
+                    src={image}
+                    alt={imageAlt || ""}
+                    width={640}
+                    height={480}
+                    className="w-full h-auto object-cover"
+                    priority
+                  />
+                </div>
+              </ScrollReveal>
+            )}
+          </div>
         </Container>
       </section>
 

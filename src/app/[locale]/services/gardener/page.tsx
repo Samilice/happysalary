@@ -20,5 +20,5 @@ export default async function GardenerPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ServiceLanding namespace="services.gardener" badge="Service" />;
+  return <ServiceLanding namespace="services.gardener" badge="Service" image="/images/use-cases/gardener.webp" imageAlt="Jardinier en Suisse" />;
 }

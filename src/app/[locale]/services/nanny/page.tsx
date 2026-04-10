@@ -20,5 +20,5 @@ export default async function NannyPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <ServiceLanding namespace="services.nanny" badge="Service" />;
+  return <ServiceLanding namespace="services.nanny" badge="Service" image="/images/use-cases/nanny.webp" imageAlt="Nounou avec enfants" />;
 }
