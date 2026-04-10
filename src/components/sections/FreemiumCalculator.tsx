@@ -151,7 +151,7 @@ export function FreemiumCalculator({ variant = "homepage" }: Props) {
             <button
               onClick={handleCalculate}
               disabled={!result}
-              className="mt-6 w-full py-3.5 rounded-xl bg-primary text-white font-bold text-base hover:bg-primary-dark transition-all duration-200 disabled:opacity-40 disabled:cursor-not-allowed shadow-lg shadow-primary/30 cursor-pointer"
+              className="mt-6 w-full py-3.5 rounded-xl bg-primary text-white font-bold text-base hover:bg-primary-dark transition-all duration-200 disabled:opacity-70 disabled:cursor-default shadow-lg shadow-primary/30 cursor-pointer"
             >
               {t("calculateCta")}
             </button>

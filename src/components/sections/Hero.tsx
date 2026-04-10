@@ -19,19 +19,20 @@ export function Hero() {
           <ScrollReveal>
             <div className="max-w-xl pt-2 sm:pt-0">
               <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-secondary">
-                {t("title").includes("simplifiée") ? (
+                {t("title").includes("simplement") ? (
                   <>
-                    {t("title").split("simplifiée")[0]}
-                    <span className="text-primary">simplifiée.</span>
+                    {t("title").split("simplement")[0]}
+                    <span className="text-primary">simplement.</span>
                   </>
-                ) : t("title").includes("simplified") ? (
+                ) : t("title").includes("simply") ? (
                   <>
-                    Household payroll, <span className="text-primary">simplified.</span>
+                    {t("title").split("simply")[0]}
+                    <span className="text-primary">simply.</span>
                   </>
                 ) : t("title").includes("einfach") ? (
                   <>
                     {t("title").split("einfach")[0]}
-                    <span className="text-primary">einfach gemacht.</span>
+                    <span className="text-primary">einfach.</span>
                   </>
                 ) : (
                   t("title")
