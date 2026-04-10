@@ -309,6 +309,30 @@
           "title": "Coût maîtrisé",
           "description": "Un forfait fixe à partir de CHF 9.90/mois, indépendamment du salaire versé."
         }
+      },
+      "cta": "Voir les tarifs",
+      "ctaSecondary": "Nous contacter",
+      "benefitsTitle": "Pourquoi déclarer votre femme de ménage ?",
+      "benefitsSubtitle": "HappySalary rend la déclaration de votre aide ménagère simple, légale et abordable.",
+      "howItWorks": {
+        "title": "Comment ça marche ?",
+        "subtitle": "Trois étapes simples pour être en règle avec votre femme de ménage.",
+        "step1": {
+          "title": "Créez votre compte",
+          "description": "Inscrivez-vous en quelques minutes et renseignez les informations de base de votre employée."
+        },
+        "step2": {
+          "title": "On prépare tout",
+          "description": "Contrat de travail, affiliation aux assurances sociales et accident : tout est généré automatiquement."
+        },
+        "step3": {
+          "title": "Recevez vos documents",
+          "description": "Chaque mois, retrouvez la fiche de salaire et le décompte des cotisations dans votre espace client."
+        }
+      },
+      "meta": {
+        "title": "Femme de ménage en Suisse — Déclaration simplifiée | HappySalary",
+        "description": "Déclarez votre femme de ménage en toute légalité. AVS, assurance accidents, contrat de travail et fiches de salaire inclus dès CHF 9.90/mois."
       }
     },
     "nanny": {
@@ -332,6 +356,30 @@
           "title": "Tranquillité d'esprit",
           "description": "Concentrez-vous sur votre vie de famille, on s'occupe de vous simplifier l'administratif."
         }
+      },
+      "cta": "Voir les tarifs",
+      "ctaSecondary": "Nous contacter",
+      "benefitsTitle": "Pourquoi déclarer votre nounou ?",
+      "benefitsSubtitle": "Employer une nounou déclarée, c'est protéger votre famille et bénéficier de déductions fiscales.",
+      "howItWorks": {
+        "title": "Comment ça marche ?",
+        "subtitle": "Trois étapes simples pour employer votre nounou en toute légalité.",
+        "step1": {
+          "title": "Créez votre compte",
+          "description": "Inscrivez-vous et renseignez les informations de votre nounou : horaires, salaire, début du contrat."
+        },
+        "step2": {
+          "title": "On s'occupe de tout",
+          "description": "Contrat de travail adapté à la garde d'enfants, assurances et cotisations sociales gérées automatiquement."
+        },
+        "step3": {
+          "title": "Recevez vos documents",
+          "description": "Fiches de salaire mensuelles et attestation annuelle pour votre déclaration fiscale, directement dans votre espace."
+        }
+      },
+      "meta": {
+        "title": "Nounou en Suisse — Emploi déclaré simplement | HappySalary",
+        "description": "Employez votre nounou en toute légalité en Suisse. Contrat, cotisations AVS, assurance et fiches de salaire inclus. Déduction fiscale facilitée."
       }
     },
     "auPair": {
@@ -355,6 +403,30 @@
           "title": "Accompagnement dédié",
           "description": "Un support spécialisé pour répondre à vos questions sur l'emploi d'au pairs en Suisse."
         }
+      },
+      "cta": "Voir les tarifs",
+      "ctaSecondary": "Nous contacter",
+      "benefitsTitle": "Pourquoi passer par HappySalary pour votre au pair ?",
+      "benefitsSubtitle": "Accueillir un(e) au pair implique des obligations spécifiques. Nous les gérons pour vous.",
+      "howItWorks": {
+        "title": "Comment ça marche ?",
+        "subtitle": "Trois étapes simples pour accueillir votre au pair en toute conformité.",
+        "step1": {
+          "title": "Créez votre compte",
+          "description": "Inscrivez-vous et renseignez les informations de votre au pair : nationalité, durée du séjour, conditions."
+        },
+        "step2": {
+          "title": "On gère les formalités",
+          "description": "Contrat conforme, affiliation aux assurances, impôt à la source : tout est pris en charge automatiquement."
+        },
+        "step3": {
+          "title": "Recevez vos documents",
+          "description": "Fiches de salaire mensuelles avec déduction de l'impôt à la source et décompte des cotisations sociales."
+        }
+      },
+      "meta": {
+        "title": "Au Pair en Suisse — Emploi conforme et simplifié | HappySalary",
+        "description": "Accueillez un(e) au pair en Suisse en toute légalité. Impôt à la source, assurances et contrat gérés automatiquement dès CHF 9.90/mois."
       }
     },
     "elderlyCare": {
@@ -378,6 +450,30 @@
           "title": "Documents pour les aides",
           "description": "Fiches de salaire détaillées utiles pour les demandes de prestations complémentaires ou d'allocation pour impotent."
         }
+      },
+      "cta": "Voir les tarifs",
+      "ctaSecondary": "Nous contacter",
+      "benefitsTitle": "Pourquoi déclarer votre aide à domicile ?",
+      "benefitsSubtitle": "Protégez votre proche et son aide en étant en conformité avec la loi suisse.",
+      "howItWorks": {
+        "title": "Comment ça marche ?",
+        "subtitle": "Trois étapes simples pour employer une aide aux personnes âgées légalement.",
+        "step1": {
+          "title": "Créez votre compte",
+          "description": "Inscrivez-vous et indiquez les besoins de votre proche : horaires, type de prestations, fréquence."
+        },
+        "step2": {
+          "title": "On s'occupe de tout",
+          "description": "Contrat de travail, assurance accidents, cotisations AVS : tout est configuré pour les spécificités de l'aide à domicile."
+        },
+        "step3": {
+          "title": "Recevez vos documents",
+          "description": "Fiches de salaire et attestations utiles pour les demandes de prestations complémentaires ou d'allocation pour impotent."
+        }
+      },
+      "meta": {
+        "title": "Aide aux personnes âgées en Suisse — Emploi déclaré | HappySalary",
+        "description": "Employez une aide à domicile pour un proche âgé en toute légalité. Cotisations, assurances et contrat inclus dès CHF 9.90/mois."
       }
     },
     "gardener": {
@@ -401,6 +497,30 @@
           "title": "Sérénité juridique",
           "description": "Vous êtes en règle avec la loi, sans effort de votre part."
         }
+      },
+      "cta": "Voir les tarifs",
+      "ctaSecondary": "Nous contacter",
+      "benefitsTitle": "Pourquoi déclarer votre jardinier ?",
+      "benefitsSubtitle": "Même pour quelques heures par mois, la déclaration est obligatoire. HappySalary la rend indolore.",
+      "howItWorks": {
+        "title": "Comment ça marche ?",
+        "subtitle": "Trois étapes simples pour déclarer votre jardinier sans effort.",
+        "step1": {
+          "title": "Créez votre compte",
+          "description": "Inscrivez-vous et renseignez les interventions de votre jardinier : fréquence, durée, salaire horaire."
+        },
+        "step2": {
+          "title": "On gère les formalités",
+          "description": "Déclaration auprès de la caisse de compensation, assurance accidents et contrat de travail générés automatiquement."
+        },
+        "step3": {
+          "title": "Recevez vos documents",
+          "description": "Fiches de salaire et décompte des cotisations disponibles dans votre espace, même pour quelques heures par mois."
+        }
+      },
+      "meta": {
+        "title": "Jardinier en Suisse — Déclaration simplifiée | HappySalary",
+        "description": "Déclarez votre jardinier en Suisse facilement. Cotisations AVS, assurance accidents et contrat inclus dès CHF 9.90/mois."
       }
     }
   },
@@ -409,51 +529,236 @@
       "title": "Gestion des salaires",
       "subtitle": "Calcul automatique et précis des salaires chaque mois.",
       "description": "Notre système calcule automatiquement le salaire net de votre employé en tenant compte de toutes les déductions légales. Vous n'avez rien à faire.",
-      "details": [
-        "Calcul automatique du salaire brut au net",
-        "Prise en compte des heures supplémentaires et des vacances",
-        "Gestion des 13ème salaire et indemnités"
-      ]
+      "cta": "Voir les tarifs",
+      "ctaSecondary": "Nous contacter",
+      "benefitsTitle": "Une gestion des salaires sans effort",
+      "benefitsSubtitle": "Tout est calculé automatiquement, vous n'avez qu'à valider.",
+      "benefits": {
+        "b1": {
+          "title": "Calcul automatique",
+          "description": "Du brut au net en un clic : toutes les déductions légales sont prises en compte automatiquement."
+        },
+        "b2": {
+          "title": "Heures et vacances",
+          "description": "Prise en compte des heures supplémentaires, des vacances et du 13ème salaire."
+        },
+        "b3": {
+          "title": "Conforme au droit suisse",
+          "description": "Calculs basés sur les taux en vigueur, mis à jour chaque année selon les directives fédérales."
+        },
+        "b4": {
+          "title": "Historique complet",
+          "description": "Retrouvez l'historique de tous les salaires versés, accessible en permanence dans votre espace client."
+        }
+      },
+      "howItWorks": {
+        "title": "Comment ça marche ?",
+        "subtitle": "La gestion des salaires en trois étapes simples.",
+        "step1": {
+          "title": "Renseignez le salaire",
+          "description": "Indiquez le salaire brut et les heures travaillées pour le mois en cours."
+        },
+        "step2": {
+          "title": "Calcul automatique",
+          "description": "HappySalary calcule le salaire net, les cotisations employeur et employé, et génère la fiche de paie."
+        },
+        "step3": {
+          "title": "Téléchargez le PDF",
+          "description": "La fiche de salaire est disponible en PDF dans votre espace client, prête à être remise à votre employé."
+        }
+      },
+      "meta": {
+        "title": "Gestion des salaires — Calcul automatique | HappySalary",
+        "description": "Calcul automatique des salaires pour votre personnel de maison en Suisse. Brut, net, cotisations et fiches de paie inclus."
+      }
     },
     "socialContributions": {
       "title": "Cotisations sociales",
       "subtitle": "AVS, AI, APG, AC : tout est calculé et déclaré pour vous.",
       "description": "HappySalary calcule les parts employeur et employé des cotisations sociales, établit les décomptes et s'occupe des déclarations auprès de la caisse de compensation.",
-      "details": [
-        "Calcul des cotisations AVS/AI/APG/AC",
-        "Déclaration annuelle auprès de la caisse de compensation",
-        "Prise en charge de la LPP si applicable"
-      ]
+      "cta": "Voir les tarifs",
+      "ctaSecondary": "Nous contacter",
+      "benefitsTitle": "Cotisations sociales gérées de A à Z",
+      "benefitsSubtitle": "AVS, AI, APG, AC : on calcule, on déclare, vous n'avez rien à faire.",
+      "benefits": {
+        "b1": {
+          "title": "Calcul précis",
+          "description": "Parts employeur et employé calculées automatiquement selon les taux fédéraux en vigueur."
+        },
+        "b2": {
+          "title": "Déclaration annuelle",
+          "description": "Nous établissons et transmettons la déclaration annuelle à la caisse de compensation compétente."
+        },
+        "b3": {
+          "title": "LPP si applicable",
+          "description": "Prise en charge de la prévoyance professionnelle si les seuils de salaire l'exigent."
+        },
+        "b4": {
+          "title": "Toujours à jour",
+          "description": "Les taux de cotisation sont mis à jour chaque année automatiquement dans notre système."
+        }
+      },
+      "howItWorks": {
+        "title": "Comment ça marche ?",
+        "subtitle": "La gestion des cotisations sociales simplifiée.",
+        "step1": {
+          "title": "Ajoutez votre employé",
+          "description": "Renseignez les informations de votre employé et son salaire mensuel."
+        },
+        "step2": {
+          "title": "Calcul automatique",
+          "description": "HappySalary calcule les cotisations AVS/AI/APG/AC pour chaque fiche de salaire."
+        },
+        "step3": {
+          "title": "Déclaration incluse",
+          "description": "En fin d'année, nous préparons la déclaration annuelle pour la caisse de compensation."
+        }
+      },
+      "meta": {
+        "title": "Cotisations sociales AVS/AI/APG/AC — Calcul et déclaration | HappySalary",
+        "description": "Calcul et déclaration des cotisations sociales pour votre personnel de maison. AVS, AI, APG, AC gérés automatiquement."
+      }
     },
     "accidentInsurance": {
       "title": "Assurance accidents",
       "subtitle": "Protection légale obligatoire pour votre employé.",
       "description": "Nous affilions votre employé à l'assurance accidents professionnels et non professionnels (LAA), conformément aux exigences légales suisses.",
-      "details": [
-        "Affiliation à la LAA (accidents professionnels et non professionnels)",
-        "Gestion des sinistres en cas d'accident",
-        "Prime intégrée dans le décompte mensuel"
-      ]
+      "cta": "Voir les tarifs",
+      "ctaSecondary": "Nous contacter",
+      "benefitsTitle": "Assurance accidents obligatoire, simplifiée",
+      "benefitsSubtitle": "Nous affilions votre employé à la LAA, conformément à la loi suisse.",
+      "benefits": {
+        "b1": {
+          "title": "Affiliation LAA complète",
+          "description": "Couverture des accidents professionnels et non professionnels, conformément aux exigences légales."
+        },
+        "b2": {
+          "title": "Gestion des sinistres",
+          "description": "En cas d'accident, nous vous accompagnons dans les démarches auprès de l'assureur."
+        },
+        "b3": {
+          "title": "Prime intégrée",
+          "description": "La prime d'assurance est calculée et intégrée directement dans le décompte mensuel."
+        },
+        "b4": {
+          "title": "Obligation légale respectée",
+          "description": "Vous êtes en conformité avec la loi fédérale sur l'assurance-accidents (LAA)."
+        }
+      },
+      "howItWorks": {
+        "title": "Comment ça marche ?",
+        "subtitle": "L'assurance accidents en trois étapes simples.",
+        "step1": {
+          "title": "Ajoutez votre employé",
+          "description": "Renseignez les informations de votre employé lors de son inscription."
+        },
+        "step2": {
+          "title": "Affiliation automatique",
+          "description": "HappySalary affilie votre employé à l'assurance accidents professionnels et non professionnels."
+        },
+        "step3": {
+          "title": "Couverture active",
+          "description": "Votre employé est protégé dès le premier jour. La prime est intégrée dans le décompte mensuel."
+        }
+      },
+      "meta": {
+        "title": "Assurance accidents LAA — Affiliation simplifiée | HappySalary",
+        "description": "Affiliez votre employé de maison à l'assurance accidents obligatoire (LAA) en Suisse. Couverture complète incluse dans votre abonnement."
+      }
     },
     "employmentContracts": {
       "title": "Contrats de travail",
       "subtitle": "Des contrats conformes et personnalisés en quelques clics.",
       "description": "Nous générons des contrats de travail conformes au droit suisse et aux contrats-types cantonaux, adaptés à votre situation spécifique.",
-      "details": [
-        "Conformité au Code des obligations et aux CTT cantonaux",
-        "Personnalisation selon le type d'emploi",
-        "Mise à jour automatique en cas de changement"
-      ]
+      "cta": "Voir les tarifs",
+      "ctaSecondary": "Nous contacter",
+      "benefitsTitle": "Des contrats de travail conformes et personnalisés",
+      "benefitsSubtitle": "Générés automatiquement selon le droit suisse et les contrats-types cantonaux.",
+      "benefits": {
+        "b1": {
+          "title": "Conformité garantie",
+          "description": "Contrats conformes au Code des obligations et aux contrats-types cantonaux (CTT) pour le travail domestique."
+        },
+        "b2": {
+          "title": "Personnalisé",
+          "description": "Adapté au type d'emploi : femme de ménage, nounou, au pair, aide à domicile ou jardinier."
+        },
+        "b3": {
+          "title": "Mise à jour automatique",
+          "description": "En cas de changement de salaire ou d'horaires, le contrat peut être mis à jour en quelques clics."
+        },
+        "b4": {
+          "title": "PDF professionnel",
+          "description": "Contrat généré en PDF, prêt à être signé et archivé dans votre espace client."
+        }
+      },
+      "howItWorks": {
+        "title": "Comment ça marche ?",
+        "subtitle": "Un contrat de travail en trois étapes simples.",
+        "step1": {
+          "title": "Renseignez les détails",
+          "description": "Indiquez le type d'emploi, les horaires, le salaire et les conditions particulières."
+        },
+        "step2": {
+          "title": "Génération automatique",
+          "description": "HappySalary génère un contrat conforme au droit suisse, personnalisé selon votre situation."
+        },
+        "step3": {
+          "title": "Téléchargez et signez",
+          "description": "Le contrat est disponible en PDF dans votre espace. Imprimez-le, signez-le et archivez-le."
+        }
+      },
+      "meta": {
+        "title": "Contrats de travail — Génération automatique | HappySalary",
+        "description": "Générez des contrats de travail conformes au droit suisse pour votre personnel de maison. Personnalisés et prêts à signer."
+      }
     },
     "payslips": {
       "title": "Fiches de salaire",
       "subtitle": "Fiches de salaire détaillées et professionnelles chaque mois.",
       "description": "Chaque mois, une fiche de salaire détaillée est générée automatiquement et mise à disposition en PDF dans votre espace client.",
-      "details": [
-        "Génération automatique mensuelle en PDF",
-        "Détail de toutes les déductions (AVS, LAA, impôt à la source)",
-        "Archivage sécurisé accessible en tout temps"
-      ]
+      "cta": "Voir les tarifs",
+      "ctaSecondary": "Nous contacter",
+      "benefitsTitle": "Des fiches de salaire professionnelles chaque mois",
+      "benefitsSubtitle": "Générées automatiquement avec le détail de toutes les déductions.",
+      "benefits": {
+        "b1": {
+          "title": "Génération automatique",
+          "description": "Chaque mois, une fiche de salaire détaillée est générée automatiquement dans votre espace client."
+        },
+        "b2": {
+          "title": "Détail complet",
+          "description": "Salaire brut, déductions AVS/LAA/impôt à la source et salaire net : tout est détaillé clairement."
+        },
+        "b3": {
+          "title": "Format PDF",
+          "description": "Téléchargez la fiche de salaire en PDF, prête à être remise à votre employé."
+        },
+        "b4": {
+          "title": "Archivage sécurisé",
+          "description": "Toutes les fiches de salaire sont archivées et accessibles à tout moment dans votre espace client."
+        }
+      },
+      "howItWorks": {
+        "title": "Comment ça marche ?",
+        "subtitle": "Des fiches de salaire en trois étapes simples.",
+        "step1": {
+          "title": "Saisissez les heures",
+          "description": "Indiquez les heures travaillées et le salaire brut pour le mois en cours."
+        },
+        "step2": {
+          "title": "Calcul automatique",
+          "description": "HappySalary calcule toutes les déductions et génère la fiche de salaire."
+        },
+        "step3": {
+          "title": "Téléchargez le PDF",
+          "description": "La fiche de salaire est prête en PDF, détaillée et professionnelle."
+        }
+      },
+      "meta": {
+        "title": "Fiches de salaire — Génération automatique | HappySalary",
+        "description": "Fiches de salaire professionnelles générées automatiquement chaque mois pour votre personnel de maison en Suisse."
+      }
     }
   },
   "testimonials": {
@@ -532,6 +837,77 @@
     "accept": "Accepter",
     "decline": "Refuser",
     "learnMore": "En savoir plus"
+  },
+  "calculator": {
+    "badge": "Gratuit",
+    "title": "Calculez le salaire net de votre employé",
+    "subtitle": "Estimez en quelques secondes le salaire net, les charges sociales et le coût total employeur.",
+    "hoursLabel": "Heures par mois",
+    "rateLabel": "Salaire horaire (CHF)",
+    "cantonLabel": "Canton",
+    "calculateCta": "Calculer le salaire",
+    "resultNet": "Salaire net estimé",
+    "resultGross": "Brut",
+    "resultCharges": "Charges",
+    "resultCost": "Coût employeur",
+    "cantonInfo": "Calcul basé sur les taux du canton de {canton}.",
+    "blurredLine1": "Vacances (8.33%)",
+    "blurredLine2": "13ème salaire",
+    "paywallTitle": "Détail complet réservé aux abonnés",
+    "paywallSubtitle": "Créez un compte pour accéder au détail de chaque déduction et générer vos fiches de salaire.",
+    "paywallCta": "Créer un compte gratuit",
+    "trustLine": "Calcul basé sur les taux fédéraux et cantonaux en vigueur."
+  },
+  "calculatorLanding": {
+    "meta": {
+      "title": "Calculateur de salaire — Estimez le coût de votre employé | HappySalary",
+      "description": "Calculez gratuitement le salaire net, les charges sociales et le coût total employeur pour votre personnel de maison en Suisse."
+    },
+    "hero": {
+      "badge": "Outil gratuit",
+      "title": "Calculez le salaire de votre employé de maison",
+      "subtitle": "Estimez en quelques secondes le salaire net, les cotisations sociales et le coût total pour employer votre aide ménagère, nounou ou jardinier en Suisse."
+    },
+    "steps": {
+      "title": "Comment ça marche ensuite ?",
+      "subtitle": "Après le calcul, passez à l'action en 3 étapes simples.",
+      "step1": {
+        "title": "Créez votre compte",
+        "description": "Inscrivez-vous gratuitement et ajoutez les informations de votre employé."
+      },
+      "step2": {
+        "title": "On gère tout",
+        "description": "Contrat, cotisations AVS, assurance accidents : tout est automatisé."
+      },
+      "step3": {
+        "title": "Recevez vos documents",
+        "description": "Fiches de salaire et décomptes disponibles chaque mois dans votre espace."
+      }
+    },
+    "premium": {
+      "title": "Tout inclus pour CHF 12.99/mois",
+      "subtitle": "Passez du calcul à la gestion complète de la paie de votre employé.",
+      "feature1": "Fiches de salaire mensuelles en PDF",
+      "feature2": "Calcul et déclaration AVS/AI/APG/AC",
+      "feature3": "Assurance accidents (LAA) incluse",
+      "feature4": "Contrat de travail conforme",
+      "feature5": "Décompte annuel pour les impôts",
+      "feature6": "Support par e-mail prioritaire",
+      "month": "mois",
+      "cta": "Commencer maintenant",
+      "guarantee": "Satisfait ou remboursé 30 jours. Sans engagement."
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": "Ce calculateur est-il gratuit ?",
+      "a1": "Oui, le calcul du salaire net est entièrement gratuit. Le détail complet des déductions et la génération de fiches de salaire sont réservés aux abonnés.",
+      "q2": "Les taux utilisés sont-ils à jour ?",
+      "a2": "Oui, nous mettons à jour les taux AVS, AC et LAA chaque année selon les directives fédérales et cantonales.",
+      "q3": "Dois-je vraiment déclarer mon employé de maison ?",
+      "a3": "Oui, en Suisse, tout employeur de personnel de maison est tenu de déclarer son employé aux assurances sociales, même pour quelques heures par mois.",
+      "q4": "Combien coûte HappySalary ?",
+      "a4": "HappySalary coûte CHF 12.99/mois ou CHF 99/an. Tout est inclus : paie, cotisations, assurances et contrats."
+    }
   },
   "dashboard": {
     "contracts": {
