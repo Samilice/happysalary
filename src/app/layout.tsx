@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description:
     "Payroll, cotisations sociales, assurances et contrats pour vos employes de maison. Prix fixe mensuel, sans commission.",
   metadataBase: new URL("https://happysalary.ch"),
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

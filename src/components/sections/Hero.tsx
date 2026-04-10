@@ -18,10 +18,6 @@ export function Hero() {
           {/* Text content */}
           <ScrollReveal>
             <div className="max-w-xl pt-2 sm:pt-0">
-              <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-3 py-1 mb-3 sm:mb-6">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                <span className="text-xs sm:text-sm font-medium text-primary">Swiss Made</span>
-              </div>
               <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-secondary">
                 {t("title").includes("simplifiée") ? (
                   <>

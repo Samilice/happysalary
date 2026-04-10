@@ -68,22 +68,16 @@ export default async function AboutPage({ params }: Props) {
         </Container>
       </section>
 
-      {/* Founder */}
+      {/* Notre histoire */}
       <section className="py-20 lg:py-28 bg-background-alt">
         <Container>
           <ScrollReveal>
-            <div className="max-w-2xl mx-auto text-center">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary">T</span>
-              </div>
-              <h3 className="text-lg font-bold text-secondary">
-                {t("founder.name")}
-              </h3>
-              <p className="text-sm font-medium text-primary mb-3">
-                {t("founder.role")}
-              </p>
-              <p className="text-sm text-text-muted max-w-md mx-auto">
-                {t("founder.bio")}
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-3xl font-bold text-secondary mb-6">
+                {t("story.title")}
+              </h2>
+              <p className="text-lg text-text-muted leading-relaxed">
+                {t("story.description")}
               </p>
             </div>
           </ScrollReveal>

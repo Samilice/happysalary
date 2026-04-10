@@ -7,21 +7,33 @@ function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY || "");
 }
 
-// Admin Supabase client for webhooks (no user cookies needed)
+// Admin Supabase client for webhooks — requires service role key (never anon)
 function getSupabaseAdmin() {
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!serviceRoleKey) throw new Error("SUPABASE_SERVICE_ROLE_KEY is required");
   return createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL || "",
-    process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ""
+    serviceRoleKey
   );
 }
 
-export async function POST(request: Request) {
-  const stripe = getStripe();
-  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET || "";
+// Map Stripe price IDs to plan names
+const PRICE_TO_PLAN: Record<string, string> = {
+  [process.env.NEXT_PUBLIC_STRIPE_PRICE_MONTHLY || ""]: "premium",
+  [process.env.NEXT_PUBLIC_STRIPE_PRICE_YEARLY || ""]: "premium",
+};
 
-  if (!process.env.STRIPE_SECRET_KEY || !webhookSecret) {
-    return NextResponse.json({ error: "Stripe not configured" }, { status: 500 });
+export async function POST(request: Request) {
+  const stripeKey = process.env.STRIPE_SECRET_KEY;
+  const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
+  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+  if (!stripeKey || !webhookSecret || !serviceRoleKey) {
+    console.error("Missing required env vars for webhook");
+    return NextResponse.json({ error: "Not configured" }, { status: 500 });
   }
+
+  const stripe = getStripe();
 
   const body = await request.text();
   const signature = request.headers.get("stripe-signature")!;
@@ -51,10 +63,9 @@ export async function POST(request: Request) {
           .single();
 
         if (profile) {
-          const amount = session.amount_total ? session.amount_total / 100 : 0;
-          let plan: "basic" | "comfort" | "premium" = "basic";
-          if (amount >= 29) plan = "premium";
-          else if (amount >= 19) plan = "comfort";
+          const lineItems = session.line_items?.data || [];
+          const priceId = lineItems[0]?.price?.id || "";
+          const plan = PRICE_TO_PLAN[priceId] || "premium";
 
           await supabase.from("subscriptions").upsert({
             user_id: profile.id,
@@ -82,13 +93,15 @@ export async function POST(request: Request) {
         : subscription.status === "past_due" ? "past_due"
         : "canceled";
 
-      const sub = subscription as unknown as { current_period_start: number; current_period_end: number };
+      const item = subscription.items?.data?.[0];
+      const periodStart = item?.current_period_start;
+      const periodEnd = item?.current_period_end;
       await supabase
         .from("subscriptions")
         .update({
           status,
-          current_period_start: new Date(sub.current_period_start * 1000).toISOString(),
-          current_period_end: new Date(sub.current_period_end * 1000).toISOString(),
+          ...(periodStart && { current_period_start: new Date(periodStart * 1000).toISOString() }),
+          ...(periodEnd && { current_period_end: new Date(periodEnd * 1000).toISOString() }),
         })
         .eq("stripe_subscription_id", stripeSubId);
       break;
