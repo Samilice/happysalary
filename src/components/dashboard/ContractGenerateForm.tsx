@@ -44,6 +44,7 @@ const NOTICE_PERIODS = ["legal", "1month", "2months", "3months"] as const;
 const PAYMENT_DAYS = ["25", "end", "custom"] as const;
 const PAYMENT_METHODS = ["transfer", "cash"] as const;
 const HOURS_TYPES = ["fixed", "variable"] as const;
+const VACATION_WEEKS = ["4", "5"] as const;
 
 function Tooltip({ text }: { text: string }) {
   return (
@@ -95,6 +96,7 @@ export function ContractGenerateForm({ employees, employer }: Props) {
   const [minHours, setMinHours] = useState("");
   const [maxHours, setMaxHours] = useState("");
   const [simplifiedProcedure, setSimplifiedProcedure] = useState(false);
+  const [vacationWeeks, setVacationWeeks] = useState<typeof VACATION_WEEKS[number]>("4");
 
   const [loading, setLoading] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
@@ -343,7 +345,7 @@ export function ContractGenerateForm({ employees, employer }: Props) {
         drawParagraph(t("pdf.simplifiedTaxNote"));
       }
       if (vacationIncluded) {
-        drawParagraph(t("pdf.vacationIncludedClause"));
+        drawParagraph(vacationWeeks === "5" ? t("pdf.vacationIncludedClause5") : t("pdf.vacationIncludedClause"));
       }
       // Payment details
       const payDayStr = paymentDay === "25" ? t("paymentDay25") : paymentDay === "end" ? t("paymentDayEnd") : customPaymentDay;
@@ -357,7 +359,7 @@ export function ContractGenerateForm({ employees, employer }: Props) {
 
       // ===== ART 7 — VACATION =====
       drawSection(t("pdf.vacationTitle"));
-      drawParagraph(t("pdf.vacationClause"));
+      drawParagraph(vacationWeeks === "5" ? t("pdf.vacationClause5") : t("pdf.vacationClause"));
 
       // ===== ART 8 — INSURANCE =====
       drawSection(t("pdf.insuranceTitle"));
@@ -417,8 +419,11 @@ export function ContractGenerateForm({ employees, employer }: Props) {
         drawText(line, margin, y, 7.5, font, gray);
         y -= 11;
       }
-      y -= 4;
-      drawText("HappySalary.ch", margin, y, 7.5, font, gray);
+      y -= 6;
+      // Discreet footer — small, right-aligned, lighter gray
+      const footerText = "happysalary.ch";
+      const footerW = font.widthOfTextAtSize(footerText, 6.5);
+      drawText(footerText, pageWidth - margin - footerW, y, 6.5, font, rgb(0.7, 0.7, 0.7));
 
       // ===== SAVE & DOWNLOAD =====
       const pdfBytes = await pdfDoc.save();
@@ -626,6 +631,13 @@ export function ContractGenerateForm({ employees, employer }: Props) {
               {t("vacationIncluded")}
               <Tooltip text={t("tooltips.vacation")} />
             </label>
+            <div>
+              <label className="block text-sm font-medium text-text mb-1.5">{t("vacationWeeks")}</label>
+              <select value={vacationWeeks} onChange={(e) => setVacationWeeks(e.target.value as typeof VACATION_WEEKS[number])} className={inputClass}>
+                <option value="4">{t("vacationWeeks4")}</option>
+                <option value="5">{t("vacationWeeks5")}</option>
+              </select>
+            </div>
             <label className="flex items-center gap-2 text-sm text-text cursor-pointer">
               <input type="checkbox" checked={thirteenthSalary} onChange={(e) => setThirteenthSalary(e.target.checked)} className="rounded border-border text-primary focus:ring-primary/50" />
               {t("thirteenthSalary")}
