@@ -1,6 +1,9 @@
 import { createClient } from "@/lib/supabase/server";
 import { Container } from "@/components/ui/Container";
 import { Card } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Link } from "@/i18n/navigation";
+import { ToggleActiveButton } from "@/components/dashboard/ToggleActiveButton";
 import type { Database } from "@/lib/database.types";
 
 type Employer = Database["public"]["Tables"]["employers"]["Row"];
@@ -29,6 +32,9 @@ export default async function EmployeesPage() {
       <div className="max-w-5xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-bold text-secondary">Mes employés</h1>
+          <Button href="/dashboard/employees/new" size="sm">
+            + Ajouter un employé
+          </Button>
         </div>
 
         {employees && employees.length > 0 ? (
@@ -47,7 +53,7 @@ export default async function EmployeesPage() {
                       <p className="text-sm text-text-muted">{emp.job_title}</p>
                     </div>
                   </div>
-                  <div className="flex flex-wrap gap-3 sm:gap-6 text-sm">
+                  <div className="flex flex-wrap items-center gap-3 sm:gap-6 text-sm">
                     <div>
                       <span className="text-text-muted">Heures : </span>
                       <strong>{emp.monthly_hours}h/mois</strong>
@@ -56,12 +62,19 @@ export default async function EmployeesPage() {
                       <span className="text-text-muted">Salaire : </span>
                       <strong>CHF {Number(emp.monthly_salary).toFixed(2)}</strong>
                     </div>
-                    <div>
-                      <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${
-                        emp.is_active ? "text-success bg-success/10" : "text-red-500 bg-red-50"
-                      }`}>
-                        {emp.is_active ? "Actif" : "Inactif"}
-                      </span>
+                    <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${
+                      emp.is_active ? "text-success bg-success/10" : "text-red-500 bg-red-50"
+                    }`}>
+                      {emp.is_active ? "Actif" : "Inactif"}
+                    </span>
+                    <div className="flex items-center gap-2">
+                      <Link
+                        href={`/dashboard/employees/${emp.id}/edit`}
+                        className="text-xs text-primary hover:text-primary-dark font-medium px-2.5 py-1.5 rounded-lg border border-primary/20 hover:bg-primary/5 transition-colors"
+                      >
+                        Modifier
+                      </Link>
+                      <ToggleActiveButton employeeId={emp.id} isActive={emp.is_active} activateLabel="Activer" deactivateLabel="Désactiver" />
                     </div>
                   </div>
                 </div>
@@ -70,7 +83,10 @@ export default async function EmployeesPage() {
           </div>
         ) : (
           <Card hover={false} className="text-center py-12">
-            <p className="text-text-muted">Aucun employé enregistré.</p>
+            <p className="text-text-muted mb-4">Aucun employé enregistré.</p>
+            <Button href="/dashboard/employees/new" size="sm">
+              + Ajouter un employé
+            </Button>
           </Card>
         )}
       </div>

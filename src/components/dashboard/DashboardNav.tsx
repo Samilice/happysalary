@@ -16,6 +16,8 @@ export function DashboardNav({ userName, userRole }: Props) {
     { href: "/dashboard", label: "Aperçu" },
     { href: "/dashboard/checklist", label: "Démarches" },
     { href: "/dashboard/employees", label: "Employés" },
+    { href: "/dashboard/payslip", label: "Fiche de salaire" },
+    { href: "/dashboard/contracts", label: "Contrats" },
     { href: "/dashboard/documents", label: "Documents" },
     { href: "/dashboard/settings", label: "Paramètres" },
   ];
