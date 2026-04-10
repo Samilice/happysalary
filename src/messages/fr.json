@@ -1226,7 +1226,14 @@
       "other": "Autre",
       "steps": "étapes",
       "allDone": "Toutes les démarches sont terminées !",
-      "usefulLinks": "Liens utiles"
+      "usefulLinks": "Liens utiles",
+      "when": "Quand",
+      "whereLabel": "Où",
+      "how": "Comment",
+      "summaryTitle": "📋 Ce que vous devez faire",
+      "summaryOneTime": "Une seule fois",
+      "summaryMonthly": "Chaque mois",
+      "summaryYearly": "Chaque année"
     },
     "settingsPage": {
       "title": "Paramètres",

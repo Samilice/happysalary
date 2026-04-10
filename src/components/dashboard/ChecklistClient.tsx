@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
-import type { ChecklistStep } from "@/lib/checklist";
+import type { ChecklistStep, ChecklistSummary } from "@/lib/checklist";
 import { useTranslations } from "next-intl";
 
 type Employee = {
@@ -20,9 +20,11 @@ type Props = {
   percentage: number;
   completedCount: number;
   totalSteps: number;
+  summary?: ChecklistSummary;
+  showSummary?: boolean;
 };
 
-export function ChecklistClient({ employee, steps, completedKeys: initialCompleted, percentage: initialPercentage, completedCount: initialCount, totalSteps }: Props) {
+export function ChecklistClient({ employee, steps, completedKeys: initialCompleted, percentage: initialPercentage, completedCount: initialCount, totalSteps, summary, showSummary }: Props) {
   const t = useTranslations("dashboard.checklistPage");
 
   const employmentTypeLabels: Record<string, string> = {
@@ -75,7 +77,63 @@ export function ChecklistClient({ employee, steps, completedKeys: initialComplet
 
   return (
     <div>
-      {/* Employee header + progress */}
+      {/* ═══ Global Summary ═══ */}
+      {showSummary && summary && (
+        <div className="bg-gradient-to-br from-secondary/5 to-primary/5 border border-border rounded-2xl p-4 sm:p-6 mb-6">
+          <h3 className="text-sm font-bold text-secondary mb-4">{t("summaryTitle")}</h3>
+          <div className="grid sm:grid-cols-3 gap-4">
+            {/* One-time */}
+            <div className="bg-white rounded-xl p-3 border border-border">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-6 h-6 rounded-lg bg-accent/10 flex items-center justify-center text-xs">🔧</span>
+                <span className="text-xs font-bold text-accent uppercase tracking-wider">{t("summaryOneTime")}</span>
+              </div>
+              <ul className="space-y-1.5">
+                {summary.oneTime.map((item, i) => (
+                  <li key={i} className="text-xs text-text-muted flex items-start gap-1.5">
+                    <span className="text-accent mt-0.5">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Monthly */}
+            <div className="bg-white rounded-xl p-3 border border-border">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-6 h-6 rounded-lg bg-primary/10 flex items-center justify-center text-xs">📅</span>
+                <span className="text-xs font-bold text-primary uppercase tracking-wider">{t("summaryMonthly")}</span>
+              </div>
+              <ul className="space-y-1.5">
+                {summary.monthly.map((item, i) => (
+                  <li key={i} className="text-xs text-text-muted flex items-start gap-1.5">
+                    <span className="text-primary mt-0.5">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Yearly */}
+            <div className="bg-white rounded-xl p-3 border border-border">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-6 h-6 rounded-lg bg-success/10 flex items-center justify-center text-xs">📋</span>
+                <span className="text-xs font-bold text-success uppercase tracking-wider">{t("summaryYearly")}</span>
+              </div>
+              <ul className="space-y-1.5">
+                {summary.yearly.map((item, i) => (
+                  <li key={i} className="text-xs text-text-muted flex items-start gap-1.5">
+                    <span className="text-success mt-0.5">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ═══ Employee header + progress ═══ */}
       <div className="bg-white rounded-2xl border border-border p-4 sm:p-6 mb-4">
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-3">
@@ -97,7 +155,6 @@ export function ChecklistClient({ employee, steps, completedKeys: initialComplet
           </div>
         </div>
 
-        {/* Progress bar */}
         <div className="w-full h-2.5 bg-border-light rounded-full overflow-hidden">
           <div
             className={`h-full rounded-full transition-all duration-500 ${percentage === 100 ? "bg-success" : "bg-primary"}`}
@@ -115,7 +172,7 @@ export function ChecklistClient({ employee, steps, completedKeys: initialComplet
         )}
       </div>
 
-      {/* Steps */}
+      {/* ═══ Steps ═══ */}
       <div className="space-y-2">
         {steps.map((step, idx) => {
           const isCompleted = completed.has(step.key);
@@ -129,16 +186,13 @@ export function ChecklistClient({ employee, steps, completedKeys: initialComplet
                 isCompleted ? "border-success/30 bg-success/[0.02]" : "border-border"
               }`}
             >
-              {/* Step header - clickable */}
+              {/* Step header */}
               <div className="flex items-start gap-3 p-4 cursor-pointer" onClick={() => setExpandedStep(isExpanded ? null : step.key)}>
-                {/* Checkbox */}
                 <button
                   onClick={(e) => { e.stopPropagation(); toggleStep(step.key); }}
                   disabled={isSaving}
                   className={`w-6 h-6 rounded-lg border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-all ${
-                    isCompleted
-                      ? "bg-success border-success"
-                      : "border-border hover:border-primary"
+                    isCompleted ? "bg-success border-success" : "border-border hover:border-primary"
                   } ${isSaving ? "opacity-50" : ""}`}
                 >
                   {isCompleted && (
@@ -148,7 +202,6 @@ export function ChecklistClient({ employee, steps, completedKeys: initialComplet
                   )}
                 </button>
 
-                {/* Content */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="text-[10px] font-bold text-text-muted bg-border-light px-1.5 py-0.5 rounded">
@@ -161,7 +214,6 @@ export function ChecklistClient({ employee, steps, completedKeys: initialComplet
                   <p className="text-xs text-text-muted mt-0.5">{step.description}</p>
                 </div>
 
-                {/* Expand arrow */}
                 <svg
                   className={`w-5 h-5 text-text-muted flex-shrink-0 mt-0.5 transition-transform ${isExpanded ? "rotate-180" : ""}`}
                   fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
@@ -170,15 +222,33 @@ export function ChecklistClient({ employee, steps, completedKeys: initialComplet
                 </svg>
               </div>
 
-              {/* Expanded guidance */}
+              {/* Expanded content */}
               {isExpanded && (
-                <div className="px-4 pb-4 pt-0 ml-9">
+                <div className="px-4 pb-4 pt-0 ml-9 space-y-3">
+                  {/* Timing / Where / How badges */}
+                  <div className="grid sm:grid-cols-3 gap-2">
+                    <div className="bg-amber-50 rounded-lg p-2.5 border border-amber-100">
+                      <p className="text-[10px] font-bold text-amber-600 uppercase tracking-wider mb-0.5">{t("when")}</p>
+                      <p className="text-xs text-amber-800">{step.timing}</p>
+                    </div>
+                    <div className="bg-blue-50 rounded-lg p-2.5 border border-blue-100">
+                      <p className="text-[10px] font-bold text-blue-600 uppercase tracking-wider mb-0.5">{t("whereLabel")}</p>
+                      <p className="text-xs text-blue-800">{step.where}</p>
+                    </div>
+                    <div className="bg-green-50 rounded-lg p-2.5 border border-green-100">
+                      <p className="text-[10px] font-bold text-green-600 uppercase tracking-wider mb-0.5">{t("how")}</p>
+                      <p className="text-xs text-green-800">{step.howTo}</p>
+                    </div>
+                  </div>
+
+                  {/* Detailed guidance */}
                   <div className="bg-background-alt rounded-xl p-4 text-sm text-text leading-relaxed whitespace-pre-line">
                     {step.guidance}
                   </div>
 
+                  {/* Links */}
                   {step.links.length > 0 && (
-                    <div className="mt-3 space-y-1.5">
+                    <div className="space-y-1.5">
                       <p className="text-xs font-semibold text-text-muted uppercase tracking-wider">{t("usefulLinks")}</p>
                       {step.links.map((link, i) => (
                         <a

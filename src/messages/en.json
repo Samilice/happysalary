@@ -1226,7 +1226,14 @@
       "other": "Other",
       "steps": "steps",
       "allDone": "All steps completed!",
-      "usefulLinks": "Useful links"
+      "usefulLinks": "Useful links",
+      "when": "When",
+      "whereLabel": "Where",
+      "how": "How",
+      "summaryTitle": "📋 What you need to do",
+      "summaryOneTime": "One-time",
+      "summaryMonthly": "Monthly",
+      "summaryYearly": "Yearly"
     },
     "settingsPage": {
       "title": "Settings",

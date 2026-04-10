@@ -1,7 +1,7 @@
 /**
  * Employer checklist steps for hiring household staff in Switzerland.
- * Each step includes guidance, canton-specific links where relevant,
- * and varies based on employment type.
+ * Each step includes guidance, timing, location, how-to instructions,
+ * canton-specific links, and varies based on employment type.
  *
  * All links verified April 2026.
  */
@@ -11,9 +11,18 @@ export type ChecklistStep = {
   title: string;
   description: string;
   guidance: string;
+  timing: string;       // QUAND — ex: "Une seule fois, avant le premier salaire"
+  where: string;        // OÙ — ex: "Caisse de compensation de votre canton"
+  howTo: string;        // COMMENT — instructions concrètes
   links: { label: string; url: string }[];
   employmentTypes?: string[];
   order: number;
+};
+
+export type ChecklistSummary = {
+  monthly: string[];
+  yearly: string[];
+  oneTime: string[];
 };
 
 // Canton compensation fund (Caisse de compensation) URLs — verified April 2026
@@ -46,14 +55,12 @@ const CANTON_AVS_LINKS: Record<string, { label: string; url: string }> = {
   AR: { label: "SOVAR – Sozialversicherungen Appenzell Ausserrhoden", url: "https://www.sovar.ch" },
 };
 
-// Canton-specific accident insurance (LAA) info
 const CANTON_LAA_INFO: Record<string, string> = {
   GE: "À Genève, le Service de l'inspection du travail (OCIRT) peut vous renseigner sur vos obligations LAA.",
   VD: "Dans le canton de Vaud, les employeurs de personnel de maison peuvent contacter la Caisse AVS vaudoise qui oriente vers les assureurs LAA reconnus.",
   TI: "In Ticino, l'IAS può fornire indicazioni sugli assicuratori LAA riconosciuti per il personale domestico.",
 };
 
-// Canton-specific withholding tax (impôt à la source) info
 const CANTON_TAX_INFO: Record<string, string> = {
   GE: "À Genève, contactez l'Administration fiscale cantonale (AFC-GE) pour les barèmes d'impôt à la source : www.ge.ch/impot-source.",
   VD: "Dans le canton de Vaud, les barèmes sont disponibles auprès de l'Administration cantonale des impôts (ACI) : www.vd.ch/impots.",
@@ -63,16 +70,46 @@ const CANTON_TAX_INFO: Record<string, string> = {
   TI: "Nel Canton Ticino, contattare la Divisione delle contribuzioni: www4.ti.ch/dfe/dc.",
 };
 
+/**
+ * Generate a global summary of what the employer needs to do and when.
+ */
+export function getChecklistSummary(isSimplified: boolean): ChecklistSummary {
+  return {
+    oneTime: [
+      "S'inscrire à la caisse de compensation AVS",
+      "Déclarer votre employé(e)",
+      "Rédiger un contrat de travail",
+      "Souscrire l'assurance accidents (LAA)",
+    ],
+    monthly: [
+      "Verser le salaire net à votre employé(e)",
+      "Générer et archiver la fiche de salaire",
+      ...(isSimplified ? [] : ["Provisionner les cotisations sociales"]),
+    ],
+    yearly: [
+      ...(isSimplified
+        ? ["Payer les cotisations AVS (décompte annuel de la caisse)"]
+        : ["Payer les cotisations AVS (trimestriel ou annuel selon la caisse)"]),
+      "Déclarer les salaires versés à la caisse de compensation (avant le 30 janvier)",
+      "Remettre le certificat de salaire à votre employé(e) (avant fin février)",
+    ],
+  };
+}
+
 export function getChecklistSteps(canton: string, employmentType: string): ChecklistStep[] {
   const cantonAvsLink = CANTON_AVS_LINKS[canton];
   const cantonTaxInfo = CANTON_TAX_INFO[canton] || `Renseignez-vous auprès de l'administration fiscale de votre canton (${canton}) pour connaître les barèmes applicables.`;
   const cantonLaaInfo = CANTON_LAA_INFO[canton] || "";
+  const cantonAvsName = cantonAvsLink?.label || `Caisse de compensation du canton ${canton}`;
 
   const steps: ChecklistStep[] = [
     {
       key: "register_avs",
       title: "S'inscrire à la caisse de compensation (AVS)",
       description: "En tant qu'employeur, vous devez vous affilier à une caisse de compensation AVS de votre canton.",
+      timing: "🕐 Une seule fois — avant le premier versement de salaire.",
+      where: `📍 ${cantonAvsName}`,
+      howTo: "Contactez votre caisse par téléphone ou en ligne. Munissez-vous de votre pièce d'identité et des coordonnées de votre employé(e). Vous recevrez un numéro d'affilié sous quelques jours.",
       guidance: `Contactez la caisse de compensation de votre canton (${canton}) pour vous inscrire en tant qu'employeur de personnel de maison. Vous recevrez un numéro d'affilié. Cette démarche est obligatoire dès le premier franc de salaire versé.\n\nMunissez-vous de :\n• Votre pièce d'identité\n• Les coordonnées de votre employé(e)\n• Le numéro AVS de l'employé(e) (756.XXXX.XXXX.XX)`,
       links: [
         ...(cantonAvsLink ? [cantonAvsLink] : []),
@@ -85,6 +122,9 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       key: "declare_employee",
       title: "Déclarer votre employé(e) auprès de la caisse AVS",
       description: "Annoncez l'engagement de votre employé(e) à la caisse de compensation.",
+      timing: "🕐 Une seule fois — dès l'engagement de l'employé(e).",
+      where: `📍 ${cantonAvsName}`,
+      howTo: "Remplissez le formulaire d'annonce avec le numéro AVS (756.XXXX.XXXX.XX), la date de naissance, le salaire brut et le taux d'occupation. La caisse calculera vos cotisations.",
       guidance: `Déclarez votre employé(e) auprès de la caisse de compensation de votre canton (${canton}) avec :\n• Son numéro AVS (756.XXXX.XXXX.XX)\n• Sa date de naissance\n• Son salaire brut convenu\n• Son taux d'occupation\n\nLa caisse calculera les cotisations dues. Taux employé : AVS/AI/APG 5.3%, AC 1.1%. L'employeur paie la même part.`,
       links: [
         ...(cantonAvsLink ? [cantonAvsLink] : []),
@@ -96,7 +136,10 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       key: "contract",
       title: "Rédiger un contrat de travail",
       description: "Un contrat écrit n'est pas obligatoire mais fortement recommandé pour éviter les litiges.",
-      guidance: `Le contrat doit mentionner :\n• Les parties (employeur et employé)\n• La fonction et le taux d'occupation\n• L'horaire de travail (jours et heures)\n• Le salaire brut (avec ou sans vacances incluses)\n• La date de début\n• Le délai de résiliation\n• Les vacances (minimum 4 semaines, 5 semaines si < 20 ans)\n\nVérifiez si un contrat-type de travail (CTT) existe dans votre canton (${canton}) pour le travail domestique — il fixe des conditions minimales obligatoires.\n\n💡 Utilisez le générateur de contrats HappySalary dans votre dashboard pour créer un contrat conforme automatiquement.`,
+      timing: "🕐 Une seule fois — avant ou au début de l'emploi.",
+      where: "📍 Depuis votre espace HappySalary (onglet Contrats)",
+      howTo: "Utilisez le générateur de contrats HappySalary : sélectionnez l'employé, remplissez les conditions, et téléchargez le PDF prêt à signer.",
+      guidance: `Le contrat doit mentionner :\n• Les parties (employeur et employé)\n• La fonction et le taux d'occupation\n• L'horaire de travail (jours et heures)\n• Le salaire brut (avec ou sans vacances incluses)\n• La date de début\n• Le délai de résiliation\n• Les vacances (minimum 4 semaines, 5 semaines si < 20 ans)\n\nVérifiez si un contrat-type de travail (CTT) existe dans votre canton (${canton}) pour le travail domestique — il fixe des conditions minimales obligatoires.`,
       links: [
         { label: "Contrats-types cantonaux (SECO)", url: "https://www.seco.admin.ch/seco/fr/home/Arbeit/Personenfreizugigkeit_Arbeitsbeziehungen/normalarbeitsvertraege.html" },
         { label: "Contrat-type de travail – ch.ch", url: "https://www.ch.ch/fr/contrat-travail/" },
@@ -107,6 +150,9 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       key: "accident_insurance",
       title: "Souscrire l'assurance accidents (LAA)",
       description: "L'assurance accidents est obligatoire dès 8 heures de travail par semaine.",
+      timing: "🕐 Une seule fois — avant le premier jour de travail.",
+      where: "📍 Auprès d'un assureur LAA reconnu (SUVA, AXA, Zurich, Mobilière, Helvetia, Baloise)",
+      howTo: "Contactez un assureur, demandez une offre LAA pour employé de maison. Le taux dépend de l'assureur (~0.17% AAP + ~1.28% AANP). Vous recevrez un contrat d'assurance et un numéro de police.",
       guidance: `Règles LAA pour le personnel de maison :\n\n• ≥ 8h/semaine chez vous → Assurance accidents professionnels ET non professionnels obligatoire\n• < 8h/semaine → Seuls les accidents professionnels sont couverts par votre assurance\n\nContactez un assureur LAA reconnu :\n• SUVA (assureur de référence)\n• Zurich Assurance\n• AXA\n• La Mobilière\n• Helvetia\n• Baloise${cantonLaaInfo ? `\n\n${cantonLaaInfo}` : ""}`,
       links: [
         { label: "SUVA – Assurance accidents", url: "https://www.suva.ch/fr-ch" },
@@ -118,7 +164,10 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       key: "salary_calculation",
       title: "Calculer le salaire net et les déductions",
       description: "Calculez le salaire net après déduction des cotisations sociales.",
-      guidance: `Déductions sur le salaire brut de l'employé(e) :\n• AVS/AI/APG : 5.3%\n• AC (chômage) : 1.1%\n• AANP (accidents non prof.) : ~1.28%\n\nCharges employeur (en plus du brut) :\n• AVS/AI/APG : 5.3%\n• AC : 1.1%\n• AAP (accidents prof.) : ~0.17%\n• Allocations familiales : variable selon le canton (${canton})\n• Frais d'administration : ~1.5%\n\n💡 Le générateur de fiches de salaire HappySalary calcule tout automatiquement avec les taux de votre canton.`,
+      timing: "🕐 Chaque mois — avant le versement du salaire.",
+      where: "📍 Depuis votre espace HappySalary (onglet Fiche de salaire)",
+      howTo: "Renseignez les heures travaillées, le taux horaire et le canton. HappySalary calcule automatiquement le brut, les déductions et le net. Téléchargez la fiche de salaire PDF.",
+      guidance: `Déductions sur le salaire brut de l'employé(e) :\n• AVS/AI/APG : 5.3%\n• AC (chômage) : 1.1%\n• AANP (accidents non prof.) : ~1.28%\n\nCharges employeur (en plus du brut) :\n• AVS/AI/APG : 5.3%\n• AC : 1.1%\n• AAP (accidents prof.) : ~0.17%\n• Allocations familiales : variable selon le canton (${canton})\n• Frais d'administration : ~1.5%`,
       links: [
         { label: "Taux de cotisation AVS actuels", url: "https://www.ahv-iv.ch/fr/Assurances-sociales/Assurance-vieillesse-et-survivants-AVS/Cotisations-AVS-AI-APG" },
       ],
@@ -128,7 +177,10 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       key: "payslip",
       title: "Établir la fiche de salaire mensuelle",
       description: "Remettez chaque mois une fiche de salaire détaillée à votre employé(e).",
-      guidance: `La fiche de salaire doit contenir :\n• Le salaire brut\n• Chaque déduction détaillée (AVS, AI, APG, AC, LAA)\n• Le supplément vacances si applicable (8.33% pour 4 semaines, 10.64% pour 5 semaines)\n• Le salaire net\n• La période concernée\n• Les éventuelles heures supplémentaires\n\nConservez un double pour vos archives. Ce document est nécessaire pour la déclaration d'impôts de votre employé(e).\n\n💡 Utilisez le générateur de fiches de salaire HappySalary pour créer et archiver automatiquement vos fiches.`,
+      timing: "🕐 Chaque mois — en même temps que le versement du salaire.",
+      where: "📍 Depuis votre espace HappySalary (onglet Fiche de salaire)",
+      howTo: "Générez la fiche depuis HappySalary, téléchargez le PDF et transmettez-le à votre employé(e). Une copie est automatiquement archivée dans vos documents.",
+      guidance: `La fiche de salaire doit contenir :\n• Le salaire brut\n• Chaque déduction détaillée (AVS, AI, APG, AC, LAA)\n• Le supplément vacances si applicable (8.33% pour 4 semaines, 10.64% pour 5 semaines)\n• Le salaire net\n• La période concernée\n• Les éventuelles heures supplémentaires\n\nConservez un double pour vos archives. Ce document est nécessaire pour la déclaration d'impôts de votre employé(e).`,
       links: [],
       order: 6,
     },
@@ -136,7 +188,10 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       key: "withholding_tax",
       title: "Vérifier l'impôt à la source",
       description: "Les employés étrangers sans permis C sont soumis à l'impôt à la source.",
-      guidance: `Si votre employé(e) est de nationalité étrangère et ne possède pas de permis d'établissement (permis C), vous devez prélever l'impôt à la source sur son salaire.\n\nLe taux dépend de :\n• Le canton de résidence de l'employé(e)\n• Son état civil\n• Ses revenus\n\n${cantonTaxInfo}\n\n💡 La procédure simplifiée (art. 37a LAVS) inclut un impôt forfaitaire de 5% — applicable si le salaire ne dépasse pas CHF 22'050/an par employeur. Activable dans le générateur de fiches de salaire HappySalary.`,
+      timing: "🕐 Une seule fois — à vérifier au moment de l'engagement.",
+      where: "📍 Administration fiscale cantonale de votre canton",
+      howTo: `Vérifiez la nationalité et le type de permis de votre employé(e). Si étranger sans permis C, activez la procédure simplifiée (5%) dans HappySalary ou consultez les barèmes cantonaux.\n\n${cantonTaxInfo}`,
+      guidance: `Si votre employé(e) est de nationalité étrangère et ne possède pas de permis d'établissement (permis C), vous devez prélever l'impôt à la source sur son salaire.\n\nLe taux dépend de :\n• Le canton de résidence de l'employé(e)\n• Son état civil\n• Ses revenus\n\n💡 La procédure simplifiée (art. 37a LAVS) inclut un impôt forfaitaire de 5% — applicable si le salaire ne dépasse pas CHF 22'050/an par employeur. Activable dans le générateur de fiches de salaire HappySalary.`,
       links: [
         { label: "Impôt à la source – ch.ch", url: "https://www.ch.ch/fr/etrangers-en-suisse/vivre-en-suisse/imposition-a-la-source/" },
       ],
@@ -146,6 +201,9 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       key: "annual_declaration",
       title: "Effectuer la déclaration annuelle de salaires",
       description: "Chaque année en janvier, déclarez les salaires versés à la caisse de compensation.",
+      timing: "🕐 Chaque année — avant le 30 janvier.",
+      where: `📍 ${cantonAvsName}`,
+      howTo: "Vous recevrez un formulaire de votre caisse de compensation en début d'année. Renseignez le total des salaires bruts versés l'année précédente. La caisse établira le décompte définitif et vous enverra la facture.",
       guidance: `Avant le 30 janvier de chaque année :\n\n1. Déclarez à votre caisse de compensation (${canton}) le total des salaires bruts versés l'année précédente\n2. La caisse établira le décompte définitif des cotisations\n3. Vous recevrez une facture pour le solde ou un remboursement\n\n⚠️ Conservez les fiches de salaire et justificatifs pendant 10 ans minimum (obligation légale).`,
       links: [
         ...(cantonAvsLink ? [cantonAvsLink] : []),
@@ -157,6 +215,9 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
       key: "certificate_of_salary",
       title: "Remettre le certificat de salaire annuel",
       description: "Établissez un certificat de salaire pour la déclaration d'impôts de votre employé(e).",
+      timing: "🕐 Chaque année — avant fin février.",
+      where: "📍 Depuis votre espace HappySalary (onglet Documents) ou formulaire AFC",
+      howTo: "Générez le récapitulatif annuel depuis HappySalary et remettez-le à votre employé(e). Ce document récapitule les montants bruts, nets et les cotisations retenues. Il est indispensable pour la déclaration d'impôts.",
       guidance: `Chaque année (avant fin février), remettez à votre employé(e) un certificat de salaire récapitulant :\n• Les montants bruts et nets versés\n• Les cotisations retenues\n• Les éventuels avantages en nature\n\nUtilisez le formulaire officiel de l'Administration fédérale des contributions (AFC). Ce document est indispensable pour la déclaration d'impôts de votre employé(e).`,
       links: [
         { label: "Certificat de salaire – AFC", url: "https://www.estv.admin.ch/fr/certificat-de-salaire-et-attestation-de-rentes" },
@@ -165,12 +226,14 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
     },
   ];
 
-  // Add au-pair specific step
   if (employmentType === "au_pair") {
     steps.push({
       key: "au_pair_permit",
       title: "Obtenir le permis de travail pour l'au pair",
       description: "Un permis de travail est nécessaire pour les au pairs non-européens.",
+      timing: "🕐 Une seule fois — avant l'arrivée de l'au pair.",
+      where: "📍 Office cantonal de la population / migration de votre canton",
+      howTo: "UE/AELE : annonce en ligne. Hors UE/AELE : déposez une demande de permis auprès du service cantonal de migration avec le contrat signé.",
       guidance: `Règles pour l'engagement d'un(e) au pair :\n\n• UE/AELE : simple annonce en ligne auprès de l'Office cantonal de la population\n• Hors UE/AELE : permis de travail cantonal obligatoire\n\nConditions :\n• Âge : 18 à 25 ans (parfois 30 selon le canton)\n• Durée max : 1 an (non renouvelable)\n• Heures de travail : max 30h/semaine\n• L'au pair doit suivre des cours de langue\n\nContactez l'Office de la population de votre canton (${canton}).`,
       links: [
         { label: "Travailler en Suisse – ch.ch", url: "https://www.ch.ch/fr/etrangers-en-suisse/travailler-en-suisse/" },
@@ -179,12 +242,14 @@ export function getChecklistSteps(canton: string, employmentType: string): Check
     });
   }
 
-  // Add elderly care specific step
   if (employmentType === "elderly_care") {
     steps.push({
       key: "spitex_coordination",
       title: "Coordonner avec les services Spitex si nécessaire",
       description: "Si votre proche reçoit déjà des soins à domicile, coordonnez les prestations.",
+      timing: "🕐 Une seule fois — au début de l'emploi.",
+      where: "📍 Service Spitex de votre commune ou canton",
+      howTo: "Appelez le service Spitex local et informez-les de l'engagement d'une aide supplémentaire. Définissez ensemble les tâches respectives.",
       guidance: `Si votre proche bénéficie de prestations Spitex ou de soins infirmiers à domicile :\n\n1. Informez le service Spitex de l'engagement d'une aide supplémentaire\n2. Délimitez clairement les tâches (aide ménagère vs soins médicaux)\n3. Vérifiez l'éligibilité aux prestations complémentaires (PC) de l'AVS/AI — elles peuvent couvrir une partie des frais d'aide à domicile\n\nRenseignez-vous auprès de votre caisse de compensation (${canton}).`,
       links: [
         { label: "Spitex Suisse", url: "https://www.spitex.ch/fr" },

@@ -1,7 +1,7 @@
 import { createClient } from "@/lib/supabase/server";
 import { Container } from "@/components/ui/Container";
 import type { Database } from "@/lib/database.types";
-import { getChecklistSteps } from "@/lib/checklist";
+import { getChecklistSteps, getChecklistSummary } from "@/lib/checklist";
 import { ChecklistClient } from "@/components/dashboard/ChecklistClient";
 import { getTranslations } from "next-intl/server";
 
@@ -71,7 +71,7 @@ export default async function ChecklistPage() {
           </div>
         ) : (
           <div className="space-y-8">
-            {employeeChecklists.map((ec) => (
+            {employeeChecklists.map((ec, idx) => (
               <ChecklistClient
                 key={ec.employee.id}
                 employee={ec.employee}
@@ -80,6 +80,8 @@ export default async function ChecklistPage() {
                 percentage={ec.percentage}
                 completedCount={ec.completedCount}
                 totalSteps={ec.totalSteps}
+                summary={idx === 0 ? getChecklistSummary(true) : undefined}
+                showSummary={idx === 0}
               />
             ))}
           </div>
