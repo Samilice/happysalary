@@ -1,6 +1,7 @@
 import { setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
+import { FreemiumCalculator } from "@/components/sections/FreemiumCalculator";
 import { FeatureGrid } from "@/components/sections/FeatureGrid";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -20,7 +21,7 @@ export default async function HomePage({ params }: Props) {
     <>
       <Hero />
       <TrustBar />
-      {/* TODO: SalaryCalculator goes here once component exists */}
+      <FreemiumCalculator />
       <FeatureGrid />
       <PricingSection />
       <LifestripeBanner src="/images/lifestyle/desk.webp" alt="Modern workspace" />
