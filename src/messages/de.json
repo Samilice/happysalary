@@ -315,7 +315,7 @@
         },
         "b4": {
           "title": "Kalkulierbare Kosten",
-          "description": "Eine Festgebühr ab CHF 9.90/Monat, unabhängig vom ausgezahlten Lohn."
+          "description": "Eine Festgebühr ab CHF 12.99/Monat, unabhängig vom ausgezahlten Lohn."
         }
       },
       "cta": "Preise ansehen",
@@ -340,7 +340,7 @@
       },
       "meta": {
         "title": "Reinigungskraft in der Schweiz — Vereinfachte Anmeldung | HappySalary",
-        "description": "Melden Sie Ihre Reinigungskraft legal in der Schweiz an. AHV, Unfallversicherung, Arbeitsvertrag und Lohnabrechnungen ab CHF 9.90/Monat."
+        "description": "Melden Sie Ihre Reinigungskraft legal in der Schweiz an. AHV, Unfallversicherung, Arbeitsvertrag und Lohnabrechnungen ab CHF 12.99/Monat."
       }
     },
     "nanny": {
@@ -353,8 +353,8 @@
           "description": "Alle Sozialversicherungsbeiträge und Versicherungen automatisch verwaltet, für eine gesetzeskonforme Kinderbetreuung."
         },
         "b2": {
-          "title": "Steuerabzug",
-          "description": "Die von HappySalary erstellten Lohnabrechnungen ermöglichen Ihnen, den Steuerabzug für Kinderbetreuungskosten geltend zu machen."
+          "title": "Dokumentation für die Steuererklärung",
+          "description": "Die von HappySalary erstellten Lohnabrechnungen dienen als Nachweis der Kinderbetreuungskosten für die Steuererklärung Ihres Mitarbeiters."
         },
         "b3": {
           "title": "Massgeschneiderter Vertrag",
@@ -396,26 +396,26 @@
       "description": "Die Anstellung eines Au-Pairs in der Schweiz unterliegt besonderen Regeln: Mindestlohn, Arbeitszeiten, Unterkunft und Verpflegung. HappySalary verwaltet die Lohnabrechnung und die Sozialversicherungspflichten, damit Ihr Aufenthalt reibungslos verläuft.",
       "benefits": {
         "b1": {
-          "title": "Regelkonformität",
-          "description": "Wir prüfen, ob die Anstellungsbedingungen den kantonalen Vorschriften für Au-Pairs entsprechen."
+          "title": "Schritt-für-Schritt-Anleitung",
+          "description": "Unser Tool führt Sie Schritt für Schritt durch Ihre Pflichten als Arbeitgeber eines Au-Pairs."
         },
         "b2": {
           "title": "Quellensteuer verwaltet",
           "description": "Automatische Berechnung und Einbehaltung der Quellensteuer für ausländische Au-Pairs."
         },
         "b3": {
-          "title": "Umfassende Versicherungen",
-          "description": "Unfallversicherung und bei Bedarf Krankentaggeldversicherung für Ihr Au-Pair."
+          "title": "Unfallversicherung (UVG)",
+          "description": "Berechnung der obligatorischen Unfallversicherung (UVG) für Ihr Au-Pair."
         },
         "b4": {
-          "title": "Spezialisierte Begleitung",
-          "description": "Ein spezialisierter Support für Ihre Fragen rund um die Au-Pair-Anstellung in der Schweiz."
+          "title": "Alle Dokumente im Dashboard",
+          "description": "Alle Dokumente sind jederzeit in Ihrem persönlichen Dashboard zugänglich."
         }
       },
       "cta": "Preise ansehen",
       "ctaSecondary": "So funktioniert's",
       "benefitsTitle": "Warum HappySalary für Ihr Au-Pair?",
-      "benefitsSubtitle": "Die Aufnahme eines Au-Pairs bringt spezifische Pflichten mit sich. Wir übernehmen sie für Sie.",
+      "benefitsSubtitle": "Die Aufnahme eines Au-Pairs bringt spezifische Pflichten mit sich. Unser Tool begleitet Sie durch Ihre Pflichten.",
       "howItWorks": {
         "title": "Wie funktioniert es?",
         "subtitle": "Drei einfache Schritte, um Ihr Au-Pair rechtskonform aufzunehmen.",
@@ -434,7 +434,7 @@
       },
       "meta": {
         "title": "Au-Pair in der Schweiz — Konform und vereinfacht | HappySalary",
-        "description": "Nehmen Sie ein Au-Pair in der Schweiz legal auf. Quellensteuer, Versicherungen und Vertrag automatisch verwaltet ab CHF 9.90/Monat."
+        "description": "Nehmen Sie ein Au-Pair in der Schweiz legal auf. Quellensteuer, Versicherungen und Vertrag automatisch verwaltet ab CHF 12.99/Monat."
       }
     },
     "elderlyCare": {
@@ -455,8 +455,8 @@
           "description": "Unfallversicherung und vollständige Sozialversicherungsdeckung für die Haushaltshilfe."
         },
         "b4": {
-          "title": "Dokumente für Anträge",
-          "description": "Detaillierte Lohnabrechnungen, nützlich für Anträge auf Ergänzungsleistungen oder Hilflosenentschädigung."
+          "title": "Dokumente im Dashboard",
+          "description": "Detaillierte Dokumente in Ihrem Dashboard verfügbar, für Ihren persönlichen Gebrauch."
         }
       },
       "cta": "Preise ansehen",
@@ -476,12 +476,12 @@
         },
         "step3": {
           "title": "Dokumente erhalten",
-          "description": "Lohnabrechnungen und Bescheinigungen, nützlich für Anträge auf Ergänzungsleistungen oder Hilflosenentschädigung."
+          "description": "Lohnabrechnungen und Bescheinigungen stehen in Ihrem Dashboard zum Herunterladen bereit."
         }
       },
       "meta": {
         "title": "Seniorenbetreuung in der Schweiz — Legale Anstellung | HappySalary",
-        "description": "Stellen Sie eine Betreuungsperson für einen älteren Angehörigen legal in der Schweiz an. Beiträge, Versicherungen und Vertrag ab CHF 9.90/Monat."
+        "description": "Stellen Sie eine Betreuungsperson für einen älteren Angehörigen legal in der Schweiz an. Beiträge, Versicherungen und Vertrag ab CHF 12.99/Monat."
       }
     },
     "gardener": {
@@ -499,7 +499,7 @@
         },
         "b3": {
           "title": "Günstiger Festpreis",
-          "description": "Ab nur CHF 9.90/Monat, ohne Provision auf den ausgezahlten Lohn."
+          "description": "Ab nur CHF 12.99/Monat, ohne Provision auf den ausgezahlten Lohn."
         },
         "b4": {
           "title": "Rechtliche Sicherheit",
@@ -528,7 +528,7 @@
       },
       "meta": {
         "title": "Gärtner in der Schweiz — Vereinfachte Anmeldung | HappySalary",
-        "description": "Melden Sie Ihren Gärtner in der Schweiz einfach an. AHV-Beiträge, Unfallversicherung und Vertrag ab CHF 9.90/Monat."
+        "description": "Melden Sie Ihren Gärtner in der Schweiz einfach an. AHV-Beiträge, Unfallversicherung und Vertrag ab CHF 12.99/Monat."
       }
     }
   },

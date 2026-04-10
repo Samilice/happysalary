@@ -315,7 +315,7 @@
         },
         "b4": {
           "title": "Coût maîtrisé",
-          "description": "Un forfait fixe à partir de CHF 9.90/mois, indépendamment du salaire versé."
+          "description": "Un forfait fixe de CHF 12.99/mois, indépendamment du salaire versé."
         }
       },
       "cta": "Voir les tarifs",
@@ -331,7 +331,7 @@
         },
         "step2": {
           "title": "On prépare tout",
-          "description": "Contrat de travail, affiliation aux assurances sociales et accident : tout est généré automatiquement."
+          "description": "Contrat de travail, affiliation aux assurances sociales et accident : contrat de travail et fiches de salaire sont générés automatiquement dans votre espace."
         },
         "step3": {
           "title": "Recevez vos documents",
@@ -340,7 +340,7 @@
       },
       "meta": {
         "title": "Femme de ménage en Suisse — Déclaration simplifiée | HappySalary",
-        "description": "Déclarez votre femme de ménage en toute légalité. AVS, assurance accidents, contrat de travail et fiches de salaire inclus dès CHF 9.90/mois."
+        "description": "Déclarez votre femme de ménage en toute légalité. AVS, assurance accidents, contrat de travail et fiches de salaire inclus dès CHF 12.99/mois."
       }
     },
     "nanny": {
@@ -354,7 +354,7 @@
         },
         "b2": {
           "title": "Déduction fiscale",
-          "description": "Les fiches de salaire établies par HappySalary vous permettent de faire valoir la déduction pour frais de garde dans votre déclaration fiscale."
+          "description": "Les fiches de salaire générées servent de justificatif pour votre déclaration fiscale."
         },
         "b3": {
           "title": "Contrat sur mesure",
@@ -368,7 +368,7 @@
       "cta": "Voir les tarifs",
       "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Pourquoi déclarer votre nounou ?",
-      "benefitsSubtitle": "Employer une nounou déclarée, c'est protéger votre famille et bénéficier de déductions fiscales.",
+      "benefitsSubtitle": "Employer une nounou déclarée, c'est protéger votre famille et être en conformité.",
       "howItWorks": {
         "title": "Comment ça marche ?",
         "subtitle": "Trois étapes simples pour employer votre nounou en toute légalité.",
@@ -387,7 +387,7 @@
       },
       "meta": {
         "title": "Nounou en Suisse — Emploi déclaré simplement | HappySalary",
-        "description": "Employez votre nounou en toute légalité en Suisse. Contrat, cotisations AVS, assurance et fiches de salaire inclus. Déduction fiscale facilitée."
+        "description": "Employez votre nounou en toute légalité en Suisse. Contrat, cotisations AVS, assurance et fiches de salaire inclus."
       }
     },
     "auPair": {
@@ -396,8 +396,8 @@
       "description": "L'emploi d'un(e) au pair en Suisse est soumis à des règles spécifiques : salaire minimum, horaires de travail, logement et nourriture. HappySalary gère la paie et les obligations sociales pour que votre accueil se passe sans souci.",
       "benefits": {
         "b1": {
-          "title": "Réglementation respectée",
-          "description": "Nous vérifions que les conditions d'emploi respectent les normes cantonales applicables aux au pairs."
+          "title": "Guide pas à pas",
+          "description": "Un guide étape par étape pour vous aider à respecter les obligations liées à l'emploi d'un(e) au pair."
         },
         "b2": {
           "title": "Impôt à la source géré",
@@ -405,17 +405,17 @@
         },
         "b3": {
           "title": "Assurances complètes",
-          "description": "Assurance accidents et, si nécessaire, assurance maladie perte de gain pour votre au pair."
+          "description": "Affiliation à l'assurance accidents (LAA) obligatoire incluse dans la gestion."
         },
         "b4": {
-          "title": "Accompagnement dédié",
-          "description": "Un support spécialisé pour répondre à vos questions sur l'emploi d'au pairs en Suisse."
+          "title": "Tout dans votre espace",
+          "description": "Fiches de salaire, contrat et guide des démarches accessibles en ligne à tout moment."
         }
       },
       "cta": "Voir les tarifs",
       "ctaSecondary": "Comment ça marche",
       "benefitsTitle": "Pourquoi passer par HappySalary pour votre au pair ?",
-      "benefitsSubtitle": "Accueillir un(e) au pair implique des obligations spécifiques. Nous les gérons pour vous.",
+      "benefitsSubtitle": "Accueillir un(e) au pair implique des obligations spécifiques. Notre outil vous guide dans vos obligations.",
       "howItWorks": {
         "title": "Comment ça marche ?",
         "subtitle": "Trois étapes simples pour accueillir votre au pair en toute conformité.",
@@ -434,7 +434,7 @@
       },
       "meta": {
         "title": "Au Pair en Suisse — Emploi conforme et simplifié | HappySalary",
-        "description": "Accueillez un(e) au pair en Suisse en toute légalité. Impôt à la source, assurances et contrat gérés automatiquement dès CHF 9.90/mois."
+        "description": "Accueillez un(e) au pair en Suisse en toute légalité. Impôt à la source, assurances et contrat gérés automatiquement dès CHF 12.99/mois."
       }
     },
     "elderlyCare": {
@@ -455,8 +455,8 @@
           "description": "Assurance accidents et couverture sociale complète pour l'aide à domicile."
         },
         "b4": {
-          "title": "Documents pour les aides",
-          "description": "Fiches de salaire détaillées utiles pour les demandes de prestations complémentaires ou d'allocation pour impotent."
+          "title": "Documents détaillés",
+          "description": "Fiches de salaire et attestations disponibles dans votre espace pour vos démarches personnelles."
         }
       },
       "cta": "Voir les tarifs",
@@ -476,12 +476,12 @@
         },
         "step3": {
           "title": "Recevez vos documents",
-          "description": "Fiches de salaire et attestations utiles pour les demandes de prestations complémentaires ou d'allocation pour impotent."
+          "description": "Fiches de salaire mensuelles et attestation annuelle disponibles dans votre espace client."
         }
       },
       "meta": {
         "title": "Aide aux personnes âgées en Suisse — Emploi déclaré | HappySalary",
-        "description": "Employez une aide à domicile pour un proche âgé en toute légalité. Cotisations, assurances et contrat inclus dès CHF 9.90/mois."
+        "description": "Employez une aide à domicile pour un proche âgé en toute légalité. Cotisations, assurances et contrat inclus dès CHF 12.99/mois."
       }
     },
     "gardener": {
@@ -499,7 +499,7 @@
         },
         "b3": {
           "title": "Forfait avantageux",
-          "description": "À partir de CHF 9.90/mois seulement, sans commission sur le salaire versé."
+          "description": "CHF 12.99/mois seulement, sans commission sur le salaire versé."
         },
         "b4": {
           "title": "Sérénité juridique",
@@ -528,7 +528,7 @@
       },
       "meta": {
         "title": "Jardinier en Suisse — Déclaration simplifiée | HappySalary",
-        "description": "Déclarez votre jardinier en Suisse facilement. Cotisations AVS, assurance accidents et contrat inclus dès CHF 9.90/mois."
+        "description": "Déclarez votre jardinier en Suisse facilement. Cotisations AVS, assurance accidents et contrat inclus dès CHF 12.99/mois."
       }
     }
   },

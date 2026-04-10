@@ -315,7 +315,7 @@
         },
         "b4": {
           "title": "Predictable costs",
-          "description": "A flat fee from CHF 9.90/month, regardless of the salary paid."
+          "description": "A flat fee from CHF 12.99/month, regardless of the salary paid."
         }
       },
       "cta": "View Pricing",
@@ -340,7 +340,7 @@
       },
       "meta": {
         "title": "Cleaning Lady in Switzerland — Simplified Registration | HappySalary",
-        "description": "Register your cleaning lady legally in Switzerland. AHV, accident insurance, employment contract and pay slips included from CHF 9.90/month."
+        "description": "Register your cleaning lady legally in Switzerland. AHV, accident insurance, employment contract and pay slips included from CHF 12.99/month."
       }
     },
     "nanny": {
@@ -354,7 +354,7 @@
         },
         "b2": {
           "title": "Tax deduction",
-          "description": "The pay slips issued by HappySalary allow you to claim the childcare cost deduction on your tax return."
+          "description": "The pay slips issued by HappySalary serve as documentation for your employee's tax declaration."
         },
         "b3": {
           "title": "Bespoke contract",
@@ -397,7 +397,7 @@
       "benefits": {
         "b1": {
           "title": "Regulatory compliance",
-          "description": "We verify that the employment conditions meet the cantonal requirements applicable to au pairs."
+          "description": "A step-by-step guide to help you understand the employment conditions applicable to au pairs in your canton."
         },
         "b2": {
           "title": "Withholding tax managed",
@@ -405,17 +405,17 @@
         },
         "b3": {
           "title": "Comprehensive insurance",
-          "description": "Accident insurance and, where required, daily sickness allowance insurance for your au pair."
+          "description": "Compulsory accident insurance (LAA) included for your au pair."
         },
         "b4": {
           "title": "Dedicated guidance",
-          "description": "Specialised support to answer your questions about employing an au pair in Switzerland."
+          "description": "Everything you need to manage your au pair's employment, accessible in your dashboard."
         }
       },
       "cta": "View Pricing",
       "ctaSecondary": "How It Works",
       "benefitsTitle": "Why use HappySalary for your au pair?",
-      "benefitsSubtitle": "Hosting an au pair involves specific obligations. We handle them for you.",
+      "benefitsSubtitle": "Hosting an au pair involves specific obligations. Our tool guides you through them.",
       "howItWorks": {
         "title": "How does it work?",
         "subtitle": "Three simple steps to host your au pair in full compliance.",
@@ -434,7 +434,7 @@
       },
       "meta": {
         "title": "Au Pair in Switzerland — Compliant and Simplified | HappySalary",
-        "description": "Host an au pair in Switzerland legally. Withholding tax, insurance and contract managed automatically from CHF 9.90/month."
+        "description": "Host an au pair in Switzerland legally. Withholding tax, insurance and contract managed automatically from CHF 12.99/month."
       }
     },
     "elderlyCare": {
@@ -456,7 +456,7 @@
         },
         "b4": {
           "title": "Supporting documentation",
-          "description": "Detailed pay slips useful for applications for supplementary benefits or helplessness allowance."
+          "description": "Detailed documents available in your dashboard for your records."
         }
       },
       "cta": "View Pricing",
@@ -476,12 +476,12 @@
         },
         "step3": {
           "title": "Receive your documents",
-          "description": "Pay slips and certificates useful for supplementary benefit or helplessness allowance applications."
+          "description": "Pay slips and certificates available in your dashboard."
         }
       },
       "meta": {
         "title": "Elderly Care in Switzerland — Registered Employment | HappySalary",
-        "description": "Employ a home carer for an elderly relative legally in Switzerland. Contributions, insurance and contract included from CHF 9.90/month."
+        "description": "Employ a home carer for an elderly relative legally in Switzerland. Contributions, insurance and contract included from CHF 12.99/month."
       }
     },
     "gardener": {
@@ -499,7 +499,7 @@
         },
         "b3": {
           "title": "Great value flat fee",
-          "description": "From just CHF 9.90/month, with no commission on the salary paid."
+          "description": "From just CHF 12.99/month, with no commission on the salary paid."
         },
         "b4": {
           "title": "Legal peace of mind",
@@ -528,7 +528,7 @@
       },
       "meta": {
         "title": "Gardener in Switzerland — Simplified Registration | HappySalary",
-        "description": "Register your gardener in Switzerland easily. AHV contributions, accident insurance and contract included from CHF 9.90/month."
+        "description": "Register your gardener in Switzerland easily. AHV contributions, accident insurance and contract included from CHF 12.99/month."
       }
     }
   },
